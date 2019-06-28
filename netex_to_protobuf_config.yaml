@@ -1,0 +1,23 @@
+outputFilename: 
+outputDirectory: target/proto
+includeMessageDocs: true
+includeFieldDocs: true
+includeSourceLocationInDoc: true
+inheritanceToComposition: true
+includeValidationRules: false
+customImports: google/protobuf/timestamp.proto,google/protobuf/duration.proto
+customImportLocations: target/proto_deps
+customTypeMappings:
+  ^duration$ : google.protobuf.Duration
+  ^dateTime$ : google.protobuf.Timestamp
+  ^(.*)_VersionStructure$ : $1
+  ^(.*)_VersionedChild$ : $1
+  ^(.*)Structure$ : $1
+
+customNameMappings:
+  ^(.*)_VersionStructure$ : $1
+  ^(.*)_VersionedChild$ : $1
+  ^(.*)Structure$ : $1
+
+options:
+  java_multiple_files: true
