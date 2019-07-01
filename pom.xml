@@ -56,7 +56,7 @@
         <commons-lang3.version>3.5</commons-lang3.version>
         <cxf-xjc.version>3.1.0</cxf-xjc.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <pgv.gen_version>0.1.0-SNAPSHOT</pgv.gen_version>
+        <pgv.gen_version>0.1.0</pgv.gen_version>
 
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,6 +74,8 @@
         <envoyproxy.version>0.1.0-SNAPSHOT</envoyproxy.version>
     </properties>
 
+
+
     <scm>
         <connection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</developerConnection>
@@ -89,10 +91,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>snapshots</id>
-            <name>entur2-snapshots</name>
-            <url>https://entur2.jfrog.io/entur2/libs-snapshot-local</url>
+            <name>entur-team-kontobasert-billettering-snapshot</name>
+            <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-snapshot</url>
         </snapshotRepository>
     </distributionManagement>
+
 
     <dependencies>
         <dependency>
@@ -351,6 +354,18 @@
                         <!--arg>-Werror</arg-->
                         <arg>-Xlint:all</arg>
                     </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <classesDirectory>target/proto</classesDirectory>
+                   <includes>
+                       <include>**/*.proto</include>
+                   </includes>
                 </configuration>
             </plugin>
 

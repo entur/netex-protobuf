@@ -4,21 +4,66 @@ includeMessageDocs: true
 includeFieldDocs: true
 includeSourceLocationInDoc: true
 inheritanceToComposition: true
-includeValidationRules: false
+includeValidationRules: true
 customImports: google/protobuf/timestamp.proto,google/protobuf/duration.proto
 customImportLocations: target/proto_deps
 customTypeMappings:
   ^duration$ : google.protobuf.Duration
   ^dateTime$ : google.protobuf.Timestamp
+  ^Entity_EntityStructure$ : EntityES
+  ^Assignment_VersionStructure_$ : AssignmentVS
+  ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles
+  ^GroupOfEntitiesRefStructure_$ : GroupOfEntitiesReference
+  ^SeriesConstraintRefStructure_$ : SeriesConstraintReference
+  ^PointOnLinkRefStructure_$ : PointOnLinkReference
+  ^LineInDirectionRef_Structure$ : LineInDirectionReference
+  ^OnboardStay_VersionedChlldStructure$: OnboardStay
+  ^Site_VersionFrameStructure$ : SiteFrame
+  ^VehicleType_VersionStructure_$ : VehicleTypeVSU
+  ^VehicleType_VersionStructure$ : VehicleTypeVS
+  ^(.*)_EntityStructure$ : $1
   ^(.*)_VersionStructure$ : $1
+  ^(.*)_VersionedStructure$ : $1
   ^(.*)_VersionedChild$ : $1
+  ^(.*)_VersionedChildStructure$ : $1
+  ^(.*)_RelStructure$ : $1Relation
+  ^(.*)_Version$ : $1Version
+  ^(.*)_VersionFrame$ : $1
+  ^(.*)_VersionFrameStructure$ : $1
+  ^(.*)_DerivedViewStructure$ : $1DerivedView
+  ^(.*)_ViewStructure$ : $1View
+  ^(.*)_Rel$ : $1Relation
+  ^(.*)_ValueStructure$ : $1Value
+  ^(.*)_Value$ : $1Value
   ^(.*)Structure$ : $1
 
 customNameMappings:
-  ^(.*)_VersionStructure$ : $1
-  ^(.*)_VersionedChild$ : $1
-  ^(.*)Structure$ : $1
   ^Descriptor$ : TopographicPlaceDescriptor
+  ^Assignment_VersionStructure_$ : AssignmentVS
+  ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles
+  ^GroupOfEntitiesRefStructure_$ : GroupOfEntitiesReference
+  ^SeriesConstraintRefStructure_$ : SeriesConstraintReference
+  ^PointOnLinkRefStructure_$ : PointOnLinkReference
+  ^LineInDirectionRef_Structure$ : LineInDirectionReference
+  ^OnboardStay_VersionedChlldStructure$: OnboardStay
+  ^Site_VersionFrameStructure$ : SiteFrame
+  ^VehicleType_VersionStructure_$ : VehicleTypeVSU
+  ^VehicleType_VersionStructure$ : VehicleTypeVS
+  ^(.*)_EntityStructure$ : $1
+  ^(.*)_VersionStructure$ : $1
+  ^(.*)_VersionedStructure$ : $1
+  ^(.*)_VersionedChild$ : $1
+  ^(.*)_VersionedChildStructure$ : $1
+  ^(.*)_RelStructure$ : $1Relation
+  ^(.*)_Version$ : $1Version
+  ^(.*)_VersionFrame$ : $1
+  ^(.*)_VersionFrameStructure$ : $1
+  ^(.*)_DerivedViewStructure$ : $1DerivedView
+  ^(.*)_ViewStructure$ : $1View
+  ^(.*)_Rel$ : $1Relation
+  ^(.*)_ValueStructure$ : $1Value
+  ^(.*)_Value$ : $1Value
+  ^(.*)Structure$ : $1
 
 options:
   java_multiple_files: true
