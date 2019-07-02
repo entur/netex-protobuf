@@ -172,6 +172,11 @@
             </extension>
         </extensions>
         <plugins>
+            <plugin>
+                <groupId>de.qaware.maven</groupId>
+                <artifactId>go-offline-maven-plugin</artifactId>
+                <version>1.2.0</version>
+            </plugin>
 
             <plugin>
                 <groupId>kr.motd.maven</groupId>
