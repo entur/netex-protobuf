@@ -81,6 +81,15 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>entur-kontobasert</id>
+            <name>entur-team-kontobasert-billettering-snapshot</name>
+            <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-snapshot</url>
+        </repository>
+
+    </repositories>
+
 
     <dependencies>
         <dependency>
