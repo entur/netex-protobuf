@@ -221,33 +221,6 @@
 
             </plugin>
 
-            <plugin>
-                <groupId>org.xolstice.maven.plugins</groupId>
-                <artifactId>protobuf-maven-plugin</artifactId>
-                <version>${protobuf-maven-plugin.version}</version>
-
-                <configuration>
-                    <protoSourceRoot>${project.build.directory}/proto</protoSourceRoot>
-                    <attachProtoSources>false</attachProtoSources>
-                    <protocArtifact>com.google.protobuf:protoc:${proto.version}:exe:${os.detected.classifier}
-                    </protocArtifact>
-                    <pluginParameter>lang=java</pluginParameter>
-                    <pluginId>java-pgv</pluginId>
-                    <pluginArtifact>
-                        io.envoyproxy.protoc-gen-validate:protoc-gen-validate:${pgv.gen_version}:exe:${os.detected.classifier}
-                    </pluginArtifact>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>compile</id>
-                        <goals>
-                            <goal>compile-custom</goal>
-                            <goal>compile</goal>
-                        </goals>
-                        <phase>process-resources</phase>
-                    </execution>
-                </executions>
-            </plugin>
 
             <plugin>
                 <groupId>com.salesforce.servicelibs</groupId>
@@ -268,21 +241,6 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                    <compilerArgs>
-                        <!--arg>-Werror</arg-->
-                        <arg>-Xlint:all</arg>
-                    </compilerArgs>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
@@ -294,5 +252,74 @@
             </plugin>
         </plugins>
     </build>
+
+
+    <profiles>
+        <profile>
+            <id>protoc</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.xolstice.maven.plugins</groupId>
+                        <artifactId>protobuf-maven-plugin</artifactId>
+                        <version>${protobuf-maven-plugin.version}</version>
+
+                        <configuration>
+                            <protoSourceRoot>${project.build.directory}/proto</protoSourceRoot>
+                            <attachProtoSources>false</attachProtoSources>
+                            <protocArtifact>com.google.protobuf:protoc:${proto.version}:exe:${os.detected.classifier}
+                            </protocArtifact>
+                            <pluginParameter>lang=java</pluginParameter>
+                            <pluginId>java-pgv</pluginId>
+                            <pluginArtifact>
+                                io.envoyproxy.protoc-gen-validate:protoc-gen-validate:${pgv.gen_version}:exe:${os.detected.classifier}
+                            </pluginArtifact>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>compile</id>
+                                <goals>
+                                    <goal>compile-custom</goal>
+                                    <goal>compile</goal>
+                                </goals>
+                                <phase>process-resources</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>compile</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <version>3.8.1</version>
+                        <configuration>
+                            <source>1.8</source>
+                            <target>1.8</target>
+                            <encoding>UTF-8</encoding>
+                            <compilerArgs>
+                                <!--arg>-Werror</arg-->
+                                <arg>-Xlint:all</arg>
+                            </compilerArgs>
+                        </configuration>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+
+
+    </profiles>
 
 </project>
