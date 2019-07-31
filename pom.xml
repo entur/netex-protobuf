@@ -51,11 +51,11 @@
         <netexGithubUrl>https://github.com/entur/${netexRepoName}</netexGithubUrl>
         <netexVersion>1.09</netexVersion>
 
-        <pgv.gen_version>0.1.0</pgv.gen_version>
+        <pgv.gen_version>0.2.0</pgv.gen_version>
         <proto.version>3.6.1</proto.version>
 
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <proto-backwards-compatibility.version>1.0.2</proto-backwards-compatibility.version>
+        <proto-backwards-compatibility.version>1.0.5</proto-backwards-compatibility.version>
         <os-maven-plugin.version>1.6.1</os-maven-plugin.version>
     </properties>
 
