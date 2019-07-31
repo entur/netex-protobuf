@@ -47,6 +47,7 @@ customTypeMappings:
   ^(.*)_ValueStructure$ : $1Value
   ^(.*)_Value$ : $1Value
   ^(.*)Structure$ : $1
+  ^(.*)Enumeration : $1
 
 customNameMappings:
   ^Descriptor$ : TopographicPlaceDescriptor
@@ -75,5 +76,7 @@ customNameMappings:
   ^(.*)_ValueStructure$ : $1Value
   ^(.*)_Value$ : $1Value
   ^(.*)Structure$ : $1
+  ^(.*)Enumeration : $1
+
 options:
   java_multiple_files: true
