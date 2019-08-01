@@ -4,7 +4,7 @@ includeMessageDocs: true
 includeFieldDocs: true
 includeSourceLocationInDoc: true
 inheritanceToComposition: false
-includeValidationRules: true
+includeValidationRules: false
 customImports:
   - google/protobuf/timestamp.proto
   - google/protobuf/duration.proto

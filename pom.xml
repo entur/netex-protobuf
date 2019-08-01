@@ -51,7 +51,7 @@
         <netexGithubUrl>https://github.com/entur/${netexRepoName}</netexGithubUrl>
         <netexVersion>1.09</netexVersion>
 
-        <pgv.gen_version>0.2.0</pgv.gen_version>
+        <pgv.version>0.2.0</pgv.version>
         <proto.version>3.6.1</proto.version>
 
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
@@ -87,12 +87,14 @@
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>${proto.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>io.envoyproxy.protoc-gen-validate</groupId>
             <artifactId>pgv-java-stub</artifactId>
-            <version>${pgv.gen_version}</version>
+            <version>${pgv.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.re2j</groupId>
@@ -275,7 +277,7 @@
                             <pluginParameter>lang=java</pluginParameter>
                             <pluginId>java-pgv</pluginId>
                             <pluginArtifact>
-                                io.envoyproxy.protoc-gen-validate:protoc-gen-validate:${pgv.gen_version}:exe:${os.detected.classifier}
+                                io.envoyproxy.protoc-gen-validate:protoc-gen-validate:${pgv.version}:exe:${os.detected.classifier}
                             </pluginArtifact>
                         </configuration>
                         <executions>
