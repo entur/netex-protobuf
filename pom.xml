@@ -230,6 +230,7 @@
                 <version>${proto-backwards-compatibility.version}</version>
                 <configuration>
                     <protoSourceRoot>target/proto</protoSourceRoot>
+                    <options>--lockdir=${basedir}</options>
                 </configuration>
                 <executions>
                     <execution>
