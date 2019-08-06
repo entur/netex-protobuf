@@ -32,21 +32,6 @@ customTypeMappings:
   ^Site_VersionFrameStructure$ : SiteFrame
   ^VehicleType_VersionStructure_$ : VehicleTypeVSU
   ^VehicleType_VersionStructure$ : VehicleTypeVS
-  ^(.*)_EntityStructure$ : $1
-  ^(.*)_VersionStructure$ : $1
-  ^(.*)_VersionedStructure$ : $1
-  ^(.*)_VersionedChild$ : $1
-  ^(.*)_VersionedChildStructure$ : $1
-  ^(.*)_RelStructure$ : $1Relation
-  ^(.*)_Version$ : $1Version
-  ^(.*)_VersionFrame$ : $1
-  ^(.*)_VersionFrameStructure$ : $1
-  ^(.*)_DerivedViewStructure$ : $1DerivedView
-  ^(.*)_ViewStructure$ : $1View
-  ^(.*)_Rel$ : $1Relation
-  ^(.*)_ValueStructure$ : $1Value
-  ^(.*)_Value$ : $1Value
-  ^(.*)Structure$ : $1
   ^(.*)Enumeration : $1
 
 customNameMappings:
@@ -61,21 +46,6 @@ customNameMappings:
   ^Site_VersionFrameStructure$ : SiteFrame
   ^VehicleType_VersionStructure_$ : VehicleTypeVSU
   ^VehicleType_VersionStructure$ : VehicleTypeVS
-  ^(.*)_EntityStructure$ : $1
-  ^(.*)_VersionStructure$ : $1
-  ^(.*)_VersionedStructure$ : $1
-  ^(.*)_VersionedChild$ : $1
-  ^(.*)_VersionedChildStructure$ : $1
-  ^(.*)_RelStructure$ : $1Relation
-  ^(.*)_Version$ : $1Version
-  ^(.*)_VersionFrame$ : $1
-  ^(.*)_VersionFrameStructure$ : $1
-  ^(.*)_DerivedViewStructure$ : $1DerivedView
-  ^(.*)_ViewStructure$ : $1View
-  ^(.*)_Rel$ : $1Relation
-  ^(.*)_ValueStructure$ : $1Value
-  ^(.*)_Value$ : $1Value
-  ^(.*)Structure$ : $1
   ^(.*)Enumeration : $1
 
 options:

@@ -4,10 +4,8 @@ This project contains setup to generate [Protocol Buffers Definition files](http
 
 The conversion is done using [schema2proto](https://github.com/entur/schema2proto) and configuration [netex_to_protobuf_config.yaml](netex_to_protobuf_config.yaml)
 
+Based on a copy of https://github.com/entur/NeTEx/tree/nick_11 pr 5th of Aug 2019 (this branch contains updates from Nick Knowles regarding ticketing)
+
 ## Building
-
-Downloads the NeTEx-XML XSD files from https://github.com/entur/NeTEx and generates java model using jaxb.
-
-You need xmlstarlet installed.
 
 `mvn clean install`

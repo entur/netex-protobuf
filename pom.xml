@@ -46,11 +46,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <netexRepoName>NeTEx</netexRepoName>
-        <netexBranch>master</netexBranch>
-        <netexGithubUrl>https://github.com/entur/${netexRepoName}</netexGithubUrl>
-        <netexVersion>1.09</netexVersion>
-
         <pgv.version>0.2.0</pgv.version>
         <proto.version>3.6.1</proto.version>
 
@@ -127,46 +122,6 @@
                 </executions>
             </plugin>
 
-
-            <plugin>
-                <artifactId>exec-maven-plugin</artifactId>
-                <groupId>org.codehaus.mojo</groupId>
-                <version>1.6.0</version>
-                <executions>
-                    <execution>
-                        <!-- This is the current version which the model is built from. -->
-                        <id>download-extract-current-version</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <environmentVariables>
-                                <GITHUB_URL>${netexGithubUrl}/archive/master.zip</GITHUB_URL>
-                                <DESTINATION_PATH>target/${netexVersion}</DESTINATION_PATH>
-                                <ZIP_PATH_TO_EXTRACT>NeTEx-master/xsd/*</ZIP_PATH_TO_EXTRACT>
-                            </environmentVariables>
-                            <executable>./bin/netex-download-extract.sh</executable>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>replace-hard-coded-id-in-bindings-file</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>
-                                <argument>${netexVersion}</argument>
-                            </arguments>
-                            <executable>
-                                ./bin/version_updater.sh
-                            </executable>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -210,7 +165,7 @@
                 <version>1.0-SNAPSHOT</version>
                 <configuration>
                     <configFile>netex_to_protobuf_config.yaml</configFile>
-                    <xsdFile>target/${netexVersion}/NeTEx_publication.xsd</xsdFile>
+                    <xsdFile>src/main/resources/xsd/NeTEx_publication.xsd</xsdFile>
                 </configuration>
                 <executions>
                     <execution>
