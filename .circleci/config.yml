@@ -16,7 +16,7 @@ jobs:
           username: _json_key
           password: $GCLOUD_SERVICE_KEY
     environment:
-      MAVEN_OPTS: -Xmx2G -Xms2G
+      MAVEN_OPTS: -Xmx3G -Xms3G
     steps:
       - checkout
       - restore_cache:
