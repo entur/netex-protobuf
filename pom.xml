@@ -266,6 +266,9 @@
                         <configuration>
                             <source>1.8</source>
                             <target>1.8</target>
+                            <fork>true</fork>
+                            <meminitial>2G</meminitial>
+                            <maxmem>3G</maxmem>
                             <encoding>UTF-8</encoding>
                             <compilerArgs>
                                 <!--arg>-Werror</arg-->
