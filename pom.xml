@@ -47,7 +47,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <pgv.version>0.2.0</pgv.version>
-        <proto.version>3.6.1</proto.version>
+        <proto.version>3.9.0</proto.version>
 
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <proto-backwards-compatibility.version>1.0.5</proto-backwards-compatibility.version>
