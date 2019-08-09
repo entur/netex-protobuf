@@ -189,6 +189,7 @@
                 </configuration>
                 <executions>
                     <execution>
+                        <phase>process-resources</phase>
                         <goals>
                             <goal>backwards-compatibility-check</goal>
                         </goals>
