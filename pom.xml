@@ -50,7 +50,7 @@
         <proto.version>3.9.0</proto.version>
 
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <proto-backwards-compatibility.version>1.0.5</proto-backwards-compatibility.version>
+        <proto-backwards-compatibility.version>1.0.5-lockdir</proto-backwards-compatibility.version>
         <os-maven-plugin.version>1.6.1</os-maven-plugin.version>
     </properties>
 
@@ -75,7 +75,6 @@
             <url>https://entur2.jfrog.io/entur2/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
-
 
     <dependencies>
         <dependency>
@@ -185,7 +184,8 @@
                 <version>${proto-backwards-compatibility.version}</version>
                 <configuration>
                     <protoSourceRoot>target/proto</protoSourceRoot>
-                    <options>--lockdir=${basedir} --debug=true</options>
+                    <lockDir>${basedir}</lockDir>
+                    <options>--debug=true</options>
                 </configuration>
                 <executions>
                     <execution>
