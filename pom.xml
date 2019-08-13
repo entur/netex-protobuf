@@ -185,7 +185,7 @@
                 <version>${proto-backwards-compatibility.version}</version>
                 <configuration>
                     <protoSourceRoot>target/proto</protoSourceRoot>
-                    <options>--lockdir=${basedir}</options>
+                    <options>--lockdir=${basedir} --debug=true</options>
                 </configuration>
                 <executions>
                     <execution>
