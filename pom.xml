@@ -55,7 +55,6 @@
     </properties>
 
 
-
     <scm>
         <connection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</developerConnection>
@@ -96,6 +95,14 @@
             <version>1.2</version>
             <scope>provided</scope>
         </dependency>
+        <!-- xsd:date and xsd:time equivalents -->
+        <dependency>
+            <groupId>com.google.api.grpc</groupId>
+            <artifactId>proto-google-common-protos</artifactId>
+            <version>1.12.0</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -137,6 +144,14 @@
                                 <artifactItem>
                                     <groupId>com.google.protobuf</groupId>
                                     <artifactId>protobuf-java</artifactId>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <includes>**/*.proto</includes>
+                                    <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>com.google.api.grpc</groupId>
+                                    <artifactId>proto-google-common-protos</artifactId>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <includes>**/*.proto</includes>
@@ -204,9 +219,9 @@
                 <version>3.1.2</version>
                 <configuration>
                     <classesDirectory>target/proto</classesDirectory>
-                   <includes>
-                       <include>**/*.proto</include>
-                   </includes>
+                    <includes>
+                        <include>**/*.proto</include>
+                    </includes>
                 </configuration>
             </plugin>
         </plugins>
