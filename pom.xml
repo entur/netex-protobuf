@@ -52,6 +52,7 @@
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <proto-backwards-compatibility.version>1.0.5-lockdir</proto-backwards-compatibility.version>
         <os-maven-plugin.version>1.6.1</os-maven-plugin.version>
+        <schema2proto.version>1.0-SNAPSHOT</schema2proto.version>
     </properties>
 
 
@@ -88,6 +89,11 @@
             <artifactId>pgv-java-stub</artifactId>
             <version>${pgv.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>no.entur</groupId>
+            <artifactId>schema2proto-xsdproto</artifactId>
+            <version>${schema2proto.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.re2j</groupId>
@@ -165,6 +171,14 @@
                                     <includes>**/*.proto</includes>
                                     <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
                                 </artifactItem>
+                                <artifactItem>
+                                    <groupId>no.entur</groupId>
+                                    <artifactId>schema2proto-xsdproto</artifactId>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <includes>**/*.proto</includes>
+                                    <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
@@ -176,7 +190,7 @@
             <plugin>
                 <groupId>no.entur</groupId>
                 <artifactId>schema2proto-maven-plugin</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <version>${schema2proto.version}</version>
                 <configuration>
                     <configFile>netex_to_protobuf_config.yaml</configFile>
                     <xsdFile>src/main/resources/xsd/NeTEx_publication.xsd</xsdFile>
