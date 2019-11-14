@@ -604,9 +604,9 @@ customTypeReplacements:
   ^TimingPatternRefStructure$: VersionOfObjectRefStructure
   ^SalesOfferPackageRefStructure$: VersionOfObjectRefStructure
   ^SaleDiscountRightRefStructure$: VersionOfObjectRefStructure
+
   ^CrewBaseRefStructure: GroupOfEntitiesRefStructure
   ^FareTableRefStructure: GroupOfEntitiesRefStructure
-
   ^GeneralGroupOfEntitiesRefStructure: GroupOfEntitiesRefStructure
   ^GroupOfCustomerPurchasePackagesRefStructure: GroupOfEntitiesRefStructure
   ^GroupOfDistanceMatrixElementsRefStructureElement: GroupOfEntitiesRefStructure
