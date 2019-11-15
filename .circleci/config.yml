@@ -14,7 +14,7 @@ jobs:
           username: _json_key
           password: $GCLOUD_SERVICE_KEY
     environment:
-      MAVEN_OPTS: -Xmx1G -Xms128m
+      MAVEN_OPTS: -Xmx3G
     steps:
       - checkout
       - restore_cache:
@@ -45,7 +45,7 @@ jobs:
           username: _json_key
           password: $GCLOUD_SERVICE_KEY
     environment:
-      MAVEN_OPTS: -Xmx1G -Xms128m
+      MAVEN_OPTS: -Xmx3G
     steps:
       - checkout
       - restore_cache:
@@ -73,4 +73,4 @@ workflows:
             - test
           filters:
             branches:
-              only: master
+              only: master, inheritance
