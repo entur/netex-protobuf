@@ -37,7 +37,6 @@ customTypeMappings:
   ^Site_VersionFrameStructure$: SiteFrame
   ^VehicleType_VersionStructure_$: VehicleTypeVSU
   ^VehicleType_VersionStructure$: VehicleTypeVS
-  ^(.*)Enumeration: $1
 
 customTypeReplacements:
   ^StopPlaceSpaceRefStructure$: VersionOfObjectRefStructure
@@ -644,7 +643,6 @@ customNameMappings:
   ^Site_VersionFrameStructure$: SiteFrame
   ^VehicleType_VersionStructure_$: VehicleTypeVSU
   ^VehicleType_VersionStructure$: VehicleTypeVS
-  ^(.*)Enumeration: $1
 
 options:
   java_multiple_files: true
