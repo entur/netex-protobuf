@@ -6,6 +6,26 @@ aliases:
       echo 'export CIRCLE_API_TOKEN="$CIRCLE_API_USER_TOKEN"' >> $BASH_ENV
       /tools/downstream_single_trigger.sh "gh/entur/abt-protobuf" "develop"
 
+  - &release
+    name: Release
+    command: |
+      if [ "$(git log -1 --pretty=%B)" == "Start release" ]
+      then
+        echo "Start release"
+        mvn versions:use-releases
+        SNAPSHOT_VERSION=$(mvn -q -Dexec.executable="echo" -Dexec.args='${project.version}' --non-recursive org.codehaus.mojo:exec-maven-plugin:1.6.0:exec)
+        TAG_VERSION="${SNAPSHOT_VERSION/-SNAPSHOT/}"
+        echo "Release version $TAG_VERSION"
+
+        mvn unleash:perform -B
+        git checkout master
+        git fetch --tags origin
+        git merge $TAG_VERSION
+        git push origin master
+      else
+        echo "Skipping release"
+      fi
+
 jobs:
   test:
     docker:
@@ -60,6 +80,21 @@ jobs:
       # Cannot use -o because of snapshot dependencies.
       - run: mvn deploy -s /tools/m2/settings.xml -DskipTests  -P '!protoc'
       - run: *post_build
+  release:
+    docker:
+      - image: eu.gcr.io/carbon-1287/circleci-toolbox-image
+        auth:
+          username: _json_key
+          password: $GCLOUD_SERVICE_KEY
+    environment:
+      MAVEN_OPTS: -Xmx1G -Xms128m
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - cache-dependencies-{{ checksum "pom.xml" }}
+            - cache-dependencies-static
+      - run: *release
 
 workflows:
   version: 2
@@ -74,3 +109,10 @@ workflows:
           filters:
             branches:
               only: master
+      - release:
+          context: org-carbon
+          requires:
+            - test
+          filters:
+            branches:
+              only: test-release
