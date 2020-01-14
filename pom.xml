@@ -52,7 +52,7 @@
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <proto-backwards-compatibility.version>1.0.5-lockdir</proto-backwards-compatibility.version>
         <os-maven-plugin.version>1.6.1</os-maven-plugin.version>
-        <schema2proto.version>1.0-alpha-3</schema2proto.version>
+        <schema2proto.version>1.0-alpha-5</schema2proto.version>
     </properties>
 
 
