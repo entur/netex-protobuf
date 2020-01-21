@@ -79,6 +79,13 @@ aliases:
           </activeProfiles>
         </settings>\""
 
+      - &circleci-container-config
+        docker:
+          - image: eu.gcr.io/carbon-1287/circleci-toolbox-image
+            auth:
+              username: _json_key
+              password: $GCLOUD_SERVICE_KEY
+
 commands:
   generate-maven-settings-file:
     parameters:
@@ -94,11 +101,7 @@ commands:
 
 jobs:
   test:
-    docker:
-      - image: eu.gcr.io/carbon-1287/circleci-toolbox-image
-        auth:
-          username: _json_key
-          password: $GCLOUD_SERVICE_KEY
+    <<: *circleci-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -127,11 +130,7 @@ jobs:
       - store_artifacts:
           path: ~/junit
   deploy-artifactory:
-    docker:
-      - image: eu.gcr.io/carbon-1287/circleci-toolbox-image
-        auth:
-          username: _json_key
-          password: $GCLOUD_SERVICE_KEY
+    <<: *circleci-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -151,11 +150,7 @@ jobs:
       - run: mvn deploy -DskipTests  -P '!protoc'
       - run: *post_build
   release:
-    docker:
-      - image: eu.gcr.io/carbon-1287/circleci-toolbox-image
-        auth:
-          username: _json_key
-          password: $GCLOUD_SERVICE_KEY
+    <<: *circleci-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
