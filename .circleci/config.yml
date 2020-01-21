@@ -18,10 +18,66 @@ aliases:
         git pull --no-edit
         git checkout develop
         mvn versions:use-releases
-        mvn -B gitflow:release-start gitflow:release-finish -DpostReleaseGoals=deploy -s /tools/m2/settings.xml
+        mvn -B gitflow:release-start gitflow:release-finish -DpostReleaseGoals=deploy -Prelease
       else
         echo "Skipping release"
       fi
+  - &maven-settings-file
+      "\"<settings xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd' xmlns='http://maven.apache.org/SETTINGS/1.1.0'
+            xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+          <servers>
+            <server>
+              <username>$SONATYPE_USERNAME</username>
+              <password>$SONATYPE_PASSWORD</password>
+              <id>ossrh</id>
+            </server>
+            <server>
+              <username>$entur_artifactory_user</username>
+              <password>$entur_artifactory_password</password>
+              <id>snapshots</id>
+            </server>
+          </servers>
+          <profiles>
+      <profile>
+        <repositories>
+          <repository>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+            <id>ossrh</id>
+            <name>Sonatype repo</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+          </repository>
+          <repository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>entur-team-kontobasert-billettering-snapshot</name>
+            <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-snapshot</url>
+          </repository>
+        </repositories>
+        <pluginRepositories>
+          <pluginRepository>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+            <id>ossrh</id>
+            <name>Sonatype repo</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+          </pluginRepository>
+          <pluginRepository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>entur-team-kontobasert-billettering-snapshot</name>
+            <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-snapshot</url>
+          </pluginRepository>
+        </pluginRepositories>
+        <id>artifactory</id>
+      </profile>
+          </profiles>
+          <activeProfiles>
+            <activeProfile>artifactory</activeProfile>
+          </activeProfiles>
+        </settings>\""
 
 
 
@@ -36,17 +92,19 @@ jobs:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
       - checkout
+      - generate-maven-settings-file:
+          settings-file: *maven-settings-file
       - restore_cache:
           keys:
             - cache-dependencies-{{ checksum "pom.xml" }}
             - cache-dependencies-static
-      - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -s /tools/m2/settings.xml
+      - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       - save_cache:
           paths:
             - ~/.m2
           key: cache-dependencies-static
       # Cannot use -o because of snapshot dependencies.
-      - run: mvn verify -s /tools/m2/settings.xml -P '!protoc'
+      - run: mvn verify -P '!protoc'
       - run:
           name: Save test results
           command: |
@@ -67,17 +125,19 @@ jobs:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
       - checkout
+      - generate-maven-settings-file:
+          settings-file: *maven-settings-file
       - restore_cache:
           keys:
             - cache-dependencies-{{ checksum "pom.xml" }}
             - cache-dependencies-static
-      - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies -s /tools/m2/settings.xml
+      - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       - save_cache:
           paths:
             - ~/.m2
           key: cache-dependencies-static
       # Cannot use -o because of snapshot dependencies.
-      - run: mvn deploy -s /tools/m2/settings.xml -DskipTests  -P '!protoc'
+      - run: mvn deploy -DskipTests  -P '!protoc'
       - run: *post_build
   release:
     docker:
@@ -89,6 +149,8 @@ jobs:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
       - checkout
+      - generate-maven-settings-file:
+          settings-file: *maven-settings-file
       - restore_cache:
           keys:
             - cache-dependencies-{{ checksum "pom.xml" }}
@@ -100,16 +162,16 @@ workflows:
   build_test_deploy:
     jobs:
       - test:
-          context: org-carbon
+          context: org-default-build
       - deploy-artifactory:
-          context: org-carbon
+          context: org-default-build
           requires:
             - test
           filters:
             branches:
               only: develop
       - release:
-          context: org-carbon
+          context: org-default-build
           requires:
             - test
           filters:
