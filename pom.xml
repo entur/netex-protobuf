@@ -74,6 +74,11 @@
             <name>entur2-snapshots</name>
             <url>https://entur2.jfrog.io/entur2/libs-snapshot-local</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <name>Sonatype</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
     </distributionManagement>
 
     <dependencies>
