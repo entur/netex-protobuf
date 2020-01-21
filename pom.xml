@@ -52,7 +52,7 @@
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <proto-backwards-compatibility.version>1.0.5-lockdir</proto-backwards-compatibility.version>
         <os-maven-plugin.version>1.6.1</os-maven-plugin.version>
-        <schema2proto.version>1.0-alpha-10</schema2proto.version>
+        <schema2proto.version>1.0-alpha-13</schema2proto.version>
     </properties>
 
 
@@ -245,6 +245,20 @@
                 <configuration>
                     <allowSnapshots>false</allowSnapshots>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
