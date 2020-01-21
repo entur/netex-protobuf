@@ -1,6 +1,6 @@
 version: 2.1
 aliases:
-  - &post_build
+  - &downstream_builds
     name: Trigger downstream builds
     command: |
       echo 'export CIRCLE_API_TOKEN="$CIRCLE_API_USER_TOKEN"' >> $BASH_ENV
@@ -86,6 +86,10 @@ aliases:
             username: _json_key
             password: $GCLOUD_SERVICE_KEY
 
+  - &java-container-config
+    docker:
+      - image: circleci/openjdk:11-jdk
+
 commands:
   generate-maven-settings-file:
     parameters:
@@ -130,7 +134,7 @@ jobs:
       - store_artifacts:
           path: ~/junit
   deploy-artifactory:
-    <<: *circleci-container-config
+    <<: *java-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -148,9 +152,8 @@ jobs:
           key: cache-dependencies-static
       # Cannot use -o because of snapshot dependencies.
       - run: mvn deploy -DskipTests  -P '!protoc'
-      - run: *post_build
   release:
-    <<: *circleci-container-config
+    <<: *java-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -163,6 +166,12 @@ jobs:
             - cache-dependencies-static
       - run: *release
 
+  postBuild:
+    <<: *circleci-container-config
+
+    steps:
+      - run: *downstream_builds
+
 workflows:
   version: 2
   build_test_deploy:
@@ -173,6 +182,13 @@ workflows:
           context: org-default-build
           requires:
             - test
+          filters:
+            branches:
+              only: develop
+      - postBuild:
+          context: org-carbon
+          requires:
+            - deploy-artifactory
           filters:
             branches:
               only: develop
