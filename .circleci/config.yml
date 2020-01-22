@@ -126,12 +126,12 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
-            - cache-dependencies-static
+            - cache-dependencies-{{ checksum "pom.xml" }}
       - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       - save_cache:
           paths:
             - ~/.m2
-          key: cache-dependencies-static
+          key: cache-dependencies-{{ checksum "pom.xml" }}
       # Cannot use -o because of snapshot dependencies.
       - run: mvn verify -P '!protoc'
       - run:
@@ -154,7 +154,7 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
-            - cache-dependencies-static
+            - cache-dependencies-{{ checksum "pom.xml" }}
       - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       - save_cache:
           paths:
@@ -173,7 +173,7 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
-            - cache-dependencies-static
+            - cache-dependencies-{{ checksum "pom.xml" }}
       - run: *release
 
   postBuild:
