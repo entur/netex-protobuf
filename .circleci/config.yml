@@ -26,6 +26,7 @@ aliases:
   - &import_gpg_key
     name: Configure GPG private key for signing project artifacts in OSS Sonatype
     command: |
+      sudo apt-get install coreutils
       echo $SONATYPE_GPG_KEY_BASE64 | base64 --decode | gpg --batch --no-tty --import --yes
 
 
