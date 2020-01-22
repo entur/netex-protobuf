@@ -26,7 +26,7 @@ aliases:
   - &import_gpg_key
     name: Configure GPG private key for signing project artifacts in OSS Sonatype
     command: |
-      echo $SONATYPE_GPG_KEY_BASE64 | base64 --decode | gpg --batch --no-tty --import --yes
+      echo -e $SONATYPE_GPG_KEY_BASE64 | gpg --import
 
 
   - &maven-settings-file
