@@ -99,6 +99,10 @@ aliases:
             username: _json_key
             password: $GCLOUD_SERVICE_KEY
 
+  - &java-container-config
+    docker:
+      - image: circleci/openjdk:8-jdk
+
 commands:
   generate-maven-settings-file:
     parameters:
@@ -113,7 +117,7 @@ commands:
 
 jobs:
   test:
-    <<: *circleci-container-config
+    <<: *java-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -141,7 +145,7 @@ jobs:
       - store_artifacts:
           path: ~/junit
   deploy-artifactory:
-    <<: *circleci-container-config
+    <<: *java-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -159,7 +163,7 @@ jobs:
       # Cannot use -o because of snapshot dependencies.
       - run: mvn deploy -DskipTests  -P '!protoc'
   release:
-    <<: *circleci-container-config
+    <<: *java-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
