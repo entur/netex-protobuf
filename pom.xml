@@ -273,9 +273,8 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
-                                <!-- fixes tty error under linux -->
                                 <configuration>
-                                    <passphraseServerId>${env.SONATYPE_GPG_KEY_PASSWORD}</passphraseServerId>
+                                    <passphrase>${env.SONATYPE_GPG_KEY_PASSWORD}</passphrase>
                                     <gpgArguments>
                                         <arg>--pinentry-mode</arg>
                                         <arg>loopback</arg>
