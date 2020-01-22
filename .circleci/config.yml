@@ -18,7 +18,7 @@ aliases:
         git pull --no-edit
         git checkout develop
         mvn versions:use-releases
-        mvn gitflow:release-start gitflow:release-finish -DpostReleaseGoals=deploy -DargLine=-Prelease,'!protoc' -B
+        mvn gitflow:release-start gitflow:release-finish -Prelease -DpostReleaseGoals=deploy -DargLine=-Prelease,'!protoc' -B
       else
         echo "Skipping release"
       fi
@@ -99,10 +99,6 @@ aliases:
             username: _json_key
             password: $GCLOUD_SERVICE_KEY
 
-  - &java-container-config
-    docker:
-      - image: circleci/openjdk:11-jdk
-
 commands:
   generate-maven-settings-file:
     parameters:
@@ -117,7 +113,7 @@ commands:
 
 jobs:
   test:
-    <<: *java-container-config
+    <<: *circleci-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -145,7 +141,7 @@ jobs:
       - store_artifacts:
           path: ~/junit
   deploy-artifactory:
-    <<: *java-container-config
+    <<: *circleci-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
@@ -163,7 +159,7 @@ jobs:
       # Cannot use -o because of snapshot dependencies.
       - run: mvn deploy -DskipTests  -P '!protoc'
   release:
-    <<: *java-container-config
+    <<: *circleci-container-config
     environment:
       MAVEN_OPTS: -Xmx1G -Xms128m
     steps:
