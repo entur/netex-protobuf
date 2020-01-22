@@ -18,7 +18,7 @@ aliases:
         git pull --no-edit
         git checkout develop
         mvn versions:use-releases
-        mvn verify gitflow:release-start gitflow:release-finish -DpostReleaseGoals=deploy -Prelease -P '!protoc' -B
+        mvn gitflow:release-start gitflow:release-finish -DpostReleaseGoals=deploy -Prelease -P'!protoc' -B
       else
         echo "Skipping release"
       fi
@@ -126,7 +126,7 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
-            - cache-dependencies-{{ checksum "pom.xml" }}
+            - cache-dependencies-static
       - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       - save_cache:
           paths:
@@ -154,7 +154,7 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
-            - cache-dependencies-{{ checksum "pom.xml" }}
+            - cache-dependencies-static
       - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       - save_cache:
           paths:
@@ -173,7 +173,7 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
-            - cache-dependencies-{{ checksum "pom.xml" }}
+            - cache-dependencies-static
       - run: *release
 
   postBuild:
