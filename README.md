@@ -10,4 +10,4 @@ Based on a copy of https://github.com/entur/NeTEx/tree/nick_11 pr 5th of Aug 201
 
 `mvn clean install`,
 
-.
+
