@@ -8,6 +8,9 @@ Based on a copy of https://github.com/entur/NeTEx/tree/nick_11 pr 5th of Aug 201
 
 ## Building
 
-`mvn clean install`,
+`mvn clean install`
 
-.
+NOTE: 
+There is a Maven profile `protoc` which is active by default. This profile performs Java compilation of the generated stubs, and is meant only as a step to verify that the protoc compiler can handle the resulting proto. The compilation step is heavy. To run without use
+
+`mvn clean install -P'!protoc'`
