@@ -4,7 +4,7 @@ This project contains setup to generate [Protocol Buffers Definition files](http
 
 The conversion is done using [schema2proto](https://github.com/entur/schema2proto) and configuration [netex_to_protobuf_config.yaml](netex_to_protobuf_config.yaml)
 
-Based on a copy of https://github.com/entur/NeTEx/tree/nick_11 pr 5th of Aug 2019 (this branch contains updates from Nick Knowles regarding ticketing)
+Based on a copy of https://github.com/NeTEx-CEN/NeTEx/commit/17c3b065ed5772e751dcdc6477360629604d2a0a pr 22. April 2020 (no tag or release exist yet)
 
 ## Building
 
