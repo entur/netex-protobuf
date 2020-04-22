@@ -9,3 +9,7 @@ Based on a copy of https://github.com/entur/NeTEx/tree/nick_11 pr 5th of Aug 201
 ## Building
 
 `mvn clean install`
+
+## Related project
+
+See https://github.com/entur/netex-java-model for Java JAXB binding classes for the same xsd files
