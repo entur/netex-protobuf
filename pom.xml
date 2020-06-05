@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Licensed under the EUPL, Version 1.2 or - as soon they will be approved by
   ~ the European Commission - subsequent versions of the EUPL (the "Licence");
@@ -12,93 +13,42 @@
   ~ See the Licence for the specific language governing permissions and
   ~ limitations under the Licence.
   -->
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
-    <url>https://github.com/entur/netex-protobuf</url>
-    <licenses>
-        <license>
-            <name>EUPL-1.2 with modifications</name>
-            <url>https://joinup.ec.europa.eu/software/page/eupl</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Arne Seime</name>
-            <email>arne.seime@entur.org</email>
-            <organization>Entur</organization>
-            <organizationUrl>http://www.entur.org</organizationUrl>
-        </developer>
-    </developers>
-
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
-        <pgv.version>0.2.0</pgv.version>
-        <proto.version>3.9.0</proto.version>
-
-        <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <proto-backwards-compatibility.version>1.0.5-lockdir</proto-backwards-compatibility.version>
         <os-maven-plugin.version>1.6.1</os-maven-plugin.version>
+        <pgv.version>0.2.0</pgv.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <proto-backwards-compatibility.version>1.0.5-lockdir</proto-backwards-compatibility.version>
+        <proto.version>3.9.0</proto.version>
+        <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <schema2proto.version>1.0-alpha-14-SNAPSHOT</schema2proto.version>
     </properties>
-
-
-    <scm>
-        <connection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</developerConnection>
-        <url>https://github.com/entur/netex-protobuf/tree/master</url>
-        <tag>HEAD</tag>
-    </scm>
-
-    <organization>
-        <name>Entur AS</name>
-        <url>http://www.entur.org/</url>
-    </organization>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <name>Sonatype snapshot</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <name>Sonatype</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
-
     <dependencies>
+        <dependency>
+            <groupId>no.entur</groupId>
+            <artifactId>schema2proto-xsdproto</artifactId>
+            <version>${schema2proto.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>${proto.version}</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>io.envoyproxy.protoc-gen-validate</groupId>
             <artifactId>pgv-java-stub</artifactId>
             <version>${pgv.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>no.entur</groupId>
-            <artifactId>schema2proto-xsdproto</artifactId>
-            <version>${schema2proto.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.re2j</groupId>
@@ -113,9 +63,7 @@
             <version>1.12.0</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -123,7 +71,6 @@
                 <artifactId>go-offline-maven-plugin</artifactId>
                 <version>1.2.0</version>
             </plugin>
-
             <plugin>
                 <groupId>kr.motd.maven</groupId>
                 <artifactId>os-maven-plugin</artifactId>
@@ -131,24 +78,23 @@
                 <extensions>true</extensions>
                 <executions>
                     <execution>
-                        <phase>validate</phase>
                         <goals>
                             <goal>detect</goal>
                         </goals>
+                        <phase>validate</phase>
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
                         <id>unpack</id>
-                        <phase>generate-resources</phase>
                         <goals>
                             <goal>unpack</goal>
                         </goals>
+                        <phase>generate-resources</phase>
                         <configuration>
                             <artifactItems>
                                 <artifactItem>
@@ -186,11 +132,8 @@
                             </artifactItems>
                         </configuration>
                     </execution>
-
                 </executions>
             </plugin>
-
-
             <plugin>
                 <groupId>no.entur</groupId>
                 <artifactId>schema2proto-maven-plugin</artifactId>
@@ -207,10 +150,7 @@
                         </goals>
                     </execution>
                 </executions>
-
             </plugin>
-
-
             <plugin>
                 <groupId>com.salesforce.servicelibs</groupId>
                 <artifactId>proto-backwards-compatibility</artifactId>
@@ -222,15 +162,13 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>process-resources</phase>
                         <goals>
                             <goal>backwards-compatibility-check</goal>
                         </goals>
+                        <phase>process-resources</phase>
                     </execution>
                 </executions>
             </plugin>
-
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -250,10 +188,68 @@
                     <allowSnapshots>false</allowSnapshots>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>com.github.ekryd.sortpom</groupId>
+                <artifactId>sortpom-maven-plugin</artifactId>
+                <version>2.11.0</version>
+                <configuration>
+                    <predefinedSortOrder>custom_1</predefinedSortOrder>
+                    <nrOfIndentSpace>4</nrOfIndentSpace>
+                    <lineSeparator>\n</lineSeparator>
+                    <sortProperties>true</sortProperties>
+                    <keepBlankLines>false</keepBlankLines>
+                    <createBackupFile>false</createBackupFile>
+                    <sortDependencies>scope</sortDependencies>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>sort</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
-
+    <url>https://github.com/entur/netex-protobuf</url>
+    <organization>
+        <name>Entur AS</name>
+        <url>http://www.entur.org/</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>EUPL-1.2 with modifications</name>
+            <url>https://joinup.ec.europa.eu/software/page/eupl</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Arne Seime</name>
+            <email>arne.seime@entur.org</email>
+            <organization>Entur</organization>
+            <organizationUrl>http://www.entur.org</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/entur/netex-protobuf.git</developerConnection>
+        <url>https://github.com/entur/netex-protobuf/tree/master</url>
+        <tag>HEAD</tag>
+    </scm>
+    <distributionManagement>
+        <repository>
+            <id>ossrh</id>
+            <name>Sonatype</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <name>Sonatype snapshot</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
     <profiles>
         <profile>
             <id>release</id>
@@ -269,10 +265,10 @@
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
-                                <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
+                                <phase>verify</phase>
                                 <configuration>
                                     <passphrase>${env.SONATYPE_GPG_KEY_PASSWORD}</passphrase>
                                     <gpgArguments>
@@ -297,7 +293,6 @@
                 </plugins>
             </build>
         </profile>
-
         <profile>
             <id>protoc</id>
             <activation>
@@ -309,17 +304,13 @@
                         <groupId>org.xolstice.maven.plugins</groupId>
                         <artifactId>protobuf-maven-plugin</artifactId>
                         <version>${protobuf-maven-plugin.version}</version>
-
                         <configuration>
                             <protoSourceRoot>${project.build.directory}/proto</protoSourceRoot>
                             <attachProtoSources>false</attachProtoSources>
-                            <protocArtifact>com.google.protobuf:protoc:${proto.version}:exe:${os.detected.classifier}
-                            </protocArtifact>
+                            <protocArtifact>com.google.protobuf:protoc:${proto.version}:exe:${os.detected.classifier}</protocArtifact>
                             <pluginParameter>lang=java</pluginParameter>
                             <pluginId>java-pgv</pluginId>
-                            <pluginArtifact>
-                                io.envoyproxy.protoc-gen-validate:protoc-gen-validate:${pgv.version}:exe:${os.detected.classifier}
-                            </pluginArtifact>
+                            <pluginArtifact>io.envoyproxy.protoc-gen-validate:protoc-gen-validate:${pgv.version}:exe:${os.detected.classifier}</pluginArtifact>
                         </configuration>
                         <executions>
                             <execution>
@@ -332,7 +323,6 @@
                             </execution>
                         </executions>
                     </plugin>
-
                 </plugins>
             </build>
         </profile>
@@ -360,12 +350,8 @@
                             </compilerArgs>
                         </configuration>
                     </plugin>
-
                 </plugins>
             </build>
         </profile>
-
-
     </profiles>
-
 </project>
