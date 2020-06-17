@@ -196,7 +196,7 @@ workflows:
             branches:
               only: develop
       - postBuild:
-          context: org-carbon
+          context: global
           requires:
             - deploy-artifactory
           filters:
