@@ -10,6 +10,7 @@ Based on a copy of https://github.com/NeTEx-CEN/NeTEx/commit/17c3b065ed5772e751d
 
 `mvn clean install`
 
-## Related project
+NOTE: 
+There is a Maven profile `protoc` which is active by default. This profile performs Java compilation of the generated stubs, and is meant only as a step to verify that the protoc compiler can handle the resulting proto. The compilation step is heavy. To run without use
 
-See https://github.com/entur/netex-java-model for Java JAXB binding classes for the same xsd files
+`mvn clean install -P'!protoc'`
