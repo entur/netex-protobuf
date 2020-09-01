@@ -1,4 +1,6 @@
 outputFilename:
+protoLockFile: proto.lock
+failIfRemovedFields: true
 outputDirectory: target/proto
 includeMessageDocs: true
 includeFieldDocs: true
@@ -7,20 +9,20 @@ inheritanceToComposition: false
 includeValidationRules: true
 includeXsdOptions: true
 customImports:
-  - google/protobuf/timestamp.proto
-  - google/protobuf/duration.proto
-  - google/type/timeofday.proto
-  - google/type/date.proto
+- google/protobuf/timestamp.proto
+- google/protobuf/duration.proto
+- google/type/timeofday.proto
+- google/type/date.proto
 customImportLocations:
-  - target/proto_deps
+- target/proto_deps
 ignoreOutputFields:
-  - uk.org.siri.www.siri/ServiceDeliveryStructure/DataObjectDelivery
-  - uk.org.siri.www.siri/ServiceDeliveryBodyStructure/DataObjectDelivery
-  - uk.org.siri.www.siri/SubscriptionRequestStructure/DataObjectSubscriptionRequest
-  - uk.org.siri.www.siri/CapabilitiesResponseStructure/DataObjectCapabilitiesResponse
-  - uk.org.siri.www.siri/ServiceRequestType/DataObjectRequest
-  - uk.org.siri.www.siri/SubscriptionRequestType/DataObjectSubscriptionRequest
-  - uk.org.siri.www.siri/ServiceDeliveryType/DataObjectDelivery
+- uk.org.siri.www.siri/ServiceDeliveryStructure/DataObjectDelivery
+- uk.org.siri.www.siri/ServiceDeliveryBodyStructure/DataObjectDelivery
+- uk.org.siri.www.siri/SubscriptionRequestStructure/DataObjectSubscriptionRequest
+- uk.org.siri.www.siri/CapabilitiesResponseStructure/DataObjectCapabilitiesResponse
+- uk.org.siri.www.siri/ServiceRequestType/DataObjectRequest
+- uk.org.siri.www.siri/SubscriptionRequestType/DataObjectSubscriptionRequest
+- uk.org.siri.www.siri/ServiceDeliveryType/DataObjectDelivery
 customTypeMappings:
   ^duration$: google.protobuf.Duration
   ^dateTime$: google.protobuf.Timestamp
@@ -39,6 +41,8 @@ customTypeMappings:
   ^VehicleType_VersionStructure$: VehicleTypeVS
 
 customTypeReplacements:
+  ^NormalDatedVehicleJourneyRefStructure: VersionOfObjectRefStructure
+  ^DatedServiceJourneyRefStructure: VersionOfObjectRefStructure
   ^StopPlaceSpaceRefStructure$: VersionOfObjectRefStructure
   ^PricingRuleRefStructure$: VersionOfObjectRefStructure
   ^AccessZoneRefStructure$: VersionOfObjectRefStructure
