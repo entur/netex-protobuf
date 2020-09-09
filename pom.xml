@@ -17,10 +17,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
+        <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <os-maven-plugin.version>1.6.2</os-maven-plugin.version>
@@ -30,7 +31,7 @@
         <proto-backwards-compatibility.version>1.0.5-lockdir</proto-backwards-compatibility.version>
         <proto.version>3.12.4</proto.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <schema2proto.version>1.0</schema2proto.version>
+        <schema2proto.version>1.2</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
@@ -60,7 +61,7 @@
         <dependency>
             <groupId>com.google.api.grpc</groupId>
             <artifactId>proto-google-common-protos</artifactId>
-            <version>1.18.0</version>
+            <version>1.18.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -185,6 +186,7 @@
                 <artifactId>gitflow-maven-plugin</artifactId>
                 <version>1.14.0</version>
                 <configuration>
+                    <commitMessagePrefix>[ci skip]</commitMessagePrefix>
                     <allowSnapshots>false</allowSnapshots>
                     <verbose>true</verbose>
                 </configuration>
@@ -290,6 +292,24 @@
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>${maven-javadoc-plugin.version}</version>
+                        <configuration>
+                            <detectJavaApiLink>false</detectJavaApiLink>
+                            <doclint>none</doclint>
+                            <source>${maven.compiler.source}</source>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>

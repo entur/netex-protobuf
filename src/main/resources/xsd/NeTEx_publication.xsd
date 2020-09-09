@@ -1043,7 +1043,7 @@
 			<xsd:field xpath="@version"/>
 		</xsd:keyref>
 		<xsd:key name="Zone_AnyVersionedKey">
-			<xsd:selector xpath=".//netex:Zone | .//netex:TariffZone | .//netex:FareZone | .//netex:RoutingConstraintZone | .//netex:ConnectionZone  | .//netex:PointOfInterest | .//netex:Parking | .//netex:ParkingArea | .//netex:ParkingBay | .//netex:TopographicPlace | .//netex:Quay | .//netex:AccessSpace | .//netex:PointOfInterestSpace | .//netex:StopPlace| .//netex:Garage| .//netex:EquipmentPlace | .//netex:FlexibleArea | .//netex:HailAndRideArea | .//netex:FlexibleQuay| .//netex:StopPlaceEntrance |  .//netex:PointOfInterestEntrance |  .//netex:ParkingPassengerEntrance | .//netex:BoardingPosition | .//netex:VehicleStoppingPlace | .//netex:VehicleEntrance   | .//netex:TransportAdministrativeZone"/>
+			<xsd:selector xpath=".//netex:Zone | .//netex:TariffZone | .//netex:FareZone | .//netex:RoutingConstraintZone | .//netex:ConnectionZone  | .//netex:PointOfInterest | .//netex:Parking | .//netex:ParkingArea | .//netex:ParkingBay | .//netex:TopographicPlace | .//netex:Quay | .//netex:AccessSpace | .//netex:PointOfInterestSpace | .//netex:StopPlace| .//netex:Garage| .//netex:EquipmentPlace | .//netex:FlexibleArea | .//netex:HailAndRideArea | .//netex:FlexibleQuay| .//netex:StopPlaceEntrance |  .//netex:PointOfInterestEntrance |  .//netex:ParkingPassengerEntrance | .//netex:BoardingPosition | .//netex:VehicleStoppingPlace | .//netex:VehicleEntrance   | .//netex:TransportAdministrativeZone | .//netex:AdministrativeZone | .//netex:GeneralZone"/>
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 		</xsd:key>  
@@ -8505,6 +8505,27 @@
 			<xsd:field xpath="@id"/>
 			<xsd:field xpath="@version"/>
 			<xsd:field xpath="@order"/>
+		</xsd:key>
+		<!-- =====GroupOfDistributionAssignments============================== -->
+		<!-- =====GroupOfDistributionAssignments unique========================== -->
+		<xsd:unique name="GroupOfDistributionAssignments_UniqueBy_Id_Version">
+			<xsd:annotation>
+				<xsd:documentation>Every [GroupOfDistributionAssignments Id + Version] must be unique within document.</xsd:documentation>
+			</xsd:annotation>
+			<xsd:selector xpath=".//netex:GroupOfDistributionAssignments"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
+		</xsd:unique>
+		<!-- =====GroupOfDistributionAssignments Key ========================== -->
+		<xsd:keyref name="GroupOfDistributionAssignments_KeyRef" refer="netex:GroupOfDistributionAssignments_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:GroupOfDistributionAssignmentsRef"/>
+			<xsd:field xpath="@ref"/>
+			<xsd:field xpath="@version"/>
+		</xsd:keyref>
+		<xsd:key name="GroupOfDistributionAssignments_AnyVersionedKey">
+			<xsd:selector xpath=".//netex:GroupOfDistributionAssignments"/>
+			<xsd:field xpath="@id"/>
+			<xsd:field xpath="@version"/>
 		</xsd:key>
 		<!-- =====TravelDocument============================== -->
 		<!-- =====TravelDocument unique========================== -->

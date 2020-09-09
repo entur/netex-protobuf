@@ -9,8 +9,6 @@ aliases:
   - &release
     name: Release
     command: |
-      if [ "$(git log -1 --pretty=%B)" == "Start release" ]
-      then
         echo "Start release"
         git config --global user.email "circleci@entur.no"
         git config --global user.name "circleci"
@@ -19,9 +17,6 @@ aliases:
         git checkout develop
         mvn versions:use-releases
         mvn gitflow:release-start gitflow:release-finish -Prelease -DpostReleaseGoals=deploy -DargLine=-Prelease,'!protoc' -B
-      else
-        echo "Skipping release"
-      fi
 
   - &import_gpg_key
     name: Configure GPG private key for signing project artifacts in OSS Sonatype
@@ -144,24 +139,6 @@ jobs:
           path: ~/junit
       - store_artifacts:
           path: ~/junit
-  deploy-artifactory:
-    <<: *java-container-config
-    environment:
-      MAVEN_OPTS: -Xmx1G -Xms128m
-    steps:
-      - checkout
-      - generate-maven-settings-file:
-          settings-file: *maven-settings-file
-      - restore_cache:
-          keys:
-            - cache-dependencies-{{ checksum "pom.xml" }}
-      - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: cache-dependencies-static
-      # Cannot use -o because of snapshot dependencies.
-      - run: mvn deploy -DskipTests  -P '!protoc'
   release:
     <<: *java-container-config
     environment:
@@ -188,17 +165,10 @@ workflows:
     jobs:
       - test:
           context: global
-      - deploy-artifactory:
-          context: global
-          requires:
-            - test
-          filters:
-            branches:
-              only: develop
       - postBuild:
           context: global
           requires:
-            - deploy-artifactory
+            - release
           filters:
             branches:
               only: develop
