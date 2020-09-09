@@ -159,12 +159,22 @@ jobs:
     steps:
       - run: *downstream_builds
 
+orbs:
+  queue: eddiewebb/queue@volatile
+
 workflows:
   version: 2
   build_test_deploy:
     jobs:
+      - queue/block_workflow:
+          only-on-branch: develop
+          time: '30'
+          circleci-api-key: CIRCLE_API_USER_TOKEN
+          context: global
       - test:
           context: global
+          requires:
+            - queue/block_workflow
       - postBuild:
           context: global
           requires:
