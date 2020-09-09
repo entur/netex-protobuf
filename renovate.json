@@ -1,3 +1,4 @@
 {
   "extends": ["github>entur/abt-renovate-config"]
 }
+
