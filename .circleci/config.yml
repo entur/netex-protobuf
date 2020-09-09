@@ -133,7 +133,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
-            - cache-dependencies-m2
+          key: cache-dependencies-m2
       - run:
           name: Save test results
           command: |
