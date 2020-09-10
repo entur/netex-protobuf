@@ -121,14 +121,19 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
+            - cache-dependencies-m2
             - cache-dependencies-{{ checksum "pom.xml" }}
       - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
+      # Cannot use -o because of snapshot dependencies.
+      - run: mvn deploy -P '!protoc'
       - save_cache:
           paths:
             - ~/.m2
           key: cache-dependencies-{{ checksum "pom.xml" }}
-      # Cannot use -o because of snapshot dependencies.
-      - run: mvn verify -P '!protoc'
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: cache-dependencies-m2
       - run:
           name: Save test results
           command: |
@@ -150,6 +155,7 @@ jobs:
           settings-file: *maven-settings-file
       - restore_cache:
           keys:
+            - cache-dependencies-m2
             - cache-dependencies-{{ checksum "pom.xml" }}
       - run: *release
 
@@ -159,12 +165,22 @@ jobs:
     steps:
       - run: *downstream_builds
 
+orbs:
+  queue: eddiewebb/queue@volatile
+
 workflows:
   version: 2
   build_test_deploy:
     jobs:
+      - queue/block_workflow:
+          only-on-branch: develop
+          time: '30'
+          circleci-api-key: CIRCLE_API_USER_TOKEN
+          context: global
       - test:
           context: global
+          requires:
+            - queue/block_workflow
       - postBuild:
           context: global
           requires:
