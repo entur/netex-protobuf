@@ -161,10 +161,6 @@ jobs:
       - run: *import_gpg_key
       - generate-maven-settings-file:
           settings-file: *maven-settings-file
-      - restore_cache:
-          keys:
-            - cache-dependencies-m2
-            - cache-dependencies-{{ checksum "pom.xml" }}
       - run: *release
 
 orbs:
