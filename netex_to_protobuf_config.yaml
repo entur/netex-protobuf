@@ -28,6 +28,7 @@ customTypeMappings:
   ^dateTime$: google.protobuf.Timestamp
   ^date$: google.type.Date
   ^time$: google.type.TimeOfDay
+  ^gMonthDay$: google.type.Date
   ^Entity_EntityStructure$: EntityES
   ^Assignment_VersionStructure_$: AssignmentVS
   ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles
