@@ -16,13 +16,13 @@ customImports:
 customImportLocations:
 - target/proto_deps
 ignoreOutputFields:
-- uk.org.siri.www.siri/ServiceDeliveryStructure/DataObjectDelivery
-- uk.org.siri.www.siri/ServiceDeliveryBodyStructure/DataObjectDelivery
 - uk.org.siri.www.siri/SubscriptionRequestStructure/DataObjectSubscriptionRequest
 - uk.org.siri.www.siri/CapabilitiesResponseStructure/DataObjectCapabilitiesResponse
 - uk.org.siri.www.siri/ServiceRequestType/DataObjectRequest
 - uk.org.siri.www.siri/SubscriptionRequestType/DataObjectSubscriptionRequest
-- uk.org.siri.www.siri/ServiceDeliveryType/DataObjectDelivery
+- uk.org.siri.www.siri/ServiceRequestType.ChoiceWrapper_AbstractFunctionalServiceRequestStructure/DataObjectRequest
+- uk.org.siri.www.siri/ChoiceWrapper_AbstractServiceDeliveryStructure/DataObjectDelivery
+- uk.org.siri.www.siri/ChoiceWrapper_AbstractSubscriptionStructure/DataObjectSubscriptionRequest
 customTypeMappings:
   ^duration$: google.protobuf.Duration
   ^dateTime$: google.protobuf.Timestamp
