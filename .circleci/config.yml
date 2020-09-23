@@ -1,10 +1,5 @@
 version: 2.1
 aliases:
-  - &downstream_builds
-    name: Trigger downstream builds
-    command: |
-      echo 'export CIRCLE_API_TOKEN="$CIRCLE_API_USER_TOKEN"' >> $BASH_ENV
-      /tools/downstream_single_trigger.sh "gh/entur/abt-protobuf" "develop"
 
   - &release
     name: Release
@@ -172,12 +167,6 @@ jobs:
             - cache-dependencies-{{ checksum "pom.xml" }}
       - run: *release
 
-  postBuild:
-    <<: *circleci-container-config
-
-    steps:
-      - run: *downstream_builds
-
 orbs:
   queue: eddiewebb/queue@volatile
 
@@ -194,13 +183,6 @@ workflows:
           context: global
           requires:
             - queue/block_workflow
-      - postBuild:
-          context: global
-          requires:
-            - release
-          filters:
-            branches:
-              only: develop
       - release:
           context: global
           requires:
