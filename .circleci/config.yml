@@ -18,7 +18,7 @@ aliases:
       mvn gitflow:release-start gitflow:release-finish -Prelease -DpostReleaseGoals=deploy -DargLine=-Prelease,'!protoc' -B
       git checkout master
       git pull --no-edit
-      mvn deploy -DskipTests -Pentur-maven-central-local
+      mvn deploy -DskipTests -Pentur-maven-central-local -P'!protoc'
       fi
 
   - &import_gpg_key
