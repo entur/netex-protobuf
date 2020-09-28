@@ -94,14 +94,6 @@ aliases:
             </activeProfiles>
           </settings>\""
 
-
-  - &circleci-container-config
-      docker:
-        - image: eu.gcr.io/entur-system-1287/circleci-toolbox-image
-          auth:
-            username: _json_key
-            password: $DOCKER_PASSWORD
-
   - &java-container-config
     docker:
       - image: circleci/openjdk:8-jdk
@@ -130,14 +122,9 @@ jobs:
       - restore_cache:
           keys:
             - cache-dependencies-m2
-            - cache-dependencies-{{ checksum "pom.xml" }}
       - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
       # Cannot use -o because of snapshot dependencies.
-      - run: mvn deploy -P '!protoc'
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: cache-dependencies-{{ checksum "pom.xml" }}
+      - run: mvn verify -P '!protoc'
       - save_cache:
           paths:
             - ~/.m2
@@ -152,15 +139,7 @@ jobs:
           path: ~/junit
       - store_artifacts:
           path: ~/junit
-  release:
-    <<: *java-container-config
-    environment:
-      MAVEN_OPTS: -Xmx1G -Xms128m
-    steps:
-      - checkout
       - run: *import_gpg_key
-      - generate-maven-settings-file:
-          settings-file: *maven-settings-file
       - run: *release
 
 orbs:
@@ -179,10 +158,3 @@ workflows:
           context: global
           requires:
             - queue/block_workflow
-      - release:
-          context: global
-          requires:
-            - test
-          filters:
-            branches:
-              only: develop
