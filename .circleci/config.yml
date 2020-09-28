@@ -139,6 +139,7 @@ jobs:
           path: ~/junit
       - store_artifacts:
           path: ~/junit
+      - run: *import_gpg_key
       - run: *release
 
 orbs:
