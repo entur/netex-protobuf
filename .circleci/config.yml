@@ -96,6 +96,9 @@ aliases:
   - &java-container-config
     docker:
       - image: circleci/openjdk:8-jdk
+        auth:
+          username: $DOCKERHUB_LOGIN
+          password: $DOCKERHUB_PASSWORD
 
 commands:
   generate-maven-settings-file:
