@@ -157,9 +157,10 @@ workflows:
           circleci-api-key: CIRCLE_API_USER_TOKEN
           context: global
       - test:
+        context: global
+        requires:
+          - queue/block_workflow
         filters:
           branches:
             only: develop
-          context: global
-          requires:
-            - queue/block_workflow
+
