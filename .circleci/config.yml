@@ -14,7 +14,6 @@ aliases:
       git checkout master
       git pull --no-edit
       git checkout develop
-      mvn versions:use-releases
       mvn gitflow:release-start gitflow:release-finish -Prelease -DpostReleaseGoals=deploy -DargLine=-Prelease,'!protoc' -B
       git checkout master
       git pull --no-edit
@@ -97,6 +96,9 @@ aliases:
   - &java-container-config
     docker:
       - image: circleci/openjdk:8-jdk
+        auth:
+          username: $DOCKERHUB_LOGIN
+          password: $DOCKERHUB_PASSWORD
 
 commands:
   generate-maven-settings-file:
@@ -158,3 +160,7 @@ workflows:
           context: global
           requires:
             - queue/block_workflow
+          filters:
+            branches:
+              only: develop
+

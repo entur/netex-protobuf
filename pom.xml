@@ -17,7 +17,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.27</version>
+    <version>1.28</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
@@ -28,10 +28,10 @@
         <pgv.version>0.4.1</pgv.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <proto-backwards-compatibility.version>1.0.5-lockdir-protolock0.15</proto-backwards-compatibility.version>
+        <proto-backwards-compatibility.version>1.0.5-lockdir-protolock0.15-allowBreakingChanges</proto-backwards-compatibility.version>
         <proto.version>3.13.0</proto.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <schema2proto.version>1.16</schema2proto.version>
+        <schema2proto.version>1.19</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
