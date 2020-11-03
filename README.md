@@ -4,7 +4,7 @@ This project contains setup to generate [Protocol Buffers Definition files](http
 
 The conversion is done using [schema2proto](https://github.com/entur/schema2proto) and configuration [netex_to_protobuf_config.yaml](netex_to_protobuf_config.yaml)
 
-Based on a copy of https://github.com/entur/NeTEx/commit/f9cac1cbb11b349e78af77dd0acdf20ef979b4d7 (v1.11) (no tag or release exist yet)
+Based on a copy of https://github.com/entur/NeTEx/commit/9fffc70c35a40c57461ebdf1527f8057db158f65 (v1.11) (no tag or release exist yet)
 
 Backwards compatibility check is handled by https://github.com/nilslice/protolock and called from Maven via plugin https://github.com/salesforce/proto-backwards-compat-maven-plugin
 
