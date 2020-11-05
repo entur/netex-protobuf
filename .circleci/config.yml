@@ -1,33 +1,33 @@
 version: 2.1
 aliases:
 
-  - &release
-    name: Release
-    command: |
-      if [ "$(git log -n 1 --pretty="%an")" == "Renovate Bot" ]
-      then
-        echo "Skipping release"
-      else
-      echo "Start release"
-      git config --global user.email "circleci@entur.no"
-      git config --global user.name "circleci"
-      git checkout master
-      git pull --no-edit
-      git checkout develop
-      mvn gitflow:release-start gitflow:release-finish -Prelease -DpostReleaseGoals=deploy -DargLine=-Prelease,'!protoc' -B
-      git checkout master
-      git pull --no-edit
-      mvn deploy -DskipTests -Pentur-maven-central-local -P'!protoc'
-      fi
+- &release
+  name: Release
+  command: |
+    if [ "$(git log -n 1 --pretty="%an")" == "Renovate Bot" ]
+    then
+      echo "Skipping release"
+    else
+    echo "Start release"
+    git config --global user.email "circleci@entur.no"
+    git config --global user.name "circleci"
+    git checkout master
+    git pull --no-edit
+    git checkout develop
+    mvn gitflow:release-start gitflow:release-finish -Prelease -DpostReleaseGoals=deploy -DargLine=-Prelease,'!protoc' -B
+    git checkout master
+    git pull --no-edit
+    mvn deploy -DskipTests -Pentur-maven-central-local -P'!protoc'
+    fi
 
-  - &import_gpg_key
-    name: Configure GPG private key for signing project artifacts in OSS Sonatype
-    command: |
-      echo $SONATYPE_GPG_KEY_BASE64 | base64 --decode | gpg --batch --no-tty --import --yes
+- &import_gpg_key
+  name: Configure GPG private key for signing project artifacts in OSS Sonatype
+  command: |
+    echo $SONATYPE_GPG_KEY_BASE64 | base64 --decode | gpg --batch --no-tty --import --yes
 
 
-  - &maven-settings-file
-      "\"<settings xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd' xmlns='http://maven.apache.org/SETTINGS/1.1.0'
+- &maven-settings-file
+    "\"<settings xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd' xmlns='http://maven.apache.org/SETTINGS/1.1.0'
               xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
             <servers>
             <server>
@@ -93,12 +93,12 @@ aliases:
             </activeProfiles>
           </settings>\""
 
-  - &java-container-config
-    docker:
-      - image: circleci/openjdk:8-jdk
-        auth:
-          username: $DOCKERHUB_LOGIN
-          password: $DOCKERHUB_PASSWORD
+- &java-container-config
+  docker:
+  - image: circleci/openjdk:8-jdk
+    auth:
+      username: $DOCKERHUB_LOGIN
+      password: $DOCKERHUB_PASSWORD
 
 commands:
   generate-maven-settings-file:
@@ -106,43 +106,43 @@ commands:
       settings-file:
         type: string
     steps:
-      - run:
-          name: Generate Maven Settings File
-          command: |
-            mkdir -p ~/.m2
-            echo -e << parameters.settings-file >> > ~/.m2/settings.xml
+    - run:
+        name: Generate Maven Settings File
+        command: |
+          mkdir -p ~/.m2
+          echo -e << parameters.settings-file >> > ~/.m2/settings.xml
 
 jobs:
   test:
     <<: *java-container-config
     environment:
-      MAVEN_OPTS: -Xmx1G -Xms128m
+      MAVEN_OPTS: -Xmx3G -Xms1G
     steps:
-      - checkout
-      - generate-maven-settings-file:
-          settings-file: *maven-settings-file
-      - restore_cache:
-          keys:
-            - cache-dependencies-m2
-      - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
-      # Cannot use -o because of snapshot dependencies.
-      - run: mvn verify -P '!protoc'
-      - save_cache:
-          paths:
-            - ~/.m2
-          key: cache-dependencies-m2
-      - run:
-          name: Save test results
-          command: |
-            mkdir -p ~/junit/
-            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/junit/ \;
-          when: always
-      - store_test_results:
-          path: ~/junit
-      - store_artifacts:
-          path: ~/junit
-      - run: *import_gpg_key
-      - run: *release
+    - checkout
+    - generate-maven-settings-file:
+        settings-file: *maven-settings-file
+    - restore_cache:
+        keys:
+        - cache-dependencies-m2
+    - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
+    # Cannot use -o because of snapshot dependencies.
+    - run: mvn deploy -P '!protoc'
+    - save_cache:
+        paths:
+        - ~/.m2
+        key: cache-dependencies-m2
+    - run:
+        name: Save test results
+        command: |
+          mkdir -p ~/junit/
+          find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/junit/ \;
+        when: always
+    - store_test_results:
+        path: ~/junit
+    - store_artifacts:
+        path: ~/junit
+    - run: *import_gpg_key
+    - run: *release
 
 orbs:
   queue: eddiewebb/queue@volatile
@@ -151,16 +151,16 @@ workflows:
   version: 2
   build_test_deploy:
     jobs:
-      - queue/block_workflow:
-          only-on-branch: develop
-          time: '30'
-          circleci-api-key: CIRCLE_API_USER_TOKEN
-          context: global
-      - test:
-          context: global
-          requires:
-            - queue/block_workflow
-          filters:
-            branches:
-              only: develop
+    - queue/block_workflow:
+        only-on-branch: develop
+        time: '30'
+        circleci-api-key: CIRCLE_API_USER_TOKEN
+        context: global
+    - test:
+        context: global
+        requires:
+        - queue/block_workflow
+        filters:
+          branches:
+            only: develop
 
