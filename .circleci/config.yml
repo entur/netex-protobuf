@@ -31,6 +31,11 @@ aliases:
           <servers>
           <!-- Comment -->
             <server>
+              <username>$SONATYPE_USERNAME</username>
+              <password>$SONATYPE_PASSWORD</password>
+              <id>ossrh</id>
+            </server>
+            <server>
               <username>$ARTIFACTORY_USER</username>
               <password>$ARTIFACTORY_PASSWORD</password>
               <id>entur-releases</id>
