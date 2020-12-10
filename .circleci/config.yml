@@ -25,73 +25,70 @@ aliases:
   command: |
     echo $SONATYPE_GPG_KEY_BASE64 | base64 --decode | gpg --batch --no-tty --import --yes
 
-
 - &maven-settings-file
     "\"<settings xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd' xmlns='http://maven.apache.org/SETTINGS/1.1.0'
-              xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
-            <servers>
+            xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'>
+          <servers>
+          <!-- Comment -->
             <server>
-                   <username>$SONATYPE_USERNAME</username>
-                   <password>$SONATYPE_PASSWORD</password>
-                   <id>ossrh</id>
-                 </server>
-              <server>
-                <username>$ARTIFACTORY_USER</username>
-                <password>$ARTIFACTORY_PASSWORD</password>
-                <id>central</id>
-              </server>
-              <server>
-                <username>$ARTIFACTORY_USER</username>
-                <password>$ARTIFACTORY_PASSWORD</password>
-                <id>snapshots</id>
-              </server>
-              <server>
-                     <username>$ARTIFACTORY_USER</username>
-                     <password>$ARTIFACTORY_PASSWORD</password>
-                     <id>entur-maven-central-local</id>
-                   </server>
-            </servers>
-            <profiles>
-        <profile>
-          <repositories>
-            <repository>
-              <snapshots>
-                <enabled>false</enabled>
-              </snapshots>
-              <id>central</id>
-              <name>entur-team-kontobasert-billettering-release</name>
-              <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-release</url>
-            </repository>
-            <repository>
-              <snapshots />
-              <id>snapshots</id>
-              <name>entur-team-kontobasert-billettering-snapshot</name>
-              <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-snapshot</url>
-            </repository>
-          </repositories>
-          <pluginRepositories>
-            <pluginRepository>
-              <snapshots>
-                <enabled>false</enabled>
-              </snapshots>
-              <id>central</id>
-              <name>entur-team-kontobasert-billettering-release</name>
-              <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-release</url>
-            </pluginRepository>
-            <pluginRepository>
-              <snapshots />
-              <id>snapshots</id>
-              <name>entur-team-kontobasert-billettering-snapshot</name>
-              <url>https://entur2.jfrog.io/entur2/entur-team-kontobasert-billettering-snapshot</url>
-            </pluginRepository>
-          </pluginRepositories>
-          <id>artifactory</id>
-        </profile>
-            </profiles>
-            <activeProfiles>
-              <activeProfile>artifactory</activeProfile>
-            </activeProfiles>
-          </settings>\""
+              <username>$SONATYPE_USERNAME</username>
+              <password>$SONATYPE_PASSWORD</password>
+              <id>ossrh</id>
+            </server>
+            <server>
+              <username>$ARTIFACTORY_USER</username>
+              <password>$ARTIFACTORY_PASSWORD</password>
+              <id>entur-releases</id>
+            </server>
+            <server>
+              <username>$ARTIFACTORY_USER</username>
+              <password>$ARTIFACTORY_PASSWORD</password>
+              <id>entur-snapshots</id>
+            </server>
+          </servers>
+          <profiles>
+      <profile>
+        <repositories>
+          <repository>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+            <id>entur-releases</id>
+            <url>https://entur2.jfrog.io/entur2/partner-release</url>
+          </repository>
+          <repository>
+            <snapshots />
+            <id>entur-snapshots</id>
+            <url>https://entur2.jfrog.io/entur2/partner-snapshot</url>
+          </repository>
+        </repositories>
+        <pluginRepositories>
+          <pluginRepository>
+            <snapshots>
+              <enabled>false</enabled>
+            </snapshots>
+            <id>entur-releases</id>
+            <url>https://entur2.jfrog.io/entur2/partner-release</url>
+          </pluginRepository>
+          <pluginRepository>
+            <snapshots />
+            <id>entur-snapshots</id>
+            <url>https://entur2.jfrog.io/entur2/partner-snapshot</url>
+          </pluginRepository>
+        </pluginRepositories>
+        <properties>
+          <entur_artifactory_partner_publish_snapshot_server_id>entur-snapshots</entur_artifactory_partner_publish_snapshot_server_id>
+          <entur_artifactory_partner_publish_release_server_id>entur-releases</entur_artifactory_partner_publish_release_server_id>
+          <entur_artifactory_partner_publish_snapshot_url>https://entur2.jfrog.io/entur2/partner-snapshot-local</entur_artifactory_partner_publish_snapshot_url>
+          <entur_artifactory_partner_publish_release_url>https://entur2.jfrog.io/entur2/partner-release-local</entur_artifactory_partner_publish_release_url>
+        </properties>
+        <id>entur-partner</id>
+      </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>entur-partner</activeProfile>
+    </activeProfiles>
+    </settings>\""
 
 - &java-container-config
   docker:
