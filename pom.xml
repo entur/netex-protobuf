@@ -31,7 +31,7 @@
         <proto-backwards-compatibility.version>1.0.5-lockdir-protolock0.15-allowBreakingChanges</proto-backwards-compatibility.version>
         <proto.version>3.14.0</proto.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <schema2proto.version>1.28</schema2proto.version>
+        <schema2proto.version>1.29</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
