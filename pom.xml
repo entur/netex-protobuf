@@ -255,16 +255,19 @@
     </distributionManagement>
     <profiles>
         <profile>
-            <id>entur-maven-central-local</id>
+            <id>entur-partner</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <distributionManagement>
                 <repository>
-                    <id>entur-maven-central-local</id>
-                    <name>Entur maven central local</name>
-                    <url>https://entur2.jfrog.io/entur2/entur-maven-central-release-local</url>
+                    <id>${entur_artifactory_partner_publish_release_server_id}</id>
+                    <url>${entur_artifactory_partner_publish_release_url}</url>
                 </repository>
+                <snapshotRepository>
+                    <id>${entur_artifactory_partner_publish_snapshot_server_id}</id>
+                    <url>${entur_artifactory_partner_publish_snapshot_url}</url>
+                </snapshotRepository>
             </distributionManagement>
         </profile>
         <profile>
