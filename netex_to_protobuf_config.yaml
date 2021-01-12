@@ -8,6 +8,8 @@ includeSourceLocationInDoc: true
 inheritanceToComposition: false
 includeValidationRules: true
 includeXsdOptions: true
+includeGoPackageOptions: true
+goPackageSource: "github.com/entur/abt-protobuf/"
 customImports:
 - google/protobuf/timestamp.proto
 - google/protobuf/duration.proto
