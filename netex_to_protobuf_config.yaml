@@ -9,7 +9,7 @@ inheritanceToComposition: false
 includeValidationRules: true
 includeXsdOptions: true
 includeGoPackageOptions: true
-goPackageSource: "github.com/entur/abt-protobuf/"
+goPackageSourcePrefix: "github.com/entur/abt-protobuf/go/"
 customImports:
 - google/protobuf/timestamp.proto
 - google/protobuf/duration.proto
