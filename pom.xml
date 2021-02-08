@@ -17,14 +17,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.41</version>
+    <version>1.42</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
         <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <os-maven-plugin.version>1.6.2</os-maven-plugin.version>
+        <os-maven-plugin.version>1.7.0</os-maven-plugin.version>
         <pgv.version>0.4.1</pgv.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

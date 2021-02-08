@@ -120,6 +120,7 @@ customTypeReplacements:
   ^RoughSurfaceRefStructure$: VersionOfObjectRefStructure
   ^RetailDeviceSecurityListingRefStructure$: VersionOfObjectRefStructure
   ^ParkingEntranceForVehiclesRefStructure$: VersionOfObjectRefStructure
+  ^ParkingPassengerEntranceRefType$: VersionOfObjectRefStructure
   ^ModeRefStructure$: VersionOfObjectRefStructure
   ^TypeOfFareContractRefStructure$: VersionOfObjectRefStructure
   ^InterchangeRefStructure$: VersionOfObjectRefStructure
