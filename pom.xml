@@ -29,7 +29,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <proto-backwards-compatibility.version>1.0.6</proto-backwards-compatibility.version>
-        <proto.version>3.15.4</proto.version>
+        <proto.version>3.15.5</proto.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <schema2proto.version>1.36</schema2proto.version>
     </properties>
