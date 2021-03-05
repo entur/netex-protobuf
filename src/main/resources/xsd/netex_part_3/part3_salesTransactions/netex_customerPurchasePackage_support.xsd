@@ -298,6 +298,12 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
+	<xsd:simpleType name="MarkedAsListOfEnumerations">
+		<xsd:annotation>
+			<xsd:documentation>List of values for MARKED AS.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:list itemType="MarkedAsEnumeration"/>
+	</xsd:simpleType>
 	<xsd:simpleType name="MarkedAsEnumeration">
 		<xsd:annotation>
 			<xsd:documentation>Allowed values for MarkedAs Status.++ +v1.1</xsd:documentation>
