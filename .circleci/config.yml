@@ -121,7 +121,6 @@ jobs:
     - restore_cache:
         keys:
         - cache-dependencies-m2
-    - run: mvn de.qaware.maven:go-offline-maven-plugin:resolve-dependencies
     # Cannot use -o because of snapshot dependencies.
     - run: mvn deploy -P '!protoc'
     - save_cache:
