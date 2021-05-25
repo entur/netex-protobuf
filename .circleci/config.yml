@@ -122,7 +122,7 @@ jobs:
         keys:
         - cache-dependencies-m2
     # Cannot use -o because of snapshot dependencies.
-    - run: mvn deploy -P '!protoc'
+    - run: mvn deploy
     - save_cache:
         paths:
         - ~/.m2
