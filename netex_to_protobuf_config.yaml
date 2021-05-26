@@ -11,8 +11,8 @@ includeXsdOptions: true
 customImports:
 - google/protobuf/timestamp.proto
 - google/protobuf/duration.proto
-- google/type/timeofday.proto
-- google/type/date.proto
+- google/api/timeofday.proto
+- google/api/date.proto
 customImportLocations:
 - target/proto_deps
 ignoreOutputFields:
