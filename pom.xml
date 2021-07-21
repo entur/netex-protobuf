@@ -17,7 +17,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.49</version>
+    <version>1.50</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
@@ -25,11 +25,11 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <os-maven-plugin.version>1.7.0</os-maven-plugin.version>
-        <pgv.version>0.4.1</pgv.version>
+        <pgv.version>0.6.1</pgv.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <proto-backwards-compatibility.version>1.0.6</proto-backwards-compatibility.version>
-        <proto.version>3.17.2</proto.version>
+        <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
+        <proto.version>3.17.3</proto.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <schema2proto.version>1.39</schema2proto.version>
     </properties>
@@ -189,7 +189,7 @@
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
                 <artifactId>sortpom-maven-plugin</artifactId>
-                <version>2.15.0</version>
+                <version>3.0.0</version>
                 <configuration>
                     <predefinedSortOrder>custom_1</predefinedSortOrder>
                     <nrOfIndentSpace>4</nrOfIndentSpace>
@@ -275,7 +275,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
+                        <version>3.0.1</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
