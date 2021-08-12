@@ -971,6 +971,9 @@ Rail transport, Roads and Road transport
 		</xsd:sequence>
 	</xsd:group>
 	
+	
+	
+	
 	<!-- ==GROUP OF CUSTOMER PURCHASE PARAMETER ASSIGNMENTS ============================================================ -->
 	<xsd:complexType name="groupsOfCustomerPurchaseParameterAssignments_RelStructure">
 		<xsd:annotation>
