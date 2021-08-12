@@ -83,6 +83,7 @@
 			<xsd:documentation>Elements for ELEMENT CONSUMPTION POLICY.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
+			<!-- TODO must be replaced with LogicalOperatorEnumeration when https://github.com/NeTEx-CEN/NeTEx/pull/126 is merged -->
 			<xsd:element name="ConsumptionRequirementGroupingType" type="LogicalOperationEnumeration" minOccurs="0" default="AND"/>
 			<xsd:element name="consumptionRequirements" type="consumptionRequirements_RelStructure" minOccurs="0">
 				<xsd:annotation>
