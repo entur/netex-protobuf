@@ -6,8 +6,28 @@
         </xsl:copy>
     </xsl:template>
 
+
+<!--
+        
+        - version_ref
+- name_of_class
+- data_source_ref
+- data_managed_object_ref
+- modification
+- derived_from_version_ref
+- compatible_with_version_frame_version_ref
+- responsibility_set_ref
+- derived_from_object_ref
+- branding_ref
+- publication
+        -->
+
     <!-- Ignores -->
     <xsl:template match="/xsd:schema/xsd:complexType[@name='EntityInVersionStructure']/xsd:complexContent/xsd:extension[@base='EntityStructure']/xsd:attribute[@name='dataSourceRef']">
+        <xsl:comment>Removed EntityInVersionStructure@dataSourceRef</xsl:comment>
+    </xsl:template>
+
+    <xsl:template match="/xsd:schema/xsd:element[@name='AlternativeName']/xsd:complexType/xsd:complexContent/xsd:restriction[@base='AlternativeName_VersionedChildStructure']/xsd:attribute[@name='dataSourceRef']">
         <xsl:comment>Removed EntityInVersionStructure@dataSourceRef</xsl:comment>
     </xsl:template>
     
