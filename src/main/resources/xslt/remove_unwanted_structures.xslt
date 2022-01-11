@@ -99,4 +99,8 @@
         <xsl:comment>Removed @nameOfRefClass</xsl:comment>
     </xsl:template>
     
+    <xsl:template match="//xsd:attribute[@name = 'nameOfMemberClass']">
+        <xsl:comment>Removed @nameOfMemberClass</xsl:comment>
+    </xsl:template>
+    
 </xsl:stylesheet>
