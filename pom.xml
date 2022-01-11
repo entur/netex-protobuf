@@ -131,12 +131,42 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <configuration>
+                    <transformationSets>
+                        <transformationSet>
+                            <includes>
+                                <include>**/*.xsd</include>
+                            </includes>
+                            <dir>src/main/resources/xsd</dir>
+                            <stylesheet>src/main/resources/xslt/remove_unwanted_structures.xslt</stylesheet>
+                        </transformationSet>
+                    </transformationSets>
+                </configuration>
+                <dependencies>
+                    <!-- https://mvnrepository.com/artifact/net.sf.saxon/Saxon-HE -->
+                    <dependency>
+                        <groupId>net.sf.saxon</groupId>
+                        <artifactId>Saxon-HE</artifactId>
+                        <version>10.6</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>transform</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>no.entur</groupId>
                 <artifactId>schema2proto-maven-plugin</artifactId>
                 <version>${schema2proto.version}</version>
                 <configuration>
                     <configFile>netex_to_protobuf_config.yaml</configFile>
-                    <xsdFile>src/main/resources/xsd/NeTEx_publication.xsd</xsdFile>
+                    <xsdFile>${build.directory}/generated-resources/xml/xslt/NeTEx_publication.xsd</xsdFile>
                 </configuration>
                 <executions>
                     <execution>
