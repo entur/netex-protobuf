@@ -86,6 +86,9 @@
         <xsl:comment>Removed DataManagedObjectStructure@responsibilitySetRef</xsl:comment>
     </xsl:template>
     
+    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'publication']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@publication</xsl:comment>
+    </xsl:template>
     
     
     <xsl:template match="//xsd:attribute[@name = 'nameOfClass']">
