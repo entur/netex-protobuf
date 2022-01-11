@@ -82,6 +82,11 @@
         <xsl:comment>Removed DisplayAssignment@compatibleWithVersionFrameVersionRef</xsl:comment>
     </xsl:template>
     
+    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'DataManagedObjectStructure']/xsd:complexContent/xsd:extension[@base = 'EntityInVersionStructure']/xsd:attribute[@name = 'responsibilitySetRef']">
+        <xsl:comment>Removed DataManagedObjectStructure@responsibilitySetRef</xsl:comment>
+    </xsl:template>
+    
+    
     
     <xsl:template match="//xsd:attribute[@name = 'nameOfClass']">
         <xsl:comment>Removed @nameOfClass</xsl:comment>
