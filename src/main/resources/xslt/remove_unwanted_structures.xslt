@@ -35,6 +35,27 @@
         <xsl:comment>Removed VersionOfObjectRefStructure@versionRef</xsl:comment>
     </xsl:template>
     
+    
+    <!-- modification attribute -->
+    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
+    </xsl:template>
+    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'TypeOfVersionRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
+    </xsl:template>
+    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'modification']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
+    </xsl:template>
+    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'DocumentModificationDetailsGroup']/xsd:attribute[@name = 'modification']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
+    </xsl:template>
+    <xsl:template
+        match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'dataSourceRef']">
+        <xsl:comment>Removed EntityInVersionStructure@dataSourceRef</xsl:comment>
+    </xsl:template>
+    
+    
+    
     <xsl:template match="//xsd:attribute[@name = 'nameOfClass']">
         <xsl:comment>Removed @nameOfClass</xsl:comment>
     </xsl:template>
