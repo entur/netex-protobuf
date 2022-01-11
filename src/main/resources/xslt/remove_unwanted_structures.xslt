@@ -63,6 +63,15 @@
         <xsl:comment>Removed DisplayAssignment@derivedFromVersionRef</xsl:comment>
     </xsl:template>
     
+    <!-- derivedFromObjectRef attribute -->
+    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'derivedFromObjectRef']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@derivedFromObjectRef</xsl:comment>
+    </xsl:template>
+    <xsl:template
+        match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'derivedFromObjectRef']">
+        <xsl:comment>Removed DisplayAssignment@derivedFromObjectRef</xsl:comment>
+    </xsl:template>
+    
     
     
     <xsl:template match="//xsd:attribute[@name = 'nameOfClass']">
