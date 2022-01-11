@@ -73,6 +73,15 @@
     </xsl:template>
     
     
+    <!-- compatibleWithVersionFrameVersionRef attribute -->
+    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'compatibleWithVersionFrameVersionRef']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@compatibleWithVersionFrameVersionRef</xsl:comment>
+    </xsl:template>
+    <xsl:template
+        match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'compatibleWithVersionFrameVersionRef']">
+        <xsl:comment>Removed DisplayAssignment@compatibleWithVersionFrameVersionRef</xsl:comment>
+    </xsl:template>
+    
     
     <xsl:template match="//xsd:attribute[@name = 'nameOfClass']">
         <xsl:comment>Removed @nameOfClass</xsl:comment>
