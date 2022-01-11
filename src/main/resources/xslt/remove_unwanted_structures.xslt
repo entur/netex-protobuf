@@ -41,17 +41,26 @@
         <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
     </xsl:template>
     <xsl:template match="/xsd:schema/xsd:complexType[@name = 'TypeOfVersionRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']">
-        <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
+        <xsl:comment>Removed TypeOfVersionRefStructure@modification</xsl:comment>
     </xsl:template>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'modification']">
-        <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
+        <xsl:comment>Removed BasicModificationDetailsGroup@modification</xsl:comment>
     </xsl:template>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'DocumentModificationDetailsGroup']/xsd:attribute[@name = 'modification']">
-        <xsl:comment>Removed VersionOfObjectRefStructure@modification</xsl:comment>
+        <xsl:comment>Removed DocumentModificationDetailsGroup@modification</xsl:comment>
     </xsl:template>
     <xsl:template
         match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'dataSourceRef']">
-        <xsl:comment>Removed EntityInVersionStructure@dataSourceRef</xsl:comment>
+        <xsl:comment>Removed DisplayAssignment@dataSourceRef</xsl:comment>
+    </xsl:template>
+    
+    <!-- derivedFromVersionRef attribute -->
+    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'derivedFromVersionRef']">
+        <xsl:comment>Removed VersionOfObjectRefStructure@derivedFromVersionRef</xsl:comment>
+    </xsl:template>
+    <xsl:template
+        match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'derivedFromVersionRef']">
+        <xsl:comment>Removed DisplayAssignment@derivedFromVersionRef</xsl:comment>
     </xsl:template>
     
     
