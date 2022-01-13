@@ -103,4 +103,28 @@
         <xsl:comment>Removed @nameOfMemberClass</xsl:comment>
     </xsl:template>
     
+    <!-- Only support embedded CPP prices, not relations -->
+    <xsl:template match="/xsd:schema/xsd:complexType[@name='customerPurchasePackagePrices_RelStructure']/xsd:complexContent/xsd:extension[@base='strictContainmentAggregationStructure']">
+        <xsd:extension base="strictContainmentAggregationStructure">
+            <xsd:sequence maxOccurs="unbounded">
+                <xsd:element name="CustomerPurchasePackagePrice" type="CustomerPurchasePackagePrice_VersionedChildStructure">
+                    <xsd:annotation>
+                        <xsd:documentation>A set of all possible price features of a CUSTOMER PURCHASE PACKAGE ELEMENT: default total price, discount in value or percentage etc.</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:extension>
+    </xsl:template>
+    
+    <!-- Fare price -->
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='Name']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='Description']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@ref='PrivateCode']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='StartDate']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='EndDate']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='FarePriceAmountWithDerivationGroup']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='IsAllowed']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='PricingServiceRef']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name='FarePriceGroup']/xsd:sequence/xsd:element[@name='Ranking']"/>
+    
 </xsl:stylesheet>
