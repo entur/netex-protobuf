@@ -89,5 +89,10 @@
     <xsl:template match="/xsd:schema/xsd:group[@name = 'FarePriceGroup']/xsd:sequence/xsd:element[@name = 'IsAllowed']"/>
     <xsl:template match="/xsd:schema/xsd:group[@name = 'FarePriceGroup']/xsd:sequence/xsd:element[@name = 'PricingServiceRef']"/>
     <xsl:template match="/xsd:schema/xsd:group[@name = 'FarePriceGroup']/xsd:sequence/xsd:element[@name = 'Ranking']"/>
+    
+    <!-- Remove pricing details from most objects -->
+    <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricingGroup']"/>
+    <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricesGroup']"/>
+    
 
 </xsl:stylesheet>

@@ -88,7 +88,6 @@ customTypeReplacements:
   ^VehicleEquipmentRefStructure$: VersionOfObjectRefStructure
   ^StopFinderRequestRefStructure$: VersionOfObjectRefStructure
   ^ServiceLinkRefStructure$: VersionOfObjectRefStructure
-  ^GeneralGroupOfEntitiesRefStructure$: VersionOfObjectRefStructure
   ^AssistanceBookingServiceRefStructure$: VersionOfObjectRefStructure
   ^SiteFrameRefStructure$: VersionOfObjectRefStructure
   ^FareStructureElementInSequenceRefStructure$: OrderedVersionOfObjectRefStructure
@@ -156,7 +155,6 @@ customTypeReplacements:
   ^RoundTripRefStructure$: VersionOfObjectRefStructure
   ^GroupTicketRefStructure$: VersionOfObjectRefStructure
   ^RoundingRefStructure$: VersionOfObjectRefStructure
-  ^FareTableRefStructure$: VersionOfObjectRefStructure
   ^LineNetworkRefStructure$: VersionOfObjectRefStructure
   ^TypeOfTravelDocumentRefStructure$: VersionOfObjectRefStructure
   ^StaircaseEquipmentRefStructure$: VersionOfObjectRefStructure
@@ -166,7 +164,7 @@ customTypeReplacements:
   ^TypeOfLinkSequenceRefStructure$: VersionOfObjectRefStructure
   ^CheckConstraintThroughputRefStructure$: VersionOfObjectRefStructure
   ^FlexibleQuayRefStructure$: VersionOfObjectRefStructure
-  ^CrewBaseRefStructure$: VersionOfObjectRefStructure
+
   ^ServiceExclusionRefStructure$: VersionOfObjectRefStructure
   ^VehicleTypeRefStructure$: VersionOfObjectRefStructure
   ^CourseOfJourneysRefStructure$: VersionOfObjectRefStructure
@@ -610,29 +608,29 @@ customTypeReplacements:
   ^SalesOfferPackageRefStructure$: VersionOfObjectRefStructure
   ^SaleDiscountRightRefStructure$: VersionOfObjectRefStructure
 
-  ^CrewBaseRefStructure: GroupOfEntitiesRefStructure
-  ^FareTableRefStructure: GroupOfEntitiesRefStructure
-  ^GeneralGroupOfEntitiesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfCustomerPurchasePackagesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfDistanceMatrixElementsRefStructureElement: GroupOfEntitiesRefStructure
-  ^GroupOfDistributionChannelsRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfLinesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfLinkSequencesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfOperatorsRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfPlacesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfPointsRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfSalesOfferPackagesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfServicesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfStopPlacesRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfTimebandsRefStructure: GroupOfEntitiesRefStructure
-  ^GroupOfTimingLinksRefStructure: GroupOfEntitiesRefStructure
-  ^JourneyFrequencyGroupRefStructure: GroupOfEntitiesRefStructure
-  ^JourneyPartRefStructure: GroupOfEntitiesRefStructure
-  ^LayerRefStructure: GroupOfEntitiesRefStructure
-  ^LogRefStructure: GroupOfEntitiesRefStructure
-  ^PlaceRefStructure: GroupOfEntitiesRefStructure
-  ^PointOfInterestHierarchyRefStructure: GroupOfEntitiesRefStructure
-  ^PriceGroupRefStructure: GroupOfEntitiesRefStructure
+  ^CrewBaseRefStructure$: GroupOfEntitiesRefStructure
+  ^FareTableRefStructure$: GroupOfEntitiesRefStructure
+  ^GeneralGroupOfEntitiesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfCustomerPurchasePackagesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfDistanceMatrixElementsRefStructureElement$: GroupOfEntitiesRefStructure
+  ^GroupOfDistributionChannelsRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfLinesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfLinkSequencesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfOperatorsRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfPlacesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfPointsRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfSalesOfferPackagesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfServicesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfStopPlacesRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfTimebandsRefStructure$: GroupOfEntitiesRefStructure
+  ^GroupOfTimingLinksRefStructure$: GroupOfEntitiesRefStructure
+  ^JourneyFrequencyGroupRefStructure$: GroupOfEntitiesRefStructure
+  ^JourneyPartRefStructure$: GroupOfEntitiesRefStructure
+  ^LayerRefStructure$: GroupOfEntitiesRefStructure
+  ^LogRefStructure$: GroupOfEntitiesRefStructure
+  ^PlaceRefStructure$: GroupOfEntitiesRefStructure
+  ^PointOfInterestHierarchyRefStructure$: GroupOfEntitiesRefStructure
+  ^PriceGroupRefStructure$: GroupOfEntitiesRefStructure
 
 
 
