@@ -1,0 +1,10 @@
+.idea
+**/*.iml
+.DS_Store
+**/.DS_Store
+
+/.README.md.html
+
+**/dependency-reduced-pom.xml
+
+target
