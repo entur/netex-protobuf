@@ -607,6 +607,8 @@ customTypeReplacements:
   ^TimingPatternRefStructure$: VersionOfObjectRefStructure
   ^SalesOfferPackageRefStructure$: VersionOfObjectRefStructure
   ^SaleDiscountRightRefStructure$: VersionOfObjectRefStructure
+  ^RevertingRefStructure$: VersionOfObjectRefStructure
+  ^SecurityPolicyRefStructure$: VersionOfObjectRefStructure
 
   ^CrewBaseRefStructure$: GroupOfEntitiesRefStructure
   ^FareTableRefStructure$: GroupOfEntitiesRefStructure

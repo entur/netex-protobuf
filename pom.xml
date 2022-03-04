@@ -17,7 +17,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.65</version>
+    <version>1.66</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
@@ -31,7 +31,7 @@
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
         <proto.version>3.19.4</proto.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
-        <schema2proto.version>1.54</schema2proto.version>
+        <schema2proto.version>1.55</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
@@ -149,7 +149,7 @@
                     <dependency>
                         <groupId>net.sf.saxon</groupId>
                         <artifactId>Saxon-HE</artifactId>
-                        <version>10.6</version>
+                        <version>10.7</version>
                     </dependency>
                 </dependencies>
                 <executions>
