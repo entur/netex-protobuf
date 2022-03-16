@@ -149,7 +149,7 @@
                     <dependency>
                         <groupId>net.sf.saxon</groupId>
                         <artifactId>Saxon-HE</artifactId>
-                        <version>10.7</version>
+                        <version>10.8</version>
                     </dependency>
                 </dependencies>
                 <executions>
