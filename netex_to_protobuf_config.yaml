@@ -609,6 +609,7 @@ customTypeReplacements:
   ^SaleDiscountRightRefStructure$: VersionOfObjectRefStructure
   ^RevertingRefStructure$: VersionOfObjectRefStructure
   ^SecurityPolicyRefStructure$: VersionOfObjectRefStructure
+  ^OnboardValidityRefStructure$: VersionOfObjectRefStructure
 
   ^CrewBaseRefStructure$: GroupOfEntitiesRefStructure
   ^FareTableRefStructure$: GroupOfEntitiesRefStructure
