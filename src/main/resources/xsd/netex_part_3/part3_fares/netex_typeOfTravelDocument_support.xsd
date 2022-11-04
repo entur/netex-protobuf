@@ -253,7 +253,7 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Elements for a TRAVEL DOCUMENT RISK POLICY.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element name="riskLevel" type="xsd:int" minOccurs="0">
+			<xsd:element name="RiskLevel" type="xsd:int" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>The risk level associated with a TRAVEL DOCUMENT.</xsd:documentation>
 				</xsd:annotation>
