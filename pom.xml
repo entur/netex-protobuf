@@ -25,7 +25,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
-        <pgv.version>0.6.13</pgv.version>
+        <pgv.version>0.9.1</pgv.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
@@ -46,7 +46,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>io.envoyproxy.protoc-gen-validate</groupId>
+            <groupId>build.buf.protoc-gen-validate</groupId>
             <artifactId>pgv-java-stub</artifactId>
             <version>${pgv.version}</version>
             <scope>provided</scope>
@@ -110,7 +110,7 @@
                                     <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>io.envoyproxy.protoc-gen-validate</groupId>
+                                    <groupId>build.buf.protoc-gen-validate</groupId>
                                     <artifactId>pgv-java-stub</artifactId>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
