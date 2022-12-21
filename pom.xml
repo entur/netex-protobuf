@@ -17,19 +17,19 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.101</version>
+    <version>1.102</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
         <maven-javadoc-plugin.version>3.4.1</maven-javadoc-plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <os-maven-plugin.version>1.7.0</os-maven-plugin.version>
-        <pgv.version>0.6.13</pgv.version>
+        <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
+        <pgv.version>0.9.1</pgv.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
-        <proto.version>3.21.9</proto.version>
+        <proto.version>3.21.12</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
         <schema2proto.version>1.79</schema2proto.version>
     </properties>
@@ -46,7 +46,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>io.envoyproxy.protoc-gen-validate</groupId>
+            <groupId>build.buf.protoc-gen-validate</groupId>
             <artifactId>pgv-java-stub</artifactId>
             <version>${pgv.version}</version>
             <scope>provided</scope>
@@ -61,7 +61,7 @@
         <dependency>
             <groupId>com.google.api.grpc</groupId>
             <artifactId>proto-google-common-protos</artifactId>
-            <version>2.9.6</version>
+            <version>2.11.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -110,7 +110,7 @@
                                     <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
-                                    <groupId>io.envoyproxy.protoc-gen-validate</groupId>
+                                    <groupId>build.buf.protoc-gen-validate</groupId>
                                     <artifactId>pgv-java-stub</artifactId>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
