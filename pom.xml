@@ -17,7 +17,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.103</version>
+    <version>1.104</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
@@ -31,7 +31,7 @@
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
         <proto.version>3.21.12</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
-        <schema2proto.version>1.81</schema2proto.version>
+        <schema2proto.version>1.83</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
@@ -61,7 +61,7 @@
         <dependency>
             <groupId>com.google.api.grpc</groupId>
             <artifactId>proto-google-common-protos</artifactId>
-            <version>2.12.0</version>
+            <version>2.14.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -149,7 +149,7 @@
                     <dependency>
                         <groupId>net.sf.saxon</groupId>
                         <artifactId>Saxon-HE</artifactId>
-                        <version>11.4</version>
+                        <version>11.5</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -219,7 +219,7 @@
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
                 <artifactId>sortpom-maven-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.2.1</version>
                 <configuration>
                     <predefinedSortOrder>custom_1</predefinedSortOrder>
                     <nrOfIndentSpace>4</nrOfIndentSpace>
@@ -372,7 +372,7 @@
                             <protocArtifact>com.google.protobuf:protoc:${proto.version}:exe:${os.detected.classifier}</protocArtifact>
                             <pluginParameter>lang=java</pluginParameter>
                             <pluginId>java-pgv</pluginId>
-                            <pluginArtifact>io.envoyproxy.protoc-gen-validate:protoc-gen-validate:${pgv.version}:exe:${os.detected.classifier}</pluginArtifact>
+                            <pluginArtifact>build.buf.protoc-gen-validate:protoc-gen-validate:${pgv.version}:exe:${os.detected.classifier}</pluginArtifact>
                         </configuration>
                         <executions>
                             <execution>
