@@ -1,12 +1,12 @@
-# NeTEx protobuf definitions
+# NeTEx Protobuf definitions
 
-This project contains setup to generate [Protocol Buffers Definition files](https://developers.google.com/protocol-buffers/) (proto files) from [NeTEx xml schema](https://github.com/entur/NeTEx).
+This project contains setup to generate [Protocol Buffers Definition files](https://protobuf.dev/) (`.proto` files) from the [NeTEx XML schema](https://github.com/entur/NeTEx).
 
 The conversion is done using [schema2proto](https://github.com/entur/schema2proto) and configuration [netex_to_protobuf_config.yaml](netex_to_protobuf_config.yaml)
 
 Based on a copy of https://github.com/entur/NeTEx/commit/55cd207e7b6d49ea0aa2905fd4adee1241bad6cb (v1.11) (no tag or release exist yet)
 
-Backwards compatibility check is handled by https://github.com/nilslice/protolock and called from Maven via plugin https://github.com/salesforce/proto-backwards-compat-maven-plugin
+Backwards compatibility check is handled by `protolock` (https://github.com/nilslice/protolock) and called from Maven via plugin `proto-backwards-compat-maven-plugin` (https://github.com/salesforce/proto-backwards-compat-maven-plugin).
 
 ## Building
 
