@@ -384,6 +384,7 @@ customTypeReplacements:
   ^JourneyPatternWaitTimeRefStructure$: VersionOfObjectRefStructure
   ^VehicleRequirementRefStructure$: VersionOfObjectRefStructure
   ^EquipmentRefStructure$: VersionOfObjectRefStructure
+  ^PlaceEquipmentRefStructure$: VersionOfObjectRefStructure
   ^TypeOfOrganisationRefStructure$: VersionOfObjectRefStructure
   ^ParkingPropertiesRefStructure$: VersionOfObjectRefStructure
   ^TimeIntervalPriceRefStructure$: VersionOfObjectRefStructure
@@ -413,6 +414,7 @@ customTypeReplacements:
   ^BlacklistRefStructure$: VersionOfObjectRefStructure
   ^TimeDemandTypeAssigmentRefStructure$: VersionOfObjectRefStructure
   ^AuthorityRefStructure$: VersionOfObjectRefStructure
+  ^AuthorityRefType$: VersionOfObjectRefStructure
   ^TypeOfFareContractEntryRefStructure$: VersionOfObjectRefStructure
   ^AllowedLineDirectionRefStructure$: VersionOfObjectRefStructure
   ^SalesTransactionRefStructure$: VersionOfObjectRefStructure
@@ -455,6 +457,7 @@ customTypeReplacements:
   ^StartTimeAtStopPointRefStructure$: VersionOfObjectRefStructure
   ^GarageRefStructure$: VersionOfObjectRefStructure
   ^OperatorRefStructure$: VersionOfObjectRefStructure
+  ^TransportOrganisationRefStructure$: VersionOfObjectRefStructure
   ^JourneyPatternHeadwayRefStructure$: VersionOfObjectRefStructure
   ^FareContractRefStructure$: VersionOfObjectRefStructure
   ^ClassRefStructure$: VersionOfObjectRefStructure
