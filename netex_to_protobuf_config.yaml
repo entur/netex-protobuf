@@ -596,9 +596,12 @@ customTypeReplacements:
   ^TypeOfPassengerInformationEquipmentRefStructure$: VersionOfObjectRefStructure
   ^NetworkRefStructure$: GroupOfEntitiesRefStructure
   ^EntityInVersionInFrameRefStructure$: VersionOfObjectRefStructure
+  ^CompoundTrainRefType$: VersionOfObjectRefStructure
   ^EntitlementRequiredRefStructure$: VersionOfObjectRefStructure
   ^AddressablePlaceRefStructure$: VersionOfObjectRefStructure
   ^ControllableElementInSequenceRefStructure$: OrderedVersionOfObjectRefStructure
+  ^CommonVehicleServiceRefStructure$: OrderedVersionOfObjectRefStructure
+  ^MobilityServiceRefStructure$: OrderedVersionOfObjectRefStructure
   ^SecurityListingRefStructure$: VersionOfObjectRefStructure
   ^PassengerSeatRefStructure$: VersionOfObjectRefStructure
   ^TicketingEquipmentRefStructure$: VersionOfObjectRefStructure
