@@ -412,8 +412,24 @@ customTypeReplacements:
   ^VehicleRentalModeOfOperationRefStructure$: VersionOfObjectRefStructure
   ^VehicleSharingModeOfOperationRefStructure$: VersionOfObjectRefStructure
   ^PersonalModeOfOperationRefStructure$: VersionOfObjectRefStructure
-  ^WaitingEquipmentRefStructure$: VersionOfObjectRefStructure
   ^GroupOfSingleJourneysRefStructure$: VersionOfObjectRefStructure
+  ^BatteryEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^BookingPolicyRefStructure$: VersionOfObjectRefStructure
+  ^CarModelProfileRefStructure$: VersionOfObjectRefStructure
+  ^VehiclePoolingMeetingPlaceRefStructure$: VersionOfObjectRefStructure
+  ^ChauffeuredVehicleServiceRefStructure$: VersionOfObjectRefStructure
+  ^TaxiServiceRefStructure$: VersionOfObjectRefStructure
+  ^CarPoolingServiceRefStructure$: VersionOfObjectRefStructure
+  ^VehiclePoolerProfileRefStructure$: VersionOfObjectRefStructure
+  ^VehicleMeetingPlaceRefStructure$: VersionOfObjectRefStructure
+  ^MonitoredVehicleSharingParkingBayRefStructure$: VersionOfObjectRefStructure
+  ^TripPatternRefStructure$: VersionOfObjectRefStructure
+  ^SingleJourneyPathRefStructure$: VersionOfObjectRefStructure
+  ^VehicleMeetingLinkRefStructure$: VersionOfObjectRefStructure
+  ^RentalPenaltyPolicyRefStructure$: VersionOfObjectRefStructure
+  ^OnlineServiceRefStructure$: VersionOfObjectRefStructure
+  ^TaxiStandRefStructure$: VersionOfObjectRefStructure
+  ^RentalOptionRefStructure$: VersionOfObjectRefStructure
   ^TaxiRankRefStructure$: VersionOfObjectRefStructure
   ^TypeOfParkingRefStructure$: VersionOfObjectRefStructure
   ^EquipmentRefStructure$: VersionOfObjectRefStructure
@@ -423,6 +439,9 @@ customTypeReplacements:
   ^ParkingPropertiesRefStructure$: VersionOfObjectRefStructure
   ^TimeIntervalPriceRefStructure$: VersionOfObjectRefStructure
   ^VehicleJourneyStopAssignmentRefStructure$: VersionOfObjectRefStructure
+  ^AdditionalDriverOptionRefStructure$: VersionOfObjectRefStructure
+  ^AllPublicTransportOrganisationsRefStructure$: VersionOfObjectRefStructure
+  ^VehiclePoolingModeOfOperationRefStructure$: VersionOfObjectRefStructure
   ^CustomerSecurityListingRefStructure$: VersionOfObjectRefStructure
   ^PurchaseWindowRefStructure$: VersionOfObjectRefStructure
   ^OrganisationalUnitRefStructure$: VersionOfObjectRefStructure
