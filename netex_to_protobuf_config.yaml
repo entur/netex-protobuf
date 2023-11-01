@@ -383,6 +383,39 @@ customTypeReplacements:
   ^CellRefStructure$: VersionOfObjectRefStructure
   ^JourneyPatternWaitTimeRefStructure$: VersionOfObjectRefStructure
   ^VehicleRequirementRefStructure$: VersionOfObjectRefStructure
+  ^ContactRefStructure$: VersionOfObjectRefStructure
+  ^CustomerPaymentMeansRefStructure$: VersionOfObjectRefStructure
+  ^OnlineServiceOperatorRefStructure$: VersionOfObjectRefStructure
+  ^MediumApplicationInstanceRefStructure$: VersionOfObjectRefStructure
+  ^RefuellingEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^TransportTypeRefStructure$: VersionOfObjectRefStructure
+  ^SimpleVehicleTypeRefStructure$: VersionOfObjectRefStructure
+  ^ServiceAccessCodeRefStructure$: VersionOfObjectRefStructure
+  ^PointInSingleJourneyPathRefStructure$: VersionOfObjectRefStructure
+  ^SmartcardRefStructure$: VersionOfObjectRefStructure
+  ^VehicleAccessCredentialsAssignmentRefStructure$: VersionOfObjectRefStructure
+  ^MobilityServiceConstraintZoneRefType$: VersionOfObjectRefStructure
+  ^EmvCardRefStructure$: VersionOfObjectRefStructure
+  ^MobileDeviceRefStructure$: VersionOfObjectRefStructure
+  ^IndividualTravellerRefStructure$: VersionOfObjectRefStructure
+  ^VehiclePoolingDriverInfoRefStructure$: VersionOfObjectRefStructure
+  ^TripRefStructure$: VersionOfObjectRefStructure
+  ^TripLegRefStructure$: VersionOfObjectRefStructure
+  ^TaxiParkingAreaRefStructure$: VersionOfObjectRefStructure
+  ^CycleModelProfileRefStructure$: VersionOfObjectRefStructure
+  ^AllOperatorsRefStructure$: VersionOfObjectRefStructure
+  ^AllAuthoritiesRefStructure$: VersionOfObjectRefStructure
+  ^FlexibleModeOfOperationRefStructure$: VersionOfObjectRefStructure
+  ^VehicleMeetingPointRefStructure$: VersionOfObjectRefStructure
+  ^SingleJourneyRefStructure$: VersionOfObjectRefStructure
+  ^ScheduledModeOfOperationRefStructure$: VersionOfObjectRefStructure
+  ^VehicleRentalModeOfOperationRefStructure$: VersionOfObjectRefStructure
+  ^VehicleSharingModeOfOperationRefStructure$: VersionOfObjectRefStructure
+  ^PersonalModeOfOperationRefStructure$: VersionOfObjectRefStructure
+  ^WaitingEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^GroupOfSingleJourneysRefStructure$: VersionOfObjectRefStructure
+  ^TaxiRankRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfParkingRefStructure$: VersionOfObjectRefStructure
   ^EquipmentRefStructure$: VersionOfObjectRefStructure
   ^PlaceEquipmentRefStructure$: VersionOfObjectRefStructure
   ^TypeOfProofRefStructure$: VersionOfObjectRefStructure
