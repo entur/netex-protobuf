@@ -385,6 +385,7 @@ customTypeReplacements:
   ^VehicleRequirementRefStructure$: VersionOfObjectRefStructure
   ^EquipmentRefStructure$: VersionOfObjectRefStructure
   ^PlaceEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfProofRefStructure$: VersionOfObjectRefStructure
   ^TypeOfOrganisationRefStructure$: VersionOfObjectRefStructure
   ^ParkingPropertiesRefStructure$: VersionOfObjectRefStructure
   ^TimeIntervalPriceRefStructure$: VersionOfObjectRefStructure
