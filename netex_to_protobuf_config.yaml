@@ -630,6 +630,13 @@ customTypeReplacements:
   ^PriceUnitRefStructure$: VersionOfObjectRefStructure
   ^EquipmentPositionRefStructure$: VersionOfObjectRefStructure
   ^EligibilityChangePolicyRefStructure$: VersionOfObjectRefStructure
+  ^VehicleReleaseEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^VehicleSharingServiceRefStructure$: VersionOfObjectRefStructure
+  ^VehicleRentalServiceRefStructure$: VersionOfObjectRefStructure
+  ^VehiclePoolingParkingBayRefStructure$: VersionOfObjectRefStructure
+  ^VehiclePoolingParkingAreaRefStructure$: VersionOfObjectRefStructure
+  ^VehicleSharingParkingBayRefStructure$: VersionOfObjectRefStructure
+  ^VehicleSharingParkingAreaRefStructure$: VersionOfObjectRefStructure
   ^TrainNumberRefStructure$: VersionOfObjectRefStructure
   ^ControlParameterAssignmentRefStructure$: VersionOfObjectRefStructure
   ^CommercialProfileRefStructure$: VersionOfObjectRefStructure
