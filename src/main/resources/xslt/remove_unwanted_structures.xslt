@@ -13,10 +13,8 @@
 - data_source_ref
 - data_managed_object_ref
 - modification
-- derived_from_version_ref
 - compatible_with_version_frame_version_ref
 - responsibility_set_ref
-- derived_from_object_ref
 - branding_ref
 - publication
         -->
@@ -37,17 +35,6 @@
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'DocumentModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
     <xsl:template
         match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'dataSourceRef']"/>
-
-    <!-- derivedFromVersionRef attribute -->
-    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'derivedFromVersionRef']"/>
-    <xsl:template
-        match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'derivedFromVersionRef']"/>
-
-    <!-- derivedFromObjectRef attribute -->
-    <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'derivedFromObjectRef']"/>
-    <xsl:template
-        match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'derivedFromObjectRef']"/>
-
 
     <!-- compatibleWithVersionFrameVersionRef attribute -->
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'compatibleWithVersionFrameVersionRef']"/>
