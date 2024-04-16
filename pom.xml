@@ -31,7 +31,7 @@
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
         <proto.version>3.25.3</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
-        <schema2proto.version>1.88</schema2proto.version>
+        <schema2proto.version>1.90</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
