@@ -31,6 +31,7 @@
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
         <proto.version>4.27.2</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
+        <protovalidate.version>0.2.1</protovalidate.version>
         <schema2proto.version>1.95</schema2proto.version>
     </properties>
     <dependencies>
@@ -49,6 +50,12 @@
             <groupId>build.buf.protoc-gen-validate</groupId>
             <artifactId>pgv-java-stub</artifactId>
             <version>${pgv.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>build.buf</groupId>
+            <artifactId>protovalidate</artifactId>
+            <version>${protovalidate.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -112,6 +119,14 @@
                                 <artifactItem>
                                     <groupId>build.buf.protoc-gen-validate</groupId>
                                     <artifactId>pgv-java-stub</artifactId>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <includes>**/*.proto</includes>
+                                    <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>build.buf</groupId>
+                                    <artifactId>protovalidate</artifactId>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <includes>**/*.proto</includes>
