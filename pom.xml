@@ -17,11 +17,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.107</version>
+    <version>1.108</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
-        <maven-javadoc-plugin.version>3.6.3</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.8.0</maven-javadoc-plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
@@ -29,9 +29,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
-        <proto.version>3.25.2</proto.version>
+        <proto.version>4.27.2</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
-        <schema2proto.version>1.87</schema2proto.version>
+        <protovalidate.version>0.2.1</protovalidate.version>
+        <schema2proto.version>1.95</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
@@ -52,6 +53,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>build.buf</groupId>
+            <artifactId>protovalidate</artifactId>
+            <version>${protovalidate.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>com.google.re2j</groupId>
             <artifactId>re2j</artifactId>
             <version>1.7</version>
@@ -61,7 +68,7 @@
         <dependency>
             <groupId>com.google.api.grpc</groupId>
             <artifactId>proto-google-common-protos</artifactId>
-            <version>2.32.0</version>
+            <version>2.42.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -118,6 +125,14 @@
                                     <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
+                                    <groupId>build.buf</groupId>
+                                    <artifactId>protovalidate</artifactId>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <includes>**/*.proto</includes>
+                                    <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
                                     <groupId>no.entur</groupId>
                                     <artifactId>schema2proto-xsdproto</artifactId>
                                     <type>jar</type>
@@ -149,7 +164,7 @@
                     <dependency>
                         <groupId>net.sf.saxon</groupId>
                         <artifactId>Saxon-HE</artifactId>
-                        <version>12.4</version>
+                        <version>12.5</version>
                     </dependency>
                 </dependencies>
                 <executions>
@@ -198,7 +213,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.4.2</version>
                 <configuration>
                     <classesDirectory>target/proto</classesDirectory>
                     <includes>
@@ -219,7 +234,7 @@
             <plugin>
                 <groupId>com.github.ekryd.sortpom</groupId>
                 <artifactId>sortpom-maven-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>4.0.0</version>
                 <configuration>
                     <predefinedSortOrder>custom_1</predefinedSortOrder>
                     <nrOfIndentSpace>4</nrOfIndentSpace>
@@ -305,7 +320,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.1.0</version>
+                        <version>3.2.4</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -398,7 +413,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <version>3.12.1</version>
+                        <version>3.13.0</version>
                         <configuration>
                             <source>1.8</source>
                             <target>1.8</target>
