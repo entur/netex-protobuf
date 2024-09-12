@@ -25,14 +25,13 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
-        <pgv.version>1.1.0</pgv.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
         <proto.version>4.28.1</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
         <protovalidate.version>0.3.0</protovalidate.version>
-        <schema2proto.version>1.96</schema2proto.version>
+        <schema2proto.version>1.97</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
@@ -44,12 +43,6 @@
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
             <version>${proto.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>build.buf.protoc-gen-validate</groupId>
-            <artifactId>pgv-java-stub</artifactId>
-            <version>${pgv.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -111,14 +104,6 @@
                                 <artifactItem>
                                     <groupId>com.google.api.grpc</groupId>
                                     <artifactId>proto-google-common-protos</artifactId>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <includes>**/*.proto</includes>
-                                    <outputDirectory>${project.build.directory}/proto_deps</outputDirectory>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>build.buf.protoc-gen-validate</groupId>
-                                    <artifactId>pgv-java-stub</artifactId>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
                                     <includes>**/*.proto</includes>
@@ -382,18 +367,13 @@
                         <artifactId>protobuf-maven-plugin</artifactId>
                         <version>${protobuf-maven-plugin.version}</version>
                         <configuration>
-                            <protoSourceRoot>${project.build.directory}/proto</protoSourceRoot>
-                            <attachProtoSources>false</attachProtoSources>
                             <protocArtifact>com.google.protobuf:protoc:${proto.version}:exe:${os.detected.classifier}</protocArtifact>
-                            <pluginParameter>lang=java</pluginParameter>
-                            <pluginId>java-pgv</pluginId>
-                            <pluginArtifact>build.buf.protoc-gen-validate:protoc-gen-validate:${pgv.version}:exe:${os.detected.classifier}</pluginArtifact>
+                            <attachProtoSources>false</attachProtoSources>
                         </configuration>
                         <executions>
                             <execution>
                                 <id>compile</id>
                                 <goals>
-                                    <goal>compile-custom</goal>
                                     <goal>compile</goal>
                                 </goals>
                                 <phase>process-resources</phase>
