@@ -31,7 +31,7 @@
         <proto.version>4.28.1</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
         <protovalidate.version>0.3.0</protovalidate.version>
-        <schema2proto.version>1.97-SNAPSHOT</schema2proto.version>
+        <schema2proto.version>1.97</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
@@ -374,7 +374,6 @@
                             <execution>
                                 <id>compile</id>
                                 <goals>
-                                    <goal>compile-custom</goal>
                                     <goal>compile</goal>
                                 </goals>
                                 <phase>process-resources</phase>
