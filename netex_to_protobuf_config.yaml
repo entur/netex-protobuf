@@ -312,7 +312,6 @@ customTypeReplacements:
   ^SeriesConstraintPriceRefStructure$: VersionOfObjectRefStructure
   ^TimeStructureFactorRefStructure$: VersionOfObjectRefStructure
   ^TravelatorEquipmentRefStructure$: VersionOfObjectRefStructure
-  ^CountryRefStructure$: VersionOfObjectRefStructure
   ^LinkInSequenceRefStructure$: OrderedVersionOfObjectRefStructure
   ^InfrastructureLinkRefStructure$: VersionOfObjectRefStructure
   ^TrainBlockRefStructure$: VersionOfObjectRefStructure
@@ -700,6 +699,7 @@ customTypeReplacements:
   ^PlaceRefStructure$: GroupOfEntitiesRefStructure
   ^PointOfInterestHierarchyRefStructure$: GroupOfEntitiesRefStructure
   ^PriceGroupRefStructure$: GroupOfEntitiesRefStructure
+  ^CountryCodeType$: IanaCountryTldEnumeration
 
 
 
