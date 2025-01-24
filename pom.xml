@@ -17,20 +17,20 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.entur</groupId>
     <artifactId>netex-protobuf</artifactId>
-    <version>1.109</version>
+    <version>1.110</version>
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
-        <maven-javadoc-plugin.version>3.10.0</maven-javadoc-plugin.version>
+        <maven-javadoc-plugin.version>3.11.2</maven-javadoc-plugin.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
-        <proto.version>4.28.1</proto.version>
+        <proto.version>4.29.3</proto.version>
         <protobuf-maven-plugin.version>0.7.1</protobuf-maven-plugin.version>
-        <protovalidate.version>0.3.0</protovalidate.version>
+        <protovalidate.version>0.5.0</protovalidate.version>
         <schema2proto.version>1.97</schema2proto.version>
     </properties>
     <dependencies>
@@ -54,14 +54,14 @@
         <dependency>
             <groupId>com.google.re2j</groupId>
             <artifactId>re2j</artifactId>
-            <version>1.7</version>
+            <version>1.8</version>
             <scope>provided</scope>
         </dependency>
         <!-- xsd:date and xsd:time equivalents -->
         <dependency>
             <groupId>com.google.api.grpc</groupId>
             <artifactId>proto-google-common-protos</artifactId>
-            <version>2.44.0</version>
+            <version>2.50.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -305,7 +305,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.2.5</version>
+                        <version>3.2.7</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
