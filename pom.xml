@@ -277,7 +277,7 @@
                     <target>${maven.compiler.target}</target>
                     <fork>true</fork>
                     <meminitial>2048m</meminitial>
-                    <maxmem>3072m</maxmem>
+                    <maxmem>4096m</maxmem>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <!--arg>-Werror</arg-->
@@ -292,6 +292,8 @@
                 <configuration>
                     <source>17</source>
                     <detectJavaApiLink>false</detectJavaApiLink>
+                    <minmemory>2048m</minmemory>
+                    <maxmemory>4096m</maxmemory>
                 </configuration>
                 <executions>
                     <execution>
