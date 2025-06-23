@@ -277,7 +277,7 @@
                     <target>${maven.compiler.target}</target>
                     <fork>true</fork>
                     <meminitial>2048m</meminitial>
-                    <maxmem>4096m</maxmem>
+                    <maxmem>8192m</maxmem>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <!--arg>-Werror</arg-->
@@ -290,6 +290,7 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>${maven-javadoc-plugin.version}</version>
                 <configuration>
+                    <doclint>none</doclint>
                     <source>17</source>
                     <detectJavaApiLink>false</detectJavaApiLink>
                     <minmemory>2048m</minmemory>
