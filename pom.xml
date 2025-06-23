@@ -293,7 +293,7 @@
                     <source>17</source>
                     <detectJavaApiLink>false</detectJavaApiLink>
                     <minmemory>2048m</minmemory>
-                    <maxmemory>4096m</maxmemory>
+                    <maxmemory>8192m</maxmemory>
                 </configuration>
                 <executions>
                     <execution>
