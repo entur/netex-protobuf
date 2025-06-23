@@ -12,11 +12,6 @@ Backwards compatibility check is handled by `protolock` (https://github.com/nils
 
 `mvn clean install`
 
-NOTE:
-There is a Maven profile `protoc` which is active by default. This profile performs Java compilation of the generated stubs, and is meant only as a step to verify that the protoc compiler can handle the resulting proto. The compilation step is heavy. To run without use
-
-`mvn clean install -P'!protoc'`
-
 ## Handling breaking changes
 
 If breaking changes needs to be accepted into the proto.lock file, run the following command to update it (do not delete as `schema2proto` needs the file for backwards compatibility check as well)
