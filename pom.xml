@@ -84,6 +84,27 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>${maven-deploy-plugin.version}</version>
                 </plugin>
+                <plugin>
+                    <!-- put this plugin into a profile so it can be disabled via command line -->
+                    <groupId>io.github.ascopes</groupId>
+                    <artifactId>protobuf-maven-plugin</artifactId>
+                    <version>${protobuf-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <id>compile-sources</id>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <phase>process-resources</phase>
+                            <configuration>
+                                <protocVersion>${proto.version}</protocVersion>
+                                <sourceDirectories>
+                                    <sourceDirectory>${project.build.directory}/proto</sourceDirectory>
+                                </sourceDirectories>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -249,26 +270,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <groupId>io.github.ascopes</groupId>
-                <artifactId>protobuf-maven-plugin</artifactId>
-                <version>${protobuf-maven-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>compile-sources</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <phase>process-resources</phase>
-                        <configuration>
-                            <protocVersion>${proto.version}</protocVersion>
-                            <sourceDirectories>
-                                <sourceDirectory>${project.build.directory}/proto</sourceDirectory>
-                            </sourceDirectories>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.plugin.version}</version>
@@ -380,12 +381,30 @@
     </scm>
     <profiles>
         <profile>
+            <id>protoc</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>io.github.ascopes</groupId>
+                        <artifactId>protobuf-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
             <id>publication</id>
             <properties>
                 <altDeploymentRepository>local::file:./target/staging-deploy</altDeploymentRepository>
             </properties>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>io.github.ascopes</groupId>
+                        <artifactId>protobuf-maven-plugin</artifactId>
+                    </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
