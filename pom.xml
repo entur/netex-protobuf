@@ -123,6 +123,30 @@
                 </executions>
             </plugin>
             <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-custom-tyeps</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <outputDirectory>${basedir}/target/proto/no/entur/netex/protobuf</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${basedir}/src/main/proto</directory>
+                                    <includes>
+                                        <include>*.proto</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
@@ -205,16 +229,16 @@
                 <groupId>no.entur</groupId>
                 <artifactId>schema2proto-maven-plugin</artifactId>
                 <version>${schema2proto.version}</version>
-                <configuration>
-                    <configFile>netex_to_protobuf_config.yaml</configFile>
-                    <xsdFile>${build.directory}/generated-resources/xml/xslt/NeTEx_publication.xsd</xsdFile>
-                </configuration>
                 <executions>
                     <execution>
-                        <id>generate-resources</id>
+                        <id>generate-proto</id>
                         <goals>
                             <goal>generate</goal>
                         </goals>
+                        <configuration>
+                            <configFile>netex_to_protobuf_config.yaml</configFile>
+                            <xsdFile>${project.build.directory}/generated-resources/xml/xslt/NeTEx_publication.xsd</xsdFile>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
