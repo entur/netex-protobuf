@@ -5,7 +5,7 @@ package no.entur.netex.protobuf;
 option java_multiple_files = true;
 
 message Duration {
-  // ISO 8601 string, for instance ' P5Y2M10D'
+  // Duration in ISO 8601 format, for instance 'P5Y2M10D'
   string value = 3;
 
 
