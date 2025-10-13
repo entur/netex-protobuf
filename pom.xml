@@ -127,7 +127,7 @@
                 <version>3.1.0</version>
                 <executions>
                     <execution>
-                        <id>copy-custom-tyeps</id>
+                        <id>copy-custom-types</id>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
