@@ -5,15 +5,15 @@ package no.entur.netex.protobuf;
 option java_multiple_files = true;
 
 message Duration {
-  // Duration in ISO 8601 format, for instance 'P5Y2M10D'
+  // Duration in ISO 8601 format, for instance 'P5Y2M10D'. Optional for backwards compatability for older clients, but will become mandatory. Use this field unless string is empty, in which case `seconds` field (and potentially `nanos` field) must be used.
   string value = 3;
 
 
-  // DEPRECATED: Specify 'value' instead
+  // DEPRECATED: Specify 'value' field instead
   // Signed seconds of the span of time. Must be from -315,576,000,000
   // to +315,576,000,000 inclusive. Note: these bounds are computed from:
   // 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
-  int64 seconds = 1 [deprecated=true];
+  int64 seconds = 1 [deprecated = true];
 
   // DEPRECATED: Specify 'value' instead
   // Signed fractions of a second at nanosecond resolution of the span
@@ -22,6 +22,6 @@ message Duration {
   // of one second or more, a non-zero value for the `nanos` field must be
   // of the same sign as the `seconds` field. Must be from -999,999,999
   // to +999,999,999 inclusive.
-  int32 nanos = 2 [deprecated=true];
+  int32 nanos = 2 [deprecated = true];
 
 }
