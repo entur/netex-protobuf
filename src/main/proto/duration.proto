@@ -5,7 +5,7 @@ package no.entur.netex.protobuf;
 option java_multiple_files = true;
 
 message Duration {
-  // Duration in ISO 8601 format, for instance 'P5Y2M10D'. Optional for backwards compatability for older clients, but will become mandatory. Use this field unless string is empty, in which case `seconds` field (and potentially `nanos` field) must be used.
+  // Duration in ISO 8601 format, for instance 'P5Y2M10D'. Optional for backwards compatability for older clients, but will become mandatory. Readers should use this field unless string is empty, in which case `seconds` field (and potentially `nanos` field) must be used.
   string value = 3;
 
 
