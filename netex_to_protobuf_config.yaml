@@ -10,11 +10,12 @@ includeValidationRules: true
 includeXsdOptions: true
 customImports:
 - google/protobuf/timestamp.proto
-- google/protobuf/duration.proto
 - google/type/timeofday.proto
 - google/type/date.proto
+- no/entur/netex/protobuf/duration.proto
 customImportLocations:
 - target/proto_deps
+- target/proto
 ignoreOutputFields:
 - uk.org.siri.www.siri/SubscriptionRequestStructure/DataObjectSubscriptionRequest
 - uk.org.siri.www.siri/CapabilitiesResponseStructure/DataObjectCapabilitiesResponse
@@ -24,7 +25,7 @@ ignoreOutputFields:
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractServiceDeliveryStructure/DataObjectDelivery
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractSubscriptionStructure/DataObjectSubscriptionRequest
 customTypeMappings:
-  ^duration$: google.protobuf.Duration
+  ^duration$: no.entur.netex.protobuf.Duration
   ^dateTime$: google.protobuf.Timestamp
   ^date$: google.type.Date
   ^time$: google.type.TimeOfDay
