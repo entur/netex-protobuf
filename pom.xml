@@ -33,7 +33,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <proto-backwards-compatibility.version>1.0.7</proto-backwards-compatibility.version>
-        <proto.version>4.33.0</proto.version>
+        <proto.version>4.33.1</proto.version>
         <protobuf-maven-plugin.version>4.0.2</protobuf-maven-plugin.version>
         <protovalidate.version>1.0.1</protovalidate.version>
         <schema2proto.version>1.107.0</schema2proto.version>
@@ -66,7 +66,7 @@
         <dependency>
             <groupId>com.google.api.grpc</groupId>
             <artifactId>proto-google-common-protos</artifactId>
-            <version>2.62.0</version>
+            <version>2.63.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
@@ -124,7 +124,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.3.1</version>
                 <executions>
                     <execution>
                         <id>copy-custom-types</id>
@@ -263,7 +263,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.4.2</version>
+                <version>3.5.0</version>
                 <configuration>
                     <classesDirectory>target/proto</classesDirectory>
                     <includes>
