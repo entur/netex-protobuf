@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_deckPlanAssignment_version">
+  <xsd:include schemaLocation="netex_deckPlanAssignment_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_trainElement_support.xsd"/>
+  <xsd:include schemaLocation="netex_coupledJourney_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_deckPlan_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_vehicleType_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_genericFramework/netex_assignment_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ======================================================================= -->
+  <!-- ==== DECK PLAN ASSIGNMENT ==================================================== -->
+  <xsd:complexType name="deckPlanAssignments_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckPlanAssignment" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckPlanAssignment" substitutionGroup="Assignment_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckPlanAssignment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="DataManagedObjectGroup"/>
+              </xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="AssignmentGroup"/>
+              </xsd:sequence>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckPlanAssignmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckPlanAssignmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckPlanAssignment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="Assignment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckPlanAssignmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckPlanAssignmentGroup">
+    <xsd:sequence>
+      <xsd:element ref="DeckPlanRef"/>
+      <xsd:group ref="DeckPlanAssignToTrainGroup"/>
+      <xsd:group ref="DeckPlanAssignToServiceJourneyGroup"/>
+      <xsd:element name="configurationConditions" type="validityConditionRefs_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckPlanAssignToTrainGroup">
+    <xsd:sequence>
+      <xsd:element ref="TransportTypeRef" minOccurs="0"/>
+      <xsd:element ref="TrainComponentRef" minOccurs="0"/>
+      <xsd:element ref="TrainElementTypeRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckPlanAssignToServiceJourneyGroup">
+    <xsd:sequence>
+      <xsd:element ref="JourneyRef" minOccurs="0"/>
+      <xsd:element ref="JourneyPartRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>

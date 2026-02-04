@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_vehicleRechargingPlan_support">
+  <xsd:include schemaLocation="../../netex_framework/netex_responsibility/netex_relationship.xsd"/>
+  <!-- ==== RECHARGING PLAN===================================================== -->
+  <xsd:simpleType name="RechargingPlanIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="RechargingPlanRef" type="RechargingPlanRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="RechargingPlanRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="RechargingPlanIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassRechargingPlanRefStructureType" default="RechargingPlan"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ===== RECHARGING STEP ==================================================== -->
+  <xsd:simpleType name="RechargingStepIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="RechargingStepRef" type="RechargingStepRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="RechargingStepRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="RechargingStepIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassRechargingStepRefStructureType" default="RechargingStep"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+  <xsd:simpleType name="RechargingProcessEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="changeBatteries"/>
+      <xsd:enumeration value="powercable"/>
+      <xsd:enumeration value="pantograph"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

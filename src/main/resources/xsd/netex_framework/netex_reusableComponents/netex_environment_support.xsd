@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:netex="http://www.netex.org.uk/netex" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_environment_support">
+  <!-- ======================================================================= -->
+  <xsd:include schemaLocation="../netex_utility/netex_utility_xml.xsd"/>
+  <xsd:include schemaLocation="../netex_genericFramework/netex_path_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- Simple Type Definitions -->
+  <!-- ======================================================================= -->
+  <xsd:group name="PathPropertiesGroup">
+    <xsd:sequence>
+      <xsd:group ref="PathNavigationGroup"/>
+      <xsd:group ref="PathDescriptionGroup"/>
+      <xsd:element name="MaximumFlowPerMinute" type="xsd:nonNegativeInteger" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="PathNavigationGroup">
+    <xsd:sequence>
+      <xsd:element name="Towards" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Back" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="NumberOfSteps" type="xsd:nonNegativeInteger" minOccurs="0"/>
+      <xsd:element name="MinimumHeight" type="LengthType" minOccurs="0"/>
+      <xsd:element name="MinimumWidth" type="LengthType" minOccurs="0"/>
+      <xsd:element name="AllowedUse" type="PathDirectionEnumeration" minOccurs="0"/>
+      <xsd:element name="Transition" type="TransitionEnumeration" minOccurs="0"/>
+      <xsd:element name="Gradient" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="GradientType" type="GradientEnumeration" minOccurs="0"/>
+      <xsd:element name="TiltAngle" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="TiltType" type="TiltTypeEnumeration" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="PathDescriptionGroup">
+    <xsd:sequence>
+      <xsd:element name="AccessFeatureType" type="AccessFeatureEnumeration" minOccurs="0"/>
+      <xsd:element name="PassageType" type="PassageTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="FlooringType" type="FlooringTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="FlooringStatus" type="FlooringStatusEnumeration" minOccurs="0"/>
+      <xsd:element name="RightSideBorder" type="BorderTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="LeftSideBorder" type="BorderTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="TactileWarningStrip" type="TactileWarningStripEnumeration" minOccurs="0"/>
+      <xsd:element name="TactileWarningStripContrast" type="xsd:boolean" minOccurs="0" default="true"/>
+      <xsd:element name="TactileGuidingStrip" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="TactileGuidingStripStatus" type="TactileGuidingStripStatusEnumeration" minOccurs="0" default="goodAndContrasted"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+  <xsd:group name="EnvironmentPropertiesGroup">
+    <xsd:sequence>
+      <xsd:element name="PublicUse" type="PublicUseEnumeration" default="all" minOccurs="0"/>
+      <xsd:element name="Covered" type="CoveredEnumeration" default="indoors" minOccurs="0"/>
+      <xsd:element name="Gated" type="GatedEnumeration" minOccurs="0"/>
+      <xsd:element name="Lighting" type="LightingEnumeration" default="wellLit" minOccurs="0"/>
+      <xsd:element name="AllAreasWheelchairAccessible" type="xsd:boolean" default="true" minOccurs="0"/>
+      <xsd:element name="PersonCapacity" type="xsd:nonNegativeInteger" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- =====PATH  related====================================================== -->
+  <xsd:simpleType name="NavigationTypeEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="hallToQuay"/>
+      <xsd:enumeration value="hallToStreet"/>
+      <xsd:enumeration value="quayToHall"/>
+      <xsd:enumeration value="quayToQuay"/>
+      <xsd:enumeration value="quayToStreet"/>
+      <xsd:enumeration value="streetToHall"/>
+      <xsd:enumeration value="streetToQuay"/>
+      <xsd:enumeration value="streetToSpace"/>
+      <xsd:enumeration value="spaceToStreet"/>
+      <xsd:enumeration value="spaceToHall"/>
+      <xsd:enumeration value="hallToSpace"/>
+      <xsd:enumeration value="spaceToSpace"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="GradientEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="verySteep"/>
+      <xsd:enumeration value="steep"/>
+      <xsd:enumeration value="medium"/>
+      <xsd:enumeration value="gentle"/>
+      <xsd:enumeration value="level"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ======================================================================= -->
+  <xsd:simpleType name="TiltTypeEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="strongLeftTilt"/>
+      <xsd:enumeration value="mediumLeftTilt"/>
+      <xsd:enumeration value="nearlyFlat"/>
+      <xsd:enumeration value="mediumRightTilt"/>
+      <xsd:enumeration value="strongRightTilt"/>
+      <xsd:enumeration value="unknown"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="FlooringTypeEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="carpet"/>
+      <xsd:enumeration value="concrete"/>
+      <xsd:enumeration value="asphalt"/>
+      <xsd:enumeration value="cork"/>
+      <xsd:enumeration value="fibreglassGrating"/>
+      <xsd:enumeration value="glazedCeramicTiles"/>
+      <xsd:enumeration value="plasticMatting"/>
+      <xsd:enumeration value="ceramicTiles"/>
+      <xsd:enumeration value="rubber"/>
+      <xsd:enumeration value="steelPlate"/>
+      <xsd:enumeration value="vinyl"/>
+      <xsd:enumeration value="wood"/>
+      <xsd:enumeration value="stone"/>
+      <xsd:enumeration value="grass"/>
+      <xsd:enumeration value="earth"/>
+      <xsd:enumeration value="gravel"/>
+      <xsd:enumeration value="uneven"/>
+      <xsd:enumeration value="unknown"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="BorderTypeEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="wall"/>
+      <xsd:enumeration value="grass"/>
+      <xsd:enumeration value="earth"/>
+      <xsd:enumeration value="barrier"/>
+      <xsd:enumeration value="road"/>
+      <xsd:enumeration value="cyclingLane"/>
+      <xsd:enumeration value="step"/>
+      <xsd:enumeration value="rail"/>
+      <xsd:enumeration value="plants"/>
+      <xsd:enumeration value="trees"/>
+      <xsd:enumeration value="mud"/>
+      <xsd:enumeration value="solidEdge"/>
+      <xsd:enumeration value="water"/>
+      <xsd:enumeration value="gravel"/>
+      <xsd:enumeration value="handrail"/>
+      <xsd:enumeration value="noPhysicalBorder"/>
+      <xsd:enumeration value="otherPhysicalBorder"/>
+      <xsd:enumeration value="unknown"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="FlooringStatusEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="good"/>
+      <xsd:enumeration value="worn"/>
+      <xsd:enumeration value="discomfortable"/>
+      <xsd:enumeration value="hazardous"/>
+      <xsd:enumeration value="unknown"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TactileWarningStripEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="tactileStripAtBeginning"/>
+      <xsd:enumeration value="tactileStripAtEnd"/>
+      <xsd:enumeration value="tactileStripAtBothEnds"/>
+      <xsd:enumeration value="noTactileStrip"/>
+      <xsd:enumeration value="unknown"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TactileGuidingStripStatusEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="goodAndContrasted"/>
+      <xsd:enumeration value="primitive"/>
+      <xsd:enumeration value="incorrect"/>
+      <xsd:enumeration value="bad"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ======================================================================= -->
+  <xsd:simpleType name="AccessFeatureEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="lift"/>
+      <xsd:enumeration value="escalator"/>
+      <xsd:enumeration value="freightElevator"/>
+      <xsd:enumeration value="travelator"/>
+      <xsd:enumeration value="ramp"/>
+      <xsd:enumeration value="stairs"/>
+      <xsd:enumeration value="seriesOfStairs"/>
+      <xsd:enumeration value="ladder"/>
+      <xsd:enumeration value="shuttle"/>
+      <xsd:enumeration value="crossing"/>
+      <xsd:enumeration value="barrier"/>
+      <xsd:enumeration value="narrowEntrance"/>
+      <xsd:enumeration value="hall"/>
+      <xsd:enumeration value="concourse"/>
+      <xsd:enumeration value="confinedSpace"/>
+      <xsd:enumeration value="queueManagement"/>
+      <xsd:enumeration value="none"/>
+      <xsd:enumeration value="unknown"/>
+      <xsd:enumeration value="other"/>
+      <xsd:enumeration value="openSpace"/>
+      <xsd:enumeration value="street"/>
+      <xsd:enumeration value="pavement"/>
+      <xsd:enumeration value="footpath"/>
+      <xsd:enumeration value="passage"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AccessFeatureListOfEnumerations">
+    <xsd:list itemType="AccessFeatureEnumeration"/>
+  </xsd:simpleType>
+  <!-- =====Site related ==================================================== -->
+  <xsd:simpleType name="LightingEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="wellLit"/>
+      <xsd:enumeration value="poorlyLit"/>
+      <xsd:enumeration value="unlit"/>
+      <xsd:enumeration value="unknown"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PublicUseEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="all"/>
+      <xsd:enumeration value="disabledPublicOnly"/>
+      <xsd:enumeration value="authorisedPublicOnly"/>
+      <xsd:enumeration value="staffOnly"/>
+      <xsd:enumeration value="publicOnly"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="CoveredEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="indoors"/>
+      <xsd:enumeration value="outdoors"/>
+      <xsd:enumeration value="covered"/>
+      <xsd:enumeration value="mixed"/>
+      <xsd:enumeration value="unknown"/>
+      <xsd:enumeration value="true"/>
+      <xsd:enumeration value="false"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="GatedEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="gatedArea"/>
+      <xsd:enumeration value="openArea"/>
+      <xsd:enumeration value="unknown"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AccessSpaceTypeEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="concourse"/>
+      <xsd:enumeration value="bookingHall"/>
+      <xsd:enumeration value="forecourt"/>
+      <xsd:enumeration value="underpass"/>
+      <xsd:enumeration value="overpass"/>
+      <xsd:enumeration value="passage"/>
+      <xsd:enumeration value="passageSection"/>
+      <xsd:enumeration value="lift"/>
+      <xsd:enumeration value="gallery"/>
+      <xsd:enumeration value="garage"/>
+      <xsd:enumeration value="shop"/>
+      <xsd:enumeration value="waitingRoom"/>
+      <xsd:enumeration value="restaurant"/>
+      <xsd:enumeration value="other"/>
+      <xsd:enumeration value="staircase"/>
+      <xsd:enumeration value="wc"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PassageTypeEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="none"/>
+      <xsd:enumeration value="pathway"/>
+      <xsd:enumeration value="corridor"/>
+      <xsd:enumeration value="overpass"/>
+      <xsd:enumeration value="underpass"/>
+      <xsd:enumeration value="tunnel"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

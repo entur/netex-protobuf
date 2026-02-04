@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_deckPlan_support">
+  <!-- ======================================================================= -->
+  <xsd:include schemaLocation="netex_seatingPlan_support.xsd"/>
+  <!-- ==== DECK PLAN==================================================== -->
+  <xsd:complexType name="deckPlanRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckPlanRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="DeckPlanIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckPlanRef" type="DeckPlanRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="DeckPlanRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="DeckPlanIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckPlanRefStructureType" default="DeckPlan"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:group name="DeckSpaceReferenceGroup">
+    <xsd:sequence>
+      <xsd:element ref="DeckPlanRef" minOccurs="0"/>
+      <xsd:element ref="DeckRef" minOccurs="0"/>
+      <xsd:element ref="DeckSpaceRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== DECK  ==================================================== -->
+  <xsd:complexType name="deckRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="DeckIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckRef" type="DeckRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="DeckRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="DeckIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckRefStructureType" default="Deck"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ===== DECK COMPONENT ======================================================== -->
+  <xsd:simpleType name="DeckComponentIdType">
+    <xsd:restriction base="OnboardSpaceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckComponentRef" type="DeckComponentRefStructure" abstract="true" substitutionGroup="OnboardSpaceRef"/>
+  <xsd:complexType name="DeckComponentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="OnboardSpaceRefStructure">
+        <xsd:attribute name="ref" type="DeckComponentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckComponentRefStructureType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== DECK SPACE ======================================= -->
+  <xsd:simpleType name="DeckSpaceIdType">
+    <xsd:restriction base="DeckComponentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckSpaceRef" type="DeckSpaceRefStructure" abstract="true" substitutionGroup="DeckComponentRef"/>
+  <xsd:complexType name="DeckSpaceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckComponentRefStructure">
+        <xsd:attribute name="ref" type="DeckSpaceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckSpaceRefStructureType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== PASSENGER SPACE ======================================= -->
+  <xsd:simpleType name="PassengerSpaceIdType">
+    <xsd:restriction base="DeckSpaceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="PassengerSpaceRef" type="PassengerSpaceRefStructure" substitutionGroup="DeckSpaceRef"/>
+  <xsd:complexType name="PassengerSpaceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckSpaceRefStructure">
+        <xsd:attribute name="ref" type="PassengerSpaceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPassengerSpaceRefStructureType" default="PassengerSpace"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="PassengerSpaceTypeEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="seatingArea"/>
+      <xsd:enumeration value="passengerCabin"/>
+      <xsd:enumeration value="vehicleArea"/>
+      <xsd:enumeration value="luggageStore"/>
+      <xsd:enumeration value="corridor"/>
+      <xsd:enumeration value="restaurant"/>
+      <xsd:enumeration value="toilet"/>
+      <xsd:enumeration value="bathroom"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="OtherDeckSpaceTypeEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="driverArea"/>
+      <xsd:enumeration value="crewSpace"/>
+      <xsd:enumeration value="staffToilet"/>
+      <xsd:enumeration value="galley"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ====== OTHER DECK SPACE ======================================= -->
+  <xsd:simpleType name="OtherDeckSpaceIdType">
+    <xsd:restriction base="DeckSpaceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="OtherDeckSpaceRef" type="OtherDeckSpaceRefStructure" substitutionGroup="DeckSpaceRef"/>
+  <xsd:complexType name="OtherDeckSpaceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckSpaceRefStructure">
+        <xsd:attribute name="ref" type="OtherDeckSpaceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassOtherDeckSpaceRefStructureType" default="OtherDeckSpace"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== DECK ENTRANCE ======================================= -->
+  <xsd:simpleType name="DeckEntranceIdType">
+    <xsd:restriction base="DeckComponentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckEntranceRef" type="DeckEntranceRefStructure" abstract="true" substitutionGroup="DeckComponentRef"/>
+  <xsd:complexType name="DeckEntranceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckComponentRefStructure">
+        <xsd:attribute name="ref" type="DeckEntranceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckEntranceRefStructureType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="DeckEntranceTypeEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="external"/>
+      <xsd:enumeration value="communicating"/>
+      <xsd:enumeration value="internal"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="VehicleSideEnumeration">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="leftSide"/>
+      <xsd:enumeration value="rightSide"/>
+      <xsd:enumeration value="frontEnd"/>
+      <xsd:enumeration value="backEnd"/>
+      <xsd:enumeration value="internal"/>
+      <xsd:enumeration value="above"/>
+      <xsd:enumeration value="below"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ====== PASSENGER ENTRANCE ======================================= -->
+  <xsd:simpleType name="PassengerEntranceIdType">
+    <xsd:restriction base="DeckEntranceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="PassengerEntranceRef" type="PassengerEntranceRefStructure" substitutionGroup="DeckEntranceRef"/>
+  <xsd:complexType name="PassengerEntranceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckEntranceRefStructure">
+        <xsd:attribute name="ref" type="PassengerEntranceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPassengerEntranceRefStructureType" default="PassengerEntrance"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== DECK VEHICLE ENTRANCE ======================================= -->
+  <xsd:simpleType name="DeckVehicleEntranceIdType">
+    <xsd:restriction base="DeckEntranceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckVehicleEntranceRef" type="DeckVehicleEntranceRefStructure" substitutionGroup="DeckEntranceRef"/>
+  <xsd:complexType name="DeckVehicleEntranceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckEntranceRefStructure">
+        <xsd:attribute name="ref" type="DeckVehicleEntranceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckVehicleEntranceRefStructureType" default="DeckVehicleEntrance"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== OTHER DECK ENTRANCE ======================================= -->
+  <xsd:simpleType name="OtherDeckEntranceIdType">
+    <xsd:restriction base="DeckEntranceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="OtherDeckEntranceRef" type="OtherDeckEntranceRefStructure" substitutionGroup="DeckEntranceRef"/>
+  <xsd:complexType name="OtherDeckEntranceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckEntranceRefStructure">
+        <xsd:attribute name="ref" type="OtherDeckEntranceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassOtherDeckEntranceRefStructureType" default="OtherDeckEntrance"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== DECK ENTRANCE USAGE======================================= -->
+  <xsd:simpleType name="DeckEntranceUsageIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckEntranceUsageRef" type="DeckEntranceUsageRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="DeckEntranceUsageRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="DeckEntranceUsageIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckEntranceUsageRefStructureType" default="DeckEntranceUsage"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="EntranceUsageEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="entryAndExit"/>
+      <xsd:enumeration value="entry"/>
+      <xsd:enumeration value="exit"/>
+      <xsd:enumeration value="emergencyExit"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="EntranceSettingEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="open"/>
+      <xsd:enumeration value="shut"/>
+      <xsd:enumeration value="lockedShut"/>
+      <xsd:enumeration value="openWhenLoading"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ====== DECK ENTRANCE COUPLE ====================================== -->
+  <xsd:simpleType name="DeckEntranceCoupleIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckEntranceCoupleRef" type="DeckEntranceCoupleRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="DeckEntranceCoupleRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="DeckEntranceCoupleIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckEntranceCoupleRefStructureType" default="DeckEntranceCouple"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== DECK WINDOW ======================================= -->
+  <xsd:simpleType name="DeckWindowIdType">
+    <xsd:restriction base="DeckComponentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckWindowRef" type="DeckWindowRefStructure" substitutionGroup="DeckComponentRef"/>
+  <xsd:complexType name="DeckWindowRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="DeckComponentRefStructure">
+        <xsd:attribute name="ref" type="DeckWindowIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckWindowRefStructureType" default="DeckWindow"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="DeckWindowTypeEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="interspaced"/>
+      <xsd:enumeration value="continuous"/>
+      <xsd:enumeration value="panorama"/>
+      <xsd:enumeration value="porthole"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ====== DECK WINDOW ======================================= -->
+  <xsd:simpleType name="DeckLevelIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckLevelRef" type="DeckLevelRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="DeckLevelRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="DeckLevelIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckLevelRefStructureType" default="DeckLevel"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======= DECK SPACE CAPACITY =========================================== -->
+  <xsd:simpleType name="DeckSpaceCapacityIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckSpaceCapacityRef" type="DeckSpaceCapacityRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="DeckSpaceCapacityRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="DeckSpaceCapacityIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckSpaceCapacityRefStructureType" default="DeckSpaceCapacity"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!--==== PURPOSE OF EQUIPMENT =========================================================-->
+  <xsd:simpleType name="TypeOfDeckSpaceIdType">
+    <xsd:restriction base="TypeOfValueIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TypeOfDeckSpaceRef" type="TypeOfDeckSpaceProfileRefStructure" substitutionGroup="TypeOfValueRef"/>
+  <xsd:complexType name="TypeOfDeckSpaceProfileRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TypeOfValueRefStructure">
+        <xsd:attribute name="ref" type="TypeOfDeckSpaceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTypeOfValueRefStructureType" use="optional"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!--==== TYPE OF DECK ENTRANCE  =========================================================-->
+  <xsd:simpleType name="TypeOfDeckEntranceIdType">
+    <xsd:restriction base="TypeOfValueIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TypeOfDeckEntranceRef" type="TypeOfDeckEntranceRefStructure" substitutionGroup="TypeOfValueRef"/>
+  <xsd:complexType name="TypeOfDeckEntranceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TypeOfValueRefStructure">
+        <xsd:attribute name="ref" type="TypeOfDeckEntranceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTypeOfDeckEntranceRefStructureType" default="TypeOfDeckEntrance"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!--==== TYPE OF DECK ENTRANCE  USAGE ===============================================-->
+  <xsd:simpleType name="TypeOfDeckEntranceUsageIdType">
+    <xsd:restriction base="TypeOfValueIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TypeOfDeckEntranceUsageRef" type="TypeOfDeckEntranceUsageRefStructure" substitutionGroup="TypeOfValueRef"/>
+  <xsd:complexType name="TypeOfDeckEntranceUsageRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TypeOfValueRefStructure">
+        <xsd:attribute name="ref" type="TypeOfDeckEntranceUsageIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTypeOfDeckEntranceUsageRefStructureType" default="TypeOfDeckEntranceUsage"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

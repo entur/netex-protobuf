@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_responsibilitySet_support">
+  <xsd:include schemaLocation="netex_relationship.xsd"/>
+  <!-- ======  RESPONSIBILITY ROLE ========================================== -->
+  <xsd:simpleType name="ResponsibilityRoleIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="ResponsibilityRoleRef" type="ResponsibilityRoleRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="ResponsibilityRoleRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="ResponsibilityRoleIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassResponsibilityRoleRefStructureType" default="ResponsibilityRole"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ================================================================ -->
+  <xsd:simpleType name="ResponsibilityRoleAssignmentIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <!--======  CONTRACT ===================================== -->
+  <xsd:simpleType name="ContractIdType">
+    <xsd:restriction base="TypeOfValueIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="ContractRef" type="ContractRefStructure"/>
+  <xsd:complexType name="ContractRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="ContractIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassContractRefStructureType" default="Contract"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:simpleType name="ContractTypeEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="formal"/>
+      <xsd:enumeration value="informal"/>
+      <xsd:enumeration value="written"/>
+      <xsd:enumeration value="oral"/>
+      <xsd:enumeration value="plainUnderstood"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LegalStatusEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="binding"/>
+      <xsd:enumeration value="nonBinding"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ===================================================================== -->
+</xsd:schema>

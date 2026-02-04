@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_vehicle_support">
+  <xsd:include schemaLocation="../netex_responsibility/netex_relationship.xsd"/>
+  <!-- =====VEHICLE  types=========================================== -->
+  <!-- ====== VEHICLE ================================================== -->
+  <xsd:complexType name="vehicleRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="VehicleRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="VehicleIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="VehicleRef" type="VehicleRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="VehicleRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="VehicleIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassVehicleRefStructureType" default="Vehicle"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== ROLLING STOCK ITEM ================================================== -->
+  <xsd:complexType name="rollingStockItemRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="RollingStockItemRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="RollingStockItemIdType">
+    <xsd:restriction base="VehicleIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="RollingStockItemRef" type="RollingStockItemRefStructure" abstract="true" substitutionGroup="VehicleRef"/>
+  <xsd:complexType name="RollingStockItemRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VehicleRefStructure">
+        <xsd:attribute name="ref" type="RollingStockItemIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassRollingStockItemRefStructureType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== TRACTIVE ROLLING STOCK ITEM ========================================= -->
+  <xsd:simpleType name="TractiveRollingStockItemIdType">
+    <xsd:restriction base="RollingStockItemIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TractiveRollingStockItemRef" type="TractiveRollingStockItemRefStructure" substitutionGroup="RollingStockItemRef"/>
+  <xsd:complexType name="TractiveRollingStockItemRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="RollingStockItemRefStructure">
+        <xsd:attribute name="ref" type="TractiveRollingStockItemIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTractiveRollingStockItemRefStructureType" default="TractiveRollingStockItem"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== TRAILING ROLLING STOCK ITEM ========================================= -->
+  <xsd:simpleType name="TrailingRollingStockItemIdType">
+    <xsd:restriction base="RollingStockItemIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TrailingRollingStockItemRef" type="TrailingRollingStockItemRefStructure" substitutionGroup="RollingStockItemRef"/>
+  <xsd:complexType name="TrailingRollingStockItemRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="RollingStockItemRefStructure">
+        <xsd:attribute name="ref" type="TrailingRollingStockItemIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTrailingRollingStockItemRefStructureType" default="TrailingRollingStockItem"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======  ROLLING STOCK INVENTORY ==================================== -->
+  <xsd:complexType name="rollingStockInventoryRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="RollingStockInventoryRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="RollingStockInventoryIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="RollingStockInventoryRef" type="RollingStockInventoryRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="RollingStockInventoryRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="RollingStockInventoryIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassRollingStockInventoryRefStructureType" default="RollingStockInventory"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ===== TYPE OF ROLLING STOCK ======================================= -->
+  <xsd:simpleType name="TypeOfRollingStockIdType">
+    <xsd:restriction base="TypeOfValueIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TypeOfRollingStockRef" type="TypeOfRollingStockRefStructure" substitutionGroup="TypeOfEntityRef"/>
+  <xsd:complexType name="TypeOfRollingStockRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TypeOfValueRefStructure">
+        <xsd:attribute name="ref" type="TypeOfRollingStockIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTypeOfRollingStockRefStructureType" default="TypeOfRollingStock"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

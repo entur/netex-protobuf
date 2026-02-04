@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_spotAffinity_support">
+  <!-- ======================================================================= -->
+  <xsd:include schemaLocation="../netex_responsibility/netex_relationship.xsd"/>
+  <!-- ===== SPOT AFFINITY======================================================== -->
+  <xsd:simpleType name="SpotAffinityIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="SpotAffinityRef" type="SpotAffinityRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="SpotAffinityRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VersionOfObjectRefStructure">
+        <xsd:attribute name="ref" type="SpotAffinityIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassSpotAffinityRefStructureType" default="SpotAffinity"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+  <xsd:simpleType name="SpotAffinityTypeEnumeration">
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="faceToFace"/>
+      <xsd:enumeration value="sideBySide"/>
+      <xsd:enumeration value="contiguousRow"/>
+      <xsd:enumeration value="sharedTable"/>
+      <xsd:enumeration value="seatBlock"/>
+      <xsd:enumeration value="lowerBerths"/>
+      <xsd:enumeration value="sharedCompartment"/>
+      <xsd:enumeration value="wheelchairCompanionSeat"/>
+      <xsd:enumeration value="other"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- ======================================================================= -->
+</xsd:schema>

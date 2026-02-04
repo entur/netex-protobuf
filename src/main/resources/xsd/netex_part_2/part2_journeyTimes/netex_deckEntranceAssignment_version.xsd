@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_deckEntranceAssignment_version">
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_seatingPlan_support.xsd"/>
+  <xsd:include schemaLocation="netex_deckEntranceAssignment_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_deckPlan_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_trainElement_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_part_1/part1_tacticalPlanning/netex_stopAssignment_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ======================================================================= -->
+  <!-- ==== DECK ENTRANCE ASSIGNMENT ==================================================== -->
+  <xsd:complexType name="deckEntranceAssignments_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckEntranceAssignment" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckEntranceAssignment" substitutionGroup="PassengerBoardingPositionAssignment_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckEntranceAssignment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="DataManagedObjectGroup"/>
+              </xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="AssignmentGroup"/>
+              </xsd:sequence>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="StopAssignmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassengerBoardingPositionAssignmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckEntranceAssignmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="deckEntranceAssignmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckEntranceAssignment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="PassengerBoardingPositionAssignment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckEntranceAssignmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckEntranceAssignmentGroup">
+    <xsd:sequence>
+      <xsd:element ref="DeckEntranceRef"/>
+      <xsd:element name="EntranceSetting" type="EntranceSettingEnumeration" minOccurs="0"/>
+      <xsd:group ref="LocatableSpotRangeGroup"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== TRAIN COMPONENT  ASSIGNMENT ==================================================== -->
+  <xsd:complexType name="trainComponentStopAssignments_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="TrainComponentStopAssignment" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="TrainComponentStopAssignment" substitutionGroup="StopAssignment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TrainComponentStopAssignment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="DataManagedObjectGroup"/>
+              </xsd:sequence>
+              <xsd:sequence>
+                <xsd:group ref="AssignmentGroup"/>
+              </xsd:sequence>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TrainComponentStopAssignmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TrainComponentStopAssignmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TrainComponentStopAssignment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="PassengerBoardingPositionAssignment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="TrainComponentStopAssignmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="TrainComponentStopAssignmentGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>

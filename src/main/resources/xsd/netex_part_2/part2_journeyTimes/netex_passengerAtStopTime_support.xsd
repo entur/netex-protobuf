@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="netex_passengerAtStopTime_support">
+  <xsd:include schemaLocation="netex_passingTimes_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ======PASSENGER AT STOP TIME ========================================== -->
+  <xsd:simpleType name="PassengerAtStopTimeIdType">
+    <xsd:restriction base="PassingTimeIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="PassengerAtStopTimeRef" type="PassengerAtStopTimeRefStructure" substitutionGroup="PassingTimeRef"/>
+  <xsd:complexType name="PassengerAtStopTimeRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="PassingTimeRefStructure">
+        <xsd:attribute name="ref" type="PassengerAtStopTimeIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPassengerAtStopTimeRefStructureType" default="PassengerAtStopTime"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 2007 03 23 Add repeating name -->
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_ifopt_navigationPath_version">
+  <!-- ======================================================================= -->
+  <!-- ===Global import of all acsb namespace elements neeeded to work around XERCES limitation
+	<xsd:include schemaLocation="../acsb/netex_acsb_all.xsd"/> =====-->
+  <!--.....These are the actual dependencies...-->
+  <xsd:include schemaLocation="netex_environment_support.xsd"/>
+  <xsd:include schemaLocation="../netex_genericFramework/netex_path_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ======ACCESS SUMMARY ================================================== -->
+  <xsd:complexType name="accessSummaries_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="AccessSummary" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="AccessSummary">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="AccessSummary_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="AccessSummaryGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="AccessSummaryIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="AccessSummary_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="AccessSummaryGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="AccessSummaryGroup">
+    <xsd:sequence>
+      <xsd:element name="AccessFeatureType" type="AccessFeatureEnumeration"/>
+      <xsd:element name="Count" type="xsd:nonNegativeInteger"/>
+      <xsd:element name="Transition" type="TransitionEnumeration" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- =====NAVIGATION PATH SUMMARY================================================== -->
+  <xsd:group name="NavigationPathSummaryGroup">
+    <xsd:sequence>
+      <xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
+      <xsd:element name="AccessModes" type="AccessModeListOfEnumerations" minOccurs="0"/>
+      <xsd:element name="summaries" type="accessSummaries_RelStructure" minOccurs="0"/>
+      <xsd:element name="TransferDuration" type="TransferDurationStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>

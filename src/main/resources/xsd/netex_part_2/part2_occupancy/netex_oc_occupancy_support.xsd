@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:core="http://www.govtalk.gov.uk/core" xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.2.2" id="netex_occupancy_support">
+  <xsd:include schemaLocation="../../netex_framework/netex_responsibility/netex_responsibility_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ====  INDIVIDUAL TRAVELLER ============================================ -->
+  <xsd:simpleType name="OccupancyEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="unknown"/>
+      <xsd:enumeration value="empty"/>
+      <xsd:enumeration value="manySeatsAvailable"/>
+      <xsd:enumeration value="fewSeatsAvailable"/>
+      <xsd:enumeration value="standingRoomOnly"/>
+      <xsd:enumeration value="crushedStandingRoomOnly"/>
+      <xsd:enumeration value="full"/>
+      <xsd:enumeration value="notAcceptingPassengers"/>
+      <xsd:enumeration value="undefined"/>
+      <xsd:enumeration value="seatsAvailable"/>
+      <xsd:enumeration value="standingAvailable"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

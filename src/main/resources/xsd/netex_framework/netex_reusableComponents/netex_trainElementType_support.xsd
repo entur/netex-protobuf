@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_trainElementType_support">
+  <xsd:include schemaLocation="netex_trainElement_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ====== POWERED TRAIN ELEMENT  =================================================== -->
+  <xsd:simpleType name="PoweredTrainIdType">
+    <xsd:restriction base="TrainIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="PoweredTrainRef" type="PoweredTrainRefStructure" substitutionGroup="TrainRef"/>
+  <xsd:complexType name="PoweredTrainRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TrainRefStructure">
+        <xsd:attribute name="ref" type="PoweredTrainIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPoweredTrainRefStructureType" default="PoweredTrain"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== UNPOWERED TRAIN ELEMENT  =================================================== -->
+  <xsd:simpleType name="UnpoweredTrainIdType">
+    <xsd:restriction base="TrainIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="UnpoweredTrainRef" type="UnpoweredTrainRefStructure" substitutionGroup="TrainRef" default="false"/>
+  <xsd:complexType name="UnpoweredTrainRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TrainRefStructure">
+        <xsd:attribute name="ref" type="UnpoweredTrainIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassUnpoweredTrainRefStructureType" default="UnpoweredTrain"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== TRACTIVE  ELEMENT  =================================================== -->
+  <xsd:simpleType name="TractiveElementTypeIdType">
+    <xsd:restriction base="TrainElementTypeIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TractiveElementTypeRef" type="TractiveElementTypeRefStructure" substitutionGroup="TrainElementTypeRef"/>
+  <xsd:complexType name="TractiveElementTypeRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TrainElementTypeRefStructure">
+        <xsd:attribute name="ref" type="TractiveElementTypeIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTractiveElementTypeRefStructureType" default="TractiveElementType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====== TRAILING  ELEMENT  =================================================== -->
+  <xsd:simpleType name="TrailingElementTypeIdType">
+    <xsd:restriction base="TrainElementTypeIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TrailingElementTypeRef" type="TrailingElementTypeRefStructure" substitutionGroup="TrainElementTypeRef"/>
+  <xsd:complexType name="TrailingElementTypeRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="TrainElementTypeRefStructure">
+        <xsd:attribute name="ref" type="TrailingElementTypeIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTrailingElementTypeRefStructureType" default="TrailingElementType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

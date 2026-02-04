@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_fareDebit_version">
+  <xsd:include schemaLocation="netex_fareDebit_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_serviceRestrictions_version.xsd"/>
+  <xsd:include schemaLocation="../part3_fares/netex_farePrice_version.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_genericFramework/netex_loggable_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ====FARE DEBIT ================================================ -->
+  <xsd:group name="PaymentAmountGroup">
+    <xsd:sequence>
+      <xsd:group ref="FarePriceAmountWithDerivationGroup"/>
+      <xsd:element name="PaymentMethod" type="PaymentMethodEnumeration" minOccurs="0"/>
+      <xsd:element ref="TypeOfPaymentMethodRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== FARE DEBIT ================================================ -->
+  <xsd:element name="FareDebit_Dummy" abstract="true" type="DataManagedObjectStructure" substitutionGroup="DataManagedObject"/>
+  <xsd:element name="FareDebit" abstract="true" substitutionGroup="FareDebit_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="FareDebit_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LogEntryGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="FareDebitGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="FareDebitIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="FareDebit_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="LogEntry_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="FareDebitGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="FareDebitGroup">
+    <xsd:sequence>
+      <xsd:group ref="PaymentAmountGroup"/>
+      <xsd:element name="CardNumber" type="PrivateCodeStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== BOOKING DEBIT ================================================ -->
+  <xsd:element name="BookingDebit" substitutionGroup="FareDebit_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="BookingDebit_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LogEntryGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="BookingDebitGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="BookingDebitIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="BookingDebit_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="FareDebit_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="BookingDebitGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="BookingDebitGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ==== TRIP  DEBIT ================================================ -->
+  <xsd:element name="TripDebit" substitutionGroup="FareDebit_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TripDebit_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LogEntryGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TripDebitGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TripDebitIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TripDebit_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="FareDebit_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="TripDebitGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="TripDebitGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ==== OTHER   DEBIT ================================================ -->
+  <xsd:element name="OtherDebit" substitutionGroup="FareDebit_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="OtherDebit_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LogEntryGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="OtherDebitGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="OtherDebitIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="OtherDebit_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="FareDebit_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="OtherDebitGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="OtherDebitGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ==== FARE PRODUCT SALES DEBIT ================================================ -->
+  <xsd:element name="FareProductSaleDebit" substitutionGroup="FareDebit_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="FareProductSaleDebit_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LogEntryGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="FareProductSaleDebitGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="FareProductSaleDebitIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="FareProductSaleDebit_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="FareDebit_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="FareProductSaleDebitGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="FareProductSaleDebitGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ==== OFFENCE  DEBIT ================================================ -->
+  <xsd:element name="OffenceDebit" substitutionGroup="FareDebit_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="OffenceDebit_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LogEntryGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="OffenceDebitGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="OffenceDebitIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="OffenceDebit_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="FareDebit_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="OffenceDebitGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="OffenceDebitGroup">
+    <xsd:sequence/>
+  </xsd:group>
+</xsd:schema>

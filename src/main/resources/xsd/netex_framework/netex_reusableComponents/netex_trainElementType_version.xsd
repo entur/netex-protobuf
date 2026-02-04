@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_trainElementType_version">
+  <xsd:include schemaLocation="netex_trainElementType_support.xsd"/>
+  <xsd:include schemaLocation="netex_trainElement_version.xsd"/>
+  <!-- ======================================================================= -->
+  <xsd:group name="TrainElementTypesInFrameGroup">
+    <xsd:sequence>
+      <xsd:element name="trainElementTypes" type="trainElementTypesInFrame_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="trainElementTypesInFrame_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="TrailingElementType"/>
+          <xsd:element ref="TractiveElementType"/>
+          <xsd:element ref="TrainElement"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- ====== POWERED TRAIN =================================================== -->
+  <xsd:element name="PoweredTrain" substitutionGroup="Train_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="PoweredTrain_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TransportTypeGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VehicleTypeGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:element ref="TrainSize" minOccurs="0"/>
+              <xsd:element name="components" type="trainComponents_RelStructure" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PoweredTrainGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="PoweredTrainIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="PoweredTrain_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="Train_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="PoweredTrainGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="PoweredTrainGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ====== UNPOWERED TRAIN =================================================== -->
+  <xsd:element name="UnpoweredTrain" substitutionGroup="Train_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="UnpoweredTrain_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TransportTypeGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VehicleTypeGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:element ref="TrainSize" minOccurs="0"/>
+              <xsd:element name="components" type="trainComponents_RelStructure" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="UnpoweredTrainGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="UnpoweredTrainIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="UnpoweredTrain_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="Train_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="UnpoweredTrainGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="UnpoweredTrainGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ====== TRACTIVE ELEMENT TYPE =================================================== -->
+  <xsd:element name="TractiveElementType">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TractiveElementType_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TrainElementTypeGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TractiveElementTypeGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TractiveElementTypeIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TractiveElementType_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="TrainElementType_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="TractiveElementTypeGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="TractiveElementTypeGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ====== TRAILING ELEMENT TYPE =============================================== -->
+  <xsd:element name="TrailingElementType">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TrailingElementType_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TrainElementTypeGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TrailingElementTypeGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TrailingElementTypeIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TrailingElementType_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="TrainElementType_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="TrailingElementTypeGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="TrailingElementTypeGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>

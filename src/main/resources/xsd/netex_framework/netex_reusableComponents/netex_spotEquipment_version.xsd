@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:netex="http://www.netex.org.uk/netex" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_spotEquipment_version">
+  <xsd:include schemaLocation="../netex_utility/netex_units.xsd"/>
+  <xsd:include schemaLocation="netex_spotEquipment_support.xsd"/>
+  <xsd:include schemaLocation="netex_equipment_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- === SPOT EQUIPMENT ============================================ -->
+  <xsd:element name="SpotEquipment_Dummy" abstract="true" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="InstalledEquipment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SpotEquipmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="SpotEquipment" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SpotEquipment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotEquipmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SpotEquipmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SpotEquipment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="InstalledEquipment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="SpotEquipmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SpotEquipmentGroup">
+    <xsd:sequence>
+      <xsd:element name="Width" type="LengthType" minOccurs="0"/>
+      <xsd:element name="Length" type="LengthType" minOccurs="0"/>
+      <xsd:element name="Height" type="LengthType" minOccurs="0"/>
+      <xsd:element name="HeightFromFloor" type="LengthType" minOccurs="0"/>
+      <xsd:element name="HasPowerSupply" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="HasUsbPowerSocket" type="xsd:boolean" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- === SEAT EQUIPMENT ============================================ -->
+  <xsd:element name="SeatEquipment" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SeatEquipment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotEquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SeatEquipmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SeatEquipmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SeatEquipment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="SpotEquipment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="SeatEquipmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SeatEquipmentGroup">
+    <xsd:sequence>
+      <xsd:element name="SeatBackHeight" type="LengthType" minOccurs="0"/>
+      <xsd:element name="SeatDepth" type="LengthType" minOccurs="0"/>
+      <xsd:element name="IsFoldup" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsReclining" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="MaximumRecline" type="xsd:positiveInteger" minOccurs="0"/>
+      <xsd:element name="IsReversible" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="canRotate" type="xsd:boolean" default="false" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- === BED EQUIPMENT ============================================ -->
+  <xsd:element name="BedEquipment" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="BedEquipment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotEquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="BedEquipmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="BedEquipmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="BedEquipment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="SpotEquipment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="BedEquipmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="BedEquipmentGroup">
+    <xsd:sequence>
+      <xsd:element name="BedType" type="BedTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="IsStowable" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="Headroom" type="LengthType" minOccurs="0"/>
+      <xsd:element name="BedLength" type="LengthType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- === LUGGAGE SPOT EQUIPMENT ============================================ -->
+  <xsd:element name="LuggageSpotEquipment" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="LuggageSpotEquipment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotEquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LuggageSpotEquipmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="LuggageSpotEquipmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="LuggageSpotEquipment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="SpotEquipment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="LuggageSpotEquipmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="LuggageSpotEquipmentGroup">
+    <xsd:sequence>
+      <xsd:element name="LuggageSpotType" type="LuggageSpotTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="HeadroomForLuggage" type="LengthType" minOccurs="0"/>
+      <xsd:element name="IsLockable" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="HasDoor" type="xsd:boolean" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+</xsd:schema>

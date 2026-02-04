@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_deckPlanAssignment_support">
+  <!-- ======================================================================= -->
+  <xsd:include schemaLocation="../../netex_framework/netex_genericFramework/netex_assignment_support.xsd"/>
+  <!-- ==== DECK PLAN ASSIGNMENT==================================================== -->
+  <xsd:complexType name="deckPlanAssignmentRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckPlanAssignmentRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="DeckPlanAssignmentIdType">
+    <xsd:restriction base="AssignmentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DeckPlanAssignmentRef" type="DeckPlanAssignmentRefStructure" substitutionGroup="AssignmentRef"/>
+  <xsd:complexType name="DeckPlanAssignmentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="AssignmentRefStructure">
+        <xsd:attribute name="ref" type="DeckPlanAssignmentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDeckPlanAssignmentRefStructureType" default="DeckPlanAssignment"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

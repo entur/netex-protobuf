@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:netex="http://www.netex.org.uk/netex" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_path_support">
+  <xsd:include schemaLocation="netex_place_support.xsd"/>
+  <xsd:include schemaLocation="netex_pointAndLink_support.xsd"/>
+  <xsd:include schemaLocation="netex_pointAndLinkSequence_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ====== PATH LINK ===================================================== -->
+  <xsd:complexType name="genericPathLinkRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="GenericPathLinkRef"/>
+          <xsd:element ref="PathLinkRefByValue"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="GenericPathLinkIdType">
+    <xsd:restriction base="LinkIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="GenericPathLinkRef" type="GenericPathLinkRefStructure" abstract="true" substitutionGroup="LinkRef"/>
+  <xsd:complexType name="GenericPathLinkRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="LinkRefStructure">
+        <xsd:attribute name="ref" type="GenericPathLinkIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassGenericPathLinkRefStructureType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+  <xsd:element name="PathLinkRefByValue" type="PathLinkRefByValueStructure" substitutionGroup="LinkRefByValue"/>
+  <xsd:complexType name="PathLinkRefByValueStructure">
+    <xsd:complexContent>
+      <xsd:restriction base="LinkRefByValueStructure">
+        <xsd:attribute name="fromPointRef" type="PointIdType" use="required"/>
+        <xsd:attribute name="toPointRef" type="PointIdType" use="required"/>
+        <xsd:attribute name="nameOfPointRefClass" type="NameOfClass" use="optional"/>
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- ======= PATH JUNCTION =========================================== -->
+  <xsd:simpleType name="GenericPathJunctionIdType">
+    <xsd:restriction base="PlaceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="GenericPathJunctionRef" type="GenericPathJunctionRefStructure" substitutionGroup="PlaceRef_Dummy"/>
+  <xsd:complexType name="GenericPathJunctionRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="PlaceRefStructure">
+        <xsd:attribute name="ref" type="GenericPathJunctionIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPlaceRefStructureType" use="optional"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======= PATH INSTRUCTION =========================================== -->
+  <xsd:simpleType name="PathInstructionIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="PathInstructionRef" type="PathInstructionRefStructure" substitutionGroup="VersionOfObjectRef"/>
+  <xsd:complexType name="PathInstructionRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="OrderedVersionOfObjectRefStructure">
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPathInstructionRefStructureType" default="PathInstruction"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="ref" type="ObjectIdType" use="required"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+  <!-- Simple Type Definitions -->
+  <!-- ====== NAVIGATION PATH =============================================== -->
+  <xsd:complexType name="GenericNavigationPathRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="GenericNavigationPathRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="GenericNavigationPathIdType">
+    <xsd:restriction base="LinkSequenceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="GenericNavigationPathRef" type="GenericNavigationPathRefStructure" substitutionGroup="LinkSequenceRef"/>
+  <xsd:complexType name="GenericNavigationPathRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="LinkSequenceRefStructure">
+        <xsd:attribute name="ref" type="GenericNavigationPathIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassGenericNavigationPathRefStructureType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+  <xsd:simpleType name="AccessSummaryIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <!-- ======= PLACE IN SEQUENCE ========================================== -->
+  <xsd:simpleType name="PlaceInSequenceIdType">
+    <xsd:restriction base="PointInSequenceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="PlaceInSequenceRef" type="PlaceInSequenceRefStructure" substitutionGroup="PointInSequenceRef"/>
+  <xsd:complexType name="PlaceInSequenceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="PointInSequenceRefStructure">
+        <xsd:attribute name="ref" type="PlaceInSequenceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPlaceInSequenceRefStructureType" default="PlaceInSequence"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======= PATH LINK IN SEQUENCE============================================ -->
+  <xsd:complexType name="pathLinksInSequenceRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="PathLinkInSequenceRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="PathLinkInSequenceIdType">
+    <xsd:restriction base="LinkInSequenceIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="PathLinkInSequenceRef" type="PathLinkInSequenceRefStructure" substitutionGroup="LinkInSequenceRef"/>
+  <xsd:complexType name="PathLinkInSequenceRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="LinkInSequenceRefStructure">
+        <xsd:attribute name="ref" type="PathLinkInSequenceIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPathLinkInSequenceRefStructureType" default="PathLinkInSequence"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- =======PATH LINK VIEW ============================================== -->
+  <xsd:simpleType name="PathLinkViewIdType">
+    <xsd:restriction base="ObjectIdType"/>
+  </xsd:simpleType>
+  <!-- =====PATH  related ENums=================================================== -->
+  <xsd:simpleType name="PathDirectionEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="oneWay"/>
+      <xsd:enumeration value="twoWay"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TransitionEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="up"/>
+      <xsd:enumeration value="down"/>
+      <xsd:enumeration value="level"/>
+      <xsd:enumeration value="upAndDown"/>
+      <xsd:enumeration value="downAndUp"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PathHeadingEnumeration">
+    <xsd:restriction base="xsd:NMTOKEN">
+      <xsd:enumeration value="left"/>
+      <xsd:enumeration value="right"/>
+      <xsd:enumeration value="forward"/>
+      <xsd:enumeration value="back"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

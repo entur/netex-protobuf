@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_spotAllocation_version">
+  <!-- ======================================================================= -->
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_seatingPlan_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_vehicleSeating_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_facility_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_part_2/part2_journeyTimes/netex_datedVehicleJourney_support.xsd"/>
+  <xsd:include schemaLocation="netex_spotAllocation_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_deckPlan_support.xsd"/>
+  <xsd:include schemaLocation="netex_salesContract_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_part_1/part1_tacticalPlanning/netex_servicePattern_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_responsibility/netex_responsibility_version.xsd"/>
+  <!-- ======================================================================= -->
+  <xsd:group name="SpotAllocationsInFrameGroup">
+    <xsd:sequence>
+      <xsd:element name="vehicleJourneySpotAllocations" type="vehicleJourneySpotAllocations_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== VEHICLE JOURNEY SPOT ALLOCATION  ==== -->
+  <xsd:element name="VehicleJourneySpotAllocation" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="VehicleJourneySpotAllocation_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VehicleJourneySpotGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="VehicleJourneySpotAllocationIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="vehicleJourneySpotAllocations_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="VehicleJourneySpotAllocation"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="VehicleJourneySpotAllocation_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DataManagedObjectStructure">
+        <xsd:sequence>
+          <xsd:group ref="VehicleJourneySpotGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="VehicleJourneySpotGroup">
+    <xsd:sequence>
+      <xsd:element ref="DatedVehicleJourneyRef" minOccurs="0"/>
+      <xsd:element name="SeatAllocationMethod" type="SeatAllocationMethodEnumeration" default="autoAssigned" minOccurs="0"/>
+      <xsd:element ref="SpotAllocationMethodRef" minOccurs="0"/>
+      <xsd:element name="passengerSpotAllocations" type="passengerSpotAllocations_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== PASSENGER SPOT ALLOCATION ===========================-->
+  <xsd:complexType name="passengerSpotAllocations_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="PassengerSpotAllocation" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PassengerSpotAllocation" substitutionGroup="VersionedChild">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="PassengerSpotAllocation_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassengerSpotAllocationGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="PassengerSpotAllocationIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="PassengerSpotAllocation_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="PassengerSpotAllocationGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="PassengerSpotAllocationGroup">
+    <xsd:sequence>
+      <xsd:element name="LastUpdated" type="xsd:dateTime"/>
+      <xsd:group ref="SpotGroup"/>
+      <xsd:element ref="FacilitySetRef" minOccurs="0"/>
+      <xsd:element name="PrimaryOrientation" type="ComponentOrientationEnumeration" minOccurs="0"/>
+      <xsd:group ref="AllocatedToPassengerGroup"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="SpotGroup">
+    <xsd:sequence>
+      <xsd:element ref="DeckRef" minOccurs="0"/>
+      <xsd:element ref="DeckSpaceRef" minOccurs="0"/>
+      <xsd:element ref="LocatableSpotRef"/>
+      <xsd:element name="Label" type="MultilingualString"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="AllocatedToPassengerGroup">
+    <xsd:sequence>
+      <xsd:element name="StartStopPointRef" type="ScheduledStopPointRefStructure" minOccurs="0"/>
+      <xsd:element name="EndStopPointRef" type="ScheduledStopPointRefStructure" minOccurs="0"/>
+      <xsd:element ref="CustomerRef" minOccurs="0"/>
+      <xsd:element name="SpotAvailabilityStatus" type="SpotAvailabilityStatusEnumeration" default="free" minOccurs="0"/>
+      <xsd:element name="SeatAllocationMethod" type="SeatAllocationMethodEnumeration" default="autoAssigned" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+</xsd:schema>

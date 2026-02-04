@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_rechargingPointAssignment_version">
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_equipment_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_nm_equipmentEnergy_support.xsd"/>
+  <xsd:include schemaLocation="netex_rechargingPointAssignment_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_genericFramework/netex_assignment_version.xsd"/>
+  <xsd:include schemaLocation="netex_ifopt_parking_version.xsd"/>
+  <xsd:include schemaLocation="../part1_tacticalPlanning/netex_servicePattern_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- =========== RECHARGING POINT ASSIGNMENT ============================================== -->
+  <xsd:group name="RechargingPointAssignmentInFrameGroup">
+    <xsd:sequence>
+      <xsd:element name="rechargingPointAssignments" type="rechargingPointAssignments_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="rechargingPointAssignments_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="RechargingPointAssignment" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RechargingPointAssignment" type="RechargingPointAssignment_VersionStructure" substitutionGroup="Assignment_Dummy"/>
+  <xsd:complexType name="RechargingPointAssignment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="Assignment_VersionStructure">
+        <xsd:group ref="RechargingPointAssignmentGroup"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="RechargingPointAssignmentGroup">
+    <xsd:sequence>
+      <xsd:element ref="SiteComponentRef" minOccurs="0"/>
+      <xsd:element ref="EquipmentPlaceRef" minOccurs="0"/>
+      <xsd:element ref="VehicleChargingEquipmentRef" minOccurs="0"/>
+      <xsd:element name="servedScheduledStopPoints" type="scheduledStopPointRefs_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- =========== RECHARGING STATION  ============================================== -->
+  <xsd:complexType name="rechargingStations_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="RechargingStation" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RechargingStation" substitutionGroup="Parking_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="RechargingStation_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="GroupOfEntitiesGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="GroupOfPointsGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="ZoneGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="PlaceGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="AddressablePlaceGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="SiteElementGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="SiteGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="ParkingGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="RechargingStationGroup"/>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="RechargingStationIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="RechargingStation_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="Parking_VersionStructure">
+        <xsd:group ref="RechargingStationGroup"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="RechargingStationGroup">
+    <xsd:sequence>
+      <xsd:element name="TotalPower" type="WattageType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- =========== RECHARGING BAY  ============================================== -->
+  <xsd:complexType name="rechargingBays_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="RechargingBay" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RechargingBay" substitutionGroup="ParkingBay_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="RechargingBay_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="GroupOfEntitiesGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="GroupOfPointsGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="ZoneGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="PlaceGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="AddressablePlaceGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="SiteElementGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="SiteComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="ParkingComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="ParkingBayGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="RechargingBayGroup"/>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="ParkingBayIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="RechargingBay_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="ParkingBay_VersionStructure">
+        <xsd:group ref="RechargingBayGroup"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="RechargingBayGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>
