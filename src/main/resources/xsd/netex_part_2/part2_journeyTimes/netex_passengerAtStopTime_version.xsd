@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.-" id="netex_passengerTimeAtStop_version">
+  <xsd:include schemaLocation="../../netex_part_1/part1_ifopt/netex_ifopt_checkConstraint_support.xsd"/>
+  <xsd:include schemaLocation="netex_passingTimes_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ==CLOSELY COUPLED ===================================================== -->
+  <!-- === PASSENGER AT STOP TIME ============================================ -->
+  <xsd:complexType name="passengerAtStopTimes_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="PassengerAtStopTime" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PassengerAtStopTime_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="PassingTime_VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="PassengerAtStopTimeGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PassengerAtStopTime" substitutionGroup="PassingTime">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="PassengerAtStopTime_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassingTimeGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassengerAtStopTimeGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:group name="PassengerAtStopTimeGroup">
+    <xsd:sequence>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="EarliestTime" type="xsd:time" minOccurs="0"/>
+      <xsd:element name="EarliestDayOffset" type="DayOffsetType" default="0" minOccurs="0"/>
+      <xsd:element name="LatestTime" type="xsd:time" minOccurs="0"/>
+      <xsd:element name="LatestDayOffset" type="DayOffsetType" default="0" minOccurs="0"/>
+      <xsd:element ref="CheckConstraintRef" minOccurs="0"/>
+      <xsd:element name="CheckConstraintProcess" type="CheckProcessTypeEnumeration" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>

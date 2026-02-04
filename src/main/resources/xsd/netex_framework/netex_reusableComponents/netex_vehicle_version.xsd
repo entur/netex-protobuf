@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_vehicleType_version">
+  <xsd:include schemaLocation="netex_vehicle_support.xsd"/>
+  <xsd:include schemaLocation="netex_vehicleType_version.xsd"/>
+  <xsd:include schemaLocation="netex_trainElementType_support.xsd"/>
+  <xsd:include schemaLocation="netex_nm_fleetEquipment_support.xsd"/>
+  <xsd:include schemaLocation="netex_nm_fleet_support.xsd"/>
+  <!-- ======================================================================= -->
+  <xsd:group name="VehicleInFrameGroup">
+    <xsd:sequence>
+      <xsd:element name="vehicles" type="vehiclesInFrame_RelStructure" minOccurs="0"/>
+      <xsd:element name="rollingStockInventories" type="rollingStockInventories_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="vehiclesInFrame_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="Vehicle" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- ==== VEHICLE ===================================================== -->
+  <xsd:complexType name="vehicles_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="VehicleRef"/>
+          <xsd:element ref="Vehicle"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Vehicle" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="Vehicle_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VehicleGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="VehicleIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="Vehicle_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DataManagedObjectStructure">
+        <xsd:sequence>
+          <xsd:group ref="VehicleGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="VehicleGroup">
+    <xsd:sequence>
+      <xsd:group ref="VehicleParticularsGroup"/>
+      <xsd:group ref="VehicleCodeGroup"/>
+      <xsd:element ref="TransportOrganisationRef" minOccurs="0"/>
+      <xsd:element ref="ContactRef" minOccurs="0"/>
+      <xsd:element ref="TransportTypeRef" minOccurs="0"/>
+      <xsd:element ref="VehicleModelRef" minOccurs="0"/>
+      <xsd:element name="equipmentProfiles" type="vehicleEquipmentProfileRefs_RelStructure" minOccurs="0"/>
+      <xsd:element ref="VehicleModelProfileRef" minOccurs="0"/>
+      <xsd:element name="actualVehicleEquipments" type="equipments_RelStructure" minOccurs="0"/>
+      <xsd:element name="Monitored" type="xsd:boolean" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="VehicleParticularsGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="ShortName" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="BuildDate" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="ChassisNumber" type="xsd:normalizedString" minOccurs="0"/>
+      <xsd:element name="RegistrationNumber" type="xsd:normalizedString" minOccurs="0"/>
+      <xsd:element name="RegistrationDate" type="xsd:date" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== ROLLING STOCK INVENTORY ================================================= -->
+  <xsd:element name="RollingStockItem_Dummy" type="DataManagedObjectStructure" abstract="true" substitutionGroup="DataManagedObject"/>
+  <xsd:complexType name="rollingStockItems_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="RollingStockItemRef"/>
+          <xsd:element ref="RollingStockItem_Dummy"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RollingStockItem" abstract="true" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="RollingStockItem_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VehicleGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="RollingStockItemGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="RollingStockItemIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="RollingStockItem_VersionStructure" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="Vehicle_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="RollingStockItemGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="RollingStockItemGroup">
+    <xsd:sequence>
+      <xsd:element name="RollingStockType" type="TrainElementTypeTypeEnumeration" minOccurs="0"/>
+      <xsd:element ref="TypeOfRollingStockRef" minOccurs="0"/>
+      <xsd:element name="facilities" type="ServiceFacilitySet_VersionStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== TRAILING ROLLING STOCK ITEM ===================================================== -->
+  <xsd:element name="TrailingRollingStockItem" substitutionGroup="RollingStockItem_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TrailingRollingStockItem_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VehicleGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="RollingStockItemGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TrailingRollingStockItemGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TrailingRollingStockItemIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TrailingRollingStockItem_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="RollingStockItem_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="TrailingRollingStockItemGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="TrailingRollingStockItemGroup">
+    <xsd:sequence>
+      <xsd:element ref="TrailingElementTypeRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== TRACTIVE ROLLING STOCK ITEM ===================================================== -->
+  <xsd:element name="TractiveRollingStockItem" substitutionGroup="RollingStockItem_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TractiveRollingStockItem_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VehicleGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="RollingStockItemGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TractiveRollingStockItemGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TractiveRollingStockItemIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TractiveRollingStockItem_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="RollingStockItem_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="TractiveRollingStockItemGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="TractiveRollingStockItemGroup">
+    <xsd:sequence>
+      <xsd:element ref="TractiveElementTypeRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== ROLLING STOCK INVENTORY ===================================================== -->
+  <xsd:complexType name="rollingStockInventories_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="RollingStockInventory"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RollingStockInventory" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="RollingStockInventory_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="RollingStockInventoryGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TrailingRollingStockItemIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="RollingStockInventory_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DataManagedObjectStructure">
+        <xsd:sequence>
+          <xsd:group ref="RollingStockInventoryGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="RollingStockInventoryGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element ref="TransportOrganisationRef" minOccurs="0"/>
+      <xsd:element name="rollingStockItems" type="rollingStockItems_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ===== TYPE OF ROLLING STOCK =================================================== -->
+  <xsd:element name="TypeOfRollingStock" type="TypeOfRollingStock_ValueStructure" substitutionGroup="TypeOfEntity"/>
+  <xsd:complexType name="TypeOfRollingStock_ValueStructure">
+    <xsd:complexContent>
+      <xsd:extension base="TypeOfEntity_VersionStructure"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

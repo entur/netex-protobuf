@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_deckEntranceAssignment_support">
+  <!-- ======================================================================= -->
+  <xsd:include schemaLocation="../../netex_part_1/part1_tacticalPlanning/netex_stopAssignment_support.xsd"/>
+  <!-- ==== DECK ENTRANCE ASSIGNMENT==================================================== -->
+  <xsd:complexType name="deckEntranceAssignmentRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="deckEntranceAssignmentRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="deckEntranceAssignmentIdType">
+    <xsd:restriction base="PassengerBoardingPositionAssignmentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="deckEntranceAssignmentRef" type="deckEntranceAssignmentRefStructure" substitutionGroup="AssignmentRef"/>
+  <xsd:complexType name="deckEntranceAssignmentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="PassengerBoardingPositionAssignmentRefStructure">
+        <xsd:attribute name="ref" type="deckEntranceAssignmentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassPassengerBoardingPositionAssignmentRefStructureType" use="optional"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ====TRAIN COMPONENT STOPASSIGNMENT==================================================== -->
+  <xsd:complexType name="trainComponentStopAssignmentRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="TrainComponentStopAssignmentRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="TrainComponentStopAssignmentIdType">
+    <xsd:restriction base="PassengerBoardingPositionAssignmentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TrainComponentStopAssignmentRef" type="TrainComponentStopAssignmentRefStructure" substitutionGroup="AssignmentRef"/>
+  <xsd:complexType name="TrainComponentStopAssignmentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="PassengerBoardingPositionAssignmentRefStructure">
+        <xsd:attribute name="ref" type="TrainComponentStopAssignmentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTrainComponentStopAssignmentRefStructureType" default="TrainComponentStopAssignment"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

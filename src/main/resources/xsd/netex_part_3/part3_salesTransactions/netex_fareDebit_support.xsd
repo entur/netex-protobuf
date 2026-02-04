@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_fareDebit_support">
+  <xsd:include schemaLocation="../../netex_framework/netex_genericFramework/netex_loggable_support.xsd"/>
+  <!-- =============================================================== -->
+  <!-- ==== FARE  DEBIT ======================================================== -->
+  <xsd:complexType name="fareDebitRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="FareDebitRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:simpleType name="FareDebitIdType">
+    <xsd:restriction base="LogEntryIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="FareDebitRef" type="FareDebitRefStructure" substitutionGroup="LogEntryRef"/>
+  <xsd:complexType name="FareDebitRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="LogEntryRefStructure">
+        <xsd:attribute name="ref" type="FareDebitIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassFareDebitRefStructureType"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ==== OTHER DEBIT ======================================================== -->
+  <xsd:simpleType name="OtherDebitIdType">
+    <xsd:restriction base="FareDebitIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="OtherDebitRef" type="OtherDebitRefStructure" substitutionGroup="FareDebitRef"/>
+  <xsd:complexType name="OtherDebitRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="FareDebitRefStructure">
+        <xsd:attribute name="ref" type="OtherDebitIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassOtherDebitRefStructureType" default="OtherDebit"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ==== BOOKING DEBIT ======================================================== -->
+  <xsd:simpleType name="BookingDebitIdType">
+    <xsd:restriction base="FareDebitIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="BookingDebitRef" type="BookingDebitRefStructure" substitutionGroup="FareDebitRef"/>
+  <xsd:complexType name="BookingDebitRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="FareDebitRefStructure">
+        <xsd:attribute name="ref" type="BookingDebitIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassBookingDebitRefStructureType" default="BookingDebit"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ==== TRIP DEBIT ======================================================== -->
+  <xsd:simpleType name="TripDebitIdType">
+    <xsd:restriction base="FareDebitIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TripDebitRef" type="TripDebitRefStructure" substitutionGroup="FareDebitRef"/>
+  <xsd:complexType name="TripDebitRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="FareDebitRefStructure">
+        <xsd:attribute name="ref" type="TripDebitIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTripDebitRefStructureType" default="TripDebit"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ==== FARE PRODUCT SALES DEBIT ======================================================== -->
+  <xsd:simpleType name="FareProductSaleDebitIdType">
+    <xsd:restriction base="FareDebitIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="FareProductSaleDebitRef" type="FareProductSaleDebitRefStructure" substitutionGroup="FareDebitRef"/>
+  <xsd:complexType name="FareProductSaleDebitRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="FareDebitRefStructure">
+        <xsd:attribute name="ref" type="FareProductSaleDebitIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassFareProductSaleDebitRefStructureType" default="FareProductSaleDebit"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ==== OFFENCE DEBIT ======================================================== -->
+  <xsd:simpleType name="OffenceDebitIdType">
+    <xsd:restriction base="FareDebitIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="OffenceDebitRef" type="OffenceDebitRefStructure" substitutionGroup="FareDebitRef"/>
+  <xsd:complexType name="OffenceDebitRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="FareDebitRefStructure">
+        <xsd:attribute name="ref" type="OffenceDebitIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassOffenceDebitRefStructureType" default="OffenceDebit"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+</xsd:schema>

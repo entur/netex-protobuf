@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_deckPlan_version">
+  <xsd:include schemaLocation="netex_deckPlan_support.xsd"/>
+  <xsd:include schemaLocation="netex_vehicleType_support.xsd"/>
+  <xsd:include schemaLocation="netex_seatingPlan_version.xsd"/>
+  <xsd:include schemaLocation="netex_spotAffinity_version.xsd"/>
+  <xsd:include schemaLocation="netex_deckPath_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ======================================================================= -->
+  <xsd:group name="DeckPlanInFrameGroup">
+    <xsd:sequence>
+      <xsd:element name="deckPlans" type="deckPlans_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== DECK PLAN ==================================================== -->
+  <xsd:complexType name="deckPlans_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckPlan" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckPlan" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckPlan_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckPlanGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckPlanIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckPlan_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DataManagedObjectStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckPlanGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckPlanGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Orientation" type="VehicleOrientationEnumeration" minOccurs="0"/>
+      <xsd:element name="configurationConditions" type="validityConditions_RelStructure" minOccurs="0"/>
+      <xsd:element name="deckLevels" type="deckLevels_RelStructure" minOccurs="0"/>
+      <xsd:element name="decks" type="decks_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======= DECK ================================================== -->
+  <xsd:complexType name="decks_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="Deck" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Deck" substitutionGroup="Zone">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="Deck_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:group ref="DeckGroup"/>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="Deck_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="Zone_VersionStructure">
+        <xsd:group ref="DeckGroup"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckGroup">
+    <xsd:sequence>
+      <xsd:element name="Label" type="MultilingualString" minOccurs="0"/>
+      <xsd:element ref="DeckLevelRef" minOccurs="0"/>
+      <xsd:element name="deckSpaces" type="deckSpaces_RelStructure" minOccurs="0"/>
+      <xsd:element name="spotRows" type="spotRows_RelStructure" minOccurs="0"/>
+      <xsd:element name="spotColumns" type="spotColumns_RelStructure" minOccurs="0"/>
+      <xsd:group ref="DeckPathGroup"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== DECK COMPONENT ======================================================= -->
+  <xsd:element name="DeckComponent" type="DeckComponent_VersionStructure" abstract="true" substitutionGroup="OnboardSpace"/>
+  <xsd:complexType name="DeckComponent_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="OnboardSpace_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckComponentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckComponentGroup">
+    <xsd:sequence>
+      <xsd:element name="PublicUse" type="xsd:boolean" default="true" minOccurs="0"/>
+      <xsd:element ref="DeckLevelRef" minOccurs="0"/>
+      <xsd:element ref="ClassOfUseRef" minOccurs="0"/>
+      <xsd:element name="FareClass" type="FareClassEnumeration" default="any" minOccurs="0"/>
+      <xsd:element ref="AccessibilityAssessment" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== DECK SPACE =================================== -->
+  <xsd:complexType name="deckSpaces_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="DeckSpaceRef"/>
+          <xsd:element ref="DeckSpace_Dummy"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckSpace_Dummy" type="DeckComponent_VersionStructure" abstract="true" substitutionGroup="DeckComponent"/>
+  <xsd:element name="DeckSpace" abstract="true" substitutionGroup="DeckComponent">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckSpace_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckSpaceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckSpaceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckSpace_VersionStructure" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="DeckComponent_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckSpaceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckSpaceGroup">
+    <xsd:sequence>
+      <xsd:element name="Covered" type="CoveredEnumeration" default="true" minOccurs="0"/>
+      <xsd:element name="AirConditioned" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="SmokingAllowed" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element ref="TypeOfDeckSpaceRef" minOccurs="0"/>
+      <xsd:element name="ParentDeckSpaceRef" type="DeckSpaceRefStructure" minOccurs="0"/>
+      <xsd:group ref="DeckSpaceEntranceGroup"/>
+      <xsd:element name="TotalCapacity" type="NumberOfPassengers" minOccurs="0"/>
+      <xsd:element name="deckSpaceCapacities" type="deckSpaceCapacities_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckSpaceEntranceGroup">
+    <xsd:sequence>
+      <xsd:element name="deckEntrances" type="deckEntrances_RelStructure" minOccurs="0"/>
+      <xsd:element name="deckEntranceCouples" type="deckEntranceCouples_RelStructure" minOccurs="0"/>
+      <xsd:element name="deckEntranceUsages" type="deckEntranceUsages_RelStructure" minOccurs="0"/>
+      <xsd:element name="deckWindows" type="deckWindows_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== PASSENGER  SPACE =================================== -->
+  <xsd:complexType name="passengerSpaces_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="PassengerSpaceRef"/>
+          <xsd:element ref="PassengerSpace"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PassengerSpace" substitutionGroup="DeckSpace_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="PassengerSpace_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassengerSpaceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="PassengerSpaceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="PassengerSpace_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DeckSpace_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="PassengerSpaceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="PassengerSpaceGroup">
+    <xsd:sequence>
+      <xsd:element name="PassengerSpaceType" type="PassengerSpaceTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="StandingAllowed" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="passengerSpots" type="passengerSpots_RelStructure" minOccurs="0"/>
+      <xsd:element name="luggageSpots" type="luggageSpots_RelStructure" minOccurs="0"/>
+      <xsd:element name="passengerVehicleSpots" type="passengerVehicleSpots_RelStructure" minOccurs="0"/>
+      <xsd:element name="spotAffinities" type="spotAffinities_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== OTHER DECK  SPACE =================================== -->
+  <xsd:complexType name="otherDeckSpaces_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="OtherDeckSpaceRef"/>
+          <xsd:element ref="OtherDeckSpace"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="OtherDeckSpace" substitutionGroup="DeckSpace_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="OtherDeckSpace_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="OtherDeckSpaceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="OtherDeckSpaceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="OtherDeckSpace_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DeckSpace_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="OtherDeckSpaceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="OtherDeckSpaceGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ====== DECK ENTRANCE =================================== -->
+  <xsd:element name="DeckEntrance_Dummy" type="DeckComponent_VersionStructure" abstract="true" substitutionGroup="DeckComponent"/>
+  <xsd:complexType name="deckEntrances_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="DeckEntranceRef"/>
+          <xsd:element ref="DeckEntrance_Dummy"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckEntrance" abstract="true" substitutionGroup="DeckComponent">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckEntrance_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckEntranceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckEntranceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckEntrance_VersionStructure" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="DeckComponent_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckEntranceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckEntranceGroup">
+    <xsd:sequence>
+      <xsd:group ref="DeckEntrancePositionGroup"/>
+      <xsd:group ref="DeckEntranceClassificationGroup"/>
+      <xsd:element name="sensorsInEntrance" type="sensorsInEntrance_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckEntrancePositionGroup">
+    <xsd:sequence>
+      <xsd:element name="VehicleSide" type="VehicleSideEnumeration" minOccurs="0"/>
+      <xsd:element name="DistanceFromFront" type="LengthType" minOccurs="0"/>
+      <xsd:element name="SequenceFromFront" type="xsd:positiveInteger" minOccurs="0"/>
+      <xsd:element name="HeightFromGround" type="LengthType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckEntranceClassificationGroup">
+    <xsd:sequence>
+      <xsd:element name="DeckEntranceType" type="DeckEntranceTypeEnumeration" minOccurs="0"/>
+      <xsd:element ref="TypeOfDeckEntranceUsageRef" minOccurs="0"/>
+      <xsd:element name="IsEmergencyExit" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="HasDoor" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="IsAutomatic" type="xsd:boolean" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== PASSENGER  ENTRANCE =================================== -->
+  <xsd:element name="PassengerEntrance" substitutionGroup="DeckEntrance_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="PassengerEntrance_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckEntranceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassengerEntranceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="PassengerEntranceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="PassengerEntrance_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DeckEntrance_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="PassengerEntranceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="PassengerEntranceGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ====== DECK VEHICLE  ENTRANCE =================================== -->
+  <xsd:element name="DeckVehicleEntrance" substitutionGroup="DeckEntrance_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckVehicleEntrance_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckEntranceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckVehicleEntranceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckVehicleEntranceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckVehicleEntrance_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DeckEntrance_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckVehicleEntranceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckVehicleEntranceGroup">
+    <xsd:sequence>
+      <xsd:element name="vehicleTypes" type="vehicleTypeRefs_RelStructure" minOccurs="0"/>
+      <xsd:element name="VehicleCategories" type="AllRoadVehicleCategoriesListOfEnumerations" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== OTHER DECK ENTRANCE =================================== -->
+  <xsd:element name="OtherDeckEntrance" substitutionGroup="DeckEntrance_Dummy">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="OtherDeckEntrance_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckEntranceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="OtherDeckEntranceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="OtherDeckEntranceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="OtherDeckEntrance_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DeckEntrance_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="OtherDeckEntranceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="OtherDeckEntranceGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ======DECK ENTRANCE USAGE. ====================================================== -->
+  <xsd:complexType name="deckEntranceUsages_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckEntranceUsage" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckEntranceUsage" substitutionGroup="VersionedChild">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckEntranceUsage_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="DeckEntranceUsageGroup"/>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckEntranceUsageIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckEntranceUsage_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:group ref="DeckEntranceUsageGroup"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckEntranceUsageGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="EntranceUsageType" type="EntranceUsageEnumeration" default="entryAndExit" minOccurs="0"/>
+      <xsd:element ref="TypeOfDeckEntranceUsageRef" minOccurs="0"/>
+      <xsd:element name="EntranceSetting" type="EntranceSettingEnumeration" default="shut" minOccurs="0"/>
+      <xsd:element name="ControlledLocking" type="xsd:boolean" default="true" minOccurs="0"/>
+      <xsd:element ref="DeckEntranceRef" minOccurs="0"/>
+      <xsd:group ref="LocatableSpotRangeGroup"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======DECK ENTRANCE COUPLE. ====================================================== -->
+  <xsd:complexType name="deckEntranceCouples_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckEntranceCouple" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckEntranceCouple" substitutionGroup="VersionedChild">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckEntranceCouple_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="DeckEntranceCoupleGroup"/>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckEntranceCoupleIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckEntranceCouple_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:group ref="DeckEntranceCoupleGroup"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckEntranceCoupleGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="FromDeckEntranceRef" type="DeckEntranceRefStructure"/>
+      <xsd:element name="ToDeckEntranceRef" type="DeckEntranceRefStructure"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== DECK WINDOW =================================== -->
+  <xsd:complexType name="deckWindows_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="DeckWindowRef"/>
+          <xsd:element ref="DeckWindow"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckWindow" substitutionGroup="DeckComponent">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckWindow_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckComponentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckWindowGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckWindowIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckWindow_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DeckComponent_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckWindowGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckWindowGroup">
+    <xsd:sequence>
+      <xsd:element name="SequenceFromFront" type="xsd:integer" minOccurs="0"/>
+      <xsd:element name="DistanceFromFront" type="LengthType" minOccurs="0"/>
+      <xsd:element name="HeightFromFloor" type="LengthType" minOccurs="0"/>
+      <xsd:element name="VehicleSide" type="VehicleSideEnumeration" minOccurs="0"/>
+      <xsd:element name="DeckWindowType" type="DeckWindowTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="HasBlind" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="CanBeOpened" type="xsd:boolean" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== DECK LEVEL =================================== -->
+  <xsd:complexType name="deckLevels_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckLevel" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckLevel" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckLevel_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckLevelGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckLevelIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckLevel_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DataManagedObjectStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckLevelGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckLevelGroup">
+    <xsd:sequence>
+      <xsd:element name="Label" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="PublicUse" type="xsd:boolean" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== DECK SPACE CAPACITY =================================== -->
+  <xsd:complexType name="deckSpaceCapacities_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckSpaceCapacity" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckSpaceCapacity">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckSpaceCapacity_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckSpaceCapacityGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckSpaceCapacityIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckSpaceCapacity_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckSpaceCapacityGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckSpaceCapacityGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="LocatableSpotType" type="TypeOfLocatableSpotEnumeration" minOccurs="0"/>
+      <xsd:element ref="TypeOfLocatableSpotRef" minOccurs="0"/>
+      <xsd:element name="Capacity" type="NumberOfPassengers" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ========= TYPE OF DECK SPACE ============================================ -->
+  <xsd:element name="TypeOfDeckSpace" substitutionGroup="TypeOfValue">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TypeOfDeckSpace_ValueStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TypeOfValueGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TypeOfDeckSpaceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TypeOfDeckSpace_ValueStructure">
+    <xsd:complexContent>
+      <xsd:extension base="TypeOfValue_VersionStructure"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- =========TYPE OF DECK ENTRANCE. ============================================ -->
+  <xsd:element name="TypeOfDeckEntrance" substitutionGroup="TypeOfValue">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TypeOfDeckEntrance_ValueStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TypeOfValueGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TypeOfDeckEntranceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TypeOfDeckEntrance_ValueStructure">
+    <xsd:complexContent>
+      <xsd:extension base="TypeOfValue_VersionStructure"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- =========TYPE OF DECK ENTRANCE USAGE. ============================================ -->
+  <xsd:element name="TypeOfDeckEntranceUsage" substitutionGroup="TypeOfValue">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TypeOfDeckEntranceUsage_ValueStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TypeOfValueGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TypeOfDeckEntranceUsageIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TypeOfDeckEntranceUsage_ValueStructure">
+    <xsd:complexContent>
+      <xsd:extension base="TypeOfValue_VersionStructure"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

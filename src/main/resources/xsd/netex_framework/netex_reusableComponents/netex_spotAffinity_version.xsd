@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_sspotAffinity_version">
+  <xsd:include schemaLocation="netex_spotAffinity_support.xsd"/>
+  <xsd:include schemaLocation="netex_seatingPlan_support.xsd"/>
+  <xsd:include schemaLocation="../netex_responsibility/netex_responsibility_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ==== SPOT AFFINITY  ======================================================= -->
+  <xsd:complexType name="spotAffinities_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="SpotAffinity" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SpotAffinity" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SpotAffinity_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotAffinityGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SpotAffinityIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SpotAffinity_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DataManagedObjectStructure">
+        <xsd:sequence>
+          <xsd:group ref="SpotAffinityGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SpotAffinityGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="SpotAffinityType" type="SpotAffinityTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="MaximumSpots" type="xsd:nonNegativeInteger" minOccurs="0"/>
+      <xsd:element name="members" type="locatableSpotRefs_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>

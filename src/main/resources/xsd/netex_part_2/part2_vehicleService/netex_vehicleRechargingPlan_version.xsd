@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_vehicleRechargingPlan_version">
+  <xsd:include schemaLocation="netex_vehicleRechargingPlan_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_vehicleType_support.xsd"/>
+  <xsd:include schemaLocation="../part2_journeyTimes/netex_coupledJourney_support.xsd"/>
+  <xsd:include schemaLocation="../part2_journeyTimes/netex_vehicleJourney_support.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_responsibility/netex_responsibility_version.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_vehicle_version.xsd"/>
+  <xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_nm_chargingEquipmentProfile_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ======================================================================= -->
+  <xsd:group name="RechargingPlanInFrameGroup">
+    <xsd:sequence>
+      <xsd:element name="rechargingPlans" type="rechargingPlans_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ===Block=================================================== -->
+  <!-- ======================================================================= -->
+  <xsd:complexType name="rechargingPlans_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="RechargingPlan" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RechargingPlan" substitutionGroup="DataManagedObject">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="RechargingPlan_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="RechargingPlanGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="RechargingPlanIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="RechargingPlan_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="DataManagedObjectStructure">
+        <xsd:sequence>
+          <xsd:group ref="RechargingPlanGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="RechargingPlanGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="RechargingProcessType" type="RechargingProcessEnumeration" minOccurs="0"/>
+      <xsd:element name="TotalChargeEnergy" type="WattHoursType" minOccurs="0"/>
+      <xsd:element name="ChargingDuration" type="xsd:duration" minOccurs="0"/>
+      <xsd:element name="rechargingSteps" type="rechargingSteps_RelStructure" minOccurs="0"/>
+      <xsd:element name="blockRefs" type="blockRefs_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+  <xsd:complexType name="rechargingSteps_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="RechargingStep" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="RechargingStep" substitutionGroup="VersionedChild">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="RechargingStep_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+              <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+              <xsd:element name="ChargeEnergy" type="WattHoursType" minOccurs="0"/>
+              <xsd:element name="TargetEnergy" type="WattHoursType" minOccurs="0"/>
+              <xsd:group ref="RechargingDurationGroup"/>
+              <xsd:element ref="JourneyRef" minOccurs="0"/>
+              <xsd:element ref="PointInJourneyPatternRef" minOccurs="0"/>
+              <xsd:element ref="VehicleChargingEquipmentRef" minOccurs="0"/>
+              <xsd:element ref="RechargingEquipmentProfileRef" minOccurs="0"/>
+              <xsd:element name="vehicleTypes" type="vehicleTypeRefs_RelStructure" minOccurs="0"/>
+              <xsd:element name="vehicles" type="vehicleRefs_RelStructure" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="RechargingStepIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="RechargingStep_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:group ref="RechargingStepGroup"/>
+        <xsd:attribute name="order" type="xsd:nonNegativeInteger" use="optional"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="RechargingStepGroup">
+    <xsd:sequence>
+      <xsd:element name="Name" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="ChargeEnergy" type="WattHoursType" minOccurs="0"/>
+      <xsd:element name="TargetEnergy" type="WattHoursType" minOccurs="0"/>
+      <xsd:group ref="RechargingDurationGroup"/>
+      <xsd:element ref="JourneyRef" minOccurs="0"/>
+      <xsd:element ref="PointInJourneyPatternRef" minOccurs="0"/>
+      <xsd:element ref="VehicleChargingEquipmentRef" minOccurs="0"/>
+      <xsd:element ref="RechargingEquipmentProfileRef" minOccurs="0"/>
+      <xsd:element name="vehicleTypes" type="vehicleTypeRefs_RelStructure" minOccurs="0"/>
+      <xsd:element name="vehicles" type="vehicleRefs_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="RechargingDurationGroup">
+    <xsd:sequence>
+      <xsd:element name="PreparationDuration" type="xsd:duration" minOccurs="0"/>
+      <xsd:element name="ChargingDuration" type="xsd:duration" minOccurs="0"/>
+      <xsd:element name="FinalisationDuration" type="xsd:duration" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+</xsd:schema>

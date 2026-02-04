@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_vehicleJourneyStopAssignment_support">
+  <xsd:include schemaLocation="../../netex_part_1/part1_tacticalPlanning/netex_stopAssignment_support.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ====VEHICLE TYPE STOP ASSIGNMENT================================== -->
+  <xsd:simpleType name="VehicleTypeStopAssignmentIdType">
+    <xsd:restriction base="StopAssignmentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="VehicleTypeStopAssignmentRef" type="VehicleTypeStopAssignmentRefStructure" substitutionGroup="StopAssignmentRef"/>
+  <xsd:complexType name="VehicleTypeStopAssignmentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="StopAssignmentRefStructure">
+        <xsd:attribute name="ref" type="VehicleTypeStopAssignmentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassVehicleTypeStopAssignmentRefStructureType" default="VehicleTypeStopAssignment"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- =====VEHICLE JOURNEY STOP ASSIGNMENT=================================== -->
+  <xsd:simpleType name="VehicleJourneyStopAssignmentIdType">
+    <xsd:restriction base="PassengerStopAssignmentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="VehicleJourneyStopAssignmentRef" type="VehicleJourneyStopAssignmentRefStructure" substitutionGroup="PassengerStopAssignmentRef"/>
+  <xsd:complexType name="VehicleJourneyStopAssignmentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="PassengerStopAssignmentRefStructure">
+        <xsd:attribute name="ref" type="VehicleJourneyStopAssignmentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassVehicleJourneyStopAssignmentRefStructureType" default="VehicleJourneyStopAssignment"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ==== TRAIN COMPONENT LABEL ASSIGNMENT ================================= -->
+  <xsd:simpleType name="TrainComponentLabelAssignmentIdType">
+    <xsd:restriction base="AssignmentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="TrainComponentLabelAssignmentRef" type="TrainComponentLabelAssignmentRefStructure" substitutionGroup="AssignmentRef"/>
+  <xsd:complexType name="TrainComponentLabelAssignmentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="AssignmentRefStructure">
+        <xsd:attribute name="ref" type="TrainComponentLabelAssignmentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassTrainComponentLabelAssignmentRefStructureType" default="TrainComponentLabelAssignment"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TrainComponentLabelAssignmentRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="oneToManyRelationshipStructure">
+        <xsd:sequence>
+          <xsd:element ref="TrainComponentLabelAssignmentRef" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- =====DYNAMIC STOP ASSIGNMENT=================================== -->
+  <xsd:simpleType name="DynamicStopAssignmentIdType">
+    <xsd:restriction base="VehicleJourneyStopAssignmentIdType"/>
+  </xsd:simpleType>
+  <xsd:element name="DynamicStopAssignmentRef" type="DynamicStopAssignmentRefStructure" substitutionGroup="VehicleJourneyStopAssignmentRef"/>
+  <xsd:complexType name="DynamicStopAssignmentRefStructure">
+    <xsd:simpleContent>
+      <xsd:restriction base="VehicleJourneyStopAssignmentRefStructure">
+        <xsd:attribute name="ref" type="DynamicStopAssignmentIdType" use="required"/>
+        <xsd:attribute name="nameOfRefClass" type="NameOfClassDynamicStopAssignmentRefStructureType" default="DynamicStopAssignment"/>
+        <xsd:attribute name="modification" type="ModificationEnumeration" use="optional"/>
+        <xsd:attribute name="versionRef" type="VersionIdType" use="optional"/>
+        <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+        <xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+</xsd:schema>

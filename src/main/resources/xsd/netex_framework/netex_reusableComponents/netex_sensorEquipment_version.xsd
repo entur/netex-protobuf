@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:netex="http://www.netex.org.uk/netex" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_sensorEquipment_version">
+  <xsd:include schemaLocation="netex_deckPlan_support.xsd"/>
+  <xsd:include schemaLocation="netex_sensorEquipment_support.xsd"/>
+  <xsd:include schemaLocation="netex_equipment_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- === SENSOR EQUIPMENT ============================================ -->
+  <xsd:element name="SensorEquipment_Dummy" abstract="true" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="InstalledEquipment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SensorEquipmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="SensorEquipment" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SensorEquipment_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SensorEquipmentGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SensorEquipmentIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SensorEquipment_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="InstalledEquipment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="SensorEquipmentGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SensorEquipmentGroup">
+    <xsd:sequence>
+      <xsd:element name="CommunicationMethod" type="SensorCommunicationsEnumeration" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- === SPOT SENSOR ============================================ -->
+  <xsd:element name="SpotSensor" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SpotSensor_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SensorEquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotSensorGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SpotSensorIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SpotSensor_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="SensorEquipment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="SpotSensorGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SpotSensorGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- === ENTRANCE SENSOR ============================================ -->
+  <xsd:element name="EntranceSensor" substitutionGroup="InstalledEquipment">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="EntranceSensor_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SensorEquipmentGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntranceSensorGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="EntranceSensorIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="EntranceSensor_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="SensorEquipment_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="EntranceSensorGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="EntranceSensorGroup">
+    <xsd:sequence/>
+  </xsd:group>
+  <!-- ====== SENSOR IN SPOT =================================== -->
+  <xsd:complexType name="sensorsInSpot_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="SensorInSpot" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SensorInSpot">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SensorInSpot_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SensorInSpotGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SensorInSpotIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SensorInSpot_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="SensorInSpotGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SensorInSpotGroup">
+    <xsd:sequence>
+      <xsd:element ref="LocatableSpotRef" minOccurs="0"/>
+      <xsd:element ref="SpotSensorRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== SENSOR IN ENTRANCE =================================== -->
+  <xsd:complexType name="sensorsInEntrance_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="SensorInEntrance" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SensorInEntrance">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SensorInEntrance_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SensorInEntranceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SensorInEntranceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SensorInEntrance_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="SensorInEntranceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SensorInEntranceGroup">
+    <xsd:sequence>
+      <xsd:element ref="DeckEntranceRef" minOccurs="0"/>
+      <xsd:element ref="EntranceSensorRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+</xsd:schema>

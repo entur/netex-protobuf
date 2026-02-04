@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 2007 03 23 Add repeating name -->
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:siri="http://www.siri.org.uk/siri" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_deckPath_version">
+  <xsd:include schemaLocation="../../netex_part_1/part1_ifopt/netex_ifopt_path_version.xsd"/>
+  <xsd:include schemaLocation="netex_deckPath_support.xsd"/>
+  <xsd:include schemaLocation="netex_deckPlan_support.xsd"/>
+  <xsd:include schemaLocation="../netex_genericFramework/netex_path_version.xsd"/>
+  <xsd:include schemaLocation="netex_environment_version.xsd"/>
+  <xsd:include schemaLocation="netex_equipment_version.xsd"/>
+  <xsd:include schemaLocation="../netex_genericFramework/netex_place_version.xsd"/>
+  <!-- =====NB The following two files are in NETEX IFOPT part1 and should be factored into comm use at some point  ======================== -->
+  <xsd:include schemaLocation="../../netex_part_1/part1_ifopt/netex_ifopt_equipmentAll.xsd"/>
+  <xsd:include schemaLocation="../../netex_part_1/part1_ifopt/netex_ifopt_checkConstraint_version.xsd"/>
+  <!-- ============================================== -->
+  <xsd:group name="DeckPathGroup">
+    <xsd:sequence>
+      <xsd:element name="deckPathJunctions" type="deckPathJunctionRefs_RelStructure" minOccurs="0"/>
+      <xsd:element name="deckPathLinks" type="deckPathLinkRefs_RelStructure" minOccurs="0"/>
+      <xsd:element name="deckNavigationPaths" type="deckNavigationPaths_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== DECK PATH LINK ===================================================== -->
+  <xsd:complexType name="deckPathLinkRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="GenericPathLinkRef"/>
+          <xsd:element ref="DeckPathLink"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckPathLink" substitutionGroup="Link">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckPathLink_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LinkGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="GenericPathLinkGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="FixedPathLinkGroup"/>
+              <xsd:group ref="DeckPathLinkComponentGroup"/>
+              <xsd:group ref="DeckPathLinkGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckGenericPathLinkIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckPathLink_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="GenericPathLink_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="FixedPathLinkGroup"/>
+          <xsd:group ref="DeckPathLinkComponentGroup"/>
+          <xsd:group ref="DeckPathLinkGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckPathLinkGroup">
+    <xsd:sequence>
+      <xsd:element name="Label" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="FromOnboardSpace" type="DeckPathLinkEndStructure"/>
+      <xsd:element name="ToOnboardSpace" type="DeckPathLinkEndStructure"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckPathLinkComponentGroup">
+    <xsd:sequence>
+      <xsd:element ref="DeckRef" minOccurs="0"/>
+      <xsd:element ref="DeckLevelRef" minOccurs="0"/>
+      <xsd:element ref="FareClass" minOccurs="0"/>
+      <xsd:element ref="ClassOfUseRef" minOccurs="0"/>
+      <xsd:element name="checkConstraints" type="checkConstraints_RelStructure" minOccurs="0"/>
+      <xsd:group ref="AllEquipmentGroup"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+  <xsd:complexType name="DeckPathLinkEndStructure">
+    <xsd:sequence>
+      <xsd:element ref="DeckRef" minOccurs="0"/>
+      <xsd:element ref="DeckLevelRef" minOccurs="0"/>
+      <xsd:element ref="OnboardSpaceRef" minOccurs="0"/>
+      <xsd:element ref="DeckPathJunctionRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="DeckPointStructure">
+    <xsd:sequence>
+      <xsd:element ref="DeckRef" minOccurs="0"/>
+      <xsd:element ref="DeckLevelRef" minOccurs="0"/>
+      <xsd:choice>
+        <xsd:element ref="DeckEntranceRef"/>
+        <xsd:element ref="DeckSpaceRef"/>
+        <xsd:element ref="DeckPathJunctionRef"/>
+      </xsd:choice>
+      <xsd:element ref="LocatableSpotRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- =====DECK PATH JUNCTION ===================================================== -->
+  <xsd:complexType name="deckPathJunctionRefs_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckPathJunction" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckPathJunction" substitutionGroup="Point">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckPathJunction_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PointGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="GenericPathJunctionGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckPathJunctionGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckPathJunctionIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckPathJunction_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="GenericPathJunction_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckPathJunctionGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckPathJunctionGroup">
+    <xsd:sequence>
+      <xsd:group ref="DeckElementPropertiesGroup"/>
+      <xsd:element name="Label" type="MultilingualString" minOccurs="0"/>
+      <xsd:element ref="OnboardSpaceRef"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckPathJunctionSpotGroup">
+    <xsd:choice>
+      <xsd:element ref="DeckEntranceRef"/>
+      <xsd:element ref="DeckSpaceRef"/>
+      <xsd:element ref="LocatableSpotRef"/>
+    </xsd:choice>
+  </xsd:group>
+  <!-- ======= PLACES IN SEQUENCE ======================================= -->
+  <xsd:complexType name="deckPlacesInSequence_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckPlaceInSequence" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckPlaceInSequence" substitutionGroup="PointInLinkSequence">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckPlaceInSequence_VersionedChildStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PointInLinkSequenceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckPlaceInSequenceGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckPlaceInSequenceIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckPlaceInSequence_VersionedChildStructure">
+    <xsd:complexContent>
+      <xsd:extension base="PointInLinkSequence_VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckPlaceInSequenceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckPlaceInSequenceGroup">
+    <xsd:sequence>
+      <xsd:element ref="OnboardSpaceRef" minOccurs="0"/>
+      <xsd:element ref="DeckPathJunction" minOccurs="0"/>
+      <xsd:element name="BranchLevel" type="xsd:NMTOKEN" minOccurs="0"/>
+      <xsd:element name="onwardLinks" type="pathLinksInSequence_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- =====DECK NAVIGATION PATH =============================================== -->
+  <xsd:complexType name="deckNavigationPaths_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="strictContainmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="DeckNavigationPath" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="DeckNavigationPath" substitutionGroup="LinkSequence">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="DeckNavigationPath_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LinkSequenceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="GenericNavigationPathGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DeckNavigationPathGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="DeckNavigationPathIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="DeckNavigationPath_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="GenericNavigationPath_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="DeckNavigationPathGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="DeckNavigationPathGroup">
+    <xsd:sequence>
+      <xsd:group ref="DeckNavigationPathSummaryGroup"/>
+      <xsd:group ref="DeckElementPropertiesGroup"/>
+      <xsd:element name="AccessFeatureList" type="AccessFeatureListOfEnumerations" minOccurs="0"/>
+      <xsd:element name="DeckNavigationType" type="DeckNavigationPathTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="deckPlacesInSequence" type="deckPlacesInSequence_RelStructure" minOccurs="0"/>
+      <xsd:element name="pathLinksInSequence" type="pathLinksInSequence_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="DeckNavigationPathSummaryGroup">
+    <xsd:sequence>
+      <xsd:element name="From" type="DeckPathLinkEndStructure" minOccurs="0"/>
+      <xsd:element name="To" type="DeckPathLinkEndStructure" minOccurs="0"/>
+      <xsd:group ref="NavigationPathSummaryGroup"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+  <xsd:group name="DeckElementPropertiesGroup">
+    <xsd:sequence>
+      <xsd:group ref="EnvironmentPropertiesGroup"/>
+      <xsd:element name="Presentation" type="PresentationStructure" minOccurs="0"/>
+      <xsd:element name="facilities" type="serviceFacilitySets_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ======================================================================= -->
+</xsd:schema>

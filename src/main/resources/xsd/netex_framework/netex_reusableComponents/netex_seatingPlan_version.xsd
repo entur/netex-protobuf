@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0" id="netex_seatingPlan_version">
+  <xsd:include schemaLocation="netex_vehicleType_version.xsd"/>
+  <xsd:include schemaLocation="netex_seatingPlan_support.xsd"/>
+  <xsd:include schemaLocation="netex_sensorEquipment_version.xsd"/>
+  <xsd:include schemaLocation="netex_equipmentVehiclePassenger_version.xsd"/>
+  <xsd:include schemaLocation="../netex_genericFramework/netex_zone_version.xsd"/>
+  <!-- ======================================================================= -->
+  <!-- ==== SPOT ROW==================================================== -->
+  <xsd:complexType name="spotRows_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="SpotRow" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SpotRow" substitutionGroup="VersionedChild">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SpotRow_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotRowGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SpotRowIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SpotRow_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="SpotRowGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SpotRowGroup">
+    <xsd:sequence>
+      <xsd:element name="Label" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="NumberingFromFront" type="xsd:boolean" default="true" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== SPOT COLUMN ================================================= -->
+  <xsd:complexType name="spotColumns_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:sequence>
+          <xsd:element ref="SpotColumn" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="SpotColumn" substitutionGroup="VersionedChild">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="SpotColumn_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="VersionedChildGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="SpotColumnGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="SpotColumnIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="SpotColumn_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="VersionedChildStructure">
+        <xsd:sequence>
+          <xsd:group ref="SpotColumnGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="SpotColumnGroup">
+    <xsd:sequence>
+      <xsd:element name="Label" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="NumberingFromLeft" type="xsd:boolean" default="true" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== ONBOARD SPACE ======================================================= -->
+  <xsd:element name="OnboardSpace" type="OnboardSpace_VersionStructure" abstract="true" substitutionGroup="Zone"/>
+  <xsd:complexType name="OnboardSpace_VersionStructure" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="Zone_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="OnboardSpaceGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="OnboardSpaceGroup">
+    <xsd:sequence>
+      <xsd:element name="Label" type="MultilingualString" minOccurs="0"/>
+      <xsd:element name="Orientation" type="ComponentOrientationEnumeration" default="forwards" minOccurs="0"/>
+      <xsd:group ref="OnboardSpaceDimensionGroup"/>
+      <xsd:element ref="FacilitySetRef" minOccurs="0"/>
+      <xsd:element name="actualVehicleEquipments" type="actualVehicleEquipments_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="OnboardSpaceDimensionGroup">
+    <xsd:sequence>
+      <xsd:element name="Width" type="LengthType" minOccurs="0"/>
+      <xsd:element name="Length" type="LengthType" minOccurs="0"/>
+      <xsd:element name="Height" type="LengthType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ==== LOCATABLE SPOT ======================================================= -->
+  <xsd:element name="LocatableSpot" type="LocatableSpot_VersionStructure" abstract="true" substitutionGroup="OnboardSpace"/>
+  <xsd:complexType name="LocatableSpot_VersionStructure" abstract="true">
+    <xsd:complexContent>
+      <xsd:extension base="OnboardSpace_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="LocatableSpotGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="LocatableSpotGroup">
+    <xsd:sequence>
+      <xsd:element name="LocatableSpotType" type="TypeOfLocatableSpotEnumeration" minOccurs="0"/>
+      <xsd:element ref="TypeOfLocatableSpotRef" minOccurs="0"/>
+      <xsd:group ref="LocatableSpotRowColumnGroup"/>
+      <xsd:element name="sensorsInSpot" type="sensorsInSpot_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="LocatableSpotDimensionGroup">
+    <xsd:sequence>
+      <xsd:element name="Width" type="LengthType" minOccurs="0"/>
+      <xsd:element name="Length" type="LengthType" minOccurs="0"/>
+      <xsd:element name="Height" type="LengthType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="LocatableSpotRowColumnGroup">
+    <xsd:sequence>
+      <xsd:element ref="SpotRowRef" minOccurs="0"/>
+      <xsd:element ref="SpotColumnRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== PASSENGER SPOT =================================== -->
+  <xsd:complexType name="passengerSpots_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="PassengerSpotRef"/>
+          <xsd:element ref="PassengerSpot"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PassengerSpot" substitutionGroup="LocatableSpot">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="PassengerSpot_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LocatableSpotGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassengerSpotGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="PassengerSpotIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="PassengerSpot_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="LocatableSpot_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="PassengerSpotGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="PassengerSpotGroup">
+    <xsd:sequence>
+      <xsd:element name="TableType" type="TableTypeEnumeration" minOccurs="0"/>
+      <xsd:element name="HasArmrest" type="xsd:boolean" minOccurs="0"/>
+      <xsd:element name="LegSpace" type="LengthType" minOccurs="0"/>
+      <xsd:element name="HasPower" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsByWindow" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsByAisle" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsBetweenSeats" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsInFrontRow" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsInEndRow" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsFacingWindow" type="xsd:boolean" default="false" minOccurs="0"/>
+      <xsd:element name="IsFacingAisle" type="xsd:boolean" default="false" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== PASSENGER VEHICLE SPOT =================================== -->
+  <xsd:complexType name="passengerVehicleSpots_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="PassengerVehicleSpotRef"/>
+          <xsd:element ref="PassengerVehicleSpot"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="PassengerVehicleSpot" substitutionGroup="LocatableSpot">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="PassengerVehicleSpot_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LocatableSpotGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="PassengerVehicleSpotGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="PassengerVehicleSpotIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="PassengerVehicleSpot_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="LocatableSpot_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="PassengerVehicleSpotGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="PassengerVehicleSpotGroup">
+    <xsd:sequence>
+      <xsd:element name="VehicleCategories" type="AllRoadVehicleCategoriesListOfEnumerations" minOccurs="0"/>
+      <xsd:element name="transportTypes" type="transportTypeRefs_RelStructure" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ====== LUGGAGE SPOT =================================== -->
+  <xsd:complexType name="luggageSpots_RelStructure">
+    <xsd:complexContent>
+      <xsd:extension base="containmentAggregationStructure">
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element ref="LuggageSpotRef"/>
+          <xsd:element ref="LuggageSpot"/>
+        </xsd:choice>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="LuggageSpot" substitutionGroup="LocatableSpot">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="LuggageSpot_VersionStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:group ref="GroupOfEntitiesGroup"/>
+            <xsd:group ref="GroupOfPointsGroup"/>
+            <xsd:group ref="ZoneGroup"/>
+            <xsd:sequence>
+              <xsd:group ref="OnboardSpaceGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LocatableSpotGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="LuggageSpotGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="LuggageSpotIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="LuggageSpot_VersionStructure">
+    <xsd:complexContent>
+      <xsd:extension base="LocatableSpot_VersionStructure">
+        <xsd:sequence>
+          <xsd:group ref="LuggageSpotGroup"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:group name="LuggageSpotGroup">
+    <xsd:sequence>
+      <xsd:element name="IsAccessibleOnVoyage" type="xsd:boolean" default="true" minOccurs="0"/>
+      <xsd:element name="HeightFromFloor" type="LengthType" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+  <!-- ========= TYPE OF LOCATABLE SPOT ============================================ -->
+  <xsd:element name="TypeOfLocatableSpot" substitutionGroup="TypeOfValue">
+    <xsd:complexType>
+      <xsd:complexContent>
+        <xsd:restriction base="TypeOfLocatableSpot_ValueStructure">
+          <xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="DataManagedObjectGroup"/>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:group ref="TypeOfValueGroup"/>
+            </xsd:sequence>
+          </xsd:sequence>
+          <xsd:attribute name="id" type="TypeOfLocatableSpotIdType" use="required"/>
+        </xsd:restriction>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:complexType name="TypeOfLocatableSpot_ValueStructure">
+    <xsd:complexContent>
+      <xsd:extension base="TypeOfValue_VersionStructure"/>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <!-- ======================================================================= -->
+  <xsd:group name="SpotDescriptionGroup">
+    <xsd:sequence>
+      <xsd:element ref="DeckRef" minOccurs="0"/>
+      <xsd:element ref="DeckSpaceRef" minOccurs="0"/>
+      <xsd:element ref="LocatableSpotRef"/>
+      <xsd:element name="Label" type="MultilingualString"/>
+      <xsd:element name="Description" type="MultilingualString" minOccurs="0"/>
+      <xsd:element ref="FacilitySetRef" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:group>
+</xsd:schema>
