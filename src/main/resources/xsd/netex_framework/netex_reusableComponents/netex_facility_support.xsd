@@ -124,6 +124,7 @@
       <xsd:enumeration value="pullmanCoach"/>
       <xsd:enumeration value="pushchair"/>
       <xsd:enumeration value="wheelchair"/>
+      <xsd:enumeration value="standing"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="AssistanceFacilityEnumeration">

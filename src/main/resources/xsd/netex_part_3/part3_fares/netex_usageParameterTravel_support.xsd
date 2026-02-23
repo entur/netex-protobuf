@@ -303,4 +303,32 @@
       <xsd:enumeration value="either"/>
     </xsd:restriction>
   </xsd:simpleType>
+  <xsd:simpleType name="ActivationRequirementsListOfEnumerations">
+    <xsd:annotation>
+      <xsd:documentation>List of values for ACTIVATION REQUIREMENTS.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:list itemType="ActivationRequirementsEnumeration"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="ActivationRequirementsEnumeration">
+    <xsd:annotation>
+      <xsd:documentation>Allowed values for ACTIVATION REQUIREMENTS</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:normalizedString">
+      <xsd:enumeration value="selectedServiceJourney">
+        <xsd:annotation>
+          <xsd:documentation>A reference to a ServiceJourney must be provided in order for activation to take place</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="selectedTariffZone">
+        <xsd:annotation>
+          <xsd:documentation>A reference to a TariffZone must be provided in order for activation to take place</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="selectedPassengerSeat">
+        <xsd:annotation>
+          <xsd:documentation>A reference to a PassengerSeat must be provided in order for activation to take place</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
 </xsd:schema>
