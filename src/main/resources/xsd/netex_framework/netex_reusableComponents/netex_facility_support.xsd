@@ -107,6 +107,7 @@
       <xsd:enumeration value="unknown"/>
       <xsd:enumeration value="standing"/>
       <xsd:enumeration value="seating"/>
+      <xsd:enumeration value="foldingSeat"/>
       <xsd:enumeration value="sleeper"/>
       <xsd:enumeration value="singleSleeper"/>
       <xsd:enumeration value="doubleSleeper"/>
