@@ -192,7 +192,15 @@
 			<xsd:documentation>Elements for DATED  VEHICLE JOURNEY REFERENCEs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element ref="JourneyRef" minOccurs="0"/>
+            <!-- Local netex-protobuf modification. JourneyRef has been changed from choice with maxOccurs="unbounded" to single value. Need to keep existing choice, element will not matter as the field type is named from choice ("choiceWrapper") -->
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element name="legacyChoiceWrapper" type="JourneyRefStructure" abstract="true" substitutionGroup="LinkSequenceRef">
+                    <xsd:annotation>
+                        <xsd:documentation>Deprecated: Use single JourneyRef + replacedJourneys instead. Kept to allow backwards compatibility in generated protobuf types</xsd:documentation>
+                    </xsd:annotation>
+                </xsd:element>
+            </xsd:choice>
+            <xsd:element ref="JourneyRef" minOccurs="0"/>
 			<xsd:element name="replacedJourneys" type="replacedJourneys_RelStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>DATED VEHICLE JOURNEYs for which current VEHICLE JOURNEY is an alteration (i.e. change, replacement, supplement)</xsd:documentation>
