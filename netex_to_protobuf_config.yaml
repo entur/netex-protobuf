@@ -676,7 +676,6 @@ customTypeReplacements:
   ^RevertingRefStructure$: VersionOfObjectRefStructure
   ^SecurityPolicyRefStructure$: VersionOfObjectRefStructure
   ^OnboardValidityRefStructure$: VersionOfObjectRefStructure
-  ^DatedServiceJourneyRefStructure$: VersionOfObjectRefStructure
 
   ^CrewBaseRefStructure$: GroupOfEntitiesRefStructure
   ^FareTableRefStructure$: GroupOfEntitiesRefStructure
