@@ -166,6 +166,12 @@
 					<xsd:documentation>The ServiceJourney where this control was conducted</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
+			 <!-- DEPRECATED Local netex-protobuf modification. DatedServiceJourneyRef has been removed, but is still heavily used in Entur API and existing data. Need to keep this until clients and data have been migrated.  -->
+			<xsd:element name="DatedServiceJourneyRef" type="DatedVehicleJourneyRefStructure" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The DatedServiceJourney where this control was conducted</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<xsd:group name="DeviceRelatedControlMeansGroup">
