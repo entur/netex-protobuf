@@ -193,7 +193,7 @@
 			<xsd:documentation>Elements for DATED  VEHICLE JOURNEY REFERENCEs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-            <!-- Local netex-protobuf modification. JourneyRef has been changed from choice with maxOccurs="unbounded" to single value. Need to keep existing choice, element will not matter as the field type is named from choice ("choiceWrapper") -->
+            <!-- DEPRECATED Local netex-protobuf modification. JourneyRef has been changed from choice with maxOccurs="unbounded" to single value. Need to keep existing choice, element will not matter as the field type is named from choice ("choiceWrapper") -->
             <xsd:choice minOccurs="0" maxOccurs="unbounded">
 				<xsd:element name="ServiceJourneyRef" type="VehicleJourneyRefStructure"/>
 				<xsd:element name="DatedServiceJourneyRef" type="DatedVehicleJourneyRefStructure"/>
