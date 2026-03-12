@@ -51,15 +51,15 @@
 				<Date><Modified>2017-03-28</Modified> CR019 Make ValidityParameter Assignment not abstract and fix ambiguity with Generic Parameter
 				</Date>
 				<Date><Modified>2017-10-10</Modified> Fix Add TypeOfTravelDocument to ProductValidityParametersGroup.
-						* Allow DistanceMatrixElement view so that origin and Destination can be referenced
+					* Allow DistanceMatrixElement view so that origin and Destination can be referenced
 				</Date>
 				<Date><Modified>2017-10-10</Modified> Fix Add TimeIntervalRef TimeStructureFactorRef to GeographicalIntervalRef   GeographicalStructureFactorRef to be referenced
 				</Date>
 				<Date><Modified>2019-03-01</Modified>EURA-(nk) Add DistanceMatrixInverseRef for backwards direction of reference to a DIstance Matrix Element
 				</Date>
 				<Date><Modified>2019-03-01</Modified>Add missing elements to GenericParameterAssignment
-					    *	UK-33 Add TariffRef	as a GenericParameterAssignment parameter
-					   *	UK80 TypeOfConcession, TypeOfUsageParameter,  VehicleType   TypeOfLineRef as GenericParameterAssignment parameters
+					*	UK-33 Add TariffRef	as a GenericParameterAssignment parameter
+					*	UK80 TypeOfConcession, TypeOfUsageParameter,  VehicleType   TypeOfLineRef as GenericParameterAssignment parameters
 				</Date>
 				<Date><Modified>2019-03-01</Modified>EURA-88 Add ServiceMatch Attributes : Exact | next | previous | timebands  to GenericParameterAssignmen
 				</Date>
@@ -70,14 +70,14 @@
 				<Date><Modified>2019-03-14</Modified>UK-41  Also LimitationSelectionType Add an additional functional operator to GenericParameterAssignment  to clarify use of groups :  oneOf /  someOf/  allOf
 
 					* Add  new ___FareStructureValidityParametersGroup___ to validity paarmaters with new attributes   ___TypeOfTariffRef___,   ___TypeOfFareStructureFactor___,  ___TypeOfFarFresStructureFactorRef___,
-					  * Extend  ___FareProduct ValidityParametersGroup___  to validity paramaters  with new attributes   ___TypeOfPriceingRuleRef___,   ___ChargingMethodRef___, ___TypeOfPaymentMethodRef___, ___TypeOfMachineReadability___, ___TypeOfFareTableRef.___  TypeofMachineReadabilityRef.
-					  * Add  new ___SeatingValidityParametersGroup___ with new attributes   ___TrainElementRef___,    ___TrainComponentLabelAssignmentRef___.
-					 * Also add OperatingPeriod Ref to Temporal  validity Parameters
-					 * Also Fix change choice of TrainNumber etc to selection,
+					* Extend  ___FareProduct ValidityParametersGroup___  to validity paramaters  with new attributes   ___TypeOfPriceingRuleRef___,   ___ChargingMethodRef___, ___TypeOfPaymentMethodRef___, ___TypeOfMachineReadability___, ___TypeOfFareTableRef.___  TypeofMachineReadabilityRef.
+					* Add  new ___SeatingValidityParametersGroup___ with new attributes   ___TrainElementRef___,    ___TrainComponentLabelAssignmentRef___.
+					* Also add OperatingPeriod Ref to Temporal  validity Parameters
+					* Also Fix change choice of TrainNumber etc to selection,
 				</Date>
 				<Date><Modified>2019-03-26</Modified>NL-27 CD #58 Add default TypeOfProductCategory and TypeOfService to Line:
 					Move TypeOfProductCategory amnd TypeOfService from netex_journey_version  to  Framework reusable components (netex_travelRights_version)  so they are visible from part 1
-		  	Can  therefore drop include of netex_travelRights_version from 	  netex_accessRightParameter_version.xsd  .
+					Can  therefore drop include of netex_travelRights_version from 	  netex_accessRightParameter_version.xsd  .
 				</Date>
 				<Date><Modified>2019-04-18</Modified>FIX  - SUpport Place to Place travel (ADDRESS and TOPOGRAPHICAL PLACE) : Add AddressRef ,  TopoographiPlaceRef and PlaceUseEnum.
 				</Date>
@@ -86,15 +86,15 @@
 					- Modes: Add AccessVeModes and  ModeOfOperation
 					- VehicleTypes:   Add ModelProfileType, use Wider TransportType rather than VehicleType
 					- Organisations - Generalision to include all organisations
-					     NB this breaks strict compatibility  in one edge case where
-					     both an operator and an authority is specified
-					 - Equipment: Add MobilityService, Euipment / LocalService / MobilitySrevice. ModelEqipmentProfile, VehicleModelRef,
-					 - Seating: Add VehicleRef
-					 - MeetingPoint/Place - Add VehicleMeetingPlace , VehicleMeetingPoint, VehicleMeetingLink
-					 - Network - Add VehicleMeetingPoint,
-					 - Route : SingleJourneyPath
-					 - Service add SingleJourney and GroupOfSingleJourneys
-					 - Fare: add MediumAccessDevice and ApplicationInstance
+					NB this breaks strict compatibility  in one edge case where
+					both an operator and an authority is specified
+					- Equipment: Add MobilityService, Euipment / LocalService / MobilitySrevice. ModelEqipmentProfile, VehicleModelRef,
+					- Seating: Add VehicleRef
+					- MeetingPoint/Place - Add VehicleMeetingPlace , VehicleMeetingPoint, VehicleMeetingLink
+					- Network - Add VehicleMeetingPoint,
+					- Route : SingleJourneyPath
+					- Service add SingleJourney and GroupOfSingleJourneys
+					- Fare: add MediumAccessDevice and ApplicationInstance
 				</Date>
 				<Date><Modified>2020-12-08</Modified>FIX - Add optional TimebandRef and ServiceCalendarRef to TemporalValidityParametersGroup
 				</Date>
@@ -103,7 +103,7 @@
 				<Date><Modified>2021-01-25</Modified>Add GroupOfTariffZonesRef to NetworkValidityParametersGroup
 				</Date>
 				<Date><Modified>2021-09-01</Modified>FIX - Post newmodes merge  Remove ambigous use of VehicleModes (drop from Organisation validity parameters).
-					    Add MobilityServiceConstraintZone to Network validity parameters.
+					Add MobilityServiceConstraintZone to Network validity parameters.
 				</Date>
 				<Description>
 					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
@@ -121,7 +121,7 @@
 					<Requires>http://www.netex.org.uk/schemas/1.0/PATH/netex_prereqfile.xsd</Requires>
 				</Relation>
 				<Rights>Unclassified
-					 <Copyright>CEN, Crown Copyright 2009-2021</Copyright>
+					<Copyright>CEN, Crown Copyright 2009-2021</Copyright>
 				</Rights>
 				<Source>
 					<ul>
@@ -131,13 +131,13 @@
 				<Status>Version 1.0</Status>
 				<Subject>
 					<Category>Arts, recreation and travel, Tourism, Travel (tourism), Transport,
-Air transport, Airports,
-Ports and maritime transport, Ferries (marine),
-Public transport, Bus services, Coach services, Bus stops and stations,
-Rail transport, Railway stations and track, Train services, Underground trains,
-Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
-Rail transport, Roads and Road transport
-</Category>
+						Air transport, Airports,
+						Ports and maritime transport, Ferries (marine),
+						Public transport, Bus services, Coach services, Bus stops and stations,
+						Rail transport, Railway stations and track, Train services, Underground trains,
+						Business and industry, Transport, Air transport , Ports and maritime transport, Public transport,
+						Rail transport, Roads and Road transport
+					</Category>
 					<Project>CEN TC278 WG3 SG9.</Project>
 				</Subject>
 				<Title>NeTEx Fare ACCESS RIGHT PARAMETER types.</Title>
@@ -185,7 +185,7 @@ Rail transport, Roads and Road transport
 					<xsd:element ref="AccessRightParameterAssignment_" maxOccurs="unbounded">
 						<xsd:annotation>
 							<xsd:documentation>A sequence or set of CONTROLLABLE ELEMENTs to which rules for limitation of access rights and calculation of prices (fare structure) are applied.
-</xsd:documentation>
+							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:sequence>
@@ -195,13 +195,13 @@ Rail transport, Roads and Road transport
 	<xsd:element name="AccessRightParameterAssignment_" type="DataManagedObjectStructure" abstract="true" substitutionGroup="Assignment_">
 		<xsd:annotation>
 			<xsd:documentation>The assignment of a fare parameter (referring to geography, time, quality or usage) to an element of a fare system (access right, validated access, control mean, etc.).
-</xsd:documentation>
+			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:element name="AccessRightParameterAssignment" type="AccessRightParameterAssignment_VersionStructure" abstract="false" substitutionGroup="AccessRightParameterAssignment_">
 		<xsd:annotation>
 			<xsd:documentation>The assignment of a fare parameter (referring to geography, time, quality or usage) to an element of a fare system (access right, validated access, control mean, etc.).
-</xsd:documentation>
+			</xsd:documentation>
 		</xsd:annotation>
 	</xsd:element>
 	<xsd:complexType name="AccessRightParameterAssignment_VersionStructure" abstract="true">
@@ -892,7 +892,7 @@ Rail transport, Roads and Road transport
 					<xsd:element ref="TypeOfAccessRightAssignment">
 						<xsd:annotation>
 							<xsd:documentation>A TYPE OF ACCESS RIGHT ASSIGNMENT specifying access rights for the ACCESS RIGHT ASSIGNMENT ELEMENTs within the range of this UNIT: 0-5 km, 4-6 zones etc.
-</xsd:documentation>
+							</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:choice>
@@ -902,7 +902,7 @@ Rail transport, Roads and Road transport
 	<xsd:element name="TypeOfAccessRightAssignment" abstract="false" substitutionGroup="TypeOfEntity">
 		<xsd:annotation>
 			<xsd:documentation>A classification of ACCESS RIGHT ASSIGNMENTs expressing their general functionalities and local functional characteristics specific to the operator. Types of ACCESS RIGHT ASSIGNMENTs like e.g. throw-away ticket, throw-away ticket unit, value card, electronic purse allowing access, public transport credit card etc. may be used to define these categories.
-</xsd:documentation>
+			</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
