@@ -41,9 +41,6 @@
     <xsl:template
         match="/xsd:schema/xsd:element[@name = 'DisplayAssignment']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'DisplayAssignment_VersionStructure']/xsd:attribute[@name = 'compatibleWithVersionFrameVersionRef']"/>
 
-    <xsl:template
-        match="/xsd:schema/xsd:complexType[@name = 'DataManagedObjectStructure']/xsd:complexContent/xsd:extension[@base = 'EntityInVersionStructure']/xsd:attribute[@name = 'responsibilitySetRef']"/>
-
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'publication']"/>
 
 
