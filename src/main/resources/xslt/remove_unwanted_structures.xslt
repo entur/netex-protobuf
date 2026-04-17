@@ -29,6 +29,10 @@
 
 
     <!-- modification attribute -->
+    <!-- Remove from VersionOfObjectRefStructure and all subclasses -->
+    <xsl:template match="//xsd:simpleContent/xsd:restriction/xsd:attribute[@name = 'modification']"/>
+    <xsl:template match="//xsd:simpleContent/xsd:restriction/xsd:attribute[@name = 'versionRef']"/>
+    <!-- Remove from VersionOfObjectRefStructure directly -->
     <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:complexType[@name = 'TypeOfVersionRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
