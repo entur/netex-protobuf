@@ -2,7 +2,6 @@
 <xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml/3.2" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="netex_salesOfferPackage_version">
 	<xsd:include schemaLocation="netex_salesOfferPackage_support.xsd"/>
 	<xsd:include schemaLocation="../../netex_framework/netex_reusableComponents/netex_topographicPlace_support.xsd"/>
-	<xsd:include schemaLocation="../part3_consumption/netex_consumption_version.xsd"/>
 	<!-- ======================================================================= -->
 	<xsd:include schemaLocation="netex_salesDistribution_version.xsd"/>
 	<xsd:include schemaLocation="netex_fareProduct_version.xsd"/>
@@ -16,7 +15,7 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-09-04</Created>
 				</Date>
@@ -31,6 +30,8 @@
 				<Date><Modified>2018-06-02</Modified>EURA-78 Allow more than one refernece a  GroupsOfSalesOfferPackageRef  from  SalesOfferPackage (ie make relationship many to many)
 				</Date>
 				<Date><Modified>2019-03-10</Modified>EURA-78 Allow more than one refernece a  GroupsOfSalesOfferPackageRef  from  SalesOfferPackage (ie make relationship many to many)
+				</Date>
+				<Date><Modified>2023-11-07</Modified>CR0544 Deprecate PrivateCode.
 				</Date>
 				<Description>
 					<p>NeTEx is a European CEN standard for the exchange of Public Transport data including timetables.</p>
@@ -71,7 +72,7 @@ Rail transport, Roads and Road transport
 				<Type>Standard</Type>
 			</Metadata>
 		</xsd:appinfo>
-		<xsd:documentation>NeTEx: SALES OFFER PACKAGE  types.</xsd:documentation>
+		<xsd:documentation>NeTEx: SALES OFFER PACKAGE types.</xsd:documentation>
 	</xsd:annotation>
 	<!-- ===ENTIITY IN VERSION IN FRAME====Used in SERVICE FRAME)=================================================== -->
 	<xsd:group name="SalesOfferPackageInFrameGroup">
@@ -100,11 +101,6 @@ Rail transport, Roads and Road transport
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="distributionAssignments" type="distributionAssignmentsInFrame_RelStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>DISTRIBUTION ASSIGNMENTS in FRAME.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="groupOfDistributionAssignments" type="groupsOfDistributionAssignmentsInFrame_RelStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>DISTRIBUTION ASSIGNMENTS in FRAME.</xsd:documentation>
 				</xsd:annotation>
@@ -171,23 +167,10 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:complexType name="groupsOfDistributionAssignmentsInFrame_RelStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for containment in frame of GROUPs OF DISTRIBUTION ASSIGNMENTs.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="frameContainmentStructure">
-				<xsd:sequence>
-					<xsd:element ref="GroupOfDistributionAssignments" maxOccurs="unbounded"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
 	<!-- ====SALES OFFER PACKAGE=================================================== -->
-	<xsd:element name="SalesOfferPackage" abstract="false" substitutionGroup="PriceableObject_">
+	<xsd:element name="SalesOfferPackage" substitutionGroup="PriceableObject_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>A package to be sold as a whole, consisting of one or several FARE PRODUCTs materialised thanks to one or several TRAVEL DOCUMENTs. The FARE PRODUCTs may be either directly attached to the TRAVEL DOCUMENTs, or may be reloadable on the TRAVEL DOCUMENTs.
-</xsd:documentation>
+			<xsd:documentation>A package to be sold as a whole, consisting of one or several FARE PRODUCTs materialised thanks to one or several TRAVEL DOCUMENTs. The FARE PRODUCTs may be either directly attached to the TRAVEL DOCUMENTs, or may be reloadable on the TRAVEL DOCUMENTs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -206,7 +189,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="SalesOfferPackageGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SalesOfferPackageIdType"/>
+					<xsd:attribute name="id" type="SalesOfferPackageIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -228,13 +211,17 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Elements for SALES OFFER PACKAGE.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:sequence>
-			<xsd:element ref="PrivateCode" minOccurs="0"/>
+			<xsd:element ref="PrivateCode" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>DEPRECATED - use privateCodes. -v2.0</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:group ref="SalesOfferPackageCommonGroup"/>
 			<xsd:choice minOccurs="0">
 				<xsd:element ref="GroupOfSalesOfferPackagesRef"/>
 				<xsd:element name="groupsOfSaleOfferPackages" type="groupOfSalesOfferPackageRefs_RelStructure">
 					<xsd:annotation>
-						<xsd:documentation>Reference to multiple GROUP of SALES OFFER PACKAGEs with whicj this SALES OFFER PACKAGE shares properties. </xsd:documentation>
+						<xsd:documentation>Reference to multiple GROUP of SALES OFFER PACKAGEs with whicj this SALES OFFER PACKAGE shares properties.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:element>
 			</xsd:choice>
@@ -254,16 +241,11 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="ConditionSummary" minOccurs="0"/>
 			<xsd:element name="validityParameterAssignments" type="genericParameterAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>NOTICE ASSIGNMENTs for  SALES OFFER PACKAGE.</xsd:documentation>
+					<xsd:documentation>NOTICE ASSIGNMENTs for SALES OFFER PACKAGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="distributionAssignments" type="distributionAssignments_RelStructure" minOccurs="0"/>
 			<xsd:group ref="SalesOfferPackagePricingGroup"/>
-			<xsd:element name="elementConsumptionPolicies" type="elementConsumptionPolicies_RelStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>CONSUMPTION UTLIISATION DEPENDENCIES in SALES OFFER PACKAGE.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
 			<xsd:element name="salesOfferPackageElements" type="salesOfferPackageElements_RelStructure" minOccurs="0">
 				<xsd:annotation>
 					<xsd:documentation>SALES OFFER PACKAGE ELEMENTs in SALES OFFER PACKAGE.</xsd:documentation>
@@ -295,18 +277,16 @@ Rail transport, Roads and Road transport
 					<xsd:element ref="SalesOfferPackageElementRef"/>
 					<xsd:element ref="SalesOfferPackageElement">
 						<xsd:annotation>
-							<xsd:documentation>A sequence or set of CONTROLLABLE ELEMENTs to which rules for limitation of access rights and calculation of prices (SALES OFFER PACKAGE) are applied.
-</xsd:documentation>
+							<xsd:documentation>A sequence or set of CONTROLLABLE ELEMENTs to which rules for limitation of access rights and calculation of prices (SALES OFFER PACKAGE) are applied.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="SalesOfferPackageElement" abstract="false" substitutionGroup="PriceableObject">
+	<xsd:element name="SalesOfferPackageElement" substitutionGroup="PriceableObject">
 		<xsd:annotation>
-			<xsd:documentation>The assignment of a FARE PRODUCT to a TYPE OF TRAVEL DOCUMENT in order to define a SALES OFFER PACKAGE, realised as a fixed assignment (printing, magnetic storage etc.) or by the possibility for the FARE PRODUCT to be reloaded on the TYPE OF TRAVEL DOCUMENT.
-</xsd:documentation>
+			<xsd:documentation>The assignment of a FARE PRODUCT to a TYPE OF TRAVEL DOCUMENT in order to define a SALES OFFER PACKAGE, realised as a fixed assignment (printing, magnetic storage etc.) or by the possibility for the FARE PRODUCT to be reloaded on the TYPE OF TRAVEL DOCUMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -325,7 +305,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="SalesOfferPackageElementGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SalesOfferPackageElementIdType"/>
+					<xsd:attribute name="id" type="SalesOfferPackageElementIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -339,9 +319,9 @@ Rail transport, Roads and Road transport
 				<xsd:sequence>
 					<xsd:group ref="SalesOfferPackageElementGroup"/>
 				</xsd:sequence>
-				<xsd:attribute name="order" type="xsd:integer">
+				<xsd:attribute name="order" type="xsd:positiveInteger" use="optional">
 					<xsd:annotation>
-						<xsd:documentation>Relative order of element.</xsd:documentation>
+						<xsd:documentation>Relative order of element. -v2.0</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
 			</xsd:extension>
@@ -354,7 +334,7 @@ Rail transport, Roads and Road transport
 		<xsd:sequence>
 			<xsd:element name="RequiresValidation" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether element requires validation  before it can be used.</xsd:documentation>
+					<xsd:documentation>Whether element requires validation before it can be used.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element ref="ConditionSummary" minOccurs="0"/>
@@ -387,12 +367,12 @@ Rail transport, Roads and Road transport
 							<xsd:documentation>A set of all possible price features of a SALES OFFER PACKAGE ELEMENT: default total price, discount in value or percentage etc.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
-					<xsd:element ref="CellRef_"/>
+					<xsd:element ref="CellRef_Dummy"/>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="SalesOfferPackagePrice" substitutionGroup="FarePrice_">
+	<xsd:element name="SalesOfferPackagePrice" substitutionGroup="FarePrice_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>A set of all possible price features of a SALES OFFER PACKAGE ELEMENT: default total price, discount in value or percentage etc.</xsd:documentation>
 		</xsd:annotation>
@@ -413,7 +393,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="SalesOfferPackagePriceGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SalesOfferPackagePriceIdType"/>
+					<xsd:attribute name="id" type="SalesOfferPackagePriceIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -453,10 +433,9 @@ Rail transport, Roads and Road transport
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="SalesOfferPackageSubstitution" abstract="false" substitutionGroup="Assignment_">
+	<xsd:element name="SalesOfferPackageSubstitution" substitutionGroup="Assignment_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>A particular tariff, described by a combination of parameters.
-</xsd:documentation>
+			<xsd:documentation>A particular tariff, described by a combination of parameters.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -477,7 +456,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="SalesOfferPackageSubstitutionGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SalesOfferPackageSubstitutionIdType"/>
+					<xsd:attribute name="id" type="SalesOfferPackageSubstitutionIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -502,16 +481,15 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="SalesOfferPackageRef" minOccurs="0"/>
 			<xsd:element name="WithSalesOfferPackageRef" type="SalesOfferPackageRefStructure">
 				<xsd:annotation>
-					<xsd:documentation>SALES OFFER PACKAGE  that may be used to subsitute base SALES OFFER PACKAGE.</xsd:documentation>
+					<xsd:documentation>SALES OFFER PACKAGE that may be used to subsitute base SALES OFFER PACKAGE.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ====GROUP OF SALES OFFER PACKAGEs=================================================== -->
-	<xsd:element name="GroupOfSalesOfferPackages" abstract="false" substitutionGroup="DataManagedObject">
+	<xsd:element name="GroupOfSalesOfferPackages" substitutionGroup="DataManagedObject">
 		<xsd:annotation>
-			<xsd:documentation>A package to be sold as a whole, consisting of one or several FARE PRODUCTs materialised thanks to one or several TRAVEL DOCUMENTs. The FARE PRODUCTs may be either directly attached to the TRAVEL DOCUMENTs, or may be reloadable on the TRAVEL DOCUMENTs.
-</xsd:documentation>
+			<xsd:documentation>A package to be sold as a whole, consisting of one or several FARE PRODUCTs materialised thanks to one or several TRAVEL DOCUMENTs. The FARE PRODUCTs may be either directly attached to the TRAVEL DOCUMENTs, or may be reloadable on the TRAVEL DOCUMENTs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -530,7 +508,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="GroupOfSalesOfferPackagesGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="GroupOfSalesOfferPackagesIdType"/>
+					<xsd:attribute name="id" type="GroupOfSalesOfferPackagesIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -573,10 +551,9 @@ Rail transport, Roads and Road transport
 		</xsd:sequence>
 	</xsd:group>
 	<!-- ====SALES NOTICE ASSIGNMENT ================================================= -->
-	<xsd:element name="SalesNoticeAssignment" abstract="false" substitutionGroup="NoticeAssignment_">
+	<xsd:element name="SalesNoticeAssignment" substitutionGroup="NoticeAssignment_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>The assignment of a NOTICE to a SALES OFFER PACKAGE or a GROUP OF SALES OFFER PACKAGEs.
-</xsd:documentation>
+			<xsd:documentation>The assignment of a NOTICE to a SALES OFFER PACKAGE or a GROUP OF SALES OFFER PACKAGEs.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -600,7 +577,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="SalesNoticeAssignmentGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="SalesNoticeAssignmentIdType"/>
+					<xsd:attribute name="id" type="SalesNoticeAssignmentIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -637,16 +614,13 @@ Rail transport, Roads and Road transport
 				<xsd:choice maxOccurs="unbounded">
 					<xsd:element ref="DistributionAssignmentRef"/>
 					<xsd:element ref="DistributionAssignment"/>
-					<xsd:element ref="GroupOfDistributionAssignmentsRef"/>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="DistributionAssignment" abstract="false" substitutionGroup="Assignment_">
+	<xsd:element name="DistributionAssignment" substitutionGroup="Assignment_Dummy">
 		<xsd:annotation>
-			<xsd:documentation>An assignment  of the  COUNTRY and/or  DISTRIBUTION CHANNEL through which a product may or may not be distributed.
-
-</xsd:documentation>
+			<xsd:documentation>An assignment of the COUNTRY and/or DISTRIBUTION CHANNEL through which a product may or may not be distributed.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -665,7 +639,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="DistributionAssignmentGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="DistributionAssignmentIdType"/>
+					<xsd:attribute name="id" type="DistributionAssignmentIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -675,7 +649,7 @@ Rail transport, Roads and Road transport
 			<xsd:documentation>Type for DISTRIBUTION ASSIGNMENT.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexContent>
-			<xsd:extension base="Assignment_VersionStructure_">
+			<xsd:extension base="Assignment_VersionStructure_Dummy">
 				<xsd:sequence>
 					<xsd:group ref="DistributionAssignmentGroup"/>
 				</xsd:sequence>
@@ -690,7 +664,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="DistributionProductsGroup"/>
 			<xsd:element name="DistributionRights" type="DistributionRightsListOfEnumerations" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Override the folloing   rights allowed by channel.</xsd:documentation>
+					<xsd:documentation>Override the folloing rights allowed by channel.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:group ref="DistributionThroughGroup"/>
@@ -702,7 +676,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="DistributionDetailsGroup"/>
 			<xsd:element name="noticeAssignments" type="noticeAssignments_RelStructure" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>NOTICEs for  SALES PACKAGe.</xsd:documentation>
+					<xsd:documentation>NOTICEs for SALES PACKAGe.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -735,7 +709,7 @@ Rail transport, Roads and Road transport
 			<xsd:group ref="OneAllOrSomeDistributionChannelsRefGroup" minOccurs="0"/>
 			<xsd:element name="DistributionChannelType" type="DistributionChannelTypeEnumeration" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Classification of  DISTRIBUTION CHANNEL.</xsd:documentation>
+					<xsd:documentation>Classification of DISTRIBUTION CHANNEL.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 			<xsd:element name="AllowedInChannel" type="xsd:boolean" default="true" minOccurs="0">
@@ -750,7 +724,7 @@ Rail transport, Roads and Road transport
 			</xsd:element>
 			<xsd:element name="MandatoryProduct" type="xsd:boolean" minOccurs="0">
 				<xsd:annotation>
-					<xsd:documentation>Whether product is mandatory, i.e.  must be provided.</xsd:documentation>
+					<xsd:documentation>Whether product is mandatory, i.e. must be provided.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:element>
 		</xsd:sequence>
@@ -798,83 +772,6 @@ Rail transport, Roads and Road transport
 			<xsd:element ref="FulfilmentMethodRef" minOccurs="0"/>
 		</xsd:sequence>
 	</xsd:group>
-	<!-- ====GROUP OF DISTRIBUTION ASSIGNMENTs=================================================== -->
-	<xsd:simpleType name="GroupOfDistributionAssignmentsIdType">
-		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a GROUP OF DISTRIBUTION ASSIGNMENTs.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="GroupOfEntitiesIdType"/>
-	</xsd:simpleType>
-	<xsd:element name="GroupOfDistributionAssignmentsRef" type="GroupOfDistributionAssignmentsRefStructure" substitutionGroup="GroupOfEntitiesRef_">
-		<xsd:annotation>
-			<xsd:documentation>Reference to a GROUP OF DISTRIBUTION ASSIGNMENTs.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="GroupOfDistributionAssignmentsRefStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for Reference to a GROUP OF DISTRIBUTION ASSIGNMENTs.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:simpleContent>
-			<xsd:restriction base="GroupOfEntitiesRefStructure">
-				<xsd:attribute name="ref" type="GroupOfDistributionAssignmentsIdType" use="required">
-					<xsd:annotation>
-						<xsd:documentation>Identifier of a GROUP OF DISTRIBUTION ASSIGNMENTs.</xsd:documentation>
-					</xsd:annotation>
-				</xsd:attribute>
-			</xsd:restriction>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:element name="GroupOfDistributionAssignments" abstract="false" substitutionGroup="GroupOfEntities">
-		<xsd:annotation>
-			<xsd:documentation>A convenience grouping of DISTRIBUTION ASSIGNMENTs that are commonly used together
-			</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:restriction base="GroupOfDistributionAssignments_VersionStructure">
-					<xsd:sequence>
-						<xsd:sequence>
-							<xsd:group ref="EntityInVersionGroup" minOccurs="0"/>
-						</xsd:sequence>
-						<xsd:sequence>
-							<xsd:group ref="DataManagedObjectGroup"/>
-						</xsd:sequence>
-						<xsd:sequence>
-							<xsd:group ref="GroupOfEntitiesGroup"/>
-						</xsd:sequence>
-						<xsd:sequence>
-							<xsd:group ref="GroupOfDistributionAssignmentsGroup"/>
-						</xsd:sequence>
-					</xsd:sequence>
-					<xsd:attribute name="id" type="GroupOfDistributionAssignmentsIdType"/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:complexType name="GroupOfDistributionAssignments_VersionStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for GROUP OF DISTRIBUTION ASSIGNMENTs.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="GroupOfEntities_VersionStructure">
-				<xsd:sequence>
-					<xsd:group ref="GroupOfDistributionAssignmentsGroup"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:group name="GroupOfDistributionAssignmentsGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for GROUP OF DISTRIBUTION ASSIGNMENTs.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element name="members" type="distributionAssignmentRefs_RelStructure" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>DISTRIBUTION ASSIGNMENTs in Group.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
 	<!-- ====TYPE OF SALES OFFER PACKAGE ======================================== -->
 	<xsd:complexType name="typesOfSalesOfferPackage_RelStructure">
 		<xsd:annotation>
@@ -886,18 +783,16 @@ Rail transport, Roads and Road transport
 					<xsd:element ref="TypeOfSalesOfferPackageRef"/>
 					<xsd:element ref="TypeOfSalesOfferPackage">
 						<xsd:annotation>
-							<xsd:documentation>A TYPE OF SALES OFFER PACKAGE specifying access rights for the SALES OFFER PACKAGE ELEMENTs within the range of this UNIT: 0-5 km, 4-6 zones etc.
-</xsd:documentation>
+							<xsd:documentation>A TYPE OF SALES OFFER PACKAGE specifying access rights for the SALES OFFER PACKAGE ELEMENTs within the range of this UNIT: 0-5 km, 4-6 zones etc.</xsd:documentation>
 						</xsd:annotation>
 					</xsd:element>
 				</xsd:choice>
 			</xsd:extension>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<xsd:element name="TypeOfSalesOfferPackage" abstract="false" substitutionGroup="TypeOfEntity">
+	<xsd:element name="TypeOfSalesOfferPackage" substitutionGroup="TypeOfEntity">
 		<xsd:annotation>
-			<xsd:documentation>A classification of SALES OFFER PACKAGEs expressing their general functionalities and local functional characteristics specific to the operator. Types of SALES OFFER PACKAGEs like e.g. throw-away ticket, throw-away ticket unit, value card, electronic purse allowing access, public transport credit card etc. may be used to define these categories.
-</xsd:documentation>
+			<xsd:documentation>A classification of SALES OFFER PACKAGEs expressing their general functionalities and local functional characteristics specific to the operator. Types of SALES OFFER PACKAGEs like e.g. throw-away ticket, throw-away ticket unit, value card, electronic purse allowing access, public transport credit card etc. may be used to define these categories.</xsd:documentation>
 		</xsd:annotation>
 		<xsd:complexType>
 			<xsd:complexContent>
@@ -913,7 +808,7 @@ Rail transport, Roads and Road transport
 							<xsd:group ref="TypeOfValueGroup"/>
 						</xsd:sequence>
 					</xsd:sequence>
-					<xsd:attribute name="id" type="TypeOfSalesOfferPackageIdType"/>
+					<xsd:attribute name="id" type="TypeOfSalesOfferPackageIdType" use="required"/>
 				</xsd:restriction>
 			</xsd:complexContent>
 		</xsd:complexType>
@@ -926,96 +821,4 @@ Rail transport, Roads and Road transport
 			<xsd:extension base="TypeOfEntity_VersionStructure"/>
 		</xsd:complexContent>
 	</xsd:complexType>
-	<!-- ==== ACCESS RIGHT IN PRODUCT ELEMENT CONSUMPTION POLICY ======= -->
-	<xsd:element name="AccessRightInProductConsumptionRequirement" substitutionGroup="ConsumptionRequirement_">
-		<xsd:annotation>
-			<xsd:documentation>The definition of a ELEMENT CONSUMPTION POLICY defining which state a ACCESS RIGHT IN PRODUCT must be in (recorded via CustomerPurchasePackageElementAccesses)</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:restriction base="AccessRightInProductConsumptionRequirement_VersionedChildStructure">
-					<xsd:sequence>
-						<xsd:sequence>
-							<xsd:group ref="VersionedChildGroup"/>
-						</xsd:sequence>
-						<xsd:sequence>
-							<xsd:group ref="ConsumptionRequirementGroup"/>
-						</xsd:sequence>
-						<xsd:sequence>
-							<xsd:group ref="AccessRightInProductConsumptionRequirementGroup"/>
-						</xsd:sequence>
-					</xsd:sequence>
-					<xsd:attribute name="id" type="AccessRightInProductConsumptionRequirementIdType"/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:complexType name="AccessRightInProductConsumptionRequirement_VersionedChildStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for ACCESS RIGHT IN PRODUCT ELEMENT CONSUMPTION POLICY.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="ConsumptionRequirement_VersionedChildStructure">
-				<xsd:sequence>
-					<xsd:group ref="AccessRightInProductConsumptionRequirementGroup"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:group name="AccessRightInProductConsumptionRequirementGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for ACCESS RIGHT IN PRODUCT ELEMENT CONSUMPTION POLICY.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element ref="AccessRightInProductRef"/>
-			<xsd:element name="AccessNumber" type="xsd:integer" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Number of access of this specific instance.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
-	<!-- ==== ACCESS RIGHT IN PRODUCT CONSUMPTION UTILISATION ======= -->
-	<xsd:element name="AccessRightInProductConsumption" abstract="false" substitutionGroup="ElementConsumption_">
-		<xsd:annotation>
-			<xsd:documentation>The definition of a CONSUMPTION UTILISATION defining which ACCESS RIGHT IN PRODUCT that is to be processed</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexType>
-			<xsd:complexContent>
-				<xsd:restriction base="AccessRightInProductConsumption_VersionedChildStructure">
-					<xsd:sequence>
-						<xsd:group ref="VersionedChildGroup"/>
-						<xsd:group ref="ElementConsumptionGroup"/>
-						<xsd:group ref="AccessRightInProductConsumptionGroup"/>
-					</xsd:sequence>
-					<xsd:attribute name="id" type="AccessRightInProductElementConsumptionIdType"/>
-				</xsd:restriction>
-			</xsd:complexContent>
-		</xsd:complexType>
-	</xsd:element>
-	<xsd:complexType name="AccessRightInProductConsumption_VersionedChildStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for ACCESS RIGHT IN PRODUCT ELEMENT CONSUMPTION POLICY.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:complexContent>
-			<xsd:extension base="ElementConsumption_VersionedChildStructure">
-				<xsd:sequence>
-					<xsd:group ref="AccessRightInProductConsumptionGroup"/>
-				</xsd:sequence>
-			</xsd:extension>
-		</xsd:complexContent>
-	</xsd:complexType>
-	<xsd:group name="AccessRightInProductConsumptionGroup">
-		<xsd:annotation>
-			<xsd:documentation>Elements for ACCESS RIGHT IN PRODUCT ELEMENT CONSUMPTION POLICY.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:sequence>
-			<xsd:element ref="AccessRightInProductRef"/>
-			<xsd:element name="AccessNumber" type="xsd:integer" minOccurs="0">
-				<xsd:annotation>
-					<xsd:documentation>Number of access of this specific instance.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-		</xsd:sequence>
-	</xsd:group>
 </xsd:schema>
