@@ -81,6 +81,8 @@
     <!-- Remove pricing details from most objects -->
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricingGroup']"/>
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricesGroup']"/>
-    
+
+    <!-- Remove StakeholderRoleTypeEnumeration values starting with upper case. These have been replaced with lower case versions, but kept for backwards compatibility in xsd. Doesn't work great with schema2proto and isn't needed.' -->
+    <xsl:template match="/xsd:schema/xsd:simpleType[@name = 'StakeholderRoleTypeEnumeration']/xsd:restriction/xsd:enumeration[translate(substring(@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '') = '']"/>
 
 </xsl:stylesheet>
