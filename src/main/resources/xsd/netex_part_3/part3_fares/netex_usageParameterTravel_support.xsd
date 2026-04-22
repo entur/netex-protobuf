@@ -10,7 +10,7 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for NeTEx version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date><Modified>2017-04-10</Modified>
 					Add extra value to FrequencyOfUseENum
 				</Date>
@@ -45,8 +45,6 @@
 				<Date><Modified>2019-04-02</Modified>Doc tidy Add  new vale _cap_ to  UsageValidityType
 				</Date>
 				<Date><Modified>2020-10-16</Modified>New Modes: Add accessCode value to ActivationMeans enumeration
-				</Date>
-				<Date><Modified>2020-12-10</Modified>Add ActivationRequirementEnumeration
 				</Date>
 				<Date><Modified>2020-12-10</Modified>FIX - Add ActivationMeansListOfEnumerations
 				</Date>
@@ -140,6 +138,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a ROUND TRIP PARAMETER.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassRoundTripRefStructureType" default="RoundTrip">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for RoundTripRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -161,7 +180,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="return">
 				<xsd:annotation>
-					<xsd:documentation>Return trip between the same origin and destination </xsd:documentation>
+					<xsd:documentation>Return trip between the same origin and destination</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="returnOut">
@@ -199,6 +218,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a ROUTING PARAMETER.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassRoutingRefStructureType" default="Routing">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for RoutingRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -225,6 +265,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a STEP LIMIT PARAMETER.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassStepLimitRefStructureType" default="StepLimit">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for StepLimitRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -265,6 +326,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a USAGE VALIDITY PERIOD.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassUsageValidityPeriodRefStructureType" default="UsageValidityPeriod">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for UsageValidityPeriodRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -353,12 +435,12 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="startOfPeriod">
 				<xsd:annotation>
-					<xsd:documentation>Validity period starts at beginning of interval specified for product   (e.g.  every month  for a monthly pass that renews automatically).</xsd:documentation>
+					<xsd:documentation>Validity period starts at beginning of interval specified for product (e.g. every month for a monthly pass that renews automatically).</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="dayOffsetBeforeCalendarPeriod">
 				<xsd:annotation>
-					<xsd:documentation>Validity period starts a specifed number of days before  beginning of specified start date .</xsd:documentation>
+					<xsd:documentation>Validity period starts a specifed number of days before beginning of specified start date .</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -380,36 +462,12 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="useOfMobileDevice"/>
 			<xsd:enumeration value="automaticByTime"/>
 			<xsd:enumeration value="automaticByProximity"/>
-			<xsd:enumeration value="accessCode"/>
+			<xsd:enumeration value="accessCode">
+				<xsd:annotation>
+					<xsd:documentation>Activation by entering a code. +v1.2.2</xsd:documentation>
+				</xsd:annotation>
+			</xsd:enumeration>
 			<xsd:enumeration value="other"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<xsd:simpleType name="ActivationRequirementsListOfEnumerations">
-		<xsd:annotation>
-			<xsd:documentation>List of values for ACTIVATION REQUIREMENTS.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:list itemType="ActivationRequirementsEnumeration"/>
-	</xsd:simpleType>
-	<xsd:simpleType name="ActivationRequirementsEnumeration">
-		<xsd:annotation>
-			<xsd:documentation>Allowed values for ACTIVATION REQUIREMENTS</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:normalizedString">
-			<xsd:enumeration value="selectedServiceJourney">
-				<xsd:annotation>
-					<xsd:documentation>A reference to a ServiceJourney must be provided in order for activation to take place</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="selectedTariffZone">
-				<xsd:annotation>
-					<xsd:documentation>A reference to a TariffZone must be provided in order for activation to take place</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="selectedPassengerSeat">
-				<xsd:annotation>
-					<xsd:documentation>A reference to a PassengerSeat must be provided in order for activation to take place</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="UsageEndEnumeration">
@@ -427,11 +485,6 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="profileExpiry"/>
 			<xsd:enumeration value="deregistration"/>
 			<xsd:enumeration value="other"/>
-			<xsd:enumeration value="noTemporalValidity">
-				<xsd:annotation>
-					<xsd:documentation>Indicate that there is no temporal validity to be added to ElementAccess when consuming</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="UsageStartConstraintTypeEnumeration">
@@ -451,7 +504,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="fixedWindow">
 				<xsd:annotation>
-					<xsd:documentation>Validity start date for a trip  is constrained relative to  start of booked service, eg may catch previous train as well.</xsd:documentation>
+					<xsd:documentation>Validity start date for a trip is constrained relative to start of booked service, eg may catch previous train as well.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -479,6 +532,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a SUSPENDING.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassSuspendingRefStructureType" default="Suspending">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for SuspendingRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -499,24 +573,24 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="forParentalLeave">
 				<xsd:annotation>
-					<xsd:documentation>Suspension allowed  for parental leave.</xsd:documentation>
+					<xsd:documentation>Suspension allowed for parental leave.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="forHoliday">
 				<xsd:annotation>
-					<xsd:documentation>Suspension allowed  for holiday.</xsd:documentation>
+					<xsd:documentation>Suspension allowed for holiday.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="forAnyReason">
 				<xsd:annotation>
-					<xsd:documentation>Suspension allowed  for any reason.</xsd:documentation>
+					<xsd:documentation>Suspension allowed for any reason.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<xsd:simpleType name="SuspensionPolicyListOfEnumerations">
 		<xsd:annotation>
-			<xsd:documentation>List of  Suspension Policiy values</xsd:documentation>
+			<xsd:documentation>List of Suspension Policiy values</xsd:documentation>
 		</xsd:annotation>
 		<xsd:list itemType="SuspensionPolicyEnumeration"/>
 	</xsd:simpleType>
@@ -538,7 +612,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="limited">
 				<xsd:annotation>
-					<xsd:documentation>Product may be used up to  a limited amount within allowed period.</xsd:documentation>
+					<xsd:documentation>Product may be used up to a limited amount within allowed period.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="twiceADay">
@@ -548,7 +622,7 @@ Rail transport, Roads and Road transport
 			</xsd:enumeration>
 			<xsd:enumeration value="single">
 				<xsd:annotation>
-					<xsd:documentation>Product may  be used once within allowed period.</xsd:documentation>
+					<xsd:documentation>Product may be used once within allowed period.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 		</xsd:restriction>
@@ -575,6 +649,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a FREQUENCY OF USE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassFrequencyOfUseRefStructureType" default="FrequencyOfUse">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for FrequencyOfUseRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -612,6 +707,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a INTERCHANGING.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassInterchangingRefStructureType" default="Interchanging">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for InterchangingRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -649,7 +765,7 @@ Rail transport, Roads and Road transport
 	</xsd:simpleType>
 	<xsd:simpleType name="RegisterBreakOfJourneyListOfEnumerations">
 		<xsd:annotation>
-			<xsd:documentation>List of  Register Break of Journey. values</xsd:documentation>
+			<xsd:documentation>List of Register Break of Journey. values</xsd:documentation>
 		</xsd:annotation>
 		<xsd:list itemType="SuspensionPolicyEnumeration"/>
 	</xsd:simpleType>
@@ -676,6 +792,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a MINIMUM STAY PARAMETER.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassMinimumStayRefStructureType" default="MinimumStay">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for MinimumStayRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -689,57 +826,6 @@ Rail transport, Roads and Road transport
 			<xsd:enumeration value="countNightsAway"/>
 			<xsd:enumeration value="both"/>
 			<xsd:enumeration value="either"/>
-		</xsd:restriction>
-	</xsd:simpleType>
-	<!-- === ONBOARD VALIDITY====================================================== -->
-	<xsd:simpleType name="OnboardValidityIdType">
-		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a ONBOARD VALIDITY.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="UsageParameterIdType"/>
-	</xsd:simpleType>
-	<xsd:element name="OnboardValidityRef" type="OnboardValidityRefStructure" substitutionGroup="UsageParameterRef">
-		<xsd:annotation>
-			<xsd:documentation>Reference to a ONBOARD VALIDITY.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:complexType name="OnboardValidityRefStructure">
-		<xsd:annotation>
-			<xsd:documentation>Type for Reference to a ONBOARD VALIDITY.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:simpleContent>
-			<xsd:restriction base="UsageParameterRefStructure">
-				<xsd:attribute name="ref" type="OnboardValidityIdType" use="required">
-					<xsd:annotation>
-						<xsd:documentation>Identifier of a ONBOARD VALIDITY.</xsd:documentation>
-					</xsd:annotation>
-				</xsd:attribute>
-			</xsd:restriction>
-		</xsd:simpleContent>
-	</xsd:complexType>
-	<xsd:simpleType name="OnboardValidityTypeEnumeration">
-		<xsd:annotation>
-			<xsd:documentation>Allowed values for ONBOARD VALIDITY</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="xsd:normalizedString">
-			<xsd:enumeration value="validAtBoardingTime">
-				<xsd:annotation>
-					<xsd:documentation>The access right is considered to be valid temporally on the same PT RIDE LEG if it was valid at boarding time.
-						Typically used when the traveller is required to validate when boarding on each PT RIDE LEG.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="validAtStartOfServiceJourney">
-				<xsd:annotation>
-					<xsd:documentation>The access right is considered to be valid temporally on the same PT RIDE LEG if it was valid at this SERVICE JOURNEY's first SCHEDULED STOP POINT.
-						Typically used when the traveller can board a vehicle without validating as long as the traveller already have a temporally valid access right.
-					In addition, since the actual place of boarding is unknown, the controller may ask the traveller's departure stop in and compare the answer to the JOURNEY PATTERN STOP TIMES</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="validAtAllTimesWhileOnboard">
-				<xsd:annotation>
-					<xsd:documentation>The access right must be temporally valid at all times when the passenger is onboard. Typically used when the traveller can board a vehicle without validating as long as the traveller already have a temporally valid access right.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 </xsd:schema>

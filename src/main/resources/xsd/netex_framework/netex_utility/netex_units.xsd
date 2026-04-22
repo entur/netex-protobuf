@@ -6,7 +6,7 @@
 				<Aggregation>main schema</Aggregation>
 				<Audience>e-service developers</Audience>
 				<Coverage>Europe</Coverage>
-				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First Drafted for version 1.0 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2010-02-01</Created>
 				</Date>
@@ -79,11 +79,6 @@ Distance = Kilometres
 Length = Metres
 Weight = Kilos
 Speed = Metres per second.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:enumeration>
-			<xsd:enumeration value="SiKilometresAndMetres">
-				<xsd:annotation>
-					<xsd:documentation>TYPO - DEPRECATED.</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
 			<xsd:enumeration value="Other"/>

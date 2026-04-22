@@ -25,11 +25,17 @@
     <xsl:template
         match="/xsd:schema/xsd:element[@name = 'AlternativeName']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'AlternativeName_VersionedChildStructure']/xsd:attribute[@name = 'dataSourceRef']"/>
 
-    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'versionRef']"/>
 
 
-    <!-- modification attribute -->
+
+    <!-- modification and versionRef attributes -->
+    <!-- Remove from VersionOfObjectRefStructure and all subclasses -->
+    <xsl:template match="//xsd:simpleContent/xsd:restriction/xsd:attribute[@name = 'modification']"/>
+    <xsl:template match="//xsd:simpleContent/xsd:restriction/xsd:attribute[@name = 'versionRef']"/>
+
+    <!-- Remove from VersionOfObjectRefStructure directly -->
     <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
+    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'versionRef']"/>
     <xsl:template match="/xsd:schema/xsd:complexType[@name = 'TypeOfVersionRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'DocumentModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
@@ -77,6 +83,8 @@
     <!-- Remove pricing details from most objects -->
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricingGroup']"/>
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricesGroup']"/>
-    
+
+    <!-- Remove StakeholderRoleTypeEnumeration values starting with upper case. These have been replaced with lower case versions, but kept for backwards compatibility in xsd. Doesn't work great with schema2proto and isn't needed.' -->
+    <xsl:template match="/xsd:schema/xsd:simpleType[@name = 'StakeholderRoleTypeEnumeration']/xsd:restriction/xsd:enumeration[translate(substring(@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '') = '']"/>
 
 </xsl:stylesheet>

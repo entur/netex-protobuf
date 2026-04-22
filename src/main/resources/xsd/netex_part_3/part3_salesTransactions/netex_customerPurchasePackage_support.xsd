@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns="http://www.netex.org.uk/netex" xmlns:netex="http://www.netex.org.uk/netex" xmlns:siri="http://www.siri.org.uk/siri" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.netex.org.uk/netex" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.1" id="netex_customerPurchasePackage_support">
 	<xsd:include schemaLocation="../part3_fares/netex_accessRightParameter_support.xsd"/>
-	<xsd:include schemaLocation="../part3_consumption/netex_consumption_support.xsd"/>
 	<xsd:include schemaLocation="netex_salesContract_support.xsd"/>
 	<!-- =============================================================== -->
 	<xsd:annotation>
@@ -12,7 +11,7 @@
 				<Contributor>V1.0 Christophe Duquesne</Contributor>
 				<Contributor>Nicholas Knowles</Contributor>
 				<Coverage>Europe</Coverage>
-				<Creator>First drafted for NeTEx version 1.1 CEN TC278 WG3 SG9 Editor Nicholas Knowles.  mailto:schemer@netex.org.uk</Creator>
+				<Creator>First drafted for NeTEx version 1.1 CEN TC278 WG3 SG9 Editor Nicholas Knowles.</Creator>
 				<Date>
 					<Created>2017-08-10</Created>
 				</Date>
@@ -86,7 +85,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="FareContractEntryIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="TravelSpecificationRef" type="TravelSpecificationRefStructure" abstract="false" substitutionGroup="FareContractEntryRef">
+	<xsd:element name="TravelSpecificationRef" type="TravelSpecificationRefStructure" substitutionGroup="FareContractEntryRef">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a TRAVEL SPECIFICATION.</xsd:documentation>
 		</xsd:annotation>
@@ -102,6 +101,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a TRAVEL SPECIFICATION.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassTravelSpecificationRefStructureType" default="TravelSpecification">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for TravelSpecificationRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -112,7 +132,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="TravelSpecificationIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="RequestedTravelSpecificationRef" type="RequestedTravelSpecificationRefStructure" abstract="false" substitutionGroup="TravelSpecificationRef">
+	<xsd:element name="RequestedTravelSpecificationRef" type="RequestedTravelSpecificationRefStructure" substitutionGroup="TravelSpecificationRef">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a REQUESTED TRAVEL SPECIFICATION.</xsd:documentation>
 		</xsd:annotation>
@@ -128,6 +148,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a REQUESTED TRAVEL SPECIFICATION.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassRequestedTravelSpecificationRefStructureType" default="RequestedTravelSpecification">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for RequestedTravelSpecificationRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -138,7 +179,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="TravelSpecificationIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="OfferedTravelSpecificationRef" type="OfferedTravelSpecificationRefStructure" abstract="false" substitutionGroup="TravelSpecificationRef">
+	<xsd:element name="OfferedTravelSpecificationRef" type="OfferedTravelSpecificationRefStructure" substitutionGroup="TravelSpecificationRef">
 		<xsd:annotation>
 			<xsd:documentation>Reference to an OFFERED TRAVEL SPECIFICATION.</xsd:documentation>
 		</xsd:annotation>
@@ -154,6 +195,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a OFFERED TRAVEL SPECIFICATION.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassOfferedTravelSpecificationRefStructureType" default="OfferedTravelSpecification">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for OfferedTravelSpecificationRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -175,6 +237,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a SPECIFIC PARAMETER.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassAssignmentRefStructureType" use="optional" default="SpecificParameterAssignment">
+					<xsd:annotation>
+						<xsd:documentation>Name of Class of the referenced entity. Allows reflection. Fixed for each entity type.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -213,6 +296,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a CUSTOMER PURCHASE PACKAGE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassCustomerPurchasePackageRefStructureType" default="CustomerPurchasePackage">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for CustomerPurchasePackageRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -239,12 +343,33 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a CUSTOMER PURCHASE PACKAGE ELEMENT.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassCustomerPurchasePackageElementRefStructureType" default="CustomerPurchasePackageElement">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for CustomerPurchasePackageElementRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
 	<xsd:simpleType name="CustomerPurchasePackageStatusEnumeration">
 		<xsd:annotation>
-			<xsd:documentation>Allowed values for CUSTOMER PURCHASE PACKAGE  Status. +v1.1</xsd:documentation>
+			<xsd:documentation>Allowed values for CUSTOMER PURCHASE PACKAGE Status. +v1.1</xsd:documentation>
 		</xsd:annotation>
 		<xsd:restriction base="xsd:normalizedString">
 			<xsd:enumeration value="reserved">
@@ -329,6 +454,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a CUSTOMER PURCHASE PACKAGE PRICE.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassCustomerPurchasePackagePriceRefStructureType" default="CustomerPurchasePackagePrice">
+					<xsd:annotation>
+						<xsd:documentation>Automatic reference class for CustomerPurchasePackagePriceRefStructure</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -351,7 +497,7 @@ Rail transport, Roads and Road transport
 		</xsd:annotation>
 		<xsd:restriction base="GroupOfEntitiesIdType"/>
 	</xsd:simpleType>
-	<xsd:element name="GroupOfCustomerPurchasePackagesRef" type="GroupOfCustomerPurchasePackagesRefStructure" substitutionGroup="GroupOfEntitiesRef_">
+	<xsd:element name="GroupOfCustomerPurchasePackagesRef" type="GroupOfCustomerPurchasePackagesRefStructure" substitutionGroup="GroupOfEntitiesRef_Dummy">
 		<xsd:annotation>
 			<xsd:documentation>Reference to a GROUP OF CUSTOMER PURCHASE PACKAGEs.</xsd:documentation>
 		</xsd:annotation>
@@ -367,6 +513,27 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a GROUP OF CUSTOMER PURCHASE PACKAGEs.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassGroupOfEntitiesRefStructureType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Name of Class of the referenced entity. Allows reflection. Fixed for each entity type.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
@@ -388,21 +555,30 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a CUSTOMER PURCHASE PARAMETER.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClassAssignmentRefStructureType" use="optional" default="CustomerPurchaseParameterAssignment">
+					<xsd:annotation>
+						<xsd:documentation>Name of Class of the referenced entity. Allows reflection. Fixed for each entity type.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- === GROUP OF CUSTOMER PURCHASE PACKAGE PARAMETER ASSIGNMENT====================================================== -->
-	<xsd:element name="CustomerPurchaseParameterAssignmentRef" type="CustomerPurchasePackageElementRefStructure">
-		<xsd:annotation>
-			<xsd:documentation>Reference to a CUSTOMER PURCHASE PARAMETER ASSIGNMENT.</xsd:documentation>
-		</xsd:annotation>
-	</xsd:element>
-	<xsd:simpleType name="GroupOfCustomerPurchaseParameterAssignmentsIdType">
-		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a GROUP CUSTOMER PURCHASE PARAMETER ASSIGNMENTS.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="GroupOfEntitiesIdType"/>
-	</xsd:simpleType>
 	<!-- === CUSTOMER PURCHASE PACKAGE ELEMENT ACCESS. ====================================================== -->
 	<xsd:simpleType name="CustomerPurchasePackageElementAccessIdType">
 		<xsd:annotation>
@@ -421,21 +597,29 @@ Rail transport, Roads and Road transport
 						<xsd:documentation>Identifier of a CUSTOMER PURCHASE PACKAGE ELEMENT ACCESS.</xsd:documentation>
 					</xsd:annotation>
 				</xsd:attribute>
+				<xsd:attribute name="nameOfRefClass" type="NameOfClass" use="optional" default="CustomerPurchasePackageElementAccess">
+					<xsd:annotation>
+						<xsd:documentation>Name of Class of the referenced entity. Allows reflection. Fixed for each entity type.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="modification" type="ModificationEnumeration" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Nature of last modification: new, revise, delete, unchanged.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="versionRef" type="VersionIdType" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Identifier of version of referenced entity. For use when reference is External and a specific version is required. Mutually exclusive with version</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attribute name="uri" type="xsd:anyURI" use="optional">
+					<xsd:annotation>
+						<xsd:documentation>Location of the external entity. +v2.0</xsd:documentation>
+					</xsd:annotation>
+				</xsd:attribute>
+				<xsd:attributeGroup ref="ReferenceModificationDetailsGroup"/>
 			</xsd:restriction>
 		</xsd:simpleContent>
 	</xsd:complexType>
-	<!-- ====CUSTOMER PURCHASE PACKAGE ELEMENT CONSUMPTION REQUIREMENT.======================================================== -->
-	<xsd:simpleType name="CustomerPurchasePackageElementConsumptionRequirementIdType">
-		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a CUSTOMER PURCHASE PACKAGE ELEMENT CONSUMPTION REQUIREMENT.</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="ConsumptionRequirementIdType"/>
-	</xsd:simpleType>
-	<!-- ====CUSTOMER PURCHASE PACKAGE ELEMENT ELEMENT CONSUMPTION======================================================== -->
-	<xsd:simpleType name="CustomerPurchasePackageElementConsumptionIdType">
-		<xsd:annotation>
-			<xsd:documentation>Type for identifier of a CUSTOMER PURCHASE PACKAGE ELEMENT ELEMENT CONSUMPTION</xsd:documentation>
-		</xsd:annotation>
-		<xsd:restriction base="ElementConsumptionIdType"/>
-	</xsd:simpleType>
+	<!-- =============================================================== -->
 </xsd:schema>
