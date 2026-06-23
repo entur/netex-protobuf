@@ -23,7 +23,6 @@
     <properties>
         <jreleaser-maven-plugin.version>1.24.0</jreleaser-maven-plugin.version>
         <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
-        <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
         <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
         <maven.compiler.plugin.version>3.15.0</maven.compiler.plugin.version>
@@ -309,29 +308,6 @@
                         <arg>-Xlint:all</arg>
                     </compilerArgs>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <configuration>
-                    <doclint>none</doclint>
-                    <source>17</source>
-                    <detectJavaApiLink>false</detectJavaApiLink>
-                    <minmemory>2048m</minmemory>
-                    <maxmemory>8192m</maxmemory>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <attach>true</attach>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.jreleaser</groupId>
