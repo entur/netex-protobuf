@@ -15,9 +15,15 @@ Backwards compatibility check is handled by `protolock` (https://github.com/nils
 `mvn clean install`
 
 NOTE:
-There is a Maven profile `protoc` which is active by default. This profile performs Java compilation of the generated stubs, and is meant only as a step to verify that the protoc compiler can handle the resulting proto. The compilation step is heavy. To run without use
+There is three Maven profiles which are active by default:
 
-`mvn clean install -P'!protoc'`
+ * `protoc` This profile performs Java compilation of the generated stubs
+ * `javadoc` This profile generates javadoc jar for the generated stubs
+ * `sources` This profile generates sources jar for the generated stubs
+
+These profiles are used to verify that the protoc compiler can handle the resulting proto. The compilation step is heavy. To run without use
+
+`mvn clean install -P'!protoc,!javadoc,!sources'`
 
 ## Handling breaking changes
 

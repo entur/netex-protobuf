@@ -105,6 +105,29 @@
                         </execution>
                     </executions>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>${maven-javadoc-plugin.version}</version>
+                    <configuration>
+                        <doclint>none</doclint>
+                        <source>17</source>
+                        <detectJavaApiLink>false</detectJavaApiLink>
+                        <minmemory>2048m</minmemory>
+                        <maxmemory>8192m</maxmemory>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                            <configuration>
+                                <attach>true</attach>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -311,29 +334,6 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <configuration>
-                    <doclint>none</doclint>
-                    <source>17</source>
-                    <detectJavaApiLink>false</detectJavaApiLink>
-                    <minmemory>2048m</minmemory>
-                    <maxmemory>8192m</maxmemory>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <attach>true</attach>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
                 <groupId>org.jreleaser</groupId>
                 <artifactId>jreleaser-maven-plugin</artifactId>
                 <inherited>false</inherited>
@@ -425,16 +425,26 @@
             </build>
         </profile>
         <profile>
-            <id>publication</id>
-            <properties>
-                <altDeploymentRepository>local::file:./target/staging-deploy</altDeploymentRepository>
-            </properties>
+            <id>javadoc</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>io.github.ascopes</groupId>
-                        <artifactId>protobuf-maven-plugin</artifactId>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
                     </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>sources</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
@@ -453,6 +463,15 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>publication</id>
+            <properties>
+                <altDeploymentRepository>local::file:./target/staging-deploy</altDeploymentRepository>
+                <!-- be extra sure that javadoc and source artifacts are not published to maven central -->
+                <maven.javadoc.skip>true</maven.javadoc.skip>
+                <maven.source.skip>true</maven.source.skip>
+            </properties>
         </profile>
     </profiles>
 </project>
