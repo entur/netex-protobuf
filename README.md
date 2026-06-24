@@ -26,4 +26,4 @@ If breaking changes needs to be accepted into the proto.lock file, run the follo
 `protolock commit --force --protoroot target/proto/`
 
 ## Publishing
-While project validates that sources / javadoc can be generated, only `.proto` files are published to Maven Central.
+A jar containing `.proto` files is published to Maven Central.
