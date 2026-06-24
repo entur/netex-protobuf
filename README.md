@@ -1,3 +1,5 @@
+[![MvnRepository](https://badges.mvnrepository.com/badge/no.entur/netex-protobuf/badge.svg?label=MvnRepository)](https://mvnrepository.com/artifact/no.entur/netex-protobuf)
+
 # NeTEx Protobuf definitions
 
 This project contains setup to generate [Protocol Buffers Definition files](https://protobuf.dev/) (`.proto` files) from the [NeTEx XML schema](https://github.com/entur/NeTEx).
@@ -22,3 +24,6 @@ There is a Maven profile `protoc` which is active by default. This profile perfo
 If breaking changes needs to be accepted into the proto.lock file, run the following command to update it (do not delete as `schema2proto` needs the file for backwards compatibility check as well)
 
 `protolock commit --force --protoroot target/proto/`
+
+## Publishing
+While project validates that sources / javadoc can be generated, only `.proto` files are published to Maven Central.
