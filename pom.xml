@@ -350,6 +350,9 @@
                                         <active>RELEASE</active>
                                         <url>https://central.sonatype.com/api/v1/publisher</url>
                                         <stagingRepositories>target/staging-deploy</stagingRepositories>
+                                        <!-- avoid publishing enormous javadoc/source artifacts to maven central -->
+                                        <sourceJar>false</sourceJar>
+                                        <javadocJar>false</javadocJar>
                                     </sonatype>
                                 </mavenCentral>
                                 <nexus2>
@@ -362,6 +365,9 @@
                                         <closeRepository>true</closeRepository>
                                         <releaseRepository>true</releaseRepository>
                                         <stagingRepositories>target/staging-deploy</stagingRepositories>
+                                        <!-- avoid publishing enormous javadoc/source artifacts to maven central -->
+                                        <sourceJar>false</sourceJar>
+                                        <javadocJar>false</javadocJar>
                                     </maven-central>
                                 </nexus2>
                             </maven>
