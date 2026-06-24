@@ -6,8 +6,16 @@ on:
       - main
 
 jobs:
+  validate-maven-build:
+    uses: entur/abt-gha-public/.github/workflows/maven-open-source-verify.yml@main
+    permissions:
+      contents: read
+    # no secrets necessary
+    with:
+      java-version: 21
   maven-build-and-release:
     uses: entur/gha-maven-central/.github/workflows/maven-publish.yml@main
+    needs: validate-maven-build
     secrets: inherit
     permissions:
       contents: write
