@@ -7674,45 +7674,31 @@
                 "integer": 7
               },
               {
-                "name": "LINE_TYPE_ENUMERATION_CORRIDOR_SERVICE",
-                "integer": 18
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_MAIN_ROUTE_WITH_FLEXIBLE_ENDS",
-                "integer": 9
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_FLEXIBLE_AREAS_ONLY",
-                "integer": 10
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_HAIL_AND_RIDE_SECTIONS",
-                "integer": 11
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_FIXED_STOP_AREA_WIDE",
-                "integer": 12
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_FREE_AREA_AREA_WIDE",
-                "integer": 13
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE",
-                "integer": 14
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE_AND_FIXED",
-                "integer": 15
-              },
-              {
-                "name": "LINE_TYPE_ENUMERATION_FIXED",
-                "integer": 16
-              },
-              {
                 "name": "LINE_TYPE_ENUMERATION_OTHER",
                 "integer": 8
               }
+            ],
+            "reserved_ids": [
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              18
+            ],
+            "reserved_names": [
+              "LINE_TYPE_ENUMERATION_MAIN_ROUTE_WITH_FLEXIBLE_ENDS",
+              "LINE_TYPE_ENUMERATION_FLEXIBLE_AREAS_ONLY",
+              "LINE_TYPE_ENUMERATION_HAIL_AND_RIDE_SECTIONS",
+              "LINE_TYPE_ENUMERATION_FIXED_STOP_AREA_WIDE",
+              "LINE_TYPE_ENUMERATION_FREE_AREA_AREA_WIDE",
+              "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE",
+              "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE_AND_FIXED",
+              "LINE_TYPE_ENUMERATION_FIXED",
+              "LINE_TYPE_ENUMERATION_CORRIDOR_SERVICE"
             ]
           },
           {
@@ -8612,6 +8598,18 @@
               {
                 "name": "MONEY_SERVICE_ENUMERATION_CUSTOMS_OFFICE",
                 "integer": 5
+              }
+            ]
+          },
+          {
+            "name": "NameOfClassContractRefStructureType",
+            "enum_fields": [
+              {
+                "name": "NAME_OF_CLASS_CONTRACT_REF_STRUCTURE_TYPE_UNSPECIFIED"
+              },
+              {
+                "name": "NAME_OF_CLASS_CONTRACT_REF_STRUCTURE_TYPE_CONTRACT",
+                "integer": 1
               }
             ]
           },
@@ -53462,6 +53460,78 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "DataManagedObjectStructure"
+              }
+            ]
+          },
+          {
+            "name": "ContractRefStructure",
+            "fields": [
+              {
+                "id": 2,
+                "name": "created",
+                "type": "google.protobuf.Timestamp"
+              },
+              {
+                "id": 3,
+                "name": "changed",
+                "type": "google.protobuf.Timestamp"
+              },
+              {
+                "id": 4,
+                "name": "version",
+                "type": "string"
+              },
+              {
+                "id": 5,
+                "name": "ref",
+                "type": "string"
+              },
+              {
+                "id": 6,
+                "name": "modification",
+                "type": "ModificationEnumeration"
+              },
+              {
+                "id": 7,
+                "name": "version_ref",
+                "type": "string"
+              },
+              {
+                "id": 8,
+                "name": "value",
+                "type": "string"
+              }
+            ],
+            "options": [
+              {
+                "name": "(xsd.base_type)",
+                "value": "VersionOfObjectRefStructure"
+              }
+            ]
+          },
+          {
+            "name": "ContractRef_RelStructure",
+            "fields": [
+              {
+                "id": 1,
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "id": 2,
+                "name": "modification_set",
+                "type": "ModificationSetEnumeration"
+              },
+              {
+                "id": 3,
+                "name": "contract_ref",
+                "type": "ContractRefStructure"
+              }
+            ],
+            "options": [
+              {
+                "name": "(xsd.base_type)",
+                "value": "ContainmentAggregationStructure"
               }
             ]
           },
@@ -216842,6 +216912,11 @@
                 "id": 183,
                 "name": "responsible_area_ref",
                 "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 187,
+                "name": "associated_contract",
+                "type": "ContractRef_RelStructure"
               }
             ],
             "reserved_ids": [
@@ -389561,11 +389636,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 328,
-                    "name": "line_type",
-                    "type": "LineTypeEnumeration"
-                  },
-                  {
                     "id": 91,
                     "name": "routing_type",
                     "type": "RoutingTypeEnumeration"
@@ -390255,6 +390325,12 @@
                     "name": "limiting_rule_ref",
                     "type": "VersionOfObjectRefStructure"
                   }
+                ],
+                "reserved_ids": [
+                  328
+                ],
+                "reserved_names": [
+                  "line_type"
                 ]
               }
             ],
