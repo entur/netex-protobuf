@@ -17,9 +17,7 @@ To build against another tag without editing the pom:
 `mvn clean install -Dnetex.xsd.version=1.0.16.2`
 
 The downloaded xsd files are treated as immutable upstream inputs; build-time schema adjustments are defined in
-[remove_unwanted_structures.xslt](src/main/resources/xslt/remove_unwanted_structures.xslt). Entur specific additions belong in the downstream reduction in
-[abt-protobuf](https://github.com/entur/abt-protobuf), which can add fields and enum constants on top of the protos
-published from here.
+[remove_unwanted_structures.xslt](src/main/resources/xslt/remove_unwanted_structures.xslt). 
 
 Backwards compatibility check is handled by `protolock` (https://github.com/nilslice/protolock) and called from Maven via plugin `proto-backwards-compat-maven-plugin` (https://github.com/salesforce/proto-backwards-compat-maven-plugin).
 
