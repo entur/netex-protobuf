@@ -390161,13 +390161,13 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 329,
-                    "name": "special_service_ref",
+                    "id": 330,
+                    "name": "dated_special_service_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 330,
-                    "name": "dated_special_service_ref",
+                    "id": 332,
+                    "name": "special_service_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
@@ -390261,11 +390261,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 204,
-                    "name": "meeting_point_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 206,
                     "name": "hire_service_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -390311,6 +390306,11 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
+                    "id": 328,
+                    "name": "meeting_point_service_ref",
+                    "type": "VersionOfObjectRefStructure"
+                  },
+                  {
                     "id": 161,
                     "name": "pricing_rule_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -390327,7 +390327,8 @@
                   }
                 ],
                 "reserved_ids": [
-                  328
+                  204,
+                  329
                 ],
                 "reserved_names": [
                   "line_type"
