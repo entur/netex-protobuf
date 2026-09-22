@@ -238,7 +238,7 @@
                         </goals>
                         <phase>generate-resources</phase>
                         <configuration>
-                            <uri>${netex.xsd.url}</uri>
+                            <url>${netex.xsd.url}</url>
                             <outputDirectory>${project.build.directory}/netex-xsd</outputDirectory>
                             <outputFileName>NeTEx-${netex.xsd.tag}.tar.gz</outputFileName>
                             <unpack>true</unpack>
