@@ -16,8 +16,8 @@ To build against another tag without editing the pom:
 
 `mvn clean install -Dnetex.xsd.version=1.0.16.2`
 
-The generated proto must be a faithful representation of the published NeTEx schema, so this repository does not carry
-local modifications to the xsd files. Entur specific additions belong in the downstream reduction in
+The downloaded xsd files are treated as immutable upstream inputs; build-time schema adjustments are defined in
+[remove_unwanted_structures.xslt](src/main/resources/xslt/remove_unwanted_structures.xslt). Entur specific additions belong in the downstream reduction in
 [abt-protobuf](https://github.com/entur/abt-protobuf), which can add fields and enum constants on top of the protos
 published from here.
 
