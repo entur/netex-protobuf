@@ -21,6 +21,7 @@
     <name>Protobuf descriptor files for NeTEx</name>
     <description>Generates protobuf descriptor files based on NeTEx xsd</description>
     <properties>
+        <download-maven-plugin.version>1.13.0</download-maven-plugin.version>
         <jreleaser-maven-plugin.version>1.26.0</jreleaser-maven-plugin.version>
         <maven-deploy-plugin.version>3.2.0</maven-deploy-plugin.version>
         <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
@@ -29,6 +30,12 @@
         <maven.compiler.plugin.version>3.16.0</maven.compiler.plugin.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <!-- Root of the NeTEx xsd tree, as unpacked from the GitHub source archive of netex.xsd.tag -->
+        <netex.xsd.dir>${project.build.directory}/netex-xsd/NeTEx-${netex.xsd.version}/xsd</netex.xsd.dir>
+        <netex.xsd.tag>v${netex.xsd.version}</netex.xsd.tag>
+        <netex.xsd.url>https://github.com/entur/NeTEx/archive/refs/tags/${netex.xsd.tag}.tar.gz</netex.xsd.url>
+        <!-- Tag in https://github.com/entur/NeTEx to generate proto from, without the leading "v" -->
+        <netex.xsd.version>1.0.16.1</netex.xsd.version>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -36,7 +43,7 @@
         <proto.version>4.36.1</proto.version>
         <protobuf-maven-plugin.version>5.1.9</protobuf-maven-plugin.version>
         <protovalidate.version>1.3.0</protovalidate.version>
-        <schema2proto.version>1.136.0</schema2proto.version>
+        <schema2proto.version>1.137.0</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
@@ -219,6 +226,27 @@
                 </executions>
             </plugin>
             <plugin>
+                <!-- Fetch the NeTEx xsd tree from the tag given by netex.xsd.version instead of keeping a copy in this repo -->
+                <groupId>com.googlecode.maven-download-plugin</groupId>
+                <artifactId>download-maven-plugin</artifactId>
+                <version>${download-maven-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>download-netex-xsd</id>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <phase>generate-resources</phase>
+                        <configuration>
+                            <url>${netex.xsd.url}</url>
+                            <outputDirectory>${project.build.directory}/netex-xsd</outputDirectory>
+                            <outputFileName>NeTEx-${netex.xsd.tag}.tar.gz</outputFileName>
+                            <unpack>true</unpack>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>xml-maven-plugin</artifactId>
                 <configuration>
@@ -227,7 +255,7 @@
                             <includes>
                                 <include>**/*.xsd</include>
                             </includes>
-                            <dir>src/main/resources/xsd</dir>
+                            <dir>${netex.xsd.dir}</dir>
                             <stylesheet>src/main/resources/xslt/remove_unwanted_structures.xslt</stylesheet>
                         </transformationSet>
                     </transformationSets>

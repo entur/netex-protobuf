@@ -6,7 +6,18 @@ This project contains setup to generate [Protocol Buffers Definition files](http
 
 The conversion is done using [schema2proto](https://github.com/entur/schema2proto) and configuration [netex_to_protobuf_config.yaml](netex_to_protobuf_config.yaml)
 
-Based on a copy of https://github.com/entur/NeTEx/commit/55cd207e7b6d49ea0aa2905fd4adee1241bad6cb (v1.11) (no tag or release exist yet)
+## NeTEx schema version
+
+The xsd files are not kept in this repository. They are downloaded at build time from a tagged source archive of
+https://github.com/entur/NeTEx, selected by the `netex.xsd.version` property in [pom.xml](pom.xml) (the tag name without
+the leading `v`). The current version is [v1.0.16.1](https://github.com/entur/NeTEx/releases/tag/v1.0.16.1).
+
+To build against another tag without editing the pom:
+
+`mvn clean install -Dnetex.xsd.version=1.0.16.2`
+
+The downloaded xsd files are treated as immutable upstream inputs; build-time schema adjustments are defined in
+[remove_unwanted_structures.xslt](src/main/resources/xslt/remove_unwanted_structures.xslt). 
 
 Backwards compatibility check is handled by `protolock` (https://github.com/nilslice/protolock) and called from Maven via plugin `proto-backwards-compat-maven-plugin` (https://github.com/salesforce/proto-backwards-compat-maven-plugin).
 
