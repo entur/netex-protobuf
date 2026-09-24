@@ -43,7 +43,7 @@
         <proto.version>4.36.1</proto.version>
         <protobuf-maven-plugin.version>5.1.9</protobuf-maven-plugin.version>
         <protovalidate.version>1.3.0</protovalidate.version>
-        <schema2proto.version>1.133.0</schema2proto.version>
+        <schema2proto.version>1.136.0</schema2proto.version>
     </properties>
     <dependencies>
         <dependency>
