@@ -4247,6 +4247,14 @@
                 "name": "CUSTOMER_PURCHASE_PACKAGE_STATUS_ENUMERATION_OTHER",
                 "integer": 9
               }
+            ],
+            "reserved_ids": [
+              20,
+              21
+            ],
+            "reserved_names": [
+              "CUSTOMER_PURCHASE_PACKAGE_STATUS_ENUMERATION_CANCELLED",
+              "CUSTOMER_PURCHASE_PACKAGE_STATUS_ENUMERATION_REFUNDED"
             ]
           },
           {
