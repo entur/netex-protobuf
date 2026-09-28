@@ -18377,11 +18377,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 551,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 552,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -18519,7 +18514,8 @@
               10,
               872,
               521,
-              532
+              532,
+              551
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -18530,7 +18526,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -18936,11 +18933,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 551,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 552,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -19078,7 +19070,8 @@
               10,
               765,
               521,
-              532
+              532,
+              551
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -19089,7 +19082,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -22518,11 +22512,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 551,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 552,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -22660,7 +22649,8 @@
               10,
               569,
               521,
-              532
+              532,
+              551
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -22671,7 +22661,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -38335,11 +38326,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 332,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 333,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -38613,7 +38599,8 @@
               11,
               10,
               362,
-              422
+              422,
+              332
             ],
             "reserved_names": [
               "service_access_right_ref",
@@ -38681,7 +38668,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -39461,11 +39449,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 444,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 445,
                 "name": "communication_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -39574,7 +39557,8 @@
               11,
               10,
               332,
-              392
+              392,
+              444
             ],
             "reserved_names": [
               "service_access_right_ref",
@@ -39642,7 +39626,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -42769,11 +42754,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 400,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 401,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -42916,7 +42896,8 @@
               10,
               453,
               370,
-              381
+              381,
+              400
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -42927,7 +42908,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -43241,11 +43223,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 400,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 401,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -43388,7 +43365,8 @@
               10,
               419,
               370,
-              381
+              381,
+              400
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -43399,7 +43377,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -87706,11 +87685,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 197,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 198,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -87848,7 +87822,8 @@
               10,
               219,
               167,
-              178
+              178,
+              197
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -87859,7 +87834,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -88128,11 +88104,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 197,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 198,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -88270,7 +88241,8 @@
               10,
               252,
               167,
-              178
+              178,
+              197
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -88281,7 +88253,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -100981,11 +100954,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 102,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 103,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -101137,10 +101105,12 @@
               }
             ],
             "reserved_ids": [
-              74
+              74,
+              102
             ],
             "reserved_names": [
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "local_service_ref"
             ]
           },
           {
@@ -268234,11 +268204,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 197,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 198,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -268316,14 +268281,16 @@
               9,
               11,
               10,
-              292
+              292,
+              197
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -269102,11 +269069,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 197,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 198,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -269184,14 +269146,16 @@
               9,
               11,
               10,
-              254
+              254,
+              197
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -293847,261 +293811,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 55,
-                "name": "equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 56,
-                "name": "access_vehicle_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 57,
-                "name": "wheelchair_vehicle_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 58,
-                "name": "place_sign_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 59,
-                "name": "general_sign_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 60,
-                "name": "heading_sign_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 61,
-                "name": "sanitary_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 62,
-                "name": "passenger_safety_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 63,
-                "name": "help_point_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 64,
-                "name": "rubbish_disposal_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 65,
-                "name": "entrance_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 66,
-                "name": "ramp_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 67,
-                "name": "crossing_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 68,
-                "name": "lift_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 69,
-                "name": "escalator_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 70,
-                "name": "travelator_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 71,
-                "name": "queueing_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 72,
-                "name": "staircase_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 73,
-                "name": "rough_surface_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 74,
-                "name": "place_lighting_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 75,
-                "name": "site_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 76,
-                "name": "waiting_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 77,
-                "name": "waiting_room_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 78,
-                "name": "luggage_locker_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 79,
-                "name": "shelter_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 80,
-                "name": "seating_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 81,
-                "name": "trolley_stand_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 82,
-                "name": "ticketing_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 83,
-                "name": "ticket_validator_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 84,
-                "name": "cycle_storage_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 85,
-                "name": "vehicle_release_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 86,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 87,
-                "name": "ticketing_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 88,
-                "name": "assistance_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 89,
-                "name": "customer_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 90,
-                "name": "complaints_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 91,
-                "name": "lost_property_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 92,
-                "name": "luggage_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 93,
-                "name": "left_luggage_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 94,
-                "name": "meeting_point_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 95,
-                "name": "communication_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 96,
-                "name": "hire_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 97,
-                "name": "money_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 98,
-                "name": "retail_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 99,
-                "name": "catering_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 100,
-                "name": "vehicle_charging_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 101,
-                "name": "refuelling_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 102,
-                "name": "battery_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 103,
-                "name": "activated_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 104,
-                "name": "passenger_information_equipment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 105,
-                "name": "assistance_booking_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 106,
                 "name": "car_pooling_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -294130,12 +293839,115 @@
                 "id": 111,
                 "name": "online_service_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 112,
-                "name": "retail_device_ref",
-                "type": "VersionOfObjectRefStructure"
               }
+            ],
+            "reserved_ids": [
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              112
+            ],
+            "reserved_names": [
+              "equipment_ref",
+              "access_vehicle_equipment_ref",
+              "wheelchair_vehicle_ref",
+              "place_sign_ref",
+              "general_sign_ref",
+              "heading_sign_ref",
+              "sanitary_equipment_ref",
+              "passenger_safety_equipment_ref",
+              "help_point_equipment_ref",
+              "rubbish_disposal_equipment_ref",
+              "entrance_equipment_ref",
+              "ramp_equipment_ref",
+              "crossing_equipment_ref",
+              "lift_equipment_ref",
+              "escalator_equipment_ref",
+              "travelator_equipment_ref",
+              "queueing_equipment_ref",
+              "staircase_equipment_ref",
+              "rough_surface_ref",
+              "place_lighting_equipment_ref",
+              "site_equipment_ref",
+              "waiting_equipment_ref",
+              "waiting_room_equipment_ref",
+              "luggage_locker_equipment_ref",
+              "shelter_equipment_ref",
+              "seating_equipment_ref",
+              "trolley_stand_equipment_ref",
+              "ticketing_equipment_ref",
+              "ticket_validator_equipment_ref",
+              "cycle_storage_equipment_ref",
+              "vehicle_release_equipment_ref",
+              "local_service_ref",
+              "ticketing_service_ref",
+              "assistance_service_ref",
+              "customer_service_ref",
+              "complaints_service_ref",
+              "lost_property_service_ref",
+              "luggage_service_ref",
+              "left_luggage_service_ref",
+              "meeting_point_service_ref",
+              "communication_service_ref",
+              "hire_service_ref",
+              "money_service_ref",
+              "retail_service_ref",
+              "catering_service_ref",
+              "vehicle_charging_equipment_ref",
+              "refuelling_equipment_ref",
+              "battery_equipment_ref",
+              "activated_equipment_ref",
+              "passenger_information_equipment_ref",
+              "assistance_booking_service_ref",
+              "retail_device_ref"
             ]
           },
           {
@@ -323402,11 +323214,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 198,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 199,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -323544,7 +323351,8 @@
               10,
               232,
               168,
-              179
+              179,
+              198
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -323555,7 +323363,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -323829,11 +323638,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 198,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 199,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -323971,7 +323775,8 @@
               10,
               218,
               168,
-              179
+              179,
+              198
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -323982,7 +323787,8 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "access_equipment_ref",
-              "sign_equipment_ref"
+              "sign_equipment_ref",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -346902,11 +346708,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 551,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 552,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -347045,7 +346846,8 @@
               832,
               521,
               532,
-              741
+              741,
+              551
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -347057,7 +346859,8 @@
               "publication",
               "access_equipment_ref",
               "sign_equipment_ref",
-              "has_wheel_chair_spaces"
+              "has_wheel_chair_spaces",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -347411,11 +347214,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 551,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 552,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -347554,7 +347352,8 @@
               738,
               521,
               532,
-              741
+              741,
+              551
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -347566,7 +347365,8 @@
               "publication",
               "access_equipment_ref",
               "sign_equipment_ref",
-              "has_wheel_chair_spaces"
+              "has_wheel_chair_spaces",
+              "local_service_ref"
             ],
             "options": [
               {
@@ -350668,23 +350468,23 @@
                 "type": "string"
               },
               {
-                "id": 6,
-                "name": "callu",
-                "type": "ChoiceWrapper_VersionedChildStructure",
+                "id": 2,
+                "name": "call",
+                "type": "CallType",
                 "is_repeated": true
               }
             ],
             "reserved_ids": [
-              2,
               3,
               4,
-              5
+              5,
+              6
             ],
             "reserved_names": [
-              "call",
               "call_z",
               "dated_call",
-              "dated_call_z"
+              "dated_call_z",
+              "callu"
             ],
             "messages": [
               {
@@ -351692,11 +351492,6 @@
                         "type": "VersionOfObjectRefStructure"
                       },
                       {
-                        "id": 437,
-                        "name": "local_service_ref",
-                        "type": "VersionOfObjectRefStructure"
-                      },
-                      {
                         "id": 333,
                         "name": "ticketing_service_ref",
                         "type": "VersionOfObjectRefStructure"
@@ -351845,7 +351640,8 @@
                       11,
                       10,
                       332,
-                      392
+                      392,
+                      437
                     ],
                     "reserved_names": [
                       "data_source_ref",
@@ -351853,7 +351649,8 @@
                       "modification",
                       "compatible_with_version_frame_version_ref",
                       "publication",
-                      "dated_service_journey_ref"
+                      "dated_service_journey_ref",
+                      "local_service_ref"
                     ],
                     "options": [
                       {
@@ -363448,11 +363245,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 37,
-                    "name": "local_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 38,
                     "name": "ticketing_service_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -363850,7 +363642,8 @@
                   56,
                   60,
                   7,
-                  18
+                  18,
+                  37
                 ],
                 "reserved_names": [
                   "passenger_equipment_ref",
@@ -363858,7 +363651,8 @@
                   "sign_equipment",
                   "access_equipment",
                   "access_equipment_ref",
-                  "sign_equipment_ref"
+                  "sign_equipment_ref",
+                  "local_service_ref"
                 ]
               }
             ],
@@ -364221,11 +364015,6 @@
                     "type": "BatteryEquipmentType"
                   },
                   {
-                    "id": 41,
-                    "name": "local_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 42,
                     "name": "ticketing_service_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -364371,13 +364160,15 @@
                   2,
                   4,
                   12,
-                  16
+                  16,
+                  41
                 ],
                 "reserved_names": [
                   "passenger_equipment_ref",
                   "vehicle_equipment_ref",
                   "sign_equipment",
-                  "access_equipment"
+                  "access_equipment",
+                  "local_service_ref"
                 ]
               }
             ],
@@ -364476,11 +364267,6 @@
               {
                 "name": "ChoiceWrapper_ExplicitLocalServices_RelStructure",
                 "fields": [
-                  {
-                    "id": 1,
-                    "name": "local_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
                   {
                     "id": 2,
                     "name": "ticketing_service_ref",
@@ -364621,6 +364407,12 @@
                     "name": "assistance_booking_service",
                     "type": "AssistanceBookingServiceType"
                   }
+                ],
+                "reserved_ids": [
+                  1
+                ],
+                "reserved_names": [
+                  "local_service_ref"
                 ]
               }
             ],
@@ -370793,11 +370585,6 @@
                 "name": "ChoiceWrapper_LocalServices_RelStructure",
                 "fields": [
                   {
-                    "id": 1,
-                    "name": "local_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 2,
                     "name": "ticketing_service_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -370937,6 +370724,12 @@
                     "name": "assistance_booking_service",
                     "type": "AssistanceBookingServiceType"
                   }
+                ],
+                "reserved_ids": [
+                  1
+                ],
+                "reserved_names": [
+                  "local_service_ref"
                 ]
               }
             ],
@@ -382478,17 +382271,17 @@
                 "type": "ModificationSetEnumeration"
               },
               {
-                "id": 4,
-                "name": "stop_placeu",
-                "type": "ChoiceWrapper_Site_VersionStructure",
+                "id": 3,
+                "name": "stop_place",
+                "type": "StopPlaceType",
                 "is_repeated": true
               }
             ],
             "reserved_ids": [
-              3
+              4
             ],
             "reserved_names": [
-              "stop_place"
+              "stop_placeu"
             ],
             "messages": [
               {
@@ -389439,11 +389232,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 196,
-                    "name": "local_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 197,
                     "name": "ticketing_service_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -389531,10 +389319,12 @@
                 ],
                 "reserved_ids": [
                   204,
-                  329
+                  329,
+                  196
                 ],
                 "reserved_names": [
-                  "line_type"
+                  "line_type",
+                  "local_service_ref"
                 ]
               }
             ],
@@ -402077,11 +401867,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 102,
-                "name": "local_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 103,
                 "name": "ticketing_service_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -402233,10 +402018,12 @@
               }
             ],
             "reserved_ids": [
-              74
+              74,
+              102
             ],
             "reserved_names": [
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "local_service_ref"
             ],
             "options": [
               {

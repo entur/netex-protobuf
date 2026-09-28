@@ -24,6 +24,14 @@ ignoreOutputFields:
 - uk.org.siri.www.siri/ServiceRequestType.ChoiceWrapper_AbstractFunctionalServiceRequestStructure/DataObjectRequest
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractServiceDeliveryStructure/DataObjectDelivery
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractSubscriptionStructure/DataObjectSubscriptionRequest
+# AccessRightParameterAssignment was abstract before NeTEx 2.0 and has been reserved in these messages since 2020. Keep it out.
+# Message names are as in the xsd (first letter not yet uppercased), wrapper names as generated
+- uk.org.netex.www.netex/accessRightParameterAssignments_RelStructure.ChoiceWrapper_DataManagedObjectStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/accessRightParameterAssignmentsInFrame_RelStructure.ChoiceWrapper_DataManagedObjectStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/validityParameterAssignments_RelStructure.ChoiceWrapper_DataManagedObjectStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/entitiesInVersion_RelStructure.ChoiceWrapper_EntityInVersionStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/versionFrameMembers_RelStructure.ChoiceWrapper_VersionFrameMembers_RelStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/ChoiceWrapper_GeneralFrameMembers_RelStructure/AccessRightParameterAssignment
 customTypeMappings:
   # NeTEx 2.0 names abstract substitution group heads X_Dummy instead of X_. Keep the previous names:
   # X_DummyType (anonymous type of element X_Dummy) -> X_Type
