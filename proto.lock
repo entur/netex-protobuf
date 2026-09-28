@@ -1800,10 +1800,6 @@
                 "integer": 2
               },
               {
-                "name": "ACCOMMODATION_FACILITY_ENUMERATION_FOLDING_SEAT",
-                "integer": 18
-              },
-              {
                 "name": "ACCOMMODATION_FACILITY_ENUMERATION_SLEEPER",
                 "integer": 3
               },
@@ -1871,6 +1867,12 @@
                 "name": "ACCOMMODATION_FACILITY_ENUMERATION_STANDING",
                 "integer": 17
               }
+            ],
+            "reserved_ids": [
+              18
+            ],
+            "reserved_names": [
+              "ACCOMMODATION_FACILITY_ENUMERATION_FOLDING_SEAT"
             ]
           },
           {
@@ -5788,11 +5790,13 @@
               {
                 "name": "FULFILMENT_METHOD_TYPE_ENUMERATION_OTHER",
                 "integer": 13
-              },
-              {
-                "name": "FULFILMENT_METHOD_TYPE_ENUMERATION_CUSTOMER_ACCOUNT",
-                "integer": 14
               }
+            ],
+            "reserved_ids": [
+              14
+            ],
+            "reserved_names": [
+              "FULFILMENT_METHOD_TYPE_ENUMERATION_CUSTOMER_ACCOUNT"
             ]
           },
           {
@@ -7502,7 +7506,7 @@
                 "integer": 1
               },
               {
-                "name": "LIGHTING_METHOD_ENUMERATION_STEPING_DETECTOR",
+                "name": "LIGHTING_METHOD_ENUMERATION_STEPPING_DETECTOR",
                 "integer": 2
               },
               {
@@ -8086,7 +8090,7 @@
                 "integer": 4
               },
               {
-                "name": "MACHINE_READABLE_ENUMERATION_APNR",
+                "name": "MACHINE_READABLE_ENUMERATION_ANPR",
                 "integer": 11
               },
               {
@@ -8094,7 +8098,7 @@
                 "integer": 5
               },
               {
-                "name": "MACHINE_READABLE_ENUMERATION_QRCODE",
+                "name": "MACHINE_READABLE_ENUMERATION_QR_CODE",
                 "integer": 10
               },
               {
@@ -10708,41 +10712,41 @@
             ]
           },
           {
-            "name": "PyschosensoryNeedEnumeration",
+            "name": "PsychosensoryNeedEnumeration",
             "enum_fields": [
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_UNSPECIFIED"
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_UNSPECIFIED"
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_VISUAL_IMPAIRMENT",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_VISUAL_IMPAIRMENT",
                 "integer": 1
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_AUDITORY_IMPAIRMENT",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_AUDITORY_IMPAIRMENT",
                 "integer": 2
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_COGNITIVE_INPUT_IMPAIRMENT",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_COGNITIVE_INPUT_IMPAIRMENT",
                 "integer": 3
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_LIFTS",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_LIFTS",
                 "integer": 4
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_ESCALATORS",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_ESCALATORS",
                 "integer": 5
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_CONFINED_SPACES",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_CONFINED_SPACES",
                 "integer": 6
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_CROWDS",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_AVERSE_TO_CROWDS",
                 "integer": 7
               },
               {
-                "name": "PYSCHOSENSORY_NEED_ENUMERATION_OTHER_PSYCHOSENSORY_NEED",
+                "name": "PSYCHOSENSORY_NEED_ENUMERATION_OTHER_PSYCHOSENSORY_NEED",
                 "integer": 8
               }
             ]
@@ -14180,61 +14184,61 @@
             ]
           },
           {
-            "name": "TypeOfInfolinkEnumeration",
+            "name": "TypeOfInfoLinkEnumeration",
             "enum_fields": [
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_UNSPECIFIED"
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_UNSPECIFIED"
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_CONTACT",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_CONTACT",
                 "integer": 1
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_RESOURCE",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_RESOURCE",
                 "integer": 2
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_INFO",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_INFO",
                 "integer": 3
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_IMAGE",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_IMAGE",
                 "integer": 4
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_DOCUMENT",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_DOCUMENT",
                 "integer": 5
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_TIMETABLE_DOCUMENT",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_TIMETABLE_DOCUMENT",
                 "integer": 6
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_FARE_SHEET",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_FARE_SHEET",
                 "integer": 7
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_DATA_LICENCE",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_DATA_LICENCE",
                 "integer": 8
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_MOBILE_APP_DOWNLOAD",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_MOBILE_APP_DOWNLOAD",
                 "integer": 14
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_MOBILE_APP_INSTALL_CHECK",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_MOBILE_APP_INSTALL_CHECK",
                 "integer": 15
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_MAP",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_MAP",
                 "integer": 9
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_ICON",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_ICON",
                 "integer": 10
               },
               {
-                "name": "TYPE_OF_INFOLINK_ENUMERATION_OTHER",
+                "name": "TYPE_OF_INFO_LINK_ENUMERATION_OTHER",
                 "integer": 11
               }
             ]
@@ -14380,11 +14384,13 @@
               {
                 "name": "USAGE_END_ENUMERATION_OTHER",
                 "integer": 10
-              },
-              {
-                "name": "USAGE_END_ENUMERATION_NO_TEMPORAL_VALIDITY",
-                "integer": 11
               }
+            ],
+            "reserved_ids": [
+              11
+            ],
+            "reserved_names": [
+              "USAGE_END_ENUMERATION_NO_TEMPORAL_VALIDITY"
             ]
           },
           {
@@ -49762,99 +49768,14 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 712,
-                "name": "fulfilment_entry_ref",
-                "type": "FulfilmentEntryRefStructure"
-              },
-              {
-                "id": 713,
-                "name": "purchase_fulfilment_entry_ref",
-                "type": "PurchaseFulfilmentEntryRefStructure"
-              },
-              {
                 "id": 715,
                 "name": "normal_dated_vehicle_journey_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 717,
-                "name": "group_of_distribution_assignments_ref",
-                "type": "GroupOfDistributionAssignmentsRefStructure"
-              },
-              {
-                "id": 719,
-                "name": "type_of_customer_account_entry_ref",
-                "type": "TypeOfCustomerAccountEntryRefStructure"
-              },
-              {
-                "id": 720,
-                "name": "customer_account_entry_ref",
-                "type": "CustomerAccountEntryRefStructure"
-              },
-              {
-                "id": 721,
-                "name": "customer_registration_ref",
-                "type": "CustomerRegistrationRefStructure"
-              },
-              {
-                "id": 722,
-                "name": "customer_deregistration_ref",
-                "type": "CustomerDeregistrationRefStructure"
-              },
-              {
                 "id": 724,
                 "name": "group_of_tariff_zones_ref",
                 "type": "GroupOfTariffZonesRefStructure"
-              },
-              {
-                "id": 725,
-                "name": "validation_entry_ref",
-                "type": "ValidationEntryRefStructure"
-              },
-              {
-                "id": 726,
-                "name": "passenger_travel_entry_ref",
-                "type": "PassengerTravelEntryRefStructure"
-              },
-              {
-                "id": 727,
-                "name": "passenger_validate_travel_entry_ref",
-                "type": "PassengerValidateTravelEntryRefStructure"
-              },
-              {
-                "id": 728,
-                "name": "passenger_used_same_stop_entry_ref",
-                "type": "PassengerUsedSameStopEntryRefStructure"
-              },
-              {
-                "id": 729,
-                "name": "no_access_rights_on_account_ref",
-                "type": "NoAccessRightsOnAccountRefStructure"
-              },
-              {
-                "id": 730,
-                "name": "insufficient_access_rights_on_account_ref",
-                "type": "InsufficientAccessRightsOnAccountRefStructure"
-              },
-              {
-                "id": 731,
-                "name": "reverting_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 733,
-                "name": "mapping_fulfilment_entry_ref",
-                "type": "MappingFulfilmentEntryRefStructure"
-              },
-              {
-                "id": 734,
-                "name": "security_policy_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 735,
-                "name": "onboard_validity_ref",
-                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 750,
@@ -49909,11 +49830,6 @@
               {
                 "id": 774,
                 "name": "service_access_code_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 775,
-                "name": "trip_pattern_trip_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -50207,7 +50123,25 @@
               10,
               732,
               697,
-              716
+              716,
+              712,
+              713,
+              717,
+              719,
+              720,
+              721,
+              722,
+              725,
+              726,
+              727,
+              728,
+              729,
+              730,
+              731,
+              733,
+              734,
+              735,
+              775
             ],
             "reserved_names": [
               "data_source_ref_v",
@@ -50216,7 +50150,25 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "customer_eligibility_ref",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "fulfilment_entry_ref",
+              "purchase_fulfilment_entry_ref",
+              "group_of_distribution_assignments_ref",
+              "type_of_customer_account_entry_ref",
+              "customer_account_entry_ref",
+              "customer_registration_ref",
+              "customer_deregistration_ref",
+              "validation_entry_ref",
+              "passenger_travel_entry_ref",
+              "passenger_validate_travel_entry_ref",
+              "passenger_used_same_stop_entry_ref",
+              "no_access_rights_on_account_ref",
+              "insufficient_access_rights_on_account_ref",
+              "reverting_ref",
+              "mapping_fulfilment_entry_ref",
+              "security_policy_ref",
+              "onboard_validity_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -50363,7 +50315,7 @@
               },
               {
                 "id": 281,
-                "name": "projected_fearture_ref",
+                "name": "projected_feature_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -50551,7 +50503,7 @@
               },
               {
                 "id": 281,
-                "name": "projected_fearture_ref",
+                "name": "projected_feature_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -60783,11 +60735,6 @@
                 "type": "CustomerPurchasePackageElementAccesses_RelStructure"
               },
               {
-                "id": 372,
-                "name": "groups_of_customer_purchase_parameter_assignments",
-                "type": "GroupsOfCustomerPurchaseParameterAssignments_RelStructure"
-              },
-              {
                 "id": 341,
                 "name": "validity_parameter_assignments",
                 "type": "CustomerPurchaseParameterAssignments_RelStructure"
@@ -60816,7 +60763,8 @@
               169,
               170,
               181,
-              182
+              182,
+              372
             ],
             "reserved_names": [
               "data_source_ref",
@@ -60829,7 +60777,8 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "groups_of_customer_purchase_parameter_assignments"
             ],
             "options": [
               {
@@ -60973,11 +60922,6 @@
                 "type": "CustomerPurchasePackageElementAccesses_RelStructure"
               },
               {
-                "id": 344,
-                "name": "groups_of_customer_purchase_parameter_assignments",
-                "type": "GroupsOfCustomerPurchaseParameterAssignments_RelStructure"
-              },
-              {
                 "id": 341,
                 "name": "validity_parameter_assignments",
                 "type": "CustomerPurchaseParameterAssignments_RelStructure"
@@ -61001,7 +60945,8 @@
               169,
               170,
               181,
-              182
+              182,
+              344
             ],
             "reserved_names": [
               "data_source_ref",
@@ -61014,7 +60959,8 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "groups_of_customer_purchase_parameter_assignments"
             ],
             "options": [
               {
@@ -61809,11 +61755,6 @@
                 "type": "DistributionAssignments_RelStructure"
               },
               {
-                "id": 392,
-                "name": "element_consumption_policies",
-                "type": "ElementConsumptionPolicies_RelStructure"
-              },
-              {
                 "id": 346,
                 "name": "customer_purchase_package_elements",
                 "type": "CustomerPurchasePackageElements_RelStructure"
@@ -61877,7 +61818,8 @@
               169,
               170,
               181,
-              182
+              182,
+              392
             ],
             "reserved_names": [
               "data_source_ref",
@@ -61890,7 +61832,8 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "element_consumption_policies"
             ],
             "options": [
               {
@@ -62054,11 +61997,6 @@
                 "type": "DistributionAssignments_RelStructure"
               },
               {
-                "id": 362,
-                "name": "element_consumption_policies",
-                "type": "ElementConsumptionPolicies_RelStructure"
-              },
-              {
                 "id": 346,
                 "name": "customer_purchase_package_elements",
                 "type": "CustomerPurchasePackageElements_RelStructure"
@@ -62117,7 +62055,8 @@
               169,
               170,
               181,
-              182
+              182,
+              362
             ],
             "reserved_names": [
               "data_source_ref",
@@ -62130,7 +62069,8 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "element_consumption_policies"
             ],
             "options": [
               {
@@ -62380,34 +62320,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 962,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 963,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -62433,21 +62353,6 @@
                 "id": 914,
                 "name": "trip_leg_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 943,
-                "name": "maximum_number_of_accesses",
-                "type": "MaximumNumberOfAccessesType"
-              },
-              {
-                "id": 871,
-                "name": "includes_grouping_type",
-                "type": "LogicalOperationEnumeration"
-              },
-              {
-                "id": 872,
-                "name": "includes",
-                "type": "CustomerPurchaseParameterAssignments_RelStructure"
               },
               {
                 "id": 901,
@@ -62530,21 +62435,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -62567,14 +62457,34 @@
               9,
               11,
               10,
-              964
+              964,
+              962,
+              963,
+              641,
+              643,
+              943,
+              871,
+              872,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "maximum_number_of_accesses",
+              "includes_grouping_type",
+              "includes",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -62778,34 +62688,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 924,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 925,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -62831,21 +62721,6 @@
                 "id": 914,
                 "name": "trip_leg_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 901,
-                "name": "maximum_number_of_accesses",
-                "type": "MaximumNumberOfAccessesType"
-              },
-              {
-                "id": 871,
-                "name": "includes_grouping_type",
-                "type": "LogicalOperationEnumeration"
-              },
-              {
-                "id": 872,
-                "name": "includes",
-                "type": "CustomerPurchaseParameterAssignments_RelStructure"
               },
               {
                 "id": 363,
@@ -62923,21 +62798,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -62960,14 +62820,34 @@
               9,
               11,
               10,
-              926
+              926,
+              924,
+              925,
+              641,
+              643,
+              901,
+              871,
+              872,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "maximum_number_of_accesses",
+              "includes_grouping_type",
+              "includes",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -93361,11 +93241,6 @@
                 "type": "DistributionAssignmentsInFrame_RelStructure"
               },
               {
-                "id": 586,
-                "name": "group_of_distribution_assignments",
-                "type": "GroupsOfDistributionAssignmentsInFrame_RelStructure"
-              },
-              {
                 "id": 601,
                 "name": "parking_tariffs",
                 "type": "ParkingTariffsType"
@@ -93393,14 +93268,16 @@
               9,
               11,
               10,
-              642
+              642,
+              586
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "group_of_distribution_assignments"
             ],
             "options": [
               {
@@ -93719,11 +93596,6 @@
                 "type": "DistributionAssignmentsInFrame_RelStructure"
               },
               {
-                "id": 586,
-                "name": "group_of_distribution_assignments",
-                "type": "GroupsOfDistributionAssignmentsInFrame_RelStructure"
-              },
-              {
                 "id": 601,
                 "name": "parking_tariffs",
                 "type": "ParkingTariffsType"
@@ -93746,14 +93618,16 @@
               9,
               11,
               10,
-              602
+              602,
+              586
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "group_of_distribution_assignments"
             ],
             "options": [
               {
@@ -94385,11 +94259,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 671,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 672,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -94483,7 +94352,8 @@
               11,
               10,
               668,
-              667
+              667,
+              671
             ],
             "reserved_names": [
               "data_source_ref",
@@ -94491,7 +94361,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -94765,11 +94636,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 532,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 533,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -94863,7 +94729,8 @@
               11,
               10,
               529,
-              528
+              528,
+              532
             ],
             "reserved_names": [
               "data_source_ref",
@@ -94871,7 +94738,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -109362,16 +109230,6 @@
                 "type": "TypeOfTravelDocumentRefs_RelStructure"
               },
               {
-                "id": 362,
-                "name": "can_issue_types_of_travel_document",
-                "type": "TypeOfTravelDocumentRefs_RelStructure"
-              },
-              {
-                "id": 336,
-                "name": "can_reuse_types_of_travel_document",
-                "type": "TypeOfTravelDocumentRefs_RelStructure"
-              },
-              {
                 "id": 335,
                 "name": "prices",
                 "type": "FulfilmentMethodPrices_RelStructure"
@@ -109395,7 +109253,9 @@
               169,
               170,
               181,
-              182
+              182,
+              362,
+              336
             ],
             "reserved_names": [
               "data_source_ref",
@@ -109408,7 +109268,9 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "can_issue_types_of_travel_document",
+              "can_reuse_types_of_travel_document"
             ],
             "options": [
               {
@@ -109542,16 +109404,6 @@
                 "type": "TypeOfTravelDocumentRefs_RelStructure"
               },
               {
-                "id": 338,
-                "name": "can_issue_types_of_travel_document",
-                "type": "TypeOfTravelDocumentRefs_RelStructure"
-              },
-              {
-                "id": 336,
-                "name": "can_reuse_types_of_travel_document",
-                "type": "TypeOfTravelDocumentRefs_RelStructure"
-              },
-              {
                 "id": 335,
                 "name": "prices",
                 "type": "FulfilmentMethodPrices_RelStructure"
@@ -109570,7 +109422,9 @@
               169,
               170,
               181,
-              182
+              182,
+              338,
+              336
             ],
             "reserved_names": [
               "data_source_ref",
@@ -109583,7 +109437,9 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "can_issue_types_of_travel_document",
+              "can_reuse_types_of_travel_document"
             ],
             "options": [
               {
@@ -112877,99 +112733,14 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 611,
-                "name": "fulfilment_entry_ref",
-                "type": "FulfilmentEntryRefStructure"
-              },
-              {
-                "id": 612,
-                "name": "purchase_fulfilment_entry_ref",
-                "type": "PurchaseFulfilmentEntryRefStructure"
-              },
-              {
                 "id": 614,
                 "name": "normal_dated_vehicle_journey_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 616,
-                "name": "group_of_distribution_assignments_ref",
-                "type": "GroupOfDistributionAssignmentsRefStructure"
-              },
-              {
-                "id": 618,
-                "name": "type_of_customer_account_entry_ref",
-                "type": "TypeOfCustomerAccountEntryRefStructure"
-              },
-              {
-                "id": 619,
-                "name": "customer_account_entry_ref",
-                "type": "CustomerAccountEntryRefStructure"
-              },
-              {
-                "id": 620,
-                "name": "customer_registration_ref",
-                "type": "CustomerRegistrationRefStructure"
-              },
-              {
-                "id": 621,
-                "name": "customer_deregistration_ref",
-                "type": "CustomerDeregistrationRefStructure"
-              },
-              {
                 "id": 623,
                 "name": "group_of_tariff_zones_ref",
                 "type": "GroupOfTariffZonesRefStructure"
-              },
-              {
-                "id": 624,
-                "name": "validation_entry_ref",
-                "type": "ValidationEntryRefStructure"
-              },
-              {
-                "id": 625,
-                "name": "passenger_travel_entry_ref",
-                "type": "PassengerTravelEntryRefStructure"
-              },
-              {
-                "id": 626,
-                "name": "passenger_validate_travel_entry_ref",
-                "type": "PassengerValidateTravelEntryRefStructure"
-              },
-              {
-                "id": 627,
-                "name": "passenger_used_same_stop_entry_ref",
-                "type": "PassengerUsedSameStopEntryRefStructure"
-              },
-              {
-                "id": 628,
-                "name": "no_access_rights_on_account_ref",
-                "type": "NoAccessRightsOnAccountRefStructure"
-              },
-              {
-                "id": 629,
-                "name": "insufficient_access_rights_on_account_ref",
-                "type": "InsufficientAccessRightsOnAccountRefStructure"
-              },
-              {
-                "id": 630,
-                "name": "reverting_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 632,
-                "name": "mapping_fulfilment_entry_ref",
-                "type": "MappingFulfilmentEntryRefStructure"
-              },
-              {
-                "id": 633,
-                "name": "security_policy_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 634,
-                "name": "onboard_validity_ref",
-                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 649,
@@ -113024,11 +112795,6 @@
               {
                 "id": 673,
                 "name": "service_access_code_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 674,
-                "name": "trip_pattern_trip_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -113322,7 +113088,25 @@
               10,
               631,
               596,
-              615
+              615,
+              611,
+              612,
+              616,
+              618,
+              619,
+              620,
+              621,
+              624,
+              625,
+              626,
+              627,
+              628,
+              629,
+              630,
+              632,
+              633,
+              634,
+              674
             ],
             "reserved_names": [
               "data_source_ref_v",
@@ -113331,7 +113115,25 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "customer_eligibility_ref",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "fulfilment_entry_ref",
+              "purchase_fulfilment_entry_ref",
+              "group_of_distribution_assignments_ref",
+              "type_of_customer_account_entry_ref",
+              "customer_account_entry_ref",
+              "customer_registration_ref",
+              "customer_deregistration_ref",
+              "validation_entry_ref",
+              "passenger_travel_entry_ref",
+              "passenger_validate_travel_entry_ref",
+              "passenger_used_same_stop_entry_ref",
+              "no_access_rights_on_account_ref",
+              "insufficient_access_rights_on_account_ref",
+              "reverting_ref",
+              "mapping_fulfilment_entry_ref",
+              "security_policy_ref",
+              "onboard_validity_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -115990,34 +115792,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 962,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 963,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -116115,21 +115897,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -116152,14 +115919,28 @@
               9,
               11,
               10,
-              964
+              964,
+              962,
+              963,
+              641,
+              643,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -116409,34 +116190,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 962,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 963,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -116534,21 +116295,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -116571,14 +116317,28 @@
               9,
               11,
               10,
-              964
+              964,
+              962,
+              963,
+              641,
+              643,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -116782,34 +116542,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 923,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 924,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -116902,21 +116642,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -116939,14 +116664,28 @@
               9,
               11,
               10,
-              925
+              925,
+              923,
+              924,
+              641,
+              643,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -121459,11 +121198,6 @@
                 "type": "GroupOfLinesTypeEnumeration"
               },
               {
-                "id": 277,
-                "name": "parent_ref",
-                "type": "GroupOfEntitiesRefStructure"
-              },
-              {
                 "id": 287,
                 "name": "payment_methods",
                 "type": "PaymentMethodEnumeration",
@@ -121535,14 +121269,16 @@
               9,
               11,
               10,
-              332
+              332,
+              277
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "parent_ref"
             ],
             "messages": [
               {
@@ -121705,11 +121441,6 @@
                 "type": "GroupOfLinesTypeEnumeration"
               },
               {
-                "id": 277,
-                "name": "parent_ref",
-                "type": "GroupOfEntitiesRefStructure"
-              },
-              {
                 "id": 287,
                 "name": "payment_methods",
                 "type": "PaymentMethodEnumeration",
@@ -121776,14 +121507,16 @@
               9,
               11,
               10,
-              290
+              290,
+              277
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "parent_ref"
             ],
             "messages": [
               {
@@ -123804,11 +123537,6 @@
                 "type": "SalesOfferPackagePrices_RelStructure"
               },
               {
-                "id": 352,
-                "name": "element_consumption_policies",
-                "type": "ElementConsumptionPolicies_RelStructure"
-              },
-              {
                 "id": 311,
                 "name": "sales_offer_package_elements",
                 "type": "SalesOfferPackageElements_RelStructure"
@@ -123846,14 +123574,16 @@
               9,
               11,
               10,
-              353
+              353,
+              352
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "element_consumption_policies"
             ],
             "messages": [
               {
@@ -124041,11 +123771,6 @@
                 "type": "SalesOfferPackagePrices_RelStructure"
               },
               {
-                "id": 322,
-                "name": "element_consumption_policies",
-                "type": "ElementConsumptionPolicies_RelStructure"
-              },
-              {
                 "id": 311,
                 "name": "sales_offer_package_elements",
                 "type": "SalesOfferPackageElements_RelStructure"
@@ -124078,14 +123803,16 @@
               9,
               11,
               10,
-              323
+              323,
+              322
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "element_consumption_policies"
             ],
             "messages": [
               {
@@ -130150,7 +129877,7 @@
               {
                 "id": 1,
                 "name": "type_of_info_link",
-                "type": "TypeOfInfolinkEnumeration",
+                "type": "TypeOfInfoLinkEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -130430,7 +130157,7 @@
               {
                 "id": 483,
                 "name": "vehicle_equipment_profiles",
-                "type": "VehicleEquipmenProfilesInFrame_RelStructure"
+                "type": "VehicleEquipmentProfilesInFrame_RelStructure"
               },
               {
                 "id": 512,
@@ -131466,7 +131193,7 @@
               {
                 "id": 483,
                 "name": "vehicle_equipment_profiles",
-                "type": "VehicleEquipmenProfilesInFrame_RelStructure"
+                "type": "VehicleEquipmentProfilesInFrame_RelStructure"
               },
               {
                 "id": 486,
@@ -143977,11 +143704,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 499,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 500,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -144215,7 +143937,8 @@
               11,
               10,
               496,
-              495
+              495,
+              499
             ],
             "reserved_names": [
               "data_source_ref",
@@ -144223,7 +143946,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -145966,11 +145690,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 337,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 338,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -145984,7 +145703,8 @@
               11,
               10,
               334,
-              333
+              333,
+              337
             ],
             "reserved_names": [
               "data_source_ref",
@@ -145992,7 +145712,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -146182,11 +145903,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 308,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 309,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -146200,7 +145916,8 @@
               11,
               10,
               305,
-              304
+              304,
+              308
             ],
             "reserved_names": [
               "data_source_ref",
@@ -146208,7 +145925,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -146388,11 +146106,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 185,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 186,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -146406,7 +146119,8 @@
               11,
               10,
               182,
-              181
+              181,
+              185
             ],
             "reserved_names": [
               "data_source_ref",
@@ -146414,7 +146128,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -146650,11 +146365,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 437,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 438,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -146773,7 +146483,8 @@
               11,
               10,
               434,
-              433
+              433,
+              437
             ],
             "reserved_names": [
               "data_source_ref",
@@ -146781,7 +146492,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -146966,11 +146678,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 337,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 338,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -147089,7 +146796,8 @@
               11,
               10,
               334,
-              333
+              333,
+              337
             ],
             "reserved_names": [
               "data_source_ref",
@@ -147097,7 +146805,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -160360,11 +160069,6 @@
                 "type": "GroupOfLinesTypeEnumeration"
               },
               {
-                "id": 277,
-                "name": "parent_ref",
-                "type": "GroupOfEntitiesRefStructure"
-              },
-              {
                 "id": 287,
                 "name": "payment_methods",
                 "type": "PaymentMethodEnumeration",
@@ -160461,14 +160165,16 @@
               9,
               11,
               10,
-              492
+              492,
+              277
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "parent_ref"
             ],
             "messages": [
               {
@@ -160703,11 +160409,6 @@
                 "type": "GroupOfLinesTypeEnumeration"
               },
               {
-                "id": 277,
-                "name": "parent_ref",
-                "type": "GroupOfEntitiesRefStructure"
-              },
-              {
                 "id": 287,
                 "name": "payment_methods",
                 "type": "PaymentMethodEnumeration",
@@ -160799,14 +160500,16 @@
               9,
               11,
               10,
-              466
+              466,
+              277
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "parent_ref"
             ],
             "messages": [
               {
@@ -162435,11 +162138,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 437,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 438,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -162483,7 +162181,8 @@
               11,
               10,
               434,
-              433
+              433,
+              437
             ],
             "reserved_names": [
               "data_source_ref",
@@ -162491,7 +162190,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -162902,11 +162602,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 400,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 401,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -162950,7 +162645,8 @@
               11,
               10,
               397,
-              396
+              396,
+              400
             ],
             "reserved_names": [
               "data_source_ref",
@@ -162958,7 +162654,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -186923,11 +186620,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 347,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 348,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -186941,7 +186633,8 @@
               11,
               10,
               344,
-              343
+              343,
+              347
             ],
             "reserved_names": [
               "data_source_ref",
@@ -186949,7 +186642,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -187164,11 +186858,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 314,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 315,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -187182,7 +186871,8 @@
               11,
               10,
               311,
-              310
+              310,
+              314
             ],
             "reserved_names": [
               "data_source_ref",
@@ -187190,7 +186880,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -189120,11 +188811,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 337,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 338,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -189138,7 +188824,8 @@
               11,
               10,
               334,
-              333
+              333,
+              337
             ],
             "reserved_names": [
               "data_source_ref",
@@ -189146,7 +188833,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -189341,11 +189029,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 309,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 310,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -189359,7 +189042,8 @@
               11,
               10,
               306,
-              305
+              305,
+              309
             ],
             "reserved_names": [
               "data_source_ref",
@@ -189367,7 +189051,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -190800,11 +190485,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 377,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 378,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -190898,7 +190578,8 @@
               11,
               10,
               374,
-              373
+              373,
+              377
             ],
             "reserved_names": [
               "data_source_ref",
@@ -190906,7 +190587,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -191150,11 +190832,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 340,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 341,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -191248,7 +190925,8 @@
               11,
               10,
               337,
-              336
+              336,
+              340
             ],
             "reserved_names": [
               "data_source_ref",
@@ -191256,7 +190934,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -191465,11 +191144,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 185,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 186,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -191483,7 +191157,8 @@
               11,
               10,
               182,
-              181
+              181,
+              185
             ],
             "reserved_names": [
               "data_source_ref",
@@ -191491,7 +191166,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -196213,11 +195889,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 607,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 608,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -196451,7 +196122,8 @@
               11,
               10,
               604,
-              603
+              603,
+              607
             ],
             "reserved_names": [
               "data_source_ref",
@@ -196459,7 +196131,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -196663,11 +196336,6 @@
               {
                 "id": 498,
                 "name": "single_journey_path_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 499,
-                "name": "trip_pattern_trip_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -196904,7 +196572,8 @@
               11,
               10,
               496,
-              495
+              495,
+              499
             ],
             "reserved_names": [
               "data_source_ref",
@@ -196912,7 +196581,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -197813,11 +197483,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 397,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 398,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -197911,7 +197576,8 @@
               11,
               10,
               394,
-              176
+              176,
+              397
             ],
             "reserved_names": [
               "data_source_ref",
@@ -197919,7 +197585,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -198109,11 +197776,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 323,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 324,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -198207,7 +197869,8 @@
               11,
               10,
               320,
-              319
+              319,
+              323
             ],
             "reserved_names": [
               "data_source_ref",
@@ -198215,7 +197878,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -198397,11 +198061,6 @@
               {
                 "id": 456,
                 "name": "single_journey_path_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 457,
-                "name": "trip_pattern_trip_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -198638,7 +198297,8 @@
               11,
               10,
               454,
-              453
+              453,
+              457
             ],
             "reserved_names": [
               "data_source_ref",
@@ -198646,7 +198306,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -198828,11 +198489,6 @@
               {
                 "id": 355,
                 "name": "single_journey_path_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 356,
-                "name": "trip_pattern_trip_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -199069,7 +198725,8 @@
               11,
               10,
               353,
-              352
+              352,
+              356
             ],
             "reserved_names": [
               "data_source_ref",
@@ -199077,7 +198734,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -216478,7 +216136,7 @@
               {
                 "id": 453,
                 "name": "vehicle_equipment_profiles",
-                "type": "VehicleEquipmenProfilesInFrame_RelStructure"
+                "type": "VehicleEquipmentProfilesInFrame_RelStructure"
               },
               {
                 "id": 464,
@@ -216756,7 +216414,7 @@
               {
                 "id": 453,
                 "name": "vehicle_equipment_profiles",
-                "type": "VehicleEquipmenProfilesInFrame_RelStructure"
+                "type": "VehicleEquipmentProfilesInFrame_RelStructure"
               },
               {
                 "id": 464,
@@ -226715,11 +226373,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 607,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 608,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -226763,7 +226416,8 @@
               11,
               10,
               604,
-              603
+              603,
+              607
             ],
             "reserved_names": [
               "data_source_ref",
@@ -226771,7 +226425,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -227025,11 +226680,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 579,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 580,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -227073,7 +226723,8 @@
               11,
               10,
               576,
-              575
+              575,
+              579
             ],
             "reserved_names": [
               "data_source_ref",
@@ -227081,7 +226732,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -229396,11 +229048,6 @@
                 "type": "SalesOfferPackagePrices_RelStructure"
               },
               {
-                "id": 392,
-                "name": "element_consumption_policies",
-                "type": "ElementConsumptionPolicies_RelStructure"
-              },
-              {
                 "id": 341,
                 "name": "sales_offer_package_elements",
                 "type": "SalesOfferPackageElements_RelStructure"
@@ -229439,7 +229086,8 @@
               169,
               170,
               181,
-              182
+              182,
+              392
             ],
             "reserved_names": [
               "data_source_ref",
@@ -229452,7 +229100,8 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "element_consumption_policies"
             ],
             "options": [
               {
@@ -229601,11 +229250,6 @@
                 "type": "SalesOfferPackagePrices_RelStructure"
               },
               {
-                "id": 362,
-                "name": "element_consumption_policies",
-                "type": "ElementConsumptionPolicies_RelStructure"
-              },
-              {
                 "id": 341,
                 "name": "sales_offer_package_elements",
                 "type": "SalesOfferPackageElements_RelStructure"
@@ -229639,7 +229283,8 @@
               169,
               170,
               181,
-              182
+              182,
+              362
             ],
             "reserved_names": [
               "data_source_ref",
@@ -229652,7 +229297,8 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "element_consumption_policies"
             ],
             "options": [
               {
@@ -234509,94 +234155,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 639,
-                "name": "group_of_distribution_assignments_ref",
-                "type": "GroupOfDistributionAssignmentsRefStructure"
-              },
-              {
-                "id": 640,
-                "name": "type_of_customer_account_entry_ref",
-                "type": "TypeOfCustomerAccountEntryRefStructure"
-              },
-              {
-                "id": 641,
-                "name": "customer_account_entry_ref",
-                "type": "CustomerAccountEntryRefStructure"
-              },
-              {
-                "id": 642,
-                "name": "customer_registration_ref",
-                "type": "CustomerRegistrationRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "customer_deregistration_ref",
-                "type": "CustomerDeregistrationRefStructure"
-              },
-              {
                 "id": 645,
                 "name": "group_of_tariff_zones_ref",
                 "type": "GroupOfTariffZonesRefStructure"
-              },
-              {
-                "id": 646,
-                "name": "validation_entry_ref",
-                "type": "ValidationEntryRefStructure"
-              },
-              {
-                "id": 647,
-                "name": "passenger_travel_entry_ref",
-                "type": "PassengerTravelEntryRefStructure"
-              },
-              {
-                "id": 648,
-                "name": "passenger_validate_travel_entry_ref",
-                "type": "PassengerValidateTravelEntryRefStructure"
-              },
-              {
-                "id": 649,
-                "name": "passenger_used_same_stop_entry_ref",
-                "type": "PassengerUsedSameStopEntryRefStructure"
-              },
-              {
-                "id": 650,
-                "name": "no_access_rights_on_account_ref",
-                "type": "NoAccessRightsOnAccountRefStructure"
-              },
-              {
-                "id": 651,
-                "name": "insufficient_access_rights_on_account_ref",
-                "type": "InsufficientAccessRightsOnAccountRefStructure"
-              },
-              {
-                "id": 652,
-                "name": "reverting_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 653,
-                "name": "fulfilment_entry_ref",
-                "type": "FulfilmentEntryRefStructure"
-              },
-              {
-                "id": 654,
-                "name": "purchase_fulfilment_entry_ref",
-                "type": "PurchaseFulfilmentEntryRefStructure"
-              },
-              {
-                "id": 656,
-                "name": "mapping_fulfilment_entry_ref",
-                "type": "MappingFulfilmentEntryRefStructure"
-              },
-              {
-                "id": 657,
-                "name": "security_policy_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 658,
-                "name": "onboard_validity_ref",
-                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 670,
@@ -234616,11 +234177,6 @@
               {
                 "id": 673,
                 "name": "service_access_code_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 674,
-                "name": "trip_pattern_trip_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -234979,7 +234535,25 @@
               10,
               655,
               596,
-              638
+              638,
+              639,
+              640,
+              641,
+              642,
+              643,
+              646,
+              647,
+              648,
+              649,
+              650,
+              651,
+              652,
+              653,
+              654,
+              656,
+              657,
+              658,
+              674
             ],
             "reserved_names": [
               "data_source_ref_v",
@@ -234988,7 +234562,25 @@
               "compatible_with_version_frame_version_ref",
               "publication",
               "customer_eligibility_ref",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "group_of_distribution_assignments_ref",
+              "type_of_customer_account_entry_ref",
+              "customer_account_entry_ref",
+              "customer_registration_ref",
+              "customer_deregistration_ref",
+              "validation_entry_ref",
+              "passenger_travel_entry_ref",
+              "passenger_validate_travel_entry_ref",
+              "passenger_used_same_stop_entry_ref",
+              "no_access_rights_on_account_ref",
+              "insufficient_access_rights_on_account_ref",
+              "reverting_ref",
+              "fulfilment_entry_ref",
+              "purchase_fulfilment_entry_ref",
+              "mapping_fulfilment_entry_ref",
+              "security_policy_ref",
+              "onboard_validity_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -235496,7 +235088,7 @@
               },
               {
                 "id": 631,
-                "name": "armrest",
+                "name": "arm_rest",
                 "type": "bool"
               },
               {
@@ -235699,7 +235291,7 @@
               },
               {
                 "id": 631,
-                "name": "armrest",
+                "name": "arm_rest",
                 "type": "bool"
               },
               {
@@ -235902,11 +235494,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 316,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 317,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -235970,7 +235557,8 @@
               11,
               10,
               313,
-              312
+              312,
+              316
             ],
             "reserved_names": [
               "data_source_ref",
@@ -235978,7 +235566,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -236158,11 +235747,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 316,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 317,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -236226,7 +235810,8 @@
               11,
               10,
               313,
-              312
+              312,
+              316
             ],
             "reserved_names": [
               "data_source_ref",
@@ -236234,7 +235819,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -245271,11 +244857,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 317,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 318,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -245289,7 +244870,8 @@
               11,
               10,
               314,
-              313
+              313,
+              317
             ],
             "reserved_names": [
               "data_source_ref",
@@ -245297,7 +244879,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -256550,34 +256133,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 962,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 963,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -256695,21 +256258,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -256732,14 +256280,28 @@
               9,
               11,
               10,
-              964
+              964,
+              962,
+              963,
+              641,
+              643,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -256943,34 +256505,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 934,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 935,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -257083,21 +256625,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -257120,14 +256647,28 @@
               9,
               11,
               10,
-              936
+              936,
+              934,
+              935,
+              641,
+              643,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -264995,11 +264536,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 467,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 468,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -265023,7 +264559,8 @@
               11,
               10,
               464,
-              176
+              176,
+              467
             ],
             "reserved_names": [
               "data_source_ref",
@@ -265031,7 +264568,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -265477,11 +265015,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 372,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 373,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -265505,7 +265038,8 @@
               11,
               10,
               369,
-              368
+              368,
+              372
             ],
             "reserved_names": [
               "data_source_ref",
@@ -265513,7 +265047,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -266287,7 +265822,7 @@
               {
                 "id": 162,
                 "name": "psychosensory_need",
-                "type": "PyschosensoryNeedEnumeration"
+                "type": "PsychosensoryNeedEnumeration"
               },
               {
                 "id": 163,
@@ -266410,7 +265945,7 @@
               {
                 "id": 162,
                 "name": "psychosensory_need",
-                "type": "PyschosensoryNeedEnumeration"
+                "type": "PsychosensoryNeedEnumeration"
               },
               {
                 "id": 163,
@@ -281349,7 +280884,7 @@
               {
                 "id": 483,
                 "name": "default_interchanges",
-                "type": "DefaultInterchangseInFrame_RelStructure"
+                "type": "DefaultInterchangesInFrame_RelStructure"
               },
               {
                 "id": 484,
@@ -281699,7 +281234,7 @@
               {
                 "id": 483,
                 "name": "default_interchanges",
-                "type": "DefaultInterchangseInFrame_RelStructure"
+                "type": "DefaultInterchangesInFrame_RelStructure"
               },
               {
                 "id": 484,
@@ -282898,11 +282433,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 337,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 338,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -282916,7 +282446,8 @@
               11,
               10,
               334,
-              333
+              333,
+              337
             ],
             "reserved_names": [
               "data_source_ref",
@@ -282924,7 +282455,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -283114,11 +282646,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 308,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 309,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -283132,7 +282659,8 @@
               11,
               10,
               305,
-              304
+              304,
+              308
             ],
             "reserved_names": [
               "data_source_ref",
@@ -283140,7 +282668,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -284225,11 +283754,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 367,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 368,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -284278,7 +283802,8 @@
               11,
               10,
               364,
-              363
+              363,
+              367
             ],
             "reserved_names": [
               "data_source_ref",
@@ -284286,7 +283811,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -284496,11 +284022,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 337,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 338,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -284549,7 +284070,8 @@
               11,
               10,
               334,
-              333
+              333,
+              337
             ],
             "reserved_names": [
               "data_source_ref",
@@ -284557,7 +284079,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "options": [
               {
@@ -312800,16 +312323,6 @@
                 "type": "string"
               },
               {
-                "id": 369,
-                "name": "travel_document_provider",
-                "type": "TravelDocumentProviderType"
-              },
-              {
-                "id": 370,
-                "name": "travel_document_risk_policy",
-                "type": "TravelDocumentRiskPolicyType"
-              },
-              {
                 "id": 391,
                 "name": "id",
                 "type": "string"
@@ -312855,11 +312368,6 @@
                 "id": 467,
                 "name": "alternative_names",
                 "type": "AlternativeNames_RelStructure"
-              },
-              {
-                "id": 469,
-                "name": "validity_scope",
-                "type": "TravelDocumentValidityScopeEnumeration"
               }
             ],
             "reserved_ids": [
@@ -312869,14 +312377,20 @@
               9,
               11,
               10,
-              468
+              468,
+              369,
+              370,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "travel_document_provider",
+              "travel_document_risk_policy",
+              "validity_scope"
             ],
             "options": [
               {
@@ -313035,21 +312549,6 @@
                 "id": 377,
                 "name": "alternative_names",
                 "type": "AlternativeNames_RelStructure"
-              },
-              {
-                "id": 368,
-                "name": "validity_scope",
-                "type": "TravelDocumentValidityScopeEnumeration"
-              },
-              {
-                "id": 369,
-                "name": "travel_document_provider",
-                "type": "TravelDocumentProviderType"
-              },
-              {
-                "id": 370,
-                "name": "travel_document_risk_policy",
-                "type": "TravelDocumentRiskPolicyType"
               }
             ],
             "reserved_ids": [
@@ -313059,14 +312558,20 @@
               9,
               11,
               10,
-              378
+              378,
+              368,
+              369,
+              370
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "validity_scope",
+              "travel_document_provider",
+              "travel_document_risk_policy"
             ],
             "options": [
               {
@@ -315826,11 +315331,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 383,
-                "name": "security_policy_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 391,
                 "name": "purchase_window_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -315981,16 +315481,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 442,
-                "name": "reverting_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 444,
-                "name": "onboard_validity_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 445,
                 "name": "vehicle_pooler_profile_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -316025,7 +315515,10 @@
               164,
               165,
               191,
-              231
+              231,
+              383,
+              442,
+              444
             ],
             "reserved_names": [
               "data_source_ref",
@@ -316039,7 +315532,10 @@
               "start_date",
               "end_date",
               "is_allowed",
-              "ranking"
+              "ranking",
+              "security_policy_ref",
+              "reverting_ref",
+              "onboard_validity_ref"
             ],
             "options": [
               {
@@ -316278,11 +315774,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 383,
-                "name": "security_policy_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 391,
                 "name": "purchase_window_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -316433,16 +315924,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 422,
-                "name": "reverting_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 424,
-                "name": "onboard_validity_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 425,
                 "name": "vehicle_pooler_profile_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -316477,7 +315958,10 @@
               164,
               165,
               191,
-              231
+              231,
+              383,
+              422,
+              424
             ],
             "reserved_names": [
               "data_source_ref",
@@ -316491,7 +315975,10 @@
               "start_date",
               "end_date",
               "is_allowed",
-              "ranking"
+              "ranking",
+              "security_policy_ref",
+              "reverting_ref",
+              "onboard_validity_ref"
             ],
             "options": [
               {
@@ -317022,26 +316509,9 @@
                 "type": "no.entur.netex.protobuf.Duration"
               },
               {
-                "id": 425,
-                "name": "stepped_duration",
-                "type": "SteppedDurationStructure"
-              },
-              {
                 "id": 505,
                 "name": "activation_means",
                 "type": "ActivationMeansEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
-              },
-              {
-                "id": 562,
-                "name": "activation_requirements",
-                "type": "ActivationRequirementsEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -317109,7 +316579,9 @@
               169,
               170,
               181,
-              182
+              182,
+              425,
+              562
             ],
             "reserved_names": [
               "data_source_ref",
@@ -317122,7 +316594,9 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "stepped_duration",
+              "activation_requirements"
             ],
             "options": [
               {
@@ -317266,26 +316740,9 @@
                 "type": "no.entur.netex.protobuf.Duration"
               },
               {
-                "id": 425,
-                "name": "stepped_duration",
-                "type": "SteppedDurationStructure"
-              },
-              {
                 "id": 505,
                 "name": "activation_means",
                 "type": "ActivationMeansEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
-              },
-              {
-                "id": 532,
-                "name": "activation_requirements",
-                "type": "ActivationRequirementsEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -317348,7 +316805,9 @@
               169,
               170,
               181,
-              182
+              182,
+              425,
+              532
             ],
             "reserved_names": [
               "data_source_ref",
@@ -317361,7 +316820,9 @@
               "discounting_rule_ref",
               "limiting_rule_ref",
               "price_groups",
-              "fare_tables"
+              "fare_tables",
+              "stepped_duration",
+              "activation_requirements"
             ],
             "options": [
               {
@@ -317432,7 +316893,7 @@
               {
                 "id": 162,
                 "name": "psychosensory_need",
-                "type": "PyschosensoryNeedEnumeration"
+                "type": "PsychosensoryNeedEnumeration"
               },
               {
                 "id": 163,
@@ -317550,7 +317011,7 @@
               {
                 "id": 162,
                 "name": "psychosensory_need",
-                "type": "PyschosensoryNeedEnumeration"
+                "type": "PsychosensoryNeedEnumeration"
               },
               {
                 "id": 163,
@@ -320765,34 +320226,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 692,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 693,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -320880,21 +320321,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -320917,14 +320343,28 @@
               9,
               11,
               10,
-              694
+              694,
+              692,
+              693,
+              641,
+              643,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -321128,34 +320568,14 @@
                 "type": "ValidityParameters_RelStructure"
               },
               {
-                "id": 657,
-                "name": "time_interval",
-                "type": "TimeIntervalType"
-              },
-              {
                 "id": 611,
                 "name": "time_interval_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 658,
-                "name": "time_structure_factor",
-                "type": "TimeStructureFactorType"
-              },
-              {
-                "id": 641,
-                "name": "geographical_interval",
-                "type": "GeographicalIntervalType"
-              },
-              {
                 "id": 621,
                 "name": "geographical_interval_ref",
                 "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 643,
-                "name": "geographical_structure_factor",
-                "type": "GeographicalStructureFactorType"
               },
               {
                 "id": 622,
@@ -321238,21 +320658,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 651,
-                "name": "quality_structure_factor",
-                "type": "QualityStructureFactorType"
-              },
-              {
-                "id": 652,
-                "name": "fare_demand_factor",
-                "type": "FareDemandFactorType"
-              },
-              {
-                "id": 653,
-                "name": "fare_quota_factor",
-                "type": "FareQuotaFactorType"
-              },
-              {
                 "id": 631,
                 "name": "quality_structure_factor_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -321275,14 +320680,28 @@
               9,
               11,
               10,
-              659
+              659,
+              657,
+              658,
+              641,
+              643,
+              651,
+              652,
+              653
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "time_interval",
+              "time_structure_factor",
+              "geographical_interval",
+              "geographical_structure_factor",
+              "quality_structure_factor",
+              "fare_demand_factor",
+              "fare_quota_factor"
             ],
             "options": [
               {
@@ -329430,11 +328849,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 170,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 171,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -329521,10 +328935,12 @@
               }
             ],
             "reserved_ids": [
-              166
+              166,
+              170
             ],
             "reserved_names": [
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -329773,11 +329189,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 170,
-                "name": "trip_pattern_trip_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 171,
                 "name": "trip_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -329864,10 +329275,12 @@
               }
             ],
             "reserved_ids": [
-              166
+              166,
+              170
             ],
             "reserved_names": [
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "trip_pattern_trip_ref"
             ],
             "messages": [
               {
@@ -354540,12 +353953,6 @@
                 "name": "customer_purchase_parameter_assignment",
                 "type": "CustomerPurchaseParameterAssignmentType",
                 "is_repeated": true
-              },
-              {
-                "id": 4,
-                "name": "customer_purchase_parameter_assignment_ref",
-                "type": "VersionOfObjectRefStructure",
-                "is_repeated": true
               }
             ],
             "options": [
@@ -354553,6 +353960,12 @@
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
               }
+            ],
+            "reserved_ids": [
+              4
+            ],
+            "reserved_names": [
+              "customer_purchase_parameter_assignment_ref"
             ]
           },
           {
@@ -354977,7 +354390,7 @@
             ]
           },
           {
-            "name": "DefaultInterchangseInFrame_RelStructure",
+            "name": "DefaultInterchangesInFrame_RelStructure",
             "fields": [
               {
                 "id": 1,
@@ -355675,12 +355088,13 @@
                     "id": 2,
                     "name": "distribution_assignment",
                     "type": "DistributionAssignmentType"
-                  },
-                  {
-                    "id": 3,
-                    "name": "group_of_distribution_assignments_ref",
-                    "type": "GroupOfDistributionAssignmentsRefStructure"
                   }
+                ],
+                "reserved_ids": [
+                  3
+                ],
+                "reserved_names": [
+                  "group_of_distribution_assignments_ref"
                 ]
               }
             ],
@@ -359824,11 +359238,6 @@
                     "type": "DistributionAssignmentType"
                   },
                   {
-                    "id": 485,
-                    "name": "group_of_distribution_assignments",
-                    "type": "GroupOfDistributionAssignmentsType"
-                  },
-                  {
                     "id": 486,
                     "name": "type_of_sales_offer_package",
                     "type": "TypeOfSalesOfferPackageType"
@@ -360019,16 +359428,6 @@
                     "type": "SalesTransactionFrameType"
                   },
                   {
-                    "id": 527,
-                    "name": "customer_registration",
-                    "type": "CustomerRegistrationType"
-                  },
-                  {
-                    "id": 528,
-                    "name": "customer_deregistration",
-                    "type": "CustomerDeregistrationType"
-                  },
-                  {
                     "id": 529,
                     "name": "group_of_tariff_zones",
                     "type": "GroupOfTariffZonesType"
@@ -360037,86 +359436,6 @@
                     "id": 530,
                     "name": "dynamic_distance_matrix_element",
                     "type": "DynamicDistanceMatrixElementType"
-                  },
-                  {
-                    "id": 531,
-                    "name": "access_right_in_product_consumption_requirement",
-                    "type": "AccessRightInProductConsumptionRequirementType"
-                  },
-                  {
-                    "id": 532,
-                    "name": "access_right_in_product_consumption",
-                    "type": "AccessRightInProductConsumptionType"
-                  },
-                  {
-                    "id": 533,
-                    "name": "group_of_customer_purchase_parameter_assignments",
-                    "type": "GroupOfCustomerPurchaseParameterAssignmentsType"
-                  },
-                  {
-                    "id": 534,
-                    "name": "customer_purchase_package_element_consumption_requirement",
-                    "type": "CustomerPurchasePackageElementConsumptionRequirementType"
-                  },
-                  {
-                    "id": 535,
-                    "name": "customer_purchase_package_element_consumption",
-                    "type": "CustomerPurchasePackageElementConsumptionType"
-                  },
-                  {
-                    "id": 536,
-                    "name": "passenger_validate_travel_entry",
-                    "type": "PassengerValidateTravelEntryType"
-                  },
-                  {
-                    "id": 537,
-                    "name": "passenger_used_same_stop_entry",
-                    "type": "PassengerUsedSameStopEntryType"
-                  },
-                  {
-                    "id": 538,
-                    "name": "no_access_rights_on_account",
-                    "type": "NoAccessRightsOnAccountType"
-                  },
-                  {
-                    "id": 539,
-                    "name": "insufficient_access_rights_on_account",
-                    "type": "InsufficientAccessRightsOnAccountType"
-                  },
-                  {
-                    "id": 540,
-                    "name": "reverting",
-                    "type": "RevertingType"
-                  },
-                  {
-                    "id": 541,
-                    "name": "purchase_fulfilment_entry",
-                    "type": "PurchaseFulfilmentEntryType"
-                  },
-                  {
-                    "id": 542,
-                    "name": "mapping_fulfilment_entry",
-                    "type": "MappingFulfilmentEntryType"
-                  },
-                  {
-                    "id": 543,
-                    "name": "security_policy",
-                    "type": "SecurityPolicyType"
-                  },
-                  {
-                    "id": 544,
-                    "name": "onboard_validity",
-                    "type": "OnboardValidityType"
-                  },
-                  {
-                    "id": 545,
-                    "name": "travel_document_provider",
-                    "type": "TravelDocumentProviderType"
-                  },
-                  {
-                    "id": 546,
-                    "name": "travel_document_risk_policy",
-                    "type": "TravelDocumentRiskPolicyType"
                   },
                   {
                     "id": 569,
@@ -360558,7 +359877,26 @@
                   427,
                   501,
                   516,
-                  495
+                  495,
+                  485,
+                  527,
+                  528,
+                  531,
+                  532,
+                  533,
+                  534,
+                  535,
+                  536,
+                  537,
+                  538,
+                  539,
+                  540,
+                  541,
+                  542,
+                  543,
+                  544,
+                  545,
+                  546
                 ],
                 "reserved_names": [
                   "sign_equipment",
@@ -360569,7 +359907,26 @@
                   "service_access_rightu",
                   "fare_contract_entryu",
                   "travel_specificationu",
-                  "customer_eligibility"
+                  "customer_eligibility",
+                  "group_of_distribution_assignments",
+                  "customer_registration",
+                  "customer_deregistration",
+                  "access_right_in_product_consumption_requirement",
+                  "access_right_in_product_consumption",
+                  "group_of_customer_purchase_parameter_assignments",
+                  "customer_purchase_package_element_consumption_requirement",
+                  "customer_purchase_package_element_consumption",
+                  "passenger_validate_travel_entry",
+                  "passenger_used_same_stop_entry",
+                  "no_access_rights_on_account",
+                  "insufficient_access_rights_on_account",
+                  "reverting",
+                  "purchase_fulfilment_entry",
+                  "mapping_fulfilment_entry",
+                  "security_policy",
+                  "onboard_validity",
+                  "travel_document_provider",
+                  "travel_document_risk_policy"
                 ]
               }
             ],
@@ -362904,94 +362261,9 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 466,
-                    "name": "group_of_distribution_assignments_ref",
-                    "type": "GroupOfDistributionAssignmentsRefStructure"
-                  },
-                  {
-                    "id": 468,
-                    "name": "type_of_customer_account_entry_ref",
-                    "type": "TypeOfCustomerAccountEntryRefStructure"
-                  },
-                  {
-                    "id": 469,
-                    "name": "customer_account_entry_ref",
-                    "type": "CustomerAccountEntryRefStructure"
-                  },
-                  {
-                    "id": 470,
-                    "name": "customer_registration_ref",
-                    "type": "CustomerRegistrationRefStructure"
-                  },
-                  {
-                    "id": 471,
-                    "name": "customer_deregistration_ref",
-                    "type": "CustomerDeregistrationRefStructure"
-                  },
-                  {
                     "id": 473,
                     "name": "group_of_tariff_zones_ref",
                     "type": "GroupOfTariffZonesRefStructure"
-                  },
-                  {
-                    "id": 474,
-                    "name": "validation_entry_ref",
-                    "type": "ValidationEntryRefStructure"
-                  },
-                  {
-                    "id": 475,
-                    "name": "passenger_travel_entry_ref",
-                    "type": "PassengerTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 476,
-                    "name": "passenger_validate_travel_entry_ref",
-                    "type": "PassengerValidateTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 477,
-                    "name": "passenger_used_same_stop_entry_ref",
-                    "type": "PassengerUsedSameStopEntryRefStructure"
-                  },
-                  {
-                    "id": 478,
-                    "name": "no_access_rights_on_account_ref",
-                    "type": "NoAccessRightsOnAccountRefStructure"
-                  },
-                  {
-                    "id": 479,
-                    "name": "insufficient_access_rights_on_account_ref",
-                    "type": "InsufficientAccessRightsOnAccountRefStructure"
-                  },
-                  {
-                    "id": 480,
-                    "name": "reverting_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 481,
-                    "name": "fulfilment_entry_ref",
-                    "type": "FulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 482,
-                    "name": "purchase_fulfilment_entry_ref",
-                    "type": "PurchaseFulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 483,
-                    "name": "mapping_fulfilment_entry_ref",
-                    "type": "MappingFulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 484,
-                    "name": "security_policy_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 485,
-                    "name": "onboard_validity_ref",
-                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 498,
@@ -363046,11 +362318,6 @@
                   {
                     "id": 522,
                     "name": "service_access_code_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 523,
-                    "name": "trip_pattern_trip_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
@@ -363391,11 +362658,47 @@
                 ],
                 "reserved_ids": [
                   435,
-                  465
+                  465,
+                  466,
+                  468,
+                  469,
+                  470,
+                  471,
+                  474,
+                  475,
+                  476,
+                  477,
+                  478,
+                  479,
+                  480,
+                  481,
+                  482,
+                  483,
+                  484,
+                  485,
+                  523
                 ],
                 "reserved_names": [
                   "customer_eligibility_ref",
-                  "dated_service_journey_ref"
+                  "dated_service_journey_ref",
+                  "group_of_distribution_assignments_ref",
+                  "type_of_customer_account_entry_ref",
+                  "customer_account_entry_ref",
+                  "customer_registration_ref",
+                  "customer_deregistration_ref",
+                  "validation_entry_ref",
+                  "passenger_travel_entry_ref",
+                  "passenger_validate_travel_entry_ref",
+                  "passenger_used_same_stop_entry_ref",
+                  "no_access_rights_on_account_ref",
+                  "insufficient_access_rights_on_account_ref",
+                  "reverting_ref",
+                  "fulfilment_entry_ref",
+                  "purchase_fulfilment_entry_ref",
+                  "mapping_fulfilment_entry_ref",
+                  "security_policy_ref",
+                  "onboard_validity_ref",
+                  "trip_pattern_trip_ref"
                 ]
               }
             ],
@@ -365558,41 +364861,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 16,
-                    "name": "validation_entry_ref",
-                    "type": "ValidationEntryRefStructure"
-                  },
-                  {
-                    "id": 17,
-                    "name": "passenger_travel_entry_ref",
-                    "type": "PassengerTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 18,
-                    "name": "passenger_validate_travel_entry_ref",
-                    "type": "PassengerValidateTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 19,
-                    "name": "passenger_used_same_stop_entry_ref",
-                    "type": "PassengerUsedSameStopEntryRefStructure"
-                  },
-                  {
-                    "id": 22,
-                    "name": "fulfilment_entry_ref",
-                    "type": "FulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 23,
-                    "name": "purchase_fulfilment_entry_ref",
-                    "type": "PurchaseFulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 24,
-                    "name": "mapping_fulfilment_entry_ref",
-                    "type": "MappingFulfilmentEntryRefStructure"
-                  },
-                  {
                     "id": 8,
                     "name": "travel_specification",
                     "type": "TravelSpecificationType"
@@ -365611,35 +364879,37 @@
                     "id": 11,
                     "name": "sales_transaction",
                     "type": "SalesTransactionType"
-                  },
-                  {
-                    "id": 14,
-                    "name": "purchase_fulfilment_entry",
-                    "type": "PurchaseFulfilmentEntryType"
-                  },
-                  {
-                    "id": 20,
-                    "name": "passenger_validate_travel_entry",
-                    "type": "PassengerValidateTravelEntryType"
-                  },
-                  {
-                    "id": 21,
-                    "name": "passenger_used_same_stop_entry",
-                    "type": "PassengerUsedSameStopEntryType"
-                  },
-                  {
-                    "id": 25,
-                    "name": "mapping_fulfilment_entry",
-                    "type": "MappingFulfilmentEntryType"
                   }
                 ],
                 "reserved_ids": [
                   6,
-                  7
+                  7,
+                  16,
+                  17,
+                  18,
+                  19,
+                  22,
+                  23,
+                  24,
+                  14,
+                  20,
+                  21,
+                  25
                 ],
                 "reserved_names": [
                   "fare_contract_entryu",
-                  "travel_specificationu"
+                  "travel_specificationu",
+                  "validation_entry_ref",
+                  "passenger_travel_entry_ref",
+                  "passenger_validate_travel_entry_ref",
+                  "passenger_used_same_stop_entry_ref",
+                  "fulfilment_entry_ref",
+                  "purchase_fulfilment_entry_ref",
+                  "mapping_fulfilment_entry_ref",
+                  "purchase_fulfilment_entry",
+                  "passenger_validate_travel_entry",
+                  "passenger_used_same_stop_entry",
+                  "mapping_fulfilment_entry"
                 ]
               }
             ],
@@ -368789,19 +368059,9 @@
                     "type": "GroupOfDistributionChannelsType"
                   },
                   {
-                    "id": 61,
-                    "name": "group_of_distribution_assignments",
-                    "type": "GroupOfDistributionAssignmentsType"
-                  },
-                  {
                     "id": 63,
                     "name": "group_of_tariff_zones",
                     "type": "GroupOfTariffZonesType"
-                  },
-                  {
-                    "id": 64,
-                    "name": "group_of_customer_purchase_parameter_assignments",
-                    "type": "GroupOfCustomerPurchaseParameterAssignmentsType"
                   },
                   {
                     "id": 67,
@@ -368873,6 +368133,14 @@
                     "name": "taxi_parking_area",
                     "type": "TaxiParkingAreaType"
                   }
+                ],
+                "reserved_ids": [
+                  61,
+                  64
+                ],
+                "reserved_names": [
+                  "group_of_distribution_assignments",
+                  "group_of_customer_purchase_parameter_assignments"
                 ]
               }
             ],
@@ -371392,21 +370660,18 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 20,
-                    "name": "trip_pattern_trip_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 21,
                     "name": "trip_ref",
                     "type": "VersionOfObjectRefStructure"
                   }
                 ],
                 "reserved_ids": [
-                  16
+                  16,
+                  20
                 ],
                 "reserved_names": [
-                  "dated_service_journey_ref"
+                  "dated_service_journey_ref",
+                  "trip_pattern_trip_ref"
                 ]
               }
             ],
@@ -375651,11 +374916,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 412,
-                    "name": "group_of_distribution_assignments_ref",
-                    "type": "GroupOfDistributionAssignmentsRefStructure"
-                  },
-                  {
                     "id": 413,
                     "name": "parking_tariff_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -375851,16 +375111,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 453,
-                    "name": "no_access_rights_on_account_ref",
-                    "type": "NoAccessRightsOnAccountRefStructure"
-                  },
-                  {
-                    "id": 454,
-                    "name": "insufficient_access_rights_on_account_ref",
-                    "type": "InsufficientAccessRightsOnAccountRefStructure"
-                  },
-                  {
                     "id": 455,
                     "name": "onward_vehicle_meeting_link_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -375871,79 +375121,9 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 457,
-                    "name": "type_of_customer_account_entry_ref",
-                    "type": "TypeOfCustomerAccountEntryRefStructure"
-                  },
-                  {
-                    "id": 458,
-                    "name": "customer_account_entry_ref",
-                    "type": "CustomerAccountEntryRefStructure"
-                  },
-                  {
-                    "id": 459,
-                    "name": "customer_registration_ref",
-                    "type": "CustomerRegistrationRefStructure"
-                  },
-                  {
-                    "id": 460,
-                    "name": "customer_deregistration_ref",
-                    "type": "CustomerDeregistrationRefStructure"
-                  },
-                  {
                     "id": 462,
                     "name": "group_of_tariff_zones_ref",
                     "type": "GroupOfTariffZonesRefStructure"
-                  },
-                  {
-                    "id": 463,
-                    "name": "validation_entry_ref",
-                    "type": "ValidationEntryRefStructure"
-                  },
-                  {
-                    "id": 464,
-                    "name": "passenger_travel_entry_ref",
-                    "type": "PassengerTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 465,
-                    "name": "passenger_validate_travel_entry_ref",
-                    "type": "PassengerValidateTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 466,
-                    "name": "passenger_used_same_stop_entry_ref",
-                    "type": "PassengerUsedSameStopEntryRefStructure"
-                  },
-                  {
-                    "id": 467,
-                    "name": "reverting_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 468,
-                    "name": "fulfilment_entry_ref",
-                    "type": "FulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 469,
-                    "name": "purchase_fulfilment_entry_ref",
-                    "type": "PurchaseFulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 470,
-                    "name": "mapping_fulfilment_entry_ref",
-                    "type": "MappingFulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 471,
-                    "name": "security_policy_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 472,
-                    "name": "onboard_validity_ref",
-                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 498,
@@ -375998,11 +375178,6 @@
                   {
                     "id": 522,
                     "name": "service_access_code_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 523,
-                    "name": "trip_pattern_trip_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
@@ -376278,11 +375453,47 @@
                 ],
                 "reserved_ids": [
                   438,
-                  289
+                  289,
+                  412,
+                  453,
+                  454,
+                  457,
+                  458,
+                  459,
+                  460,
+                  463,
+                  464,
+                  465,
+                  466,
+                  467,
+                  468,
+                  469,
+                  470,
+                  471,
+                  472,
+                  523
                 ],
                 "reserved_names": [
                   "customer_eligibility_ref",
-                  "dated_service_journey_ref"
+                  "dated_service_journey_ref",
+                  "group_of_distribution_assignments_ref",
+                  "no_access_rights_on_account_ref",
+                  "insufficient_access_rights_on_account_ref",
+                  "type_of_customer_account_entry_ref",
+                  "customer_account_entry_ref",
+                  "customer_registration_ref",
+                  "customer_deregistration_ref",
+                  "validation_entry_ref",
+                  "passenger_travel_entry_ref",
+                  "passenger_validate_travel_entry_ref",
+                  "passenger_used_same_stop_entry_ref",
+                  "reverting_ref",
+                  "fulfilment_entry_ref",
+                  "purchase_fulfilment_entry_ref",
+                  "mapping_fulfilment_entry_ref",
+                  "security_policy_ref",
+                  "onboard_validity_ref",
+                  "trip_pattern_trip_ref"
                 ]
               }
             ],
@@ -379916,21 +379127,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 63,
-                    "name": "reverting_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 64,
-                    "name": "security_policy_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 65,
-                    "name": "onboard_validity_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 66,
                     "name": "vehicle_pooler_profile_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -379955,6 +379151,16 @@
                     "name": "booking_policy_ref",
                     "type": "VersionOfObjectRefStructure"
                   }
+                ],
+                "reserved_ids": [
+                  63,
+                  64,
+                  65
+                ],
+                "reserved_names": [
+                  "reverting_ref",
+                  "security_policy_ref",
+                  "onboard_validity_ref"
                 ]
               }
             ],
@@ -385956,11 +385162,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 41,
-                    "name": "type_of_customer_account_entry_ref",
-                    "type": "TypeOfCustomerAccountEntryRefStructure"
-                  },
-                  {
                     "id": 52,
                     "name": "scheduled_mode_of_operation_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -386010,6 +385211,12 @@
                     "name": "type_of_mobility_service_ref",
                     "type": "TypeOfMobilityServiceRefStructure"
                   }
+                ],
+                "reserved_ids": [
+                  41
+                ],
+                "reserved_names": [
+                  "type_of_customer_account_entry_ref"
                 ]
               }
             ],
@@ -388323,21 +387530,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 31,
-                    "name": "onboard_validity_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 32,
-                    "name": "reverting_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 33,
-                    "name": "security_policy_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 35,
                     "name": "vehicle_pooler_profile_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -388362,6 +387554,16 @@
                     "name": "booking_policy_ref",
                     "type": "VersionOfObjectRefStructure"
                   }
+                ],
+                "reserved_ids": [
+                  31,
+                  32,
+                  33
+                ],
+                "reserved_names": [
+                  "onboard_validity_ref",
+                  "reverting_ref",
+                  "security_policy_ref"
                 ]
               }
             ],
@@ -388599,21 +387801,6 @@
                     "type": "SalesOfferPackageEntitlementRequiredType"
                   },
                   {
-                    "id": 31,
-                    "name": "reverting",
-                    "type": "RevertingType"
-                  },
-                  {
-                    "id": 32,
-                    "name": "security_policy",
-                    "type": "SecurityPolicyType"
-                  },
-                  {
-                    "id": 33,
-                    "name": "onboard_validity",
-                    "type": "OnboardValidityType"
-                  },
-                  {
                     "id": 34,
                     "name": "rental_penalty_policy",
                     "type": "RentalPenaltyPolicyType"
@@ -388633,6 +387820,16 @@
                     "name": "vehicle_pooler_profile",
                     "type": "VehiclePoolerProfileType"
                   }
+                ],
+                "reserved_ids": [
+                  31,
+                  32,
+                  33
+                ],
+                "reserved_names": [
+                  "reverting",
+                  "security_policy",
+                  "onboard_validity"
                 ]
               }
             ],
@@ -388818,21 +388015,6 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 62,
-                    "name": "reverting_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 64,
-                    "name": "security_policy_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 66,
-                    "name": "onboard_validity_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 75,
                     "name": "booking_policy_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -389003,21 +388185,6 @@
                     "type": "SalesOfferPackageEntitlementRequiredType"
                   },
                   {
-                    "id": 63,
-                    "name": "reverting",
-                    "type": "RevertingType"
-                  },
-                  {
-                    "id": 65,
-                    "name": "security_policy",
-                    "type": "SecurityPolicyType"
-                  },
-                  {
-                    "id": 67,
-                    "name": "onboard_validity",
-                    "type": "OnboardValidityType"
-                  },
-                  {
                     "id": 71,
                     "name": "vehicle_pooler_profile",
                     "type": "VehiclePoolerProfileType"
@@ -389037,6 +388204,22 @@
                     "name": "additional_driver_option",
                     "type": "AdditionalDriverOptionType"
                   }
+                ],
+                "reserved_ids": [
+                  62,
+                  64,
+                  66,
+                  63,
+                  65,
+                  67
+                ],
+                "reserved_names": [
+                  "reverting_ref",
+                  "security_policy_ref",
+                  "onboard_validity_ref",
+                  "reverting",
+                  "security_policy",
+                  "onboard_validity"
                 ]
               }
             ],
@@ -390570,7 +389753,7 @@
             ]
           },
           {
-            "name": "VehicleEquipmenProfilesInFrame_RelStructure",
+            "name": "VehicleEquipmentProfilesInFrame_RelStructure",
             "fields": [
               {
                 "id": 1,
@@ -390585,7 +389768,7 @@
               {
                 "id": 4,
                 "name": "choice_wrapper",
-                "type": "ChoiceWrapper_VehicleEquipmenProfilesInFrame_RelStructure",
+                "type": "ChoiceWrapper_VehicleEquipmentProfilesInFrame_RelStructure",
                 "is_repeated": true
               }
             ],
@@ -390597,7 +389780,7 @@
             ],
             "messages": [
               {
-                "name": "ChoiceWrapper_VehicleEquipmenProfilesInFrame_RelStructure",
+                "name": "ChoiceWrapper_VehicleEquipmentProfilesInFrame_RelStructure",
                 "fields": [
                   {
                     "id": 1,
@@ -394250,21 +393433,6 @@
                     "type": "SalesTransactionFrameType"
                   },
                   {
-                    "id": 440,
-                    "name": "customer_registration",
-                    "type": "CustomerRegistrationType"
-                  },
-                  {
-                    "id": 441,
-                    "name": "group_of_distribution_assignments",
-                    "type": "GroupOfDistributionAssignmentsType"
-                  },
-                  {
-                    "id": 442,
-                    "name": "customer_deregistration",
-                    "type": "CustomerDeregistrationType"
-                  },
-                  {
                     "id": 443,
                     "name": "group_of_tariff_zones",
                     "type": "GroupOfTariffZonesType"
@@ -394273,66 +393441,6 @@
                     "id": 444,
                     "name": "dynamic_distance_matrix_element",
                     "type": "DynamicDistanceMatrixElementType"
-                  },
-                  {
-                    "id": 445,
-                    "name": "group_of_customer_purchase_parameter_assignments",
-                    "type": "GroupOfCustomerPurchaseParameterAssignmentsType"
-                  },
-                  {
-                    "id": 446,
-                    "name": "passenger_validate_travel_entry",
-                    "type": "PassengerValidateTravelEntryType"
-                  },
-                  {
-                    "id": 447,
-                    "name": "passenger_used_same_stop_entry",
-                    "type": "PassengerUsedSameStopEntryType"
-                  },
-                  {
-                    "id": 448,
-                    "name": "no_access_rights_on_account",
-                    "type": "NoAccessRightsOnAccountType"
-                  },
-                  {
-                    "id": 449,
-                    "name": "insufficient_access_rights_on_account",
-                    "type": "InsufficientAccessRightsOnAccountType"
-                  },
-                  {
-                    "id": 450,
-                    "name": "reverting",
-                    "type": "RevertingType"
-                  },
-                  {
-                    "id": 451,
-                    "name": "purchase_fulfilment_entry",
-                    "type": "PurchaseFulfilmentEntryType"
-                  },
-                  {
-                    "id": 452,
-                    "name": "mapping_fulfilment_entry",
-                    "type": "MappingFulfilmentEntryType"
-                  },
-                  {
-                    "id": 453,
-                    "name": "security_policy",
-                    "type": "SecurityPolicyType"
-                  },
-                  {
-                    "id": 454,
-                    "name": "onboard_validity",
-                    "type": "OnboardValidityType"
-                  },
-                  {
-                    "id": 455,
-                    "name": "travel_document_provider",
-                    "type": "TravelDocumentProviderType"
-                  },
-                  {
-                    "id": 456,
-                    "name": "travel_document_risk_policy",
-                    "type": "TravelDocumentRiskPolicyType"
                   },
                   {
                     "id": 480,
@@ -394741,7 +393849,22 @@
                   343,
                   360,
                   420,
-                  430
+                  430,
+                  440,
+                  441,
+                  442,
+                  445,
+                  446,
+                  447,
+                  448,
+                  449,
+                  450,
+                  451,
+                  452,
+                  453,
+                  454,
+                  455,
+                  456
                 ],
                 "reserved_names": [
                   "sign_equipment",
@@ -394749,7 +393872,22 @@
                   "access_right_parameter_assignment",
                   "service_access_rightu",
                   "fare_contract_entryu",
-                  "travel_specificationu"
+                  "travel_specificationu",
+                  "customer_registration",
+                  "group_of_distribution_assignments",
+                  "customer_deregistration",
+                  "group_of_customer_purchase_parameter_assignments",
+                  "passenger_validate_travel_entry",
+                  "passenger_used_same_stop_entry",
+                  "no_access_rights_on_account",
+                  "insufficient_access_rights_on_account",
+                  "reverting",
+                  "purchase_fulfilment_entry",
+                  "mapping_fulfilment_entry",
+                  "security_policy",
+                  "onboard_validity",
+                  "travel_document_provider",
+                  "travel_document_risk_policy"
                 ]
               }
             ],
@@ -398121,21 +397259,6 @@
                 "type": "SalesTransactionFrameType"
               },
               {
-                "id": 441,
-                "name": "customer_registration",
-                "type": "CustomerRegistrationType"
-              },
-              {
-                "id": 442,
-                "name": "group_of_distribution_assignments",
-                "type": "GroupOfDistributionAssignmentsType"
-              },
-              {
-                "id": 443,
-                "name": "customer_deregistration",
-                "type": "CustomerDeregistrationType"
-              },
-              {
                 "id": 444,
                 "name": "group_of_tariff_zones",
                 "type": "GroupOfTariffZonesType"
@@ -398144,66 +397267,6 @@
                 "id": 445,
                 "name": "dynamic_distance_matrix_element",
                 "type": "DynamicDistanceMatrixElementType"
-              },
-              {
-                "id": 446,
-                "name": "group_of_customer_purchase_parameter_assignments",
-                "type": "GroupOfCustomerPurchaseParameterAssignmentsType"
-              },
-              {
-                "id": 447,
-                "name": "passenger_validate_travel_entry",
-                "type": "PassengerValidateTravelEntryType"
-              },
-              {
-                "id": 448,
-                "name": "passenger_used_same_stop_entry",
-                "type": "PassengerUsedSameStopEntryType"
-              },
-              {
-                "id": 449,
-                "name": "no_access_rights_on_account",
-                "type": "NoAccessRightsOnAccountType"
-              },
-              {
-                "id": 450,
-                "name": "insufficient_access_rights_on_account",
-                "type": "InsufficientAccessRightsOnAccountType"
-              },
-              {
-                "id": 451,
-                "name": "reverting",
-                "type": "RevertingType"
-              },
-              {
-                "id": 452,
-                "name": "purchase_fulfilment_entry",
-                "type": "PurchaseFulfilmentEntryType"
-              },
-              {
-                "id": 453,
-                "name": "mapping_fulfilment_entry",
-                "type": "MappingFulfilmentEntryType"
-              },
-              {
-                "id": 454,
-                "name": "security_policy",
-                "type": "SecurityPolicyType"
-              },
-              {
-                "id": 455,
-                "name": "onboard_validity",
-                "type": "OnboardValidityType"
-              },
-              {
-                "id": 456,
-                "name": "travel_document_provider",
-                "type": "TravelDocumentProviderType"
-              },
-              {
-                "id": 457,
-                "name": "travel_document_risk_policy",
-                "type": "TravelDocumentRiskPolicyType"
               },
               {
                 "id": 480,
@@ -398612,7 +397675,22 @@
               343,
               360,
               420,
-              430
+              430,
+              441,
+              442,
+              443,
+              446,
+              447,
+              448,
+              449,
+              450,
+              451,
+              452,
+              453,
+              454,
+              455,
+              456,
+              457
             ],
             "reserved_names": [
               "sign_equipment",
@@ -398620,7 +397698,22 @@
               "access_right_parameter_assignment",
               "service_access_rightu",
               "fare_contract_entryu",
-              "travel_specificationu"
+              "travel_specificationu",
+              "customer_registration",
+              "group_of_distribution_assignments",
+              "customer_deregistration",
+              "group_of_customer_purchase_parameter_assignments",
+              "passenger_validate_travel_entry",
+              "passenger_used_same_stop_entry",
+              "no_access_rights_on_account",
+              "insufficient_access_rights_on_account",
+              "reverting",
+              "purchase_fulfilment_entry",
+              "mapping_fulfilment_entry",
+              "security_policy",
+              "onboard_validity",
+              "travel_document_provider",
+              "travel_document_risk_policy"
             ]
           },
           {
@@ -399102,21 +398195,6 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 63,
-                "name": "reverting_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 64,
-                "name": "security_policy_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 65,
-                "name": "onboard_validity_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 66,
                 "name": "vehicle_pooler_profile_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -399141,6 +398219,16 @@
                 "name": "booking_policy_ref",
                 "type": "VersionOfObjectRefStructure"
               }
+            ],
+            "reserved_ids": [
+              63,
+              64,
+              65
+            ],
+            "reserved_names": [
+              "reverting_ref",
+              "security_policy_ref",
+              "onboard_validity_ref"
             ]
           },
           {
@@ -401925,94 +401013,9 @@
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
-                    "id": 484,
-                    "name": "group_of_distribution_assignments_ref",
-                    "type": "GroupOfDistributionAssignmentsRefStructure"
-                  },
-                  {
-                    "id": 486,
-                    "name": "type_of_customer_account_entry_ref",
-                    "type": "TypeOfCustomerAccountEntryRefStructure"
-                  },
-                  {
-                    "id": 487,
-                    "name": "customer_account_entry_ref",
-                    "type": "CustomerAccountEntryRefStructure"
-                  },
-                  {
-                    "id": 488,
-                    "name": "customer_registration_ref",
-                    "type": "CustomerRegistrationRefStructure"
-                  },
-                  {
-                    "id": 489,
-                    "name": "customer_deregistration_ref",
-                    "type": "CustomerDeregistrationRefStructure"
-                  },
-                  {
                     "id": 491,
                     "name": "group_of_tariff_zones_ref",
                     "type": "GroupOfTariffZonesRefStructure"
-                  },
-                  {
-                    "id": 492,
-                    "name": "validation_entry_ref",
-                    "type": "ValidationEntryRefStructure"
-                  },
-                  {
-                    "id": 493,
-                    "name": "passenger_travel_entry_ref",
-                    "type": "PassengerTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 494,
-                    "name": "passenger_validate_travel_entry_ref",
-                    "type": "PassengerValidateTravelEntryRefStructure"
-                  },
-                  {
-                    "id": 495,
-                    "name": "passenger_used_same_stop_entry_ref",
-                    "type": "PassengerUsedSameStopEntryRefStructure"
-                  },
-                  {
-                    "id": 496,
-                    "name": "no_access_rights_on_account_ref",
-                    "type": "NoAccessRightsOnAccountRefStructure"
-                  },
-                  {
-                    "id": 497,
-                    "name": "insufficient_access_rights_on_account_ref",
-                    "type": "InsufficientAccessRightsOnAccountRefStructure"
-                  },
-                  {
-                    "id": 498,
-                    "name": "reverting_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 499,
-                    "name": "fulfilment_entry_ref",
-                    "type": "FulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 500,
-                    "name": "purchase_fulfilment_entry_ref",
-                    "type": "PurchaseFulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 501,
-                    "name": "mapping_fulfilment_entry_ref",
-                    "type": "MappingFulfilmentEntryRefStructure"
-                  },
-                  {
-                    "id": 502,
-                    "name": "security_policy_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 503,
-                    "name": "onboard_validity_ref",
-                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 504,
@@ -402037,11 +401040,6 @@
                   {
                     "id": 522,
                     "name": "service_access_code_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 523,
-                    "name": "trip_pattern_trip_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
@@ -402533,12 +401531,48 @@
                 "reserved_ids": [
                   435,
                   459,
-                  483
+                  483,
+                  484,
+                  486,
+                  487,
+                  488,
+                  489,
+                  492,
+                  493,
+                  494,
+                  495,
+                  496,
+                  497,
+                  498,
+                  499,
+                  500,
+                  501,
+                  502,
+                  503,
+                  523
                 ],
                 "reserved_names": [
                   "customer_eligibility_ref",
                   "time_demand_type_assigment_ref",
-                  "dated_service_journey_ref"
+                  "dated_service_journey_ref",
+                  "group_of_distribution_assignments_ref",
+                  "type_of_customer_account_entry_ref",
+                  "customer_account_entry_ref",
+                  "customer_registration_ref",
+                  "customer_deregistration_ref",
+                  "validation_entry_ref",
+                  "passenger_travel_entry_ref",
+                  "passenger_validate_travel_entry_ref",
+                  "passenger_used_same_stop_entry_ref",
+                  "no_access_rights_on_account_ref",
+                  "insufficient_access_rights_on_account_ref",
+                  "reverting_ref",
+                  "fulfilment_entry_ref",
+                  "purchase_fulfilment_entry_ref",
+                  "mapping_fulfilment_entry_ref",
+                  "security_policy_ref",
+                  "onboard_validity_ref",
+                  "trip_pattern_trip_ref"
                 ]
               }
             ]

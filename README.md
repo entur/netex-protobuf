@@ -2,19 +2,23 @@
 
 # NeTEx Protobuf definitions
 
-This project contains setup to generate [Protocol Buffers Definition files](https://protobuf.dev/) (`.proto` files) from the [NeTEx XML schema](https://github.com/entur/NeTEx).
+This project contains setup to generate [Protocol Buffers Definition files](https://protobuf.dev/) (`.proto` files) from the [NeTEx XML schema](https://github.com/TransmodelEcosystem/NeTEx).
 
 The conversion is done using [schema2proto](https://github.com/entur/schema2proto) and configuration [netex_to_protobuf_config.yaml](netex_to_protobuf_config.yaml)
 
 ## NeTEx schema version
 
 The xsd files are not kept in this repository. They are downloaded at build time from a tagged source archive of
-https://github.com/entur/NeTEx, selected by the `netex.xsd.version` property in [pom.xml](pom.xml) (the tag name without
-the leading `v`). The current version is [v1.0.16.1](https://github.com/entur/NeTEx/releases/tag/v1.0.16.1).
+https://github.com/TransmodelEcosystem/NeTEx, selected by the `netex.xsd.version` property in [pom.xml](pom.xml) (the tag name
+without the leading `v`). The current version is [v2.0.0](https://github.com/TransmodelEcosystem/NeTEx/releases/tag/v2.0.0).
+
+Earlier versions were generated from Entur's fork https://github.com/entur/NeTEx (last from tag v1.0.16.1). Entur additions
+in that fork that are not part of NeTEx 2.0 are reserved in [proto.lock](proto.lock), so their field numbers are not reused.
+Where NeTEx 2.0 corrected the spelling of a name, the name was changed and the field number kept.
 
 To build against another tag without editing the pom:
 
-`mvn clean install -Dnetex.xsd.version=1.0.16.2`
+`mvn clean install -Dnetex.xsd.version=2.0.1`
 
 The downloaded xsd files are treated as immutable upstream inputs; build-time schema adjustments are defined in
 [remove_unwanted_structures.xslt](src/main/resources/xslt/remove_unwanted_structures.xslt). 
