@@ -25,12 +25,13 @@
     <xsl:template
         match="/xsd:schema/xsd:element[@name = 'AlternativeName']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'AlternativeName_VersionedChildStructure']/xsd:attribute[@name = 'dataSourceRef']"/>
 
-    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'versionRef']"/>
-
+    <!-- versionRef and modification attributes on reference structures. NeTEx 2.0 redeclares them in every restriction of
+         VersionOfObjectRefStructure, so they are removed from all simple content types, except where they have always been
+         kept (versionRef on TypeOfVersionRefStructure, both on ContractRefStructure) -->
+    <xsl:template match="//xsd:complexType[not(@name = 'TypeOfVersionRefStructure') and not(@name = 'ContractRefStructure')]/xsd:simpleContent/*/xsd:attribute[@name = 'versionRef']"/>
+    <xsl:template match="//xsd:complexType[not(@name = 'ContractRefStructure')]/xsd:simpleContent/*/xsd:attribute[@name = 'modification']"/>
 
     <!-- modification attribute -->
-    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
-    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'TypeOfVersionRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'DocumentModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
     <xsl:template

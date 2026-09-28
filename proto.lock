@@ -266727,8 +266727,6 @@
               1
             ],
             "reserved_names": [
-              "version_ref",
-              "modification",
               "name_of_ref_class"
             ],
             "options": [
