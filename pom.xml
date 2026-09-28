@@ -33,9 +33,9 @@
         <!-- Root of the NeTEx xsd tree, as unpacked from the GitHub source archive of netex.xsd.tag -->
         <netex.xsd.dir>${project.build.directory}/netex-xsd/NeTEx-${netex.xsd.version}/xsd</netex.xsd.dir>
         <netex.xsd.tag>v${netex.xsd.version}</netex.xsd.tag>
-        <netex.xsd.url>https://github.com/entur/NeTEx/archive/refs/tags/${netex.xsd.tag}.tar.gz</netex.xsd.url>
-        <!-- Tag in https://github.com/entur/NeTEx to generate proto from, without the leading "v" -->
-        <netex.xsd.version>1.0.16.1</netex.xsd.version>
+        <netex.xsd.url>https://github.com/TransmodelEcosystem/NeTEx/archive/refs/tags/${netex.xsd.tag}.tar.gz</netex.xsd.url>
+        <!-- Tag in https://github.com/TransmodelEcosystem/NeTEx to generate proto from, without the leading "v" -->
+        <netex.xsd.version>2.0.0</netex.xsd.version>
         <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

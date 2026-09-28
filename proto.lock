@@ -7682,31 +7682,45 @@
                 "integer": 7
               },
               {
+                "name": "LINE_TYPE_ENUMERATION_CORRIDOR_SERVICE",
+                "integer": 18
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_MAIN_ROUTE_WITH_FLEXIBLE_ENDS",
+                "integer": 9
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_FLEXIBLE_AREAS_ONLY",
+                "integer": 10
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_HAIL_AND_RIDE_SECTIONS",
+                "integer": 11
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_FIXED_STOP_AREA_WIDE",
+                "integer": 12
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_FREE_AREA_AREA_WIDE",
+                "integer": 13
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE",
+                "integer": 14
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE_AND_FIXED",
+                "integer": 15
+              },
+              {
+                "name": "LINE_TYPE_ENUMERATION_FIXED",
+                "integer": 16
+              },
+              {
                 "name": "LINE_TYPE_ENUMERATION_OTHER",
                 "integer": 8
               }
-            ],
-            "reserved_ids": [
-              9,
-              10,
-              11,
-              12,
-              13,
-              14,
-              15,
-              16,
-              18
-            ],
-            "reserved_names": [
-              "LINE_TYPE_ENUMERATION_MAIN_ROUTE_WITH_FLEXIBLE_ENDS",
-              "LINE_TYPE_ENUMERATION_FLEXIBLE_AREAS_ONLY",
-              "LINE_TYPE_ENUMERATION_HAIL_AND_RIDE_SECTIONS",
-              "LINE_TYPE_ENUMERATION_FIXED_STOP_AREA_WIDE",
-              "LINE_TYPE_ENUMERATION_FREE_AREA_AREA_WIDE",
-              "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE",
-              "LINE_TYPE_ENUMERATION_MIXED_FLEXIBLE_AND_FIXED",
-              "LINE_TYPE_ENUMERATION_FIXED",
-              "LINE_TYPE_ENUMERATION_CORRIDOR_SERVICE"
             ]
           },
           {
