@@ -25,17 +25,20 @@ ignoreOutputFields:
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractServiceDeliveryStructure/DataObjectDelivery
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractSubscriptionStructure/DataObjectSubscriptionRequest
 customTypeMappings:
+  # NeTEx 2.0 names abstract substitution group heads X_Dummy instead of X_. Keep the previous names:
+  # X_DummyType (anonymous type of element X_Dummy) -> X_Type
+  ^(.*)_DummyType$: $1_Type
   ^duration$: no.entur.netex.protobuf.Duration
   ^dateTime$: google.protobuf.Timestamp
   ^date$: google.type.Date
   ^time$: google.type.TimeOfDay
   ^gMonthDay$: google.type.Date
   ^Entity_EntityStructure$: EntityES
-  ^Assignment_VersionStructure_$: AssignmentVS
+  ^Assignment_VersionStructure_Dummy$: AssignmentVS
   ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles
-  ^GroupOfEntitiesRefStructure_$: GroupOfEntitiesReference
-  ^SeriesConstraintRefStructure_$: SeriesConstraintReference
-  ^PointOnLinkRefStructure_$: PointOnLinkReference
+  ^GroupOfEntitiesRefStructure_Dummy$: GroupOfEntitiesReference
+  ^SeriesConstraintRefStructure_Dummy$: SeriesConstraintReference
+  ^PointOnLinkRefStructure_Dummy$: PointOnLinkReference
   ^LineInDirectionRef_Structure$: LineInDirectionReference
   ^OnboardStay_VersionedChlldStructure$: OnboardStay
   ^Site_VersionFrameStructure$: SiteFrame
@@ -706,6 +709,8 @@ customTypeReplacements:
 
 
 customNameMappings:
+  # Element X_Dummy (X_ before NeTEx 2.0) -> field x_u, as schema2proto turns a trailing underscore into "u"
+  ^(.*)_Dummy$: $1_
   ^Descriptor$: TopographicPlaceDescriptor
   ^Assignment_VersionStructure_$: AssignmentVS
   ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles
