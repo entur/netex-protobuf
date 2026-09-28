@@ -718,7 +718,9 @@ customTypeReplacements:
 
 customNameMappings:
   # Element X_Dummy (X_ before NeTEx 2.0) -> field x_u, as schema2proto turns a trailing underscore into "u"
-  ^(.*)_Dummy$: $1_
+  ^(?![oO]rganisationRef_Dummy$)(.*)_Dummy$: $1_
+  # OrganisationRef_Dummy is new in NeTEx 2.0; before, OrganisationRef was referenced directly (field organisation_ref)
+  ^([oO])rganisationRef_Dummy$: $1rganisationRef
   ^Descriptor$: TopographicPlaceDescriptor
   ^Assignment_VersionStructure_$: AssignmentVS
   ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles

@@ -43388,6 +43388,61 @@
             ]
           },
           {
+            "name": "ChoiceWrapper_OrganisationRefStructure",
+            "fields": [
+              {
+                "id": 1,
+                "name": "organisation_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 2,
+                "name": "other_organisation_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 3,
+                "name": "travel_agent_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 4,
+                "name": "serviced_organisation_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 5,
+                "name": "management_agent_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 6,
+                "name": "general_organisation_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 7,
+                "name": "operator_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 8,
+                "name": "authority_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 9,
+                "name": "retail_consortium_ref",
+                "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 11,
+                "name": "online_service_operator_ref",
+                "type": "VersionOfObjectRefStructure"
+              }
+            ]
+          },
+          {
             "name": "ClassAttributeInFrameStructure",
             "fields": [
               {
@@ -375856,63 +375911,6 @@
               "operator_ref",
               "authority_ref",
               "retail_consortium_ref"
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_OrganisationRefStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "organisation_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 2,
-                    "name": "other_organisation_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 3,
-                    "name": "travel_agent_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 4,
-                    "name": "serviced_organisation_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 5,
-                    "name": "management_agent_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 6,
-                    "name": "general_organisation_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 7,
-                    "name": "operator_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 8,
-                    "name": "authority_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 9,
-                    "name": "retail_consortium_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 11,
-                    "name": "online_service_operator_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  }
-                ]
-              }
             ],
             "options": [
               {
