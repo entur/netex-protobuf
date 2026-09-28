@@ -158166,11 +158166,6 @@
                 "id": 2,
                 "name": "text_id_type",
                 "type": "string"
-              },
-              {
-                "id": 3,
-                "name": "value",
-                "type": "string"
               }
             ],
             "options": [
@@ -158178,6 +158173,12 @@
                 "name": "(xsd.base_type)",
                 "value": "org.w3.www.v2001.xmlschema.normalizedString"
               }
+            ],
+            "reserved_ids": [
+              3
+            ],
+            "reserved_names": [
+              "value"
             ]
           },
           {
