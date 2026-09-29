@@ -57869,7 +57869,7 @@
               {
                 "id": 183,
                 "name": "customer_account_entries",
-                "type": "CustomerAccountEntries_RelStructure"
+                "type": "FareContractEntries_RelStructure"
               },
               {
                 "id": 221,
@@ -58042,7 +58042,7 @@
               {
                 "id": 183,
                 "name": "customer_account_entries",
-                "type": "CustomerAccountEntries_RelStructure"
+                "type": "FareContractEntries_RelStructure"
               }
             ],
             "reserved_ids": [
@@ -344058,33 +344058,6 @@
             ]
           },
           {
-            "name": "ChargingEquipmenProfilesInFrame_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "charging_equipment_profile",
-                "type": "ChargingEquipmentProfileType",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
             "name": "CheckConstraintDelaysInFrame_RelStructure",
             "fields": [
               {
@@ -345489,85 +345462,6 @@
                 "name": "cross_constraint",
                 "type": "CrossConstraintType",
                 "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "CustomerAccountEntries_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "choice_wrapper",
-                "type": "ChoiceWrapper_CustomerAccountEntries_RelStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_CustomerAccountEntries_RelStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "customer_account_entry_ref",
-                    "type": "CustomerAccountEntryRefStructure"
-                  },
-                  {
-                    "id": 2,
-                    "name": "customer_registration_ref",
-                    "type": "CustomerRegistrationRefStructure"
-                  },
-                  {
-                    "id": 3,
-                    "name": "customer_deregistration_ref",
-                    "type": "CustomerDeregistrationRefStructure"
-                  },
-                  {
-                    "id": 10,
-                    "name": "no_access_rights_on_account_ref",
-                    "type": "NoAccessRightsOnAccountRefStructure"
-                  },
-                  {
-                    "id": 11,
-                    "name": "insufficient_access_rights_on_account_ref",
-                    "type": "InsufficientAccessRightsOnAccountRefStructure"
-                  },
-                  {
-                    "id": 4,
-                    "name": "customer_registration",
-                    "type": "CustomerRegistrationType"
-                  },
-                  {
-                    "id": 5,
-                    "name": "customer_deregistration",
-                    "type": "CustomerDeregistrationType"
-                  },
-                  {
-                    "id": 8,
-                    "name": "no_access_rights_on_account",
-                    "type": "NoAccessRightsOnAccountType"
-                  },
-                  {
-                    "id": 9,
-                    "name": "insufficient_access_rights_on_account",
-                    "type": "InsufficientAccessRightsOnAccountType"
-                  }
-                ]
               }
             ],
             "options": [
@@ -360708,28 +360602,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "GroupsOfDistributionAssignmentsInFrame_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "group_of_distribution_assignments",
-                "type": "GroupOfDistributionAssignmentsType",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "FrameContainmentStructure"
               }
             ]
           },
