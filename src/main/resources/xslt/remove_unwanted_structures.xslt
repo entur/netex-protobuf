@@ -85,6 +85,13 @@
     <!-- Remove pricing details from most objects -->
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricingGroup']"/>
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricesGroup']"/>
-    
+
+    <!-- TODO must be resolved before merging NeTEx 2.0: ActivationMeans is a single ActivationMeansEnumeration in NeTEx 2.0,
+         but was a list (ActivationMeansListOfEnumerations) before. Keep the list for now, so activation_means stays a
+         repeated enum -->
+    <xsl:template match="/xsd:schema/xsd:group[@name = 'UsageValidityPeriodGroup']/xsd:sequence/xsd:element[@name = 'ActivationMeans']/@type">
+        <xsl:attribute name="type">ActivationMeansListOfEnumerations</xsl:attribute>
+    </xsl:template>
+
 
 </xsl:stylesheet>
