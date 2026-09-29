@@ -1952,26 +1952,6 @@
             ]
           },
           {
-            "name": "ActivationRequirementsEnumeration",
-            "enum_fields": [
-              {
-                "name": "ACTIVATION_REQUIREMENTS_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "ACTIVATION_REQUIREMENTS_ENUMERATION_SELECTED_SERVICE_JOURNEY",
-                "integer": 1
-              },
-              {
-                "name": "ACTIVATION_REQUIREMENTS_ENUMERATION_SELECTED_TARIFF_ZONE",
-                "integer": 2
-              },
-              {
-                "name": "ACTIVATION_REQUIREMENTS_ENUMERATION_SELECTED_PASSENGER_SEAT",
-                "integer": 3
-              }
-            ]
-          },
-          {
             "name": "AdditionalDriverTypeEnumeration",
             "enum_fields": [
               {
@@ -3932,22 +3912,6 @@
             ]
           },
           {
-            "name": "ConsumptionTriggerTypeEnumeration",
-            "enum_fields": [
-              {
-                "name": "CONSUMPTION_TRIGGER_TYPE_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "CONSUMPTION_TRIGGER_TYPE_ENUMERATION_MANUAL",
-                "integer": 1
-              },
-              {
-                "name": "CONSUMPTION_TRIGGER_TYPE_ENUMERATION_AUTOMATIC",
-                "integer": 2
-              }
-            ]
-          },
-          {
             "name": "ContactTypeEnumeration",
             "enum_fields": [
               {
@@ -5071,34 +5035,6 @@
             ],
             "reserved_names": [
               "COUNTRY_CODE_TYPE_2"
-            ]
-          },
-          {
-            "name": "CouplingTypeEnumeration",
-            "enum_fields": [
-              {
-                "name": "COUPLING_TYPE_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "COUPLING_TYPE_ENUMERATION_UNDEFINED",
-                "integer": 1
-              },
-              {
-                "name": "COUPLING_TYPE_ENUMERATION_PLUG",
-                "integer": 2
-              },
-              {
-                "name": "COUPLING_TYPE_ENUMERATION_PANTOGRAPH_A_BOVE",
-                "integer": 3
-              },
-              {
-                "name": "COUPLING_TYPE_ENUMERATION_INDUCTION",
-                "integer": 4
-              },
-              {
-                "name": "COUPLING_TYPE_ENUMERATION_OTHER",
-                "integer": 5
-              }
             ]
           },
           {
@@ -9166,50 +9102,6 @@
             ]
           },
           {
-            "name": "MarkedAsTemporalValidityEnumeration",
-            "enum_fields": [
-              {
-                "name": "MARKED_AS_TEMPORAL_VALIDITY_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "MARKED_AS_TEMPORAL_VALIDITY_ENUMERATION_ANY",
-                "integer": 1
-              },
-              {
-                "name": "MARKED_AS_TEMPORAL_VALIDITY_ENUMERATION_CURRENT",
-                "integer": 2
-              },
-              {
-                "name": "MARKED_AS_TEMPORAL_VALIDITY_ENUMERATION_FUTURE",
-                "integer": 3
-              },
-              {
-                "name": "MARKED_AS_TEMPORAL_VALIDITY_ENUMERATION_CURRENT_FUTURE",
-                "integer": 4
-              },
-              {
-                "name": "MARKED_AS_TEMPORAL_VALIDITY_ENUMERATION_EXPIRED",
-                "integer": 5
-              }
-            ]
-          },
-          {
-            "name": "MaximumNumberOfAccessesEnumeration",
-            "enum_fields": [
-              {
-                "name": "MAXIMUM_NUMBER_OF_ACCESSES_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "MAXIMUM_NUMBER_OF_ACCESSES_ENUMERATION_LIMITED",
-                "integer": 1
-              },
-              {
-                "name": "MAXIMUM_NUMBER_OF_ACCESSES_ENUMERATION_UNLIMITED",
-                "integer": 2
-              }
-            ]
-          },
-          {
             "name": "MealFacilityEnumeration",
             "enum_fields": [
               {
@@ -9882,26 +9774,6 @@
               {
                 "name": "ON_CEASING_ENUMERATION_OTHER",
                 "integer": 6
-              }
-            ]
-          },
-          {
-            "name": "OnboardValidityTypeEnumeration",
-            "enum_fields": [
-              {
-                "name": "ONBOARD_VALIDITY_TYPE_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "ONBOARD_VALIDITY_TYPE_ENUMERATION_VALID_AT_BOARDING_TIME",
-                "integer": 1
-              },
-              {
-                "name": "ONBOARD_VALIDITY_TYPE_ENUMERATION_VALID_AT_START_OF_SERVICE_JOURNEY",
-                "integer": 2
-              },
-              {
-                "name": "ONBOARD_VALIDITY_TYPE_ENUMERATION_VALID_AT_ALL_TIMES_WHILE_ONBOARD",
-                "integer": 3
               }
             ]
           },
@@ -11526,38 +11398,6 @@
               {
                 "name": "PUBLIC_USE_ENUMERATION_PUBLIC_ONLY",
                 "integer": 5
-              }
-            ]
-          },
-          {
-            "name": "PublicationEnumeration",
-            "enum_fields": [
-              {
-                "name": "PUBLICATION_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "PUBLICATION_ENUMERATION_PUBLIC",
-                "integer": 1
-              },
-              {
-                "name": "PUBLICATION_ENUMERATION_RESTRICTED",
-                "integer": 2
-              },
-              {
-                "name": "PUBLICATION_ENUMERATION_PRIVATE",
-                "integer": 3
-              },
-              {
-                "name": "PUBLICATION_ENUMERATION_CONFIDENTIAL",
-                "integer": 4
-              },
-              {
-                "name": "PUBLICATION_ENUMERATION_AUTHORISED",
-                "integer": 5
-              },
-              {
-                "name": "PUBLICATION_ENUMERATION_TEST",
-                "integer": 6
               }
             ]
           },
@@ -14842,46 +14682,6 @@
             ]
           },
           {
-            "name": "TrainElementTypeEnumeration",
-            "enum_fields": [
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_BUFFET_CAR",
-                "integer": 1
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_CARRIAGE",
-                "integer": 2
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_ENGINE",
-                "integer": 3
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_CAR_TRANSPORTER",
-                "integer": 4
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_SLEEPER_CARRIAGE",
-                "integer": 5
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_LUGGAGE_VAN",
-                "integer": 6
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_RESTAURANT_CARRIAGE",
-                "integer": 7
-              },
-              {
-                "name": "TRAIN_ELEMENT_TYPE_ENUMERATION_OTHER",
-                "integer": 8
-              }
-            ]
-          },
-          {
             "name": "TrainRestrictionsEnumeration",
             "enum_fields": [
               {
@@ -15137,50 +14937,6 @@
               },
               {
                 "name": "TRAVEL_CREDIT_POLICY_ENUMERATION_OTHER",
-                "integer": 4
-              }
-            ]
-          },
-          {
-            "name": "TravelDocumentValidityScopeEnumeration",
-            "enum_fields": [
-              {
-                "name": "TRAVEL_DOCUMENT_VALIDITY_SCOPE_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "TRAVEL_DOCUMENT_VALIDITY_SCOPE_ENUMERATION_NATIONAL",
-                "integer": 1
-              },
-              {
-                "name": "TRAVEL_DOCUMENT_VALIDITY_SCOPE_ENUMERATION_LOCAL",
-                "integer": 2
-              },
-              {
-                "name": "TRAVEL_DOCUMENT_VALIDITY_SCOPE_ENUMERATION_OTHER",
-                "integer": 3
-              }
-            ]
-          },
-          {
-            "name": "TypeOfCouplingEnumeration",
-            "enum_fields": [
-              {
-                "name": "TYPE_OF_COUPLING_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "TYPE_OF_COUPLING_ENUMERATION_SERVICE_FACILITY",
-                "integer": 1
-              },
-              {
-                "name": "TYPE_OF_COUPLING_ENUMERATION_COUPLING",
-                "integer": 2
-              },
-              {
-                "name": "TYPE_OF_COUPLING_ENUMERATION_TARIFF_SECTION",
-                "integer": 3
-              },
-              {
-                "name": "TYPE_OF_COUPLING_ENUMERATION_UNCOUPLED",
                 "integer": 4
               }
             ]
@@ -18706,11 +18462,6 @@
                 "type": "bool"
               },
               {
-                "id": 746,
-                "name": "ramp_bearing_capacity",
-                "type": "double"
-              },
-              {
                 "id": 747,
                 "name": "number_of_steps",
                 "type": "uint32"
@@ -19091,7 +18842,8 @@
               872,
               521,
               532,
-              551
+              551,
+              746
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -19103,7 +18855,8 @@
               "publication",
               "access_equipment_ref",
               "sign_equipment_ref",
-              "local_service_ref"
+              "local_service_ref",
+              "ramp_bearing_capacity"
             ],
             "options": [
               {
@@ -19270,11 +19023,6 @@
                 "id": 745,
                 "name": "ramp",
                 "type": "bool"
-              },
-              {
-                "id": 746,
-                "name": "ramp_bearing_capacity",
-                "type": "double"
               },
               {
                 "id": 747,
@@ -19647,7 +19395,8 @@
               765,
               521,
               532,
-              551
+              551,
+              746
             ],
             "reserved_names": [
               "passenger_equipment_ref",
@@ -19659,7 +19408,8 @@
               "publication",
               "access_equipment_ref",
               "sign_equipment_ref",
-              "local_service_ref"
+              "local_service_ref",
+              "ramp_bearing_capacity"
             ],
             "options": [
               {
@@ -21224,7 +20974,7 @@
               {
                 "id": 163,
                 "name": "accounting_factor",
-                "type": "no.entur.netex.protobuf.Duration"
+                "type": "double"
               },
               {
                 "id": 164,
@@ -21342,7 +21092,7 @@
               {
                 "id": 163,
                 "name": "accounting_factor",
-                "type": "no.entur.netex.protobuf.Duration"
+                "type": "double"
               },
               {
                 "id": 164,
@@ -33910,267 +33660,6 @@
             ]
           },
           {
-            "name": "CallZType",
-            "fields": [
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 304,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 305,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 71,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 101,
-                "name": "order",
-                "type": "uint32",
-                "options": [
-                  {
-                    "name": "(buf.validate.field).uint32.gt",
-                    "value": "0"
-                  }
-                ]
-              },
-              {
-                "id": 102,
-                "name": "constrained",
-                "type": "bool"
-              },
-              {
-                "id": 161,
-                "name": "visit_number",
-                "type": "uint32"
-              },
-              {
-                "id": 164,
-                "name": "scheduled_stop_point_view",
-                "type": "ScheduledStopPoint_DerivedViewStructure"
-              },
-              {
-                "id": 171,
-                "name": "onward_timing_link_view",
-                "type": "OnwardTimingLinkViewType"
-              },
-              {
-                "id": 172,
-                "name": "onward_service_link_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 173,
-                "name": "onward_service_link_view",
-                "type": "OnwardServiceLinkViewType"
-              },
-              {
-                "id": 181,
-                "name": "timing_point_status",
-                "type": "TimingPointStatusEnumeration"
-              },
-              {
-                "id": 193,
-                "name": "point_in_journey_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 194,
-                "name": "arrival",
-                "type": "ArrivalStructure"
-              },
-              {
-                "id": 195,
-                "name": "departure",
-                "type": "DepartureStructure"
-              },
-              {
-                "id": 196,
-                "name": "frequency",
-                "type": "FrequencyStructure"
-              },
-              {
-                "id": 201,
-                "name": "destination_display_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 202,
-                "name": "destination_display_view",
-                "type": "DestinationDisplayViewType"
-              },
-              {
-                "id": 211,
-                "name": "vias",
-                "type": "Vias_RelStructure"
-              },
-              {
-                "id": 221,
-                "name": "flexible_point_properties",
-                "type": "FlexiblePointPropertiesType"
-              },
-              {
-                "id": 222,
-                "name": "change_of_destination_display",
-                "type": "bool"
-              },
-              {
-                "id": 223,
-                "name": "change_of_service_requirements",
-                "type": "bool"
-              },
-              {
-                "id": 224,
-                "name": "notice_assignments",
-                "type": "Call_VersionedChildStructure_NoticeAssignmentsType"
-              },
-              {
-                "id": 231,
-                "name": "request_stop",
-                "type": "bool"
-              },
-              {
-                "id": 232,
-                "name": "request_method",
-                "type": "RequestMethodTypeEnumeration"
-              },
-              {
-                "id": 233,
-                "name": "stop_use",
-                "type": "StopUseEnumeration"
-              },
-              {
-                "id": 234,
-                "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
-              },
-              {
-                "id": 235,
-                "name": "print",
-                "type": "bool"
-              },
-              {
-                "id": 236,
-                "name": "dynamic",
-                "type": "DynamicAdvertisementEnumeration"
-              },
-              {
-                "id": 251,
-                "name": "passenger_carrying_requirement_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 252,
-                "name": "passenger_carrying_requirements_view",
-                "type": "PassengerCarryingRequirementsViewType"
-              },
-              {
-                "id": 261,
-                "name": "train_size",
-                "type": "TrainSizeStructure"
-              },
-              {
-                "id": 262,
-                "name": "equipments",
-                "type": "VehicleEquipments_RelStructure"
-              },
-              {
-                "id": 271,
-                "name": "note",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 301,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 162,
-                "name": "scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 163,
-                "name": "fare_scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 191,
-                "name": "service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 192,
-                "name": "template_service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              }
-            ],
-            "reserved_ids": [
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              303,
-              302
-            ],
-            "reserved_names": [
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication",
-              "dated_service_journey_ref"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "Call_VersionedChildStructure"
-              }
-            ]
-          },
-          {
             "name": "CallType",
             "fields": [
               {
@@ -43211,7 +42700,7 @@
               {
                 "id": 3,
                 "name": "type_of_frame_ref",
-                "type": "string"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 4,
@@ -48515,11 +48004,6 @@
                 "type": "GroupOfEntitiesRefStructure"
               },
               {
-                "id": 522,
-                "name": "passing_time_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 523,
                 "name": "target_passing_time_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -48642,11 +48126,6 @@
               {
                 "id": 547,
                 "name": "type_of_flexible_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 548,
-                "name": "supply_contract_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -49829,7 +49308,9 @@
               734,
               735,
               775,
-              805
+              805,
+              522,
+              548
             ],
             "reserved_names": [
               "data_source_ref_v",
@@ -49857,7 +49338,9 @@
               "security_policy_ref",
               "onboard_validity_ref",
               "trip_pattern_trip_ref",
-              "charging_equipment_profile_ref"
+              "charging_equipment_profile_ref",
+              "passing_time_ref",
+              "supply_contract_ref"
             ],
             "options": [
               {
@@ -52139,92 +51622,6 @@
                 "id": 93,
                 "name": "vehicle_collection",
                 "type": "VehicleCollectionEnumeration"
-              }
-            ]
-          },
-          {
-            "name": "ConnectingJourney_DerivedViewStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "branding_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 41,
-                "name": "service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 42,
-                "name": "departure_time",
-                "type": "google.type.TimeOfDay"
-              },
-              {
-                "id": 43,
-                "name": "frequency",
-                "type": "FrequencyStructure"
-              },
-              {
-                "id": 51,
-                "name": "name",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 52,
-                "name": "destination_display_view",
-                "type": "DestinationDisplayViewType"
-              },
-              {
-                "id": 59,
-                "name": "connecting_order",
-                "type": "uint32"
-              },
-              {
-                "id": 60,
-                "name": "connecting_visit_number",
-                "type": "uint32"
-              },
-              {
-                "id": 53,
-                "name": "day_type_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 54,
-                "name": "fare_day_type_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 55,
-                "name": "journey_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 56,
-                "name": "dead_run_journey_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 57,
-                "name": "service_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 58,
-                "name": "service_journey_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "DerivedViewStructure"
               }
             ]
           },
@@ -62552,7 +61949,7 @@
               {
                 "id": 474,
                 "name": "covered",
-                "type": "bool"
+                "type": "CoveredEnumeration"
               },
               {
                 "id": 501,
@@ -62720,7 +62117,7 @@
               {
                 "id": 474,
                 "name": "covered",
-                "type": "bool"
+                "type": "CoveredEnumeration"
               }
             ],
             "reserved_ids": [
@@ -63683,834 +63080,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "TypeOfValue_VersionStructure"
-              }
-            ]
-          },
-          {
-            "name": "DatedCallZType",
-            "fields": [
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 534,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 535,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 71,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 101,
-                "name": "order",
-                "type": "uint32",
-                "options": [
-                  {
-                    "name": "(buf.validate.field).uint32.gt",
-                    "value": "0"
-                  }
-                ]
-              },
-              {
-                "id": 102,
-                "name": "constrained",
-                "type": "bool"
-              },
-              {
-                "id": 161,
-                "name": "visit_number",
-                "type": "uint32"
-              },
-              {
-                "id": 164,
-                "name": "scheduled_stop_point_view",
-                "type": "ScheduledStopPoint_DerivedViewStructure"
-              },
-              {
-                "id": 171,
-                "name": "onward_timing_link_view",
-                "type": "OnwardTimingLinkViewType"
-              },
-              {
-                "id": 172,
-                "name": "onward_service_link_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 173,
-                "name": "onward_service_link_view",
-                "type": "OnwardServiceLinkViewType"
-              },
-              {
-                "id": 181,
-                "name": "timing_point_status",
-                "type": "TimingPointStatusEnumeration"
-              },
-              {
-                "id": 193,
-                "name": "point_in_journey_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 194,
-                "name": "arrival",
-                "type": "ArrivalStructure"
-              },
-              {
-                "id": 195,
-                "name": "departure",
-                "type": "DepartureStructure"
-              },
-              {
-                "id": 196,
-                "name": "frequency",
-                "type": "FrequencyStructure"
-              },
-              {
-                "id": 201,
-                "name": "destination_display_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 202,
-                "name": "destination_display_view",
-                "type": "DestinationDisplayViewType"
-              },
-              {
-                "id": 211,
-                "name": "vias",
-                "type": "Vias_RelStructure"
-              },
-              {
-                "id": 221,
-                "name": "flexible_point_properties",
-                "type": "FlexiblePointPropertiesType"
-              },
-              {
-                "id": 222,
-                "name": "change_of_destination_display",
-                "type": "bool"
-              },
-              {
-                "id": 223,
-                "name": "change_of_service_requirements",
-                "type": "bool"
-              },
-              {
-                "id": 224,
-                "name": "notice_assignments",
-                "type": "Call_VersionedChildStructure_NoticeAssignmentsType"
-              },
-              {
-                "id": 231,
-                "name": "request_stop",
-                "type": "bool"
-              },
-              {
-                "id": 232,
-                "name": "request_method",
-                "type": "RequestMethodTypeEnumeration"
-              },
-              {
-                "id": 233,
-                "name": "stop_use",
-                "type": "StopUseEnumeration"
-              },
-              {
-                "id": 234,
-                "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
-              },
-              {
-                "id": 235,
-                "name": "print",
-                "type": "bool"
-              },
-              {
-                "id": 236,
-                "name": "dynamic",
-                "type": "DynamicAdvertisementEnumeration"
-              },
-              {
-                "id": 251,
-                "name": "passenger_carrying_requirement_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 252,
-                "name": "passenger_carrying_requirements_view",
-                "type": "PassengerCarryingRequirementsViewType"
-              },
-              {
-                "id": 261,
-                "name": "train_size",
-                "type": "TrainSizeStructure"
-              },
-              {
-                "id": 262,
-                "name": "equipments",
-                "type": "VehicleEquipments_RelStructure"
-              },
-              {
-                "id": 271,
-                "name": "note",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 501,
-                "name": "driver_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 502,
-                "name": "arrival_date",
-                "type": "google.type.Date"
-              },
-              {
-                "id": 503,
-                "name": "departure_date",
-                "type": "google.type.Date"
-              },
-              {
-                "id": 531,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 162,
-                "name": "scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 163,
-                "name": "fare_scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 191,
-                "name": "service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 192,
-                "name": "template_service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              }
-            ],
-            "reserved_ids": [
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              533,
-              532
-            ],
-            "reserved_names": [
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication",
-              "dated_service_journey_ref"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "DatedCall_VersionedChildStructure"
-              }
-            ]
-          },
-          {
-            "name": "DatedCallType",
-            "fields": [
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 534,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 535,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 71,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 101,
-                "name": "order",
-                "type": "uint32",
-                "options": [
-                  {
-                    "name": "(buf.validate.field).uint32.gt",
-                    "value": "0"
-                  }
-                ]
-              },
-              {
-                "id": 102,
-                "name": "constrained",
-                "type": "bool"
-              },
-              {
-                "id": 161,
-                "name": "visit_number",
-                "type": "uint32"
-              },
-              {
-                "id": 164,
-                "name": "scheduled_stop_point_view",
-                "type": "ScheduledStopPoint_DerivedViewStructure"
-              },
-              {
-                "id": 171,
-                "name": "onward_timing_link_view",
-                "type": "OnwardTimingLinkViewType"
-              },
-              {
-                "id": 172,
-                "name": "onward_service_link_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 173,
-                "name": "onward_service_link_view",
-                "type": "OnwardServiceLinkViewType"
-              },
-              {
-                "id": 181,
-                "name": "timing_point_status",
-                "type": "TimingPointStatusEnumeration"
-              },
-              {
-                "id": 193,
-                "name": "point_in_journey_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 194,
-                "name": "arrival",
-                "type": "ArrivalStructure"
-              },
-              {
-                "id": 195,
-                "name": "departure",
-                "type": "DepartureStructure"
-              },
-              {
-                "id": 196,
-                "name": "frequency",
-                "type": "FrequencyStructure"
-              },
-              {
-                "id": 201,
-                "name": "destination_display_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 202,
-                "name": "destination_display_view",
-                "type": "DestinationDisplayViewType"
-              },
-              {
-                "id": 211,
-                "name": "vias",
-                "type": "Vias_RelStructure"
-              },
-              {
-                "id": 221,
-                "name": "flexible_point_properties",
-                "type": "FlexiblePointPropertiesType"
-              },
-              {
-                "id": 222,
-                "name": "change_of_destination_display",
-                "type": "bool"
-              },
-              {
-                "id": 223,
-                "name": "change_of_service_requirements",
-                "type": "bool"
-              },
-              {
-                "id": 224,
-                "name": "notice_assignments",
-                "type": "Call_VersionedChildStructure_NoticeAssignmentsType"
-              },
-              {
-                "id": 231,
-                "name": "request_stop",
-                "type": "bool"
-              },
-              {
-                "id": 232,
-                "name": "request_method",
-                "type": "RequestMethodTypeEnumeration"
-              },
-              {
-                "id": 233,
-                "name": "stop_use",
-                "type": "StopUseEnumeration"
-              },
-              {
-                "id": 234,
-                "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
-              },
-              {
-                "id": 235,
-                "name": "print",
-                "type": "bool"
-              },
-              {
-                "id": 236,
-                "name": "dynamic",
-                "type": "DynamicAdvertisementEnumeration"
-              },
-              {
-                "id": 251,
-                "name": "passenger_carrying_requirement_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 252,
-                "name": "passenger_carrying_requirements_view",
-                "type": "PassengerCarryingRequirementsViewType"
-              },
-              {
-                "id": 261,
-                "name": "train_size",
-                "type": "TrainSizeStructure"
-              },
-              {
-                "id": 262,
-                "name": "equipments",
-                "type": "VehicleEquipments_RelStructure"
-              },
-              {
-                "id": 271,
-                "name": "note",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 501,
-                "name": "driver_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 502,
-                "name": "arrival_date",
-                "type": "google.type.Date"
-              },
-              {
-                "id": 503,
-                "name": "departure_date",
-                "type": "google.type.Date"
-              },
-              {
-                "id": 531,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 162,
-                "name": "scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 163,
-                "name": "fare_scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 191,
-                "name": "service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 192,
-                "name": "template_service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              }
-            ],
-            "reserved_ids": [
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              533,
-              532
-            ],
-            "reserved_names": [
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication",
-              "dated_service_journey_ref"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "DatedCall_VersionedChildStructure"
-              }
-            ]
-          },
-          {
-            "name": "DatedCall_VersionedChildStructure",
-            "fields": [
-              {
-                "id": 2,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 506,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 507,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 71,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 101,
-                "name": "order",
-                "type": "uint32",
-                "options": [
-                  {
-                    "name": "(buf.validate.field).uint32.gt",
-                    "value": "0"
-                  }
-                ]
-              },
-              {
-                "id": 102,
-                "name": "constrained",
-                "type": "bool"
-              },
-              {
-                "id": 161,
-                "name": "visit_number",
-                "type": "uint32"
-              },
-              {
-                "id": 164,
-                "name": "scheduled_stop_point_view",
-                "type": "ScheduledStopPoint_DerivedViewStructure"
-              },
-              {
-                "id": 171,
-                "name": "onward_timing_link_view",
-                "type": "OnwardTimingLinkViewType"
-              },
-              {
-                "id": 172,
-                "name": "onward_service_link_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 173,
-                "name": "onward_service_link_view",
-                "type": "OnwardServiceLinkViewType"
-              },
-              {
-                "id": 181,
-                "name": "timing_point_status",
-                "type": "TimingPointStatusEnumeration"
-              },
-              {
-                "id": 193,
-                "name": "point_in_journey_pattern_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 194,
-                "name": "arrival",
-                "type": "ArrivalStructure"
-              },
-              {
-                "id": 195,
-                "name": "departure",
-                "type": "DepartureStructure"
-              },
-              {
-                "id": 196,
-                "name": "frequency",
-                "type": "FrequencyStructure"
-              },
-              {
-                "id": 201,
-                "name": "destination_display_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 202,
-                "name": "destination_display_view",
-                "type": "DestinationDisplayViewType"
-              },
-              {
-                "id": 211,
-                "name": "vias",
-                "type": "Vias_RelStructure"
-              },
-              {
-                "id": 221,
-                "name": "flexible_point_properties",
-                "type": "FlexiblePointPropertiesType"
-              },
-              {
-                "id": 222,
-                "name": "change_of_destination_display",
-                "type": "bool"
-              },
-              {
-                "id": 223,
-                "name": "change_of_service_requirements",
-                "type": "bool"
-              },
-              {
-                "id": 224,
-                "name": "notice_assignments",
-                "type": "Call_VersionedChildStructure_NoticeAssignmentsType"
-              },
-              {
-                "id": 231,
-                "name": "request_stop",
-                "type": "bool"
-              },
-              {
-                "id": 232,
-                "name": "request_method",
-                "type": "RequestMethodTypeEnumeration"
-              },
-              {
-                "id": 233,
-                "name": "stop_use",
-                "type": "StopUseEnumeration"
-              },
-              {
-                "id": 234,
-                "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
-              },
-              {
-                "id": 235,
-                "name": "print",
-                "type": "bool"
-              },
-              {
-                "id": 236,
-                "name": "dynamic",
-                "type": "DynamicAdvertisementEnumeration"
-              },
-              {
-                "id": 251,
-                "name": "passenger_carrying_requirement_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 252,
-                "name": "passenger_carrying_requirements_view",
-                "type": "PassengerCarryingRequirementsViewType"
-              },
-              {
-                "id": 261,
-                "name": "train_size",
-                "type": "TrainSizeStructure"
-              },
-              {
-                "id": 262,
-                "name": "equipments",
-                "type": "VehicleEquipments_RelStructure"
-              },
-              {
-                "id": 271,
-                "name": "note",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 501,
-                "name": "driver_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 502,
-                "name": "arrival_date",
-                "type": "google.type.Date"
-              },
-              {
-                "id": 503,
-                "name": "departure_date",
-                "type": "google.type.Date"
-              },
-              {
-                "id": 162,
-                "name": "scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 163,
-                "name": "fare_scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 191,
-                "name": "service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 192,
-                "name": "template_service_journey_ref",
-                "type": "VersionOfObjectRefStructure"
-              }
-            ],
-            "reserved_ids": [
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              505,
-              504
-            ],
-            "reserved_names": [
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication",
-              "dated_service_journey_ref"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "Call_VersionedChildStructure"
               }
             ]
           },
@@ -79000,7 +77569,7 @@
               {
                 "id": 165,
                 "name": "accounting_factor",
-                "type": "no.entur.netex.protobuf.Duration"
+                "type": "double"
               },
               {
                 "id": 166,
@@ -79133,7 +77702,7 @@
               {
                 "id": 165,
                 "name": "accounting_factor",
-                "type": "no.entur.netex.protobuf.Duration"
+                "type": "double"
               },
               {
                 "id": 166,
@@ -79292,7 +77861,7 @@
               {
                 "id": 163,
                 "name": "accounting_factor",
-                "type": "no.entur.netex.protobuf.Duration"
+                "type": "double"
               },
               {
                 "id": 164,
@@ -79465,7 +78034,7 @@
               {
                 "id": 163,
                 "name": "accounting_factor",
-                "type": "no.entur.netex.protobuf.Duration"
+                "type": "double"
               },
               {
                 "id": 164,
@@ -80536,7 +79105,7 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType",
+                "type": "TrainStopAssignments_RelStructure",
                 "is_repeated": true
               },
               {
@@ -80765,7 +79334,7 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType",
+                "type": "TrainStopAssignments_RelStructure",
                 "is_repeated": true
               },
               {
@@ -83984,11 +82553,6 @@
                 "type": "bool"
               },
               {
-                "id": 644,
-                "name": "opening_necessary_force",
-                "type": "NecessaryForceEnumeration"
-              },
-              {
                 "id": 601,
                 "name": "id",
                 "type": "string"
@@ -84001,14 +82565,16 @@
               9,
               11,
               10,
-              602
+              602,
+              644
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "opening_necessary_force"
             ],
             "options": [
               {
@@ -84270,11 +82836,6 @@
                 "id": 562,
                 "name": "audio_passthrough_indicator",
                 "type": "bool"
-              },
-              {
-                "id": 644,
-                "name": "opening_necessary_force",
-                "type": "NecessaryForceEnumeration"
               }
             ],
             "reserved_ids": [
@@ -84284,14 +82845,16 @@
               9,
               11,
               10,
-              564
+              564,
+              644
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "opening_necessary_force"
             ],
             "options": [
               {
@@ -109077,11 +107640,6 @@
                 "type": "GroupOfEntitiesRefStructure"
               },
               {
-                "id": 421,
-                "name": "passing_time_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 422,
                 "name": "target_passing_time_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -109204,11 +107762,6 @@
               {
                 "id": 446,
                 "name": "type_of_flexible_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 447,
-                "name": "supply_contract_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -110391,7 +108944,9 @@
               633,
               634,
               674,
-              704
+              704,
+              421,
+              447
             ],
             "reserved_names": [
               "data_source_ref_v",
@@ -110419,7 +108974,9 @@
               "security_policy_ref",
               "onboard_validity_ref",
               "trip_pattern_trip_ref",
-              "charging_equipment_profile_ref"
+              "charging_equipment_profile_ref",
+              "passing_time_ref",
+              "supply_contract_ref"
             ],
             "options": [
               {
@@ -126784,26 +125341,6 @@
                 "type": "VehicleTypesInFrame_RelStructure"
               },
               {
-                "id": 482,
-                "name": "vehicle_models",
-                "type": "VehicleModelsInFrame_RelStructure"
-              },
-              {
-                "id": 483,
-                "name": "vehicle_equipment_profiles",
-                "type": "VehicleEquipmentProfilesInFrame_RelStructure"
-              },
-              {
-                "id": 512,
-                "name": "vehicle_model_profiles",
-                "type": "VehicleModelProfilesInFrame_RelStructure"
-              },
-              {
-                "id": 484,
-                "name": "vehicles",
-                "type": "VehiclesInFrame_RelStructure"
-              },
-              {
                 "id": 521,
                 "name": "id",
                 "type": "string"
@@ -126816,14 +125353,22 @@
               9,
               11,
               10,
-              522
+              522,
+              483,
+              484,
+              482,
+              512
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "vehicle_equipment_profiles",
+              "vehicles",
+              "vehicle_models",
+              "vehicle_model_profiles"
             ],
             "options": [
               {
@@ -127818,26 +126363,6 @@
                 "id": 481,
                 "name": "vehicle_types",
                 "type": "VehicleTypesInFrame_RelStructure"
-              },
-              {
-                "id": 482,
-                "name": "vehicle_models",
-                "type": "VehicleModelsInFrame_RelStructure"
-              },
-              {
-                "id": 483,
-                "name": "vehicle_equipment_profiles",
-                "type": "VehicleEquipmentProfilesInFrame_RelStructure"
-              },
-              {
-                "id": 486,
-                "name": "vehicle_model_profiles",
-                "type": "VehicleModelProfilesInFrame_RelStructure"
-              },
-              {
-                "id": 484,
-                "name": "vehicles",
-                "type": "VehiclesInFrame_RelStructure"
               }
             ],
             "reserved_ids": [
@@ -127847,14 +126372,22 @@
               9,
               11,
               10,
-              485
+              485,
+              483,
+              484,
+              482,
+              486
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "vehicle_equipment_profiles",
+              "vehicles",
+              "vehicle_models",
+              "vehicle_model_profiles"
             ],
             "options": [
               {
@@ -131757,7 +130290,7 @@
               {
                 "id": 191,
                 "name": "connecting_journey_view",
-                "type": "ConnectingJourney_DerivedViewStructure"
+                "type": "ConnectingServiceJourney_DerivedViewStructure"
               },
               {
                 "id": 203,
@@ -131923,7 +130456,7 @@
               {
                 "id": 71,
                 "name": "connecting_journey_view",
-                "type": "ConnectingJourney_DerivedViewStructure"
+                "type": "ConnectingServiceJourney_DerivedViewStructure"
               },
               {
                 "id": 83,
@@ -132193,7 +130726,7 @@
               {
                 "id": 191,
                 "name": "connecting_journey_view",
-                "type": "ConnectingJourney_DerivedViewStructure"
+                "type": "ConnectingServiceJourney_DerivedViewStructure"
               },
               {
                 "id": 203,
@@ -132450,7 +130983,7 @@
               {
                 "id": 171,
                 "name": "journey_parts",
-                "type": "JourneyPartRefs_RelStructure"
+                "type": "JourneyParts_RelStructure"
               },
               {
                 "id": 172,
@@ -132624,7 +131157,7 @@
               {
                 "id": 171,
                 "name": "journey_parts",
-                "type": "JourneyPartRefs_RelStructure"
+                "type": "JourneyParts_RelStructure"
               },
               {
                 "id": 172,
@@ -138213,11 +136746,6 @@
                 "type": "double"
               },
               {
-                "id": 654,
-                "name": "ground_markaligned_with_button_v",
-                "type": "bool"
-              },
-              {
                 "id": 611,
                 "name": "id",
                 "type": "string"
@@ -138230,14 +136758,16 @@
               9,
               11,
               10,
-              612
+              612,
+              654
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "ground_markaligned_with_button_v"
             ],
             "options": [
               {
@@ -138524,11 +137054,6 @@
                 "id": 653,
                 "name": "buttons_height",
                 "type": "double"
-              },
-              {
-                "id": 654,
-                "name": "ground_markaligned_with_button_v",
-                "type": "bool"
               }
             ],
             "reserved_ids": [
@@ -138538,14 +137063,16 @@
               9,
               11,
               10,
-              573
+              573,
+              654
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "ground_markaligned_with_button_v"
             ],
             "options": [
               {
@@ -154611,52 +153138,6 @@
             ]
           },
           {
-            "name": "NavigationPathRefStructure",
-            "fields": [
-              {
-                "id": 5,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 6,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 9,
-                "name": "ref",
-                "type": "string"
-              },
-              {
-                "id": 10,
-                "name": "value",
-                "type": "string"
-              }
-            ],
-            "reserved_ids": [
-              4,
-              2,
-              1
-            ],
-            "reserved_names": [
-              "version_ref",
-              "modification",
-              "name_of_ref_class"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "LinkSequenceRefStructure"
-              }
-            ]
-          },
-          {
             "name": "NavigationPathType",
             "fields": [
               {
@@ -154768,12 +153249,12 @@
               {
                 "id": 291,
                 "name": "from",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 292,
                 "name": "to",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 293,
@@ -154919,272 +153400,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "NavigationPath_VersionStructure"
-              }
-            ]
-          },
-          {
-            "name": "NavigationPath_VersionStructure",
-            "fields": [
-              {
-                "id": 2,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 326,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 327,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 41,
-                "name": "responsibility_set_ref",
-                "type": "string"
-              },
-              {
-                "id": 71,
-                "name": "key_list",
-                "type": "KeyListStructure"
-              },
-              {
-                "id": 72,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 73,
-                "name": "branding_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 161,
-                "name": "name",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 162,
-                "name": "short_name",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 163,
-                "name": "description",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 164,
-                "name": "distance",
-                "type": "double"
-              },
-              {
-                "id": 165,
-                "name": "private_code",
-                "type": "PrivateCodeStructure"
-              },
-              {
-                "id": 166,
-                "name": "projections",
-                "type": "Projections_RelStructure"
-              },
-              {
-                "id": 167,
-                "name": "info_links",
-                "type": "InfoLinksType"
-              },
-              {
-                "id": 168,
-                "name": "sections_in_sequence",
-                "type": "SectionsInSequence_RelStructure"
-              },
-              {
-                "id": 291,
-                "name": "from",
-                "type": "PathLinkEndStructure"
-              },
-              {
-                "id": 292,
-                "name": "to",
-                "type": "PathLinkEndStructure"
-              },
-              {
-                "id": 293,
-                "name": "accessibility_assessment",
-                "type": "AccessibilityAssessmentType"
-              },
-              {
-                "id": 294,
-                "name": "access_modes",
-                "type": "AccessModeEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
-              },
-              {
-                "id": 295,
-                "name": "summaries",
-                "type": "AccessSummaries_RelStructure"
-              },
-              {
-                "id": 296,
-                "name": "transfer_duration",
-                "type": "TransferDurationStructure"
-              },
-              {
-                "id": 301,
-                "name": "public_use",
-                "type": "PublicUseEnumeration"
-              },
-              {
-                "id": 302,
-                "name": "covered",
-                "type": "CoveredEnumeration"
-              },
-              {
-                "id": 303,
-                "name": "gated",
-                "type": "GatedEnumeration"
-              },
-              {
-                "id": 304,
-                "name": "lighting",
-                "type": "LightingEnumeration"
-              },
-              {
-                "id": 305,
-                "name": "all_areas_wheelchair_accessible",
-                "type": "bool"
-              },
-              {
-                "id": 306,
-                "name": "person_capacity",
-                "type": "uint32"
-              },
-              {
-                "id": 297,
-                "name": "presentation",
-                "type": "PresentationStructure"
-              },
-              {
-                "id": 307,
-                "name": "facilities",
-                "type": "SiteFacilitySets_RelStructure"
-              },
-              {
-                "id": 311,
-                "name": "access_feature_list",
-                "type": "AccessFeatureEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
-              },
-              {
-                "id": 312,
-                "name": "navigation_type",
-                "type": "NavigationTypeEnumeration"
-              },
-              {
-                "id": 313,
-                "name": "places_in_sequence",
-                "type": "PlacesInSequence_RelStructure"
-              },
-              {
-                "id": 314,
-                "name": "path_links_in_sequence",
-                "type": "PathLinksInSequence_RelStructure"
-              },
-              {
-                "id": 315,
-                "name": "transfers",
-                "type": "TransferRefs_RelStructure"
-              }
-            ],
-            "reserved_ids": [
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              316
-            ],
-            "reserved_names": [
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication"
-            ],
-            "messages": [
-              {
-                "name": "InfoLinksType",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "info_link",
-                    "type": "InfoLinkStructure",
-                    "is_repeated": true
-                  }
-                ],
-                "options": [
-                  {
-                    "name": "(xsd.base_type)",
-                    "value": "InfoLinks_RelStructure"
-                  }
-                ]
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "LinkSequence_VersionStructure"
               }
             ]
           },
@@ -175922,7 +174137,7 @@
               {
                 "id": 1732,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1733,
@@ -176519,7 +174734,7 @@
               {
                 "id": 1732,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1733,
@@ -179263,7 +177478,7 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType",
+                "type": "TrainStopAssignments_RelStructure",
                 "is_repeated": true
               },
               {
@@ -179589,7 +177804,7 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType",
+                "type": "TrainStopAssignments_RelStructure",
                 "is_repeated": true
               },
               {
@@ -180110,54 +178325,6 @@
             ]
           },
           {
-            "name": "PathJunctionRefStructure",
-            "fields": [
-              {
-                "id": 5,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 6,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 11,
-                "name": "ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "value",
-                "type": "string"
-              }
-            ],
-            "reserved_ids": [
-              4,
-              2,
-              1,
-              8
-            ],
-            "reserved_names": [
-              "version_ref",
-              "modification",
-              "name_of_ref_class",
-              "name_of_member_class"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "PlaceRefStructure"
-              }
-            ]
-          },
-          {
             "name": "PathJunctionType",
             "fields": [
               {
@@ -180341,206 +178508,21 @@
             ]
           },
           {
-            "name": "PathJunction_VersionStructure",
-            "fields": [
-              {
-                "id": 2,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 304,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 305,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 41,
-                "name": "responsibility_set_ref",
-                "type": "string"
-              },
-              {
-                "id": 71,
-                "name": "key_list",
-                "type": "KeyListStructure"
-              },
-              {
-                "id": 72,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 73,
-                "name": "branding_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 161,
-                "name": "name",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 162,
-                "name": "location",
-                "type": "LocationStructure"
-              },
-              {
-                "id": 163,
-                "name": "point_number",
-                "type": "string"
-              },
-              {
-                "id": 164,
-                "name": "types",
-                "type": "TypeOfPointRefs_RelStructure"
-              },
-              {
-                "id": 165,
-                "name": "projections",
-                "type": "Projections_RelStructure"
-              },
-              {
-                "id": 166,
-                "name": "group_memberships",
-                "type": "GroupMembershipRefs_RelStructure"
-              },
-              {
-                "id": 281,
-                "name": "parent_zone_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 282,
-                "name": "public_use",
-                "type": "PublicUseEnumeration"
-              },
-              {
-                "id": 283,
-                "name": "covered",
-                "type": "CoveredEnumeration"
-              },
-              {
-                "id": 284,
-                "name": "gated",
-                "type": "GatedEnumeration"
-              },
-              {
-                "id": 285,
-                "name": "lighting",
-                "type": "LightingEnumeration"
-              },
-              {
-                "id": 286,
-                "name": "all_areas_wheelchair_accessible",
-                "type": "bool"
-              },
-              {
-                "id": 287,
-                "name": "person_capacity",
-                "type": "uint32"
-              },
-              {
-                "id": 278,
-                "name": "presentation",
-                "type": "PresentationStructure"
-              },
-              {
-                "id": 288,
-                "name": "facilities",
-                "type": "SiteFacilitySets_RelStructure"
-              },
-              {
-                "id": 301,
-                "name": "label",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 302,
-                "name": "site_component_ref",
-                "type": "VersionOfObjectRefStructure"
-              }
-            ],
-            "reserved_ids": [
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              303
-            ],
-            "reserved_names": [
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "Point_VersionStructure"
-              }
-            ]
-          },
-          {
             "name": "PathLinkEndStructure",
             "fields": [
               {
                 "id": 1,
                 "name": "place_ref",
                 "type": "GroupOfEntitiesRefStructure"
-              },
-              {
-                "id": 2,
-                "name": "level_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 3,
-                "name": "entrance_ref",
-                "type": "VersionOfObjectRefStructure"
               }
+            ],
+            "reserved_ids": [
+              2,
+              3
+            ],
+            "reserved_names": [
+              "level_ref",
+              "entrance_ref"
             ]
           },
           {
@@ -181123,52 +179105,6 @@
             ]
           },
           {
-            "name": "PathLinkRefStructure",
-            "fields": [
-              {
-                "id": 5,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 6,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 9,
-                "name": "ref",
-                "type": "string"
-              },
-              {
-                "id": 10,
-                "name": "value",
-                "type": "string"
-              }
-            ],
-            "reserved_ids": [
-              4,
-              2,
-              1
-            ],
-            "reserved_names": [
-              "version_ref",
-              "modification",
-              "name_of_ref_class"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "LinkRefStructure"
-              }
-            ]
-          },
-          {
             "name": "PathLinkType",
             "fields": [
               {
@@ -181270,12 +179206,12 @@
               {
                 "id": 281,
                 "name": "from",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 282,
                 "name": "to",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 283,
@@ -181291,18 +179227,6 @@
                 "id": 285,
                 "name": "accessibility_assessment",
                 "type": "AccessibilityAssessmentType"
-              },
-              {
-                "id": 291,
-                "name": "access_modes",
-                "type": "AccessModeEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
               },
               {
                 "id": 292,
@@ -181333,16 +179257,6 @@
                 "id": 297,
                 "name": "person_capacity",
                 "type": "uint32"
-              },
-              {
-                "id": 288,
-                "name": "presentation",
-                "type": "PresentationStructure"
-              },
-              {
-                "id": 298,
-                "name": "facilities",
-                "type": "SiteFacilitySets_RelStructure"
               },
               {
                 "id": 321,
@@ -181458,7 +179372,10 @@
               9,
               11,
               10,
-              403
+              403,
+              288,
+              298,
+              291
             ],
             "reserved_names": [
               "gradien_type",
@@ -181466,7 +179383,10 @@
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "presentation",
+              "facilities",
+              "access_modes"
             ],
             "options": [
               {
@@ -181518,359 +179438,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "PathLink_DerivedViewStructure"
-              }
-            ]
-          },
-          {
-            "name": "PathLink_DerivedViewStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "branding_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 41,
-                "name": "hide_link",
-                "type": "bool"
-              },
-              {
-                "id": 42,
-                "name": "hide_destination",
-                "type": "bool"
-              },
-              {
-                "id": 43,
-                "name": "show_entrance_separately",
-                "type": "bool"
-              },
-              {
-                "id": 44,
-                "name": "show_exit_separately",
-                "type": "bool"
-              },
-              {
-                "id": 45,
-                "name": "show_heading_separately",
-                "type": "bool"
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "DerivedViewStructure"
-              }
-            ]
-          },
-          {
-            "name": "PathLink_VersionStructure",
-            "fields": [
-              {
-                "id": 2,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 364,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 365,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 41,
-                "name": "responsibility_set_ref",
-                "type": "string"
-              },
-              {
-                "id": 71,
-                "name": "key_list",
-                "type": "KeyListStructure"
-              },
-              {
-                "id": 72,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 73,
-                "name": "branding_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 161,
-                "name": "name",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 162,
-                "name": "distance",
-                "type": "double"
-              },
-              {
-                "id": 163,
-                "name": "types",
-                "type": "LinkTypeRefs_RelStructure"
-              },
-              {
-                "id": 164,
-                "name": "line_string",
-                "type": "net.opengis.www.gml.v3_2.LineStringType"
-              },
-              {
-                "id": 165,
-                "name": "projections",
-                "type": "Projections_RelStructure"
-              },
-              {
-                "id": 166,
-                "name": "passing_through",
-                "type": "PointsOnLink_RelStructure"
-              },
-              {
-                "id": 281,
-                "name": "from",
-                "type": "PathLinkEndStructure"
-              },
-              {
-                "id": 282,
-                "name": "to",
-                "type": "PathLinkEndStructure"
-              },
-              {
-                "id": 283,
-                "name": "description",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 284,
-                "name": "accessibility_assessment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 285,
-                "name": "accessibility_assessment",
-                "type": "AccessibilityAssessmentType"
-              },
-              {
-                "id": 291,
-                "name": "access_modes",
-                "type": "AccessModeEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
-              },
-              {
-                "id": 292,
-                "name": "public_use",
-                "type": "PublicUseEnumeration"
-              },
-              {
-                "id": 293,
-                "name": "covered",
-                "type": "CoveredEnumeration"
-              },
-              {
-                "id": 294,
-                "name": "gated",
-                "type": "GatedEnumeration"
-              },
-              {
-                "id": 295,
-                "name": "lighting",
-                "type": "LightingEnumeration"
-              },
-              {
-                "id": 296,
-                "name": "all_areas_wheelchair_accessible",
-                "type": "bool"
-              },
-              {
-                "id": 297,
-                "name": "person_capacity",
-                "type": "uint32"
-              },
-              {
-                "id": 288,
-                "name": "presentation",
-                "type": "PresentationStructure"
-              },
-              {
-                "id": 298,
-                "name": "facilities",
-                "type": "SiteFacilitySets_RelStructure"
-              },
-              {
-                "id": 321,
-                "name": "towards",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 322,
-                "name": "back",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 323,
-                "name": "number_of_steps",
-                "type": "uint32"
-              },
-              {
-                "id": 324,
-                "name": "minimum_height",
-                "type": "double"
-              },
-              {
-                "id": 325,
-                "name": "minimum_width",
-                "type": "double"
-              },
-              {
-                "id": 326,
-                "name": "allowed_use",
-                "type": "PathDirectionEnumeration"
-              },
-              {
-                "id": 327,
-                "name": "transition",
-                "type": "TransitionEnumeration"
-              },
-              {
-                "id": 328,
-                "name": "gradient",
-                "type": "int32"
-              },
-              {
-                "id": 362,
-                "name": "gradient_type",
-                "type": "GradientEnumeration"
-              },
-              {
-                "id": 330,
-                "name": "tilt_angle",
-                "type": "int32"
-              },
-              {
-                "id": 331,
-                "name": "tilt_type",
-                "type": "TiltTypeEnumeration"
-              },
-              {
-                "id": 341,
-                "name": "access_feature_type",
-                "type": "AccessFeatureEnumeration"
-              },
-              {
-                "id": 342,
-                "name": "passage_type",
-                "type": "PassageTypeEnumeration"
-              },
-              {
-                "id": 343,
-                "name": "flooring_type",
-                "type": "FlooringTypeEnumeration"
-              },
-              {
-                "id": 344,
-                "name": "right_side_border",
-                "type": "BorderTypeEnumeration"
-              },
-              {
-                "id": 345,
-                "name": "left_side_border",
-                "type": "BorderTypeEnumeration"
-              },
-              {
-                "id": 346,
-                "name": "tactile_warning_strip",
-                "type": "TactileWarningStripEnumeration"
-              },
-              {
-                "id": 347,
-                "name": "tactile_guiding_strip",
-                "type": "bool"
-              },
-              {
-                "id": 351,
-                "name": "maximum_flow_per_minute",
-                "type": "uint32"
-              },
-              {
-                "id": 361,
-                "name": "transfer_duration",
-                "type": "TransferDurationStructure"
-              }
-            ],
-            "reserved_ids": [
-              329,
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              363
-            ],
-            "reserved_names": [
-              "gradien_type",
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "Link_VersionStructure"
               }
             ]
           },
@@ -188492,7 +186059,7 @@
               {
                 "id": 1752,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1753,
@@ -189770,7 +187337,7 @@
               {
                 "id": 1752,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1753,
@@ -198099,7 +195666,7 @@
               {
                 "id": 12,
                 "name": "background_colour",
-                "type": "bytes"
+                "type": "string"
               },
               {
                 "id": 5,
@@ -226703,11 +224270,6 @@
                 "type": "GroupOfEntitiesRefStructure"
               },
               {
-                "id": 421,
-                "name": "passing_time_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 422,
                 "name": "target_passing_time_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -226830,11 +224392,6 @@
               {
                 "id": 446,
                 "name": "type_of_flexible_service_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 447,
-                "name": "supply_contract_ref",
                 "type": "VersionOfObjectRefStructure"
               },
               {
@@ -228047,7 +225604,9 @@
               657,
               658,
               674,
-              723
+              723,
+              421,
+              447
             ],
             "reserved_names": [
               "data_source_ref_v",
@@ -228075,7 +225634,9 @@
               "security_policy_ref",
               "onboard_validity_ref",
               "trip_pattern_trip_ref",
-              "charging_equipment_profile_ref"
+              "charging_equipment_profile_ref",
+              "passing_time_ref",
+              "supply_contract_ref"
             ],
             "options": [
               {
@@ -235287,7 +232848,7 @@
               {
                 "id": 73,
                 "name": "connecting_journey_view",
-                "type": "ConnectingJourney_DerivedViewStructure"
+                "type": "ConnectingServiceJourney_DerivedViewStructure"
               },
               {
                 "id": 81,
@@ -246419,12 +243980,12 @@
               {
                 "id": 432,
                 "name": "path_links",
-                "type": "PathLinksInFrame_RelStructure"
+                "type": "SitePathLinksInFrame_RelStructure"
               },
               {
                 "id": 433,
                 "name": "path_junctions",
-                "type": "PathJunctionsInFrame_RelStructure"
+                "type": "SitePathJunctionsInFrame_RelStructure"
               },
               {
                 "id": 441,
@@ -246643,12 +244204,12 @@
               {
                 "id": 281,
                 "name": "from",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 282,
                 "name": "to",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 283,
@@ -246664,18 +244225,6 @@
                 "id": 285,
                 "name": "accessibility_assessment",
                 "type": "AccessibilityAssessmentType"
-              },
-              {
-                "id": 291,
-                "name": "access_modes",
-                "type": "AccessModeEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
               },
               {
                 "id": 292,
@@ -246706,16 +244255,6 @@
                 "id": 297,
                 "name": "person_capacity",
                 "type": "uint32"
-              },
-              {
-                "id": 288,
-                "name": "presentation",
-                "type": "PresentationStructure"
-              },
-              {
-                "id": 298,
-                "name": "facilities",
-                "type": "SiteFacilitySets_RelStructure"
               },
               {
                 "id": 321,
@@ -246871,7 +244410,10 @@
               9,
               11,
               10,
-              643
+              643,
+              288,
+              298,
+              291
             ],
             "reserved_names": [
               "gradien_type",
@@ -246879,7 +244421,10 @@
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "presentation",
+              "facilities",
+              "access_modes"
             ],
             "options": [
               {
@@ -246995,12 +244540,12 @@
               {
                 "id": 281,
                 "name": "from",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 282,
                 "name": "to",
-                "type": "PathLinkEndStructure"
+                "type": "SitePathLinkEndStructure"
               },
               {
                 "id": 283,
@@ -247016,18 +244561,6 @@
                 "id": 285,
                 "name": "accessibility_assessment",
                 "type": "AccessibilityAssessmentType"
-              },
-              {
-                "id": 291,
-                "name": "access_modes",
-                "type": "AccessModeEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
               },
               {
                 "id": 292,
@@ -247058,16 +244591,6 @@
                 "id": 297,
                 "name": "person_capacity",
                 "type": "uint32"
-              },
-              {
-                "id": 288,
-                "name": "presentation",
-                "type": "PresentationStructure"
-              },
-              {
-                "id": 298,
-                "name": "facilities",
-                "type": "SiteFacilitySets_RelStructure"
               },
               {
                 "id": 321,
@@ -247218,7 +244741,10 @@
               9,
               11,
               10,
-              613
+              613,
+              288,
+              298,
+              291
             ],
             "reserved_names": [
               "gradien_type",
@@ -247226,7 +244752,10 @@
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "presentation",
+              "facilities",
+              "access_modes"
             ],
             "options": [
               {
@@ -247465,12 +244994,12 @@
               {
                 "id": 432,
                 "name": "path_links",
-                "type": "PathLinksInFrame_RelStructure"
+                "type": "SitePathLinksInFrame_RelStructure"
               },
               {
                 "id": 433,
                 "name": "path_junctions",
-                "type": "PathJunctionsInFrame_RelStructure"
+                "type": "SitePathJunctionsInFrame_RelStructure"
               },
               {
                 "id": 441,
@@ -253000,52 +250529,6 @@
             ]
           },
           {
-            "name": "StopPathLinkRefStructure",
-            "fields": [
-              {
-                "id": 5,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 6,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 10,
-                "name": "ref",
-                "type": "string"
-              },
-              {
-                "id": 11,
-                "name": "value",
-                "type": "string"
-              }
-            ],
-            "reserved_ids": [
-              4,
-              2,
-              1
-            ],
-            "reserved_names": [
-              "version_ref",
-              "modification",
-              "name_of_ref_class"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "PathLinkRefStructure"
-              }
-            ]
-          },
-          {
             "name": "StopPlaceComponent_VersionStructure",
             "fields": [
               {
@@ -255441,7 +252924,7 @@
               {
                 "id": 1812,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1813,
@@ -257168,7 +254651,7 @@
               {
                 "id": 1812,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1813,
@@ -260397,11 +257880,6 @@
                 "type": "google.type.TimeOfDay"
               },
               {
-                "id": 452,
-                "name": "passing_day_offset",
-                "type": "int32"
-              },
-              {
                 "id": 471,
                 "name": "aimed_headway",
                 "type": "HeadwayIntervalStructure"
@@ -260490,7 +257968,8 @@
               11,
               10,
               504,
-              503
+              503,
+              452
             ],
             "reserved_names": [
               "data_source_ref",
@@ -260498,7 +257977,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "passing_day_offset"
             ],
             "options": [
               {
@@ -260617,11 +258097,6 @@
                 "type": "google.type.TimeOfDay"
               },
               {
-                "id": 332,
-                "name": "passing_day_offset",
-                "type": "int32"
-              },
-              {
                 "id": 351,
                 "name": "aimed_headway",
                 "type": "HeadwayIntervalStructure"
@@ -260634,14 +258109,16 @@
               9,
               11,
               10,
-              352
+              352,
+              332
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "passing_day_offset"
             ],
             "options": [
               {
@@ -260750,11 +258227,6 @@
                 "type": "google.type.TimeOfDay"
               },
               {
-                "id": 452,
-                "name": "passing_day_offset",
-                "type": "int32"
-              },
-              {
                 "id": 471,
                 "name": "aimed_headway",
                 "type": "HeadwayIntervalStructure"
@@ -260838,7 +258310,8 @@
               11,
               10,
               474,
-              473
+              473,
+              452
             ],
             "reserved_names": [
               "data_source_ref",
@@ -260846,7 +258319,8 @@
               "modification",
               "compatible_with_version_frame_version_ref",
               "publication",
-              "dated_service_journey_ref"
+              "dated_service_journey_ref",
+              "passing_day_offset"
             ],
             "options": [
               {
@@ -260965,11 +258439,6 @@
                 "type": "google.type.TimeOfDay"
               },
               {
-                "id": 332,
-                "name": "passing_day_offset",
-                "type": "int32"
-              },
-              {
                 "id": 351,
                 "name": "aimed_headway",
                 "type": "HeadwayIntervalStructure"
@@ -260982,14 +258451,16 @@
               9,
               11,
               10,
-              352
+              352,
+              332
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "passing_day_offset"
             ],
             "options": [
               {
@@ -263538,7 +261009,7 @@
               {
                 "id": 1822,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1823,
@@ -264131,7 +261602,7 @@
               {
                 "id": 1822,
                 "name": "path_junctions",
-                "type": "PathJunctions_RelStructure"
+                "type": "SitePathJunctions_RelStructure"
               },
               {
                 "id": 1823,
@@ -280490,7 +277961,7 @@
               {
                 "id": 46,
                 "name": "train_element_type",
-                "type": "TrainElementTypeEnumeration"
+                "type": "TrainElementTypeTypeEnumeration"
               }
             ],
             "options": [
@@ -280559,7 +278030,7 @@
               {
                 "id": 46,
                 "name": "train_element_type",
-                "type": "TrainElementTypeEnumeration"
+                "type": "TrainElementTypeTypeEnumeration"
               }
             ],
             "options": [
@@ -280709,52 +278180,6 @@
             ]
           },
           {
-            "name": "TrainElementRefStructure",
-            "fields": [
-              {
-                "id": 5,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 6,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "ref",
-                "type": "string"
-              },
-              {
-                "id": 9,
-                "name": "value",
-                "type": "string"
-              }
-            ],
-            "reserved_ids": [
-              4,
-              2,
-              1
-            ],
-            "reserved_names": [
-              "version_ref",
-              "modification",
-              "name_of_ref_class"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "VersionOfObjectRefStructure"
-              }
-            ]
-          },
-          {
             "name": "TrainElementType",
             "fields": [
               {
@@ -280834,14 +278259,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 153,
-                "name": "private_code",
-                "type": "PrivateCodeStructure"
-              },
-              {
                 "id": 163,
                 "name": "train_element_type",
-                "type": "TrainElementTypeEnumeration"
+                "type": "TrainElementTypeTypeEnumeration"
               },
               {
                 "id": 164,
@@ -280874,11 +278294,6 @@
                 "id": 168,
                 "name": "width",
                 "type": "double"
-              },
-              {
-                "id": 169,
-                "name": "train_size",
-                "type": "TrainSizeStructure"
               },
               {
                 "id": 170,
@@ -280903,184 +278318,23 @@
               9,
               11,
               10,
-              202
+              202,
+              153,
+              169
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "private_code",
+              "train_size"
             ],
             "options": [
               {
                 "name": "(xsd.base_type)",
                 "value": "TrainElement_VersionStructure"
-              }
-            ]
-          },
-          {
-            "name": "TrainElement_VersionStructure",
-            "fields": [
-              {
-                "id": 2,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 4,
-                "name": "created",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 5,
-                "name": "changed",
-                "type": "google.protobuf.Timestamp"
-              },
-              {
-                "id": 7,
-                "name": "version",
-                "type": "string"
-              },
-              {
-                "id": 8,
-                "name": "status",
-                "type": "StatusEnumeration"
-              },
-              {
-                "id": 173,
-                "name": "derived_from_version_ref",
-                "type": "string"
-              },
-              {
-                "id": 174,
-                "name": "derived_from_object_ref",
-                "type": "string"
-              },
-              {
-                "id": 12,
-                "name": "validity_conditions",
-                "type": "ValidityConditions_RelStructure"
-              },
-              {
-                "id": 13,
-                "name": "valid_between",
-                "type": "ValidBetweenType",
-                "is_repeated": true
-              },
-              {
-                "id": 21,
-                "name": "alternative_texts",
-                "type": "AlternativeTexts_RelStructure"
-              },
-              {
-                "id": 41,
-                "name": "responsibility_set_ref",
-                "type": "string"
-              },
-              {
-                "id": 71,
-                "name": "key_list",
-                "type": "KeyListStructure"
-              },
-              {
-                "id": 72,
-                "name": "extensions",
-                "type": "ExtensionsStructure"
-              },
-              {
-                "id": 73,
-                "name": "branding_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 161,
-                "name": "name",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 162,
-                "name": "description",
-                "type": "MultilingualString"
-              },
-              {
-                "id": 153,
-                "name": "private_code",
-                "type": "PrivateCodeStructure"
-              },
-              {
-                "id": 163,
-                "name": "train_element_type",
-                "type": "TrainElementTypeEnumeration"
-              },
-              {
-                "id": 164,
-                "name": "fare_classes",
-                "type": "FareClassEnumeration",
-                "is_repeated": true,
-                "options": [
-                  {
-                    "name": "packed",
-                    "value": "true"
-                  }
-                ]
-              },
-              {
-                "id": 165,
-                "name": "passenger_capacity",
-                "type": "PassengerCapacityStructure"
-              },
-              {
-                "id": 166,
-                "name": "capacities",
-                "type": "PassengerCapacities_RelStructure"
-              },
-              {
-                "id": 167,
-                "name": "length",
-                "type": "double"
-              },
-              {
-                "id": 168,
-                "name": "width",
-                "type": "double"
-              },
-              {
-                "id": 169,
-                "name": "train_size",
-                "type": "TrainSizeStructure"
-              },
-              {
-                "id": 170,
-                "name": "facilities",
-                "type": "ServiceFacilitySets_RelStructure"
-              },
-              {
-                "id": 171,
-                "name": "equipments",
-                "type": "Equipments_RelStructure"
-              }
-            ],
-            "reserved_ids": [
-              3,
-              1,
-              6,
-              9,
-              11,
-              10,
-              172
-            ],
-            "reserved_names": [
-              "data_source_ref",
-              "name_of_class",
-              "modification",
-              "compatible_with_version_frame_version_ref",
-              "publication"
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "DataManagedObjectStructure"
               }
             ]
           },
@@ -313628,7 +310882,7 @@
               {
                 "id": 162,
                 "name": "values",
-                "type": "TypesOfValueStructure"
+                "type": "TypesOfValue_RelStructure"
               },
               {
                 "id": 191,
@@ -313746,7 +311000,7 @@
               {
                 "id": 162,
                 "name": "values",
-                "type": "TypesOfValueStructure"
+                "type": "TypesOfValue_RelStructure"
               }
             ],
             "reserved_ids": [
@@ -317413,7 +314667,7 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType",
+                "type": "TrainStopAssignments_RelStructure",
                 "is_repeated": true
               },
               {
@@ -317634,7 +314888,7 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType",
+                "type": "TrainStopAssignments_RelStructure",
                 "is_repeated": true
               },
               {
@@ -335459,11 +332713,6 @@
                 "type": "uint32"
               },
               {
-                "id": 304,
-                "name": "vehicle_type_preference_ref",
-                "type": "VehicleTypePreferenceRefType"
-              },
-              {
                 "id": 331,
                 "name": "id",
                 "type": "string"
@@ -335486,14 +332735,16 @@
               9,
               11,
               10,
-              332
+              332,
+              304
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "vehicle_type_preference_ref"
             ],
             "options": [
               {
@@ -335592,11 +332843,6 @@
                 "type": "uint32"
               },
               {
-                "id": 304,
-                "name": "vehicle_type_preference_ref",
-                "type": "VehicleTypePreferenceRefType"
-              },
-              {
                 "id": 302,
                 "name": "day_type_ref",
                 "type": "VersionOfObjectRefStructure"
@@ -335614,14 +332860,16 @@
               9,
               11,
               10,
-              305
+              305,
+              304
             ],
             "reserved_names": [
               "data_source_ref",
               "name_of_class",
               "modification",
               "compatible_with_version_frame_version_ref",
-              "publication"
+              "publication",
+              "vehicle_type_preference_ref"
             ],
             "options": [
               {
@@ -342874,33 +340122,6 @@
               "dated_call_z",
               "callu"
             ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_VersionedChildStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "call",
-                    "type": "CallType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "call_z",
-                    "type": "CallZType"
-                  },
-                  {
-                    "id": 3,
-                    "name": "dated_call",
-                    "type": "DatedCallType"
-                  },
-                  {
-                    "id": 4,
-                    "name": "dated_call_z",
-                    "type": "DatedCallZType"
-                  }
-                ]
-              }
-            ],
             "options": [
               {
                 "name": "(xsd.base_type)",
@@ -344878,45 +342099,6 @@
             ]
           },
           {
-            "name": "ConsumptionRequirements_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "consumption_requirementu",
-                "type": "ChoiceWrapper_VersionedChildStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_VersionedChildStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "access_right_in_product_consumption_requirement",
-                    "type": "AccessRightInProductConsumptionRequirementType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "customer_purchase_package_element_consumption_requirement",
-                    "type": "CustomerPurchasePackageElementConsumptionRequirementType"
-                  }
-                ]
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "StrictContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
             "name": "ContactRefs_RelStructure",
             "fields": [
               {
@@ -345445,33 +342627,6 @@
             ]
           },
           {
-            "name": "CrossConstraints_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "cross_constraint",
-                "type": "CrossConstraintType",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
             "name": "CustomerAccountRefs_RelStructure",
             "fields": [
               {
@@ -345987,33 +343142,6 @@
             ]
           },
           {
-            "name": "CustomerPurchaseParameterAssignmentRefs_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "customer_purchase_parameter_assignment_ref",
-                "type": "VersionOfObjectRefStructure",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
             "name": "CustomerPurchaseParameterAssignments_RelStructure",
             "fields": [
               {
@@ -346218,28 +343346,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "DatedCalls_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "dated_call",
-                "type": "DatedCallType",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "StrictContainmentAggregationStructure"
               }
             ]
           },
@@ -347085,33 +344191,6 @@
             ]
           },
           {
-            "name": "DistributionAssignmentRefs_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "distribution_assignment_ref",
-                "type": "VersionOfObjectRefStructure",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "OneToManyRelationshipStructure"
-              }
-            ]
-          },
-          {
             "name": "DistributionAssignmentsInFrame_RelStructure",
             "fields": [
               {
@@ -347776,72 +344855,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "OneToManyRelationshipStructure"
-              }
-            ]
-          },
-          {
-            "name": "ElementConsumptionPolicies_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "element_consumption_policy",
-                "type": "ElementConsumptionPolicyType",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "StrictContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "ElementConsumptions_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "element_consumptionu",
-                "type": "ChoiceWrapper_VersionedChildStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_VersionedChildStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "access_right_in_product_consumption",
-                    "type": "AccessRightInProductConsumptionType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "customer_purchase_package_element_consumption",
-                    "type": "CustomerPurchasePackageElementConsumptionType"
-                  }
-                ]
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
               }
             ]
           },
@@ -350803,7 +347816,7 @@
                   {
                     "id": 380,
                     "name": "fare_table_in_context",
-                    "type": "FareTable_VersionStructure"
+                    "type": "FareTableInContextType"
                   },
                   {
                     "id": 381,
@@ -351601,11 +348614,6 @@
                     "type": "VehicleMeetingLinkType"
                   },
                   {
-                    "id": 587,
-                    "name": "vehicle_meeting_placeu",
-                    "type": "AddressablePlace_VersionStructure"
-                  },
-                  {
                     "id": 588,
                     "name": "vehicle_meeting_place",
                     "type": "VehicleMeetingPlaceType"
@@ -351636,11 +348644,6 @@
                     "type": "VehiclePoolingParkingBayType"
                   },
                   {
-                    "id": 594,
-                    "name": "vehicle_meeting_point_assignmentu",
-                    "type": "VehicleMeetingPointAssignment_Type"
-                  },
-                  {
                     "id": 595,
                     "name": "vehicle_meeting_point_assignment",
                     "type": "VehicleMeetingPointAssignmentType"
@@ -351649,11 +348652,6 @@
                     "id": 596,
                     "name": "dynamic_vehicle_meeting_point_assignment",
                     "type": "DynamicVehicleMeetingPointAssignmentType"
-                  },
-                  {
-                    "id": 597,
-                    "name": "vehicle_service_place_assignmentu",
-                    "type": "VehicleServicePlaceAssignment_Type"
                   },
                   {
                     "id": 598,
@@ -351970,7 +348968,10 @@
                   544,
                   545,
                   546,
-                  636
+                  636,
+                  587,
+                  594,
+                  597
                 ],
                 "reserved_names": [
                   "sign_equipment",
@@ -352001,7 +349002,10 @@
                   "onboard_validity",
                   "travel_document_provider",
                   "travel_document_risk_policy",
-                  "charging_equipment_profile"
+                  "charging_equipment_profile",
+                  "vehicle_meeting_placeu",
+                  "vehicle_meeting_point_assignmentu",
+                  "vehicle_service_place_assignmentu"
                 ]
               }
             ],
@@ -353386,11 +350390,6 @@
                     "type": "GroupOfEntitiesRefStructure"
                   },
                   {
-                    "id": 260,
-                    "name": "passing_time_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 261,
                     "name": "target_passing_time_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -353513,11 +350512,6 @@
                   {
                     "id": 285,
                     "name": "type_of_flexible_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 286,
-                    "name": "supply_contract_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
@@ -354747,7 +351741,9 @@
                   484,
                   485,
                   523,
-                  564
+                  564,
+                  260,
+                  286
                 ],
                 "reserved_names": [
                   "customer_eligibility_ref",
@@ -354770,7 +351766,9 @@
                   "security_policy_ref",
                   "onboard_validity_ref",
                   "trip_pattern_trip_ref",
-                  "charging_equipment_profile_ref"
+                  "charging_equipment_profile_ref",
+                  "passing_time_ref",
+                  "supply_contract_ref"
                 ]
               }
             ],
@@ -355989,7 +352987,7 @@
                   {
                     "id": 70,
                     "name": "other_place_equipment",
-                    "type": "PlaceEquipment_VersionStructure"
+                    "type": "OtherPlaceEquipmentType"
                   },
                   {
                     "id": 3,
@@ -356727,7 +353725,7 @@
                   {
                     "id": 1,
                     "name": "other_place_equipment",
-                    "type": "PlaceEquipment_VersionStructure"
+                    "type": "OtherPlaceEquipmentType"
                   },
                   {
                     "id": 2,
@@ -358225,7 +355223,7 @@
                   {
                     "id": 2,
                     "name": "fare_table_in_context",
-                    "type": "FareTable_VersionStructure"
+                    "type": "FareTableInContextType"
                   },
                   {
                     "id": 3,
@@ -358279,7 +355277,7 @@
                   {
                     "id": 4,
                     "name": "fare_table_in_context",
-                    "type": "FareTable_VersionStructure"
+                    "type": "FareTableInContextType"
                   },
                   {
                     "id": 5,
@@ -360108,7 +357106,7 @@
                   {
                     "id": 57,
                     "name": "fare_table_in_context",
-                    "type": "FareTable_VersionStructure"
+                    "type": "FareTableInContextType"
                   },
                   {
                     "id": 58,
@@ -360129,11 +357127,6 @@
                     "id": 63,
                     "name": "group_of_tariff_zones",
                     "type": "GroupOfTariffZonesType"
-                  },
-                  {
-                    "id": 67,
-                    "name": "vehicle_meeting_placeu",
-                    "type": "AddressablePlace_VersionStructure"
                   },
                   {
                     "id": 68,
@@ -360203,11 +357196,13 @@
                 ],
                 "reserved_ids": [
                   61,
-                  64
+                  64,
+                  67
                 ],
                 "reserved_names": [
                   "group_of_distribution_assignments",
-                  "group_of_customer_purchase_parameter_assignments"
+                  "group_of_customer_purchase_parameter_assignments",
+                  "vehicle_meeting_placeu"
                 ]
               }
             ],
@@ -360509,33 +357504,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "OneToManyRelationshipStructure"
-              }
-            ]
-          },
-          {
-            "name": "GroupsOfCustomerPurchaseParameterAssignments_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "group_of_customer_purchase_parameter_assignments",
-                "type": "GroupOfCustomerPurchaseParameterAssignmentsType",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
               }
             ]
           },
@@ -361898,39 +358866,6 @@
                 "id": 2,
                 "name": "modification_set",
                 "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "choice_wrapper",
-                "type": "ChoiceWrapper_JourneyPatternsInFrame_RelStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_JourneyPatternsInFrame_RelStructure",
-                "fields": [
-                  {
-                    "id": 4,
-                    "name": "journey_pattern_view",
-                    "type": "JourneyPattern_DerivedViewStructure"
-                  },
-                  {
-                    "id": 1,
-                    "name": "journey_pattern",
-                    "type": "JourneyPatternType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "dead_run_journey_pattern",
-                    "type": "DeadRunJourneyPatternType"
-                  },
-                  {
-                    "id": 3,
-                    "name": "service_journey_pattern",
-                    "type": "ServiceJourneyPatternType"
-                  }
-                ]
               }
             ],
             "options": [
@@ -361938,6 +358873,12 @@
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
               }
+            ],
+            "reserved_ids": [
+              3
+            ],
+            "reserved_names": [
+              "choice_wrapper"
             ]
           },
           {
@@ -362357,12 +359298,6 @@
                 "id": 2,
                 "name": "modification_set",
                 "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "line_in_direction_ref",
-                "type": "LineInDirectionReference",
-                "is_repeated": true
               }
             ],
             "options": [
@@ -362370,6 +359305,12 @@
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
               }
+            ],
+            "reserved_ids": [
+              3
+            ],
+            "reserved_names": [
+              "line_in_direction_ref"
             ]
           },
           {
@@ -363616,33 +360557,6 @@
             ]
           },
           {
-            "name": "NavigationPathRefs_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "navigation_path_ref",
-                "type": "VersionOfObjectRefStructure",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "OneToManyRelationshipStructure"
-              }
-            ]
-          },
-          {
             "name": "NavigationPathsInFrame_RelStructure",
             "fields": [
               {
@@ -363654,12 +360568,6 @@
                 "id": 2,
                 "name": "modification_set",
                 "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "navigation_path",
-                "type": "NavigationPathType",
-                "is_repeated": true
               }
             ],
             "options": [
@@ -363667,6 +360575,12 @@
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
               }
+            ],
+            "reserved_ids": [
+              3
+            ],
+            "reserved_names": [
+              "navigation_path"
             ]
           },
           {
@@ -366207,11 +363121,6 @@
                     "type": "GroupOfEntitiesRefStructure"
                   },
                   {
-                    "id": 260,
-                    "name": "passing_time_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 261,
                     "name": "target_passing_time_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -366334,11 +363243,6 @@
                   {
                     "id": 285,
                     "name": "type_of_flexible_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 286,
-                    "name": "supply_contract_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
@@ -367513,7 +364417,9 @@
                   471,
                   472,
                   523,
-                  553
+                  553,
+                  260,
+                  286
                 ],
                 "reserved_names": [
                   "customer_eligibility_ref",
@@ -367536,7 +364442,9 @@
                   "security_policy_ref",
                   "onboard_validity_ref",
                   "trip_pattern_trip_ref",
-                  "charging_equipment_profile_ref"
+                  "charging_equipment_profile_ref",
+                  "passing_time_ref",
+                  "supply_contract_ref"
                 ]
               }
             ],
@@ -369001,12 +365909,6 @@
                 "id": 2,
                 "name": "modification_set",
                 "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "parking",
-                "type": "ParkingType",
-                "is_repeated": true
               }
             ],
             "options": [
@@ -369014,6 +365916,12 @@
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
               }
+            ],
+            "reserved_ids": [
+              3
+            ],
+            "reserved_names": [
+              "parking"
             ]
           },
           {
@@ -369294,148 +366202,6 @@
                     "type": "TemplateServiceJourneyType"
                   }
                 ]
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "PathJunctionsInFrame_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "path_junction",
-                "type": "PathJunctionType",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "PathJunctions_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "choice_wrapper",
-                "type": "ChoiceWrapper_PathJunctions_RelStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_PathJunctions_RelStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "path_junction_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 2,
-                    "name": "path_junction",
-                    "type": "PathJunctionType"
-                  }
-                ]
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "PathLinkRefs_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "choice_wrapper",
-                "type": "ChoiceWrapper_PathLinkRefs_RelStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_PathLinkRefs_RelStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "path_link_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 2,
-                    "name": "path_link_ref_by_value",
-                    "type": "PathLinkRefByValueStructure"
-                  }
-                ]
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "OneToManyRelationshipStructure"
-              }
-            ]
-          },
-          {
-            "name": "PathLinksInFrame_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "path_link",
-                "type": "PathLinkType",
-                "is_repeated": true
               }
             ],
             "options": [
@@ -372696,16 +369462,6 @@
                 "id": 2,
                 "name": "modification_set",
                 "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 4,
-                "name": "fare_scheduled_stop_point_ref",
-                "type": "VersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -372713,6 +369469,14 @@
                 "name": "(xsd.base_type)",
                 "value": "OneToManyRelationshipStructure"
               }
+            ],
+            "reserved_ids": [
+              3,
+              4
+            ],
+            "reserved_names": [
+              "scheduled_stop_point_ref",
+              "fare_scheduled_stop_point_ref"
             ]
           },
           {
@@ -373773,15 +370537,16 @@
                 "name": "ChoiceWrapper_SitePathLinks_RelStructure",
                 "fields": [
                   {
-                    "id": 1,
-                    "name": "path_link_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 2,
                     "name": "site_path_link",
                     "type": "SitePathLinkType"
                   }
+                ],
+                "reserved_ids": [
+                  1
+                ],
+                "reserved_names": [
+                  "path_link_ref"
                 ]
               }
             ],
@@ -374327,23 +371092,6 @@
             ],
             "reserved_names": [
               "stop_placeu"
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_Site_VersionStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "stop_place",
-                    "type": "StopPlaceType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "taxi_rank",
-                    "type": "TaxiRankType"
-                  }
-                ]
-              }
             ],
             "options": [
               {
@@ -376636,33 +373384,6 @@
             ]
           },
           {
-            "name": "TypeOfCustomerAccountEntryRefs_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "type_of_customer_account_entry_ref",
-                "type": "TypeOfCustomerAccountEntryRefStructure",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "OneToManyRelationshipStructure"
-              }
-            ]
-          },
-          {
             "name": "TypeOfCustomerAccountRefs_RelStructure",
             "fields": [
               {
@@ -378543,525 +375264,6 @@
             ]
           },
           {
-            "name": "TypesOfValueStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 65,
-                "name": "type_of_value",
-                "type": "ChoiceWrapper_TypeOfValue_VersionStructure",
-                "is_repeated": true
-              }
-            ],
-            "reserved_ids": [
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11,
-              12,
-              13,
-              14,
-              15,
-              16,
-              17,
-              18,
-              19,
-              20,
-              21,
-              22,
-              23,
-              24,
-              25,
-              26,
-              27,
-              28,
-              29,
-              30,
-              31,
-              32,
-              33,
-              34,
-              35,
-              36,
-              37,
-              38,
-              39,
-              40,
-              41,
-              42,
-              43,
-              44,
-              45,
-              46,
-              47,
-              48,
-              49,
-              50,
-              51,
-              52,
-              53,
-              54,
-              55,
-              56,
-              57,
-              58,
-              59,
-              60,
-              61,
-              62,
-              63,
-              64
-            ],
-            "reserved_names": [
-              "type_of_version",
-              "type_of_entity",
-              "data_source",
-              "branding",
-              "type_of_responsibility_role",
-              "purpose_of_grouping",
-              "type_of_frame",
-              "type_of_validity",
-              "type_of_projection",
-              "type_of_point",
-              "type_of_link",
-              "type_of_zone",
-              "type_of_codespace_assignment",
-              "type_of_organisation",
-              "type_of_organisation_part",
-              "type_of_operation",
-              "type_of_transfer",
-              "type_of_place",
-              "type_of_link_sequence",
-              "type_of_feature",
-              "open_transport_mode",
-              "submode",
-              "type_of_equipment",
-              "class_of_use",
-              "type_of_payment_method",
-              "type_of_service",
-              "type_of_product_category",
-              "type_of_facility",
-              "type_of_notice",
-              "type_of_delivery_variant",
-              "type_of_security_list",
-              "purpose_of_equipment_profile",
-              "type_of_activation",
-              "type_of_line",
-              "direction",
-              "type_of_journey_pattern",
-              "type_of_congestion",
-              "type_of_passenger_information_equipment",
-              "type_of_time_demand_type",
-              "point_of_interest_classification",
-              "type_of_service_feature",
-              "purpose_of_journey_partition",
-              "timing_algorithm_type",
-              "type_of_flexible_service",
-              "price_unit",
-              "type_of_pricing_rule",
-              "type_of_fare_table",
-              "type_of_fare_structure_factor",
-              "type_of_usage_parameter",
-              "type_of_access_right_assignment",
-              "type_of_tariff",
-              "type_of_fare_structure_element",
-              "type_of_fare_product",
-              "charging_moment",
-              "type_of_concession",
-              "type_of_sales_offer_package",
-              "type_of_travel_document",
-              "type_of_machine_readability",
-              "type_of_fare_contract",
-              "type_of_fare_contract_entry",
-              "type_of_customer_account",
-              "customer_account_status",
-              "type_of_retail_device"
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_TypeOfValue_VersionStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "type_of_version",
-                    "type": "TypeOfVersionType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "type_of_entity",
-                    "type": "TypeOfEntity_VersionStructure"
-                  },
-                  {
-                    "id": 3,
-                    "name": "data_source",
-                    "type": "DataSourceType"
-                  },
-                  {
-                    "id": 4,
-                    "name": "branding",
-                    "type": "BrandingType"
-                  },
-                  {
-                    "id": 5,
-                    "name": "type_of_responsibility_role",
-                    "type": "TypeOfResponsibilityRoleType"
-                  },
-                  {
-                    "id": 6,
-                    "name": "purpose_of_grouping",
-                    "type": "PurposeOfGroupingType"
-                  },
-                  {
-                    "id": 7,
-                    "name": "type_of_frame",
-                    "type": "TypeOfFrameType"
-                  },
-                  {
-                    "id": 8,
-                    "name": "type_of_validity",
-                    "type": "TypeOfValidityType"
-                  },
-                  {
-                    "id": 9,
-                    "name": "type_of_projection",
-                    "type": "TypeOfProjectionType"
-                  },
-                  {
-                    "id": 10,
-                    "name": "type_of_point",
-                    "type": "TypeOfPointType"
-                  },
-                  {
-                    "id": 11,
-                    "name": "type_of_link",
-                    "type": "TypeOfLinkType"
-                  },
-                  {
-                    "id": 12,
-                    "name": "type_of_zone",
-                    "type": "TypeOfZoneType"
-                  },
-                  {
-                    "id": 13,
-                    "name": "type_of_codespace_assignment",
-                    "type": "TypeOfCodespaceAssignmentType"
-                  },
-                  {
-                    "id": 14,
-                    "name": "type_of_organisation",
-                    "type": "TypeOfOrganisationType"
-                  },
-                  {
-                    "id": 15,
-                    "name": "type_of_organisation_part",
-                    "type": "TypeOfOrganisationPartType"
-                  },
-                  {
-                    "id": 16,
-                    "name": "type_of_operation",
-                    "type": "TypeOfOperationType"
-                  },
-                  {
-                    "id": 17,
-                    "name": "type_of_transfer",
-                    "type": "TypeOfTransferType"
-                  },
-                  {
-                    "id": 18,
-                    "name": "type_of_place",
-                    "type": "TypeOfPlaceType"
-                  },
-                  {
-                    "id": 19,
-                    "name": "type_of_link_sequence",
-                    "type": "TypeOfLinkSequenceType"
-                  },
-                  {
-                    "id": 20,
-                    "name": "type_of_feature",
-                    "type": "TypeOfFeatureType"
-                  },
-                  {
-                    "id": 21,
-                    "name": "open_transport_mode",
-                    "type": "OpenTransportModeType"
-                  },
-                  {
-                    "id": 22,
-                    "name": "submode",
-                    "type": "SubmodeType"
-                  },
-                  {
-                    "id": 23,
-                    "name": "type_of_equipment",
-                    "type": "TypeOfEquipmentType"
-                  },
-                  {
-                    "id": 24,
-                    "name": "class_of_use",
-                    "type": "ClassOfUseType"
-                  },
-                  {
-                    "id": 25,
-                    "name": "type_of_payment_method",
-                    "type": "TypeOfPaymentMethodType"
-                  },
-                  {
-                    "id": 26,
-                    "name": "type_of_service",
-                    "type": "TypeOfServiceType"
-                  },
-                  {
-                    "id": 27,
-                    "name": "type_of_product_category",
-                    "type": "TypeOfProductCategoryType"
-                  },
-                  {
-                    "id": 28,
-                    "name": "type_of_facility",
-                    "type": "TypeOfFacilityType"
-                  },
-                  {
-                    "id": 29,
-                    "name": "type_of_notice",
-                    "type": "TypeOfNoticeType"
-                  },
-                  {
-                    "id": 30,
-                    "name": "type_of_delivery_variant",
-                    "type": "TypeOfDeliveryVariantType"
-                  },
-                  {
-                    "id": 31,
-                    "name": "type_of_security_list",
-                    "type": "TypeOfSecurityListType"
-                  },
-                  {
-                    "id": 32,
-                    "name": "purpose_of_equipment_profile",
-                    "type": "PurposeOfEquipmentProfileType"
-                  },
-                  {
-                    "id": 33,
-                    "name": "type_of_activation",
-                    "type": "TypeOfActivationType"
-                  },
-                  {
-                    "id": 34,
-                    "name": "type_of_line",
-                    "type": "TypeOfLineType"
-                  },
-                  {
-                    "id": 35,
-                    "name": "direction",
-                    "type": "DirectionType"
-                  },
-                  {
-                    "id": 36,
-                    "name": "type_of_journey_pattern",
-                    "type": "TypeOfJourneyPatternType"
-                  },
-                  {
-                    "id": 37,
-                    "name": "type_of_congestion",
-                    "type": "TypeOfCongestionType"
-                  },
-                  {
-                    "id": 38,
-                    "name": "type_of_passenger_information_equipment",
-                    "type": "TypeOfPassengerInformationEquipmentType"
-                  },
-                  {
-                    "id": 39,
-                    "name": "type_of_time_demand_type",
-                    "type": "TypeOfTimeDemandTypeType"
-                  },
-                  {
-                    "id": 40,
-                    "name": "point_of_interest_classification",
-                    "type": "PointOfInterestClassificationType"
-                  },
-                  {
-                    "id": 41,
-                    "name": "type_of_service_feature",
-                    "type": "TypeOfServiceFeatureType"
-                  },
-                  {
-                    "id": 42,
-                    "name": "purpose_of_journey_partition",
-                    "type": "PurposeOfJourneyPartitionType"
-                  },
-                  {
-                    "id": 43,
-                    "name": "timing_algorithm_type",
-                    "type": "TimingAlgorithmTypeType"
-                  },
-                  {
-                    "id": 44,
-                    "name": "type_of_flexible_service",
-                    "type": "TypeOfFlexibleServiceType"
-                  },
-                  {
-                    "id": 45,
-                    "name": "price_unit",
-                    "type": "PriceUnitType"
-                  },
-                  {
-                    "id": 46,
-                    "name": "type_of_pricing_rule",
-                    "type": "TypeOfPricingRuleType"
-                  },
-                  {
-                    "id": 47,
-                    "name": "type_of_fare_table",
-                    "type": "TypeOfFareTableType"
-                  },
-                  {
-                    "id": 48,
-                    "name": "type_of_fare_structure_factor",
-                    "type": "TypeOfFareStructureFactorType"
-                  },
-                  {
-                    "id": 49,
-                    "name": "type_of_usage_parameter",
-                    "type": "TypeOfUsageParameterType"
-                  },
-                  {
-                    "id": 50,
-                    "name": "type_of_access_right_assignment",
-                    "type": "TypeOfAccessRightAssignmentType"
-                  },
-                  {
-                    "id": 51,
-                    "name": "type_of_tariff",
-                    "type": "TypeOfTariffType"
-                  },
-                  {
-                    "id": 52,
-                    "name": "type_of_fare_structure_element",
-                    "type": "TypeOfFareStructureElementType"
-                  },
-                  {
-                    "id": 53,
-                    "name": "type_of_fare_product",
-                    "type": "TypeOfFareProductType"
-                  },
-                  {
-                    "id": 54,
-                    "name": "charging_moment",
-                    "type": "ChargingMomentType"
-                  },
-                  {
-                    "id": 55,
-                    "name": "type_of_concession",
-                    "type": "TypeOfConcessionType"
-                  },
-                  {
-                    "id": 56,
-                    "name": "type_of_sales_offer_package",
-                    "type": "TypeOfSalesOfferPackageType"
-                  },
-                  {
-                    "id": 57,
-                    "name": "type_of_travel_document",
-                    "type": "TypeOfTravelDocumentType"
-                  },
-                  {
-                    "id": 58,
-                    "name": "type_of_machine_readability",
-                    "type": "TypeOfMachineReadabilityType"
-                  },
-                  {
-                    "id": 59,
-                    "name": "type_of_fare_contract",
-                    "type": "TypeOfFareContractType"
-                  },
-                  {
-                    "id": 60,
-                    "name": "type_of_fare_contract_entry",
-                    "type": "TypeOfFareContractEntryType"
-                  },
-                  {
-                    "id": 61,
-                    "name": "type_of_customer_account",
-                    "type": "TypeOfCustomerAccountType"
-                  },
-                  {
-                    "id": 62,
-                    "name": "customer_account_status",
-                    "type": "CustomerAccountStatusType"
-                  },
-                  {
-                    "id": 63,
-                    "name": "type_of_retail_device",
-                    "type": "TypeOfRetailDeviceType"
-                  },
-                  {
-                    "id": 69,
-                    "name": "type_of_medium_access_device",
-                    "type": "TypeOfMediumAccessDeviceType"
-                  },
-                  {
-                    "id": 70,
-                    "name": "type_of_mobility_service",
-                    "type": "TypeOfMobilityServiceType"
-                  },
-                  {
-                    "id": 71,
-                    "name": "parking_bay_status",
-                    "type": "ParkingBayStatusType"
-                  },
-                  {
-                    "id": 72,
-                    "name": "type_of_fleet",
-                    "type": "TypeOfFleetType"
-                  },
-                  {
-                    "id": 73,
-                    "name": "type_of_battery_chemistry",
-                    "type": "TypeOfBatteryChemistryType"
-                  },
-                  {
-                    "id": 74,
-                    "name": "type_of_plug",
-                    "type": "TypeOfPlugType"
-                  },
-                  {
-                    "id": 75,
-                    "name": "type_of_mode_of_operation",
-                    "type": "TypeOfModeOfOperationType"
-                  },
-                  {
-                    "id": 76,
-                    "name": "type_of_parking",
-                    "type": "TypeOfParkingType"
-                  },
-                  {
-                    "id": 77,
-                    "name": "type_of_proof",
-                    "type": "TypeOfProofType"
-                  }
-                ]
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "StrictContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
             "name": "UsageParameterPriceRefs_RelStructure",
             "fields": [
               {
@@ -380430,33 +376632,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
-              }
-            ]
-          },
-          {
-            "name": "ValidityParameterAssignmentRefs_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "validity_parameter_assignment_ref",
-                "type": "VersionOfObjectRefStructure",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "OneToManyRelationshipStructure"
               }
             ]
           },
@@ -382042,15 +378217,16 @@
                 "name": "ChoiceWrapper_AddressablePlace_VersionStructure",
                 "fields": [
                   {
-                    "id": 1,
-                    "name": "vehicle_meeting_placeu",
-                    "type": "AddressablePlace_VersionStructure"
-                  },
-                  {
                     "id": 2,
                     "name": "vehicle_pooling_meeting_place",
                     "type": "VehiclePoolingMeetingPlaceType"
                   }
+                ],
+                "reserved_ids": [
+                  1
+                ],
+                "reserved_names": [
+                  "vehicle_meeting_placeu"
                 ]
               }
             ],
@@ -382948,39 +379124,6 @@
                 "id": 2,
                 "name": "modification_set",
                 "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "choice_wrapper",
-                "type": "ChoiceWrapper_VehicleTypesInFrame_RelStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_VehicleTypesInFrame_RelStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "compound_train",
-                    "type": "CompoundTrainType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "train",
-                    "type": "TrainType"
-                  },
-                  {
-                    "id": 3,
-                    "name": "vehicle_type",
-                    "type": "VehicleTypeType"
-                  },
-                  {
-                    "id": 4,
-                    "name": "simple_vehicle_type",
-                    "type": "SimpleVehicleTypeType"
-                  }
-                ]
               }
             ],
             "options": [
@@ -382988,6 +379131,12 @@
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
               }
+            ],
+            "reserved_ids": [
+              3
+            ],
+            "reserved_names": [
+              "choice_wrapper"
             ]
           },
           {
@@ -383002,29 +379151,6 @@
                 "id": 2,
                 "name": "modification_set",
                 "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "choice_wrapper",
-                "type": "ChoiceWrapper_VehiclesInFrame_RelStructure",
-                "is_repeated": true
-              }
-            ],
-            "messages": [
-              {
-                "name": "ChoiceWrapper_VehiclesInFrame_RelStructure",
-                "fields": [
-                  {
-                    "id": 1,
-                    "name": "train_element",
-                    "type": "TrainElementType"
-                  },
-                  {
-                    "id": 2,
-                    "name": "vehicle",
-                    "type": "VehicleType"
-                  }
-                ]
               }
             ],
             "options": [
@@ -383032,6 +379158,12 @@
                 "name": "(xsd.base_type)",
                 "value": "ContainmentAggregationStructure"
               }
+            ],
+            "reserved_ids": [
+              3
+            ],
+            "reserved_names": [
+              "choice_wrapper"
             ]
           },
           {
@@ -384735,7 +380867,7 @@
                   {
                     "id": 329,
                     "name": "fare_table_in_context",
-                    "type": "FareTable_VersionStructure"
+                    "type": "FareTableInContextType"
                   },
                   {
                     "id": 330,
@@ -385353,11 +381485,6 @@
                     "type": "VehicleMeetingLinkType"
                   },
                   {
-                    "id": 496,
-                    "name": "vehicle_meeting_placeu",
-                    "type": "AddressablePlace_VersionStructure"
-                  },
-                  {
                     "id": 497,
                     "name": "vehicle_meeting_place",
                     "type": "VehicleMeetingPlaceType"
@@ -385388,11 +381515,6 @@
                     "type": "VehiclePoolingParkingBayType"
                   },
                   {
-                    "id": 503,
-                    "name": "vehicle_meeting_point_assignmentu",
-                    "type": "VehicleMeetingPointAssignment_Type"
-                  },
-                  {
                     "id": 504,
                     "name": "vehicle_meeting_point_assignment",
                     "type": "VehicleMeetingPointAssignmentType"
@@ -385401,11 +381523,6 @@
                     "id": 505,
                     "name": "dynamic_vehicle_meeting_point_assignment",
                     "type": "DynamicVehicleMeetingPointAssignmentType"
-                  },
-                  {
-                    "id": 506,
-                    "name": "vehicle_service_place_assignmentu",
-                    "type": "VehicleServicePlaceAssignment_Type"
                   },
                   {
                     "id": 507,
@@ -385695,7 +381812,10 @@
                   454,
                   455,
                   456,
-                  542
+                  542,
+                  496,
+                  503,
+                  506
                 ],
                 "reserved_names": [
                   "sign_equipment",
@@ -385719,7 +381839,10 @@
                   "onboard_validity",
                   "travel_document_provider",
                   "travel_document_risk_policy",
-                  "charging_equipment_profile"
+                  "charging_equipment_profile",
+                  "vehicle_meeting_placeu",
+                  "vehicle_meeting_point_assignmentu",
+                  "vehicle_service_place_assignmentu"
                 ]
               }
             ],
@@ -386421,11 +382544,6 @@
                     "type": "PointOfInterestVehicleEntranceType"
                   },
                   {
-                    "id": 44,
-                    "name": "vehicle_meeting_placeu",
-                    "type": "AddressablePlace_VersionStructure"
-                  },
-                  {
                     "id": 45,
                     "name": "vehicle_meeting_place",
                     "type": "VehicleMeetingPlaceType"
@@ -386480,6 +382598,12 @@
                     "name": "taxi_parking_area",
                     "type": "TaxiParkingAreaType"
                   }
+                ],
+                "reserved_ids": [
+                  44
+                ],
+                "reserved_names": [
+                  "vehicle_meeting_placeu"
                 ]
               }
             ],
@@ -388558,7 +384682,7 @@
               {
                 "id": 329,
                 "name": "fare_table_in_context",
-                "type": "FareTable_VersionStructure"
+                "type": "FareTableInContextType"
               },
               {
                 "id": 330,
@@ -389176,11 +385300,6 @@
                 "type": "VehicleMeetingLinkType"
               },
               {
-                "id": 496,
-                "name": "vehicle_meeting_placeu",
-                "type": "AddressablePlace_VersionStructure"
-              },
-              {
                 "id": 497,
                 "name": "vehicle_meeting_place",
                 "type": "VehicleMeetingPlaceType"
@@ -389211,11 +385330,6 @@
                 "type": "VehiclePoolingParkingBayType"
               },
               {
-                "id": 503,
-                "name": "vehicle_meeting_point_assignmentu",
-                "type": "VehicleMeetingPointAssignment_Type"
-              },
-              {
                 "id": 504,
                 "name": "vehicle_meeting_point_assignment",
                 "type": "VehicleMeetingPointAssignmentType"
@@ -389224,11 +385338,6 @@
                 "id": 505,
                 "name": "dynamic_vehicle_meeting_point_assignment",
                 "type": "DynamicVehicleMeetingPointAssignmentType"
-              },
-              {
-                "id": 506,
-                "name": "vehicle_service_place_assignmentu",
-                "type": "VehicleServicePlaceAssignment_Type"
               },
               {
                 "id": 507,
@@ -389518,7 +385627,10 @@
               455,
               456,
               457,
-              543
+              543,
+              496,
+              503,
+              506
             ],
             "reserved_names": [
               "sign_equipment",
@@ -389542,7 +385654,10 @@
               "onboard_validity",
               "travel_document_provider",
               "travel_document_risk_policy",
-              "charging_equipment_profile"
+              "charging_equipment_profile",
+              "vehicle_meeting_placeu",
+              "vehicle_meeting_point_assignmentu",
+              "vehicle_service_place_assignmentu"
             ]
           },
           {
@@ -390072,21 +386187,6 @@
                 "id": 2,
                 "name": "fare_scheduled_stop_point_ref",
                 "type": "VersionOfObjectRefStructure"
-              }
-            ]
-          },
-          {
-            "name": "ChoiceWrapper_TrainStopAssignments_RelStructure",
-            "fields": [
-              {
-                "id": 1,
-                "name": "train_stop_assignment_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
-                "id": 2,
-                "name": "train_stop_assignment",
-                "type": "TrainStopAssignmentType"
               }
             ]
           },
@@ -391892,11 +387992,6 @@
                     "type": "GroupOfEntitiesRefStructure"
                   },
                   {
-                    "id": 260,
-                    "name": "passing_time_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
                     "id": 261,
                     "name": "target_passing_time_ref",
                     "type": "VersionOfObjectRefStructure"
@@ -392019,11 +388114,6 @@
                   {
                     "id": 285,
                     "name": "type_of_flexible_service_ref",
-                    "type": "VersionOfObjectRefStructure"
-                  },
-                  {
-                    "id": 286,
-                    "name": "supply_contract_ref",
                     "type": "VersionOfObjectRefStructure"
                   },
                   {
@@ -393374,7 +389464,9 @@
                   502,
                   503,
                   523,
-                  589
+                  589,
+                  260,
+                  286
                 ],
                 "reserved_names": [
                   "customer_eligibility_ref",
@@ -393398,7 +389490,9 @@
                   "security_policy_ref",
                   "onboard_validity_ref",
                   "trip_pattern_trip_ref",
-                  "charging_equipment_profile_ref"
+                  "charging_equipment_profile_ref",
+                  "passing_time_ref",
+                  "supply_contract_ref"
                 ]
               }
             ]
@@ -394116,33 +390210,6 @@
               {
                 "name": "(xsd.base_type)",
                 "value": "CheckConstraintThroughputs_RelStructure"
-              }
-            ]
-          },
-          {
-            "name": "TrainElementsType",
-            "fields": [
-              {
-                "id": 1,
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "id": 2,
-                "name": "modification_set",
-                "type": "ModificationSetEnumeration"
-              },
-              {
-                "id": 3,
-                "name": "choice_wrapper",
-                "type": "ChoiceWrapper_TrainStopAssignments_RelStructure",
-                "is_repeated": true
-              }
-            ],
-            "options": [
-              {
-                "name": "(xsd.base_type)",
-                "value": "TrainStopAssignments_RelStructure"
               }
             ]
           },
