@@ -33334,7 +33334,7 @@
               {
                 "id": 8,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 9,
@@ -69207,7 +69207,7 @@
               {
                 "id": 498,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 499,
@@ -69685,7 +69685,7 @@
               {
                 "id": 498,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 499,
@@ -104824,7 +104824,7 @@
               {
                 "id": 439,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 440,
@@ -104971,7 +104971,7 @@
               {
                 "id": 119,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 120,
@@ -105109,7 +105109,7 @@
               {
                 "id": 119,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 120,
@@ -105452,7 +105452,7 @@
               {
                 "id": 439,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 440,
@@ -107679,7 +107679,7 @@
               {
                 "id": 188,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 189,
@@ -107913,7 +107913,7 @@
               {
                 "id": 188,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 189,
@@ -256523,7 +256523,7 @@
               {
                 "id": 498,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 499,
@@ -256909,7 +256909,7 @@
               {
                 "id": 498,
                 "name": "booking_url",
-                "type": "string"
+                "type": "InfoLinkStructure"
               },
               {
                 "id": 499,
