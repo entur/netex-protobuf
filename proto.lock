@@ -376755,7 +376755,7 @@
               {
                 "id": 3,
                 "name": "parking_ref",
-                "type": "VersionOfObjectRefStructure",
+                "type": "ChoiceWrapper_ParkingRefStructure",
                 "is_repeated": true
               }
             ],
@@ -390438,7 +390438,7 @@
               {
                 "id": 3,
                 "name": "vehicle_ref",
-                "type": "VersionOfObjectRefStructure",
+                "type": "ChoiceWrapper_VehicleRefStructure",
                 "is_repeated": true
               }
             ],
