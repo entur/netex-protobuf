@@ -691,6 +691,11 @@ customTypeReplacements:
   ^RevertingRefStructure$: VersionOfObjectRefStructure
   ^SecurityPolicyRefStructure$: VersionOfObjectRefStructure
   ^OnboardValidityRefStructure$: VersionOfObjectRefStructure
+  # Typed in NeTEx 2.0, VersionOfObjectRefStructure before
+  ^SiteNavigationPathRefStructure$: VersionOfObjectRefStructure
+  ^SitePathJunctionRefStructure$: VersionOfObjectRefStructure
+  ^PtRideLegRefStructure$: VersionOfObjectRefStructure
+  ^TrainElementTypeRefStructure$: VersionOfObjectRefStructure
 
   ^CrewBaseRefStructure$: GroupOfEntitiesRefStructure
   ^FareTableRefStructure$: GroupOfEntitiesRefStructure
