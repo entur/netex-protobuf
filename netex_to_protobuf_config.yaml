@@ -54,6 +54,10 @@ customTypeMappings:
   ^VehicleType_VersionStructure$: VehicleTypeVS
 
 customTypeReplacements:
+  # NameOfClass is an enumeration of all class names in NeTEx 2.0 (free text before), and schema2proto generates an empty enum
+  # for RelationshipId (restriction of NameOfClass). Keep both as string, as before 2.0
+  ^NameOfClass$: string
+  ^RelationshipId$: string
   ^NormalDatedVehicleJourneyRefStructure: VersionOfObjectRefStructure
   ^DatedServiceJourneyRefStructure: VersionOfObjectRefStructure
   ^StopPlaceSpaceRefStructure$: VersionOfObjectRefStructure

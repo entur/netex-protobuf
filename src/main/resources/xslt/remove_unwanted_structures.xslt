@@ -51,6 +51,13 @@
 
     <xsl:template match="//xsd:attribute[@name = 'nameOfMemberClass']"/>
 
+    <!-- NeTEx 2.0 has both e.g. 'planning' and 'Planning' in these enumerations, which give the same enum constant name. Keep
+         the lower case variant (the only one before 2.0 for StakeholderRoleTypeEnumeration) -->
+    <xsl:template
+        match="/xsd:schema/xsd:simpleType[@name = 'NameOfClass' or @name = 'StakeholderRoleTypeEnumeration']/xsd:restriction/xsd:enumeration
+            [translate(substring(@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '') = '']
+            [../xsd:enumeration/@value = concat(translate(substring(current()/@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), substring(current()/@value, 2))]"/>
+
     <!-- Only support embedded CPP prices, not relations -->
     <xsl:template match="/xsd:schema/xsd:complexType[@name = 'customerPurchasePackagePrices_RelStructure']/xsd:complexContent/xsd:extension[@base = 'strictContainmentAggregationStructure']">
         <xsd:extension base="strictContainmentAggregationStructure">
