@@ -27479,7 +27479,7 @@
               {
                 "id": 444,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 445,
@@ -27719,7 +27719,7 @@
               {
                 "id": 444,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 445,
@@ -33767,7 +33767,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -34033,7 +34033,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -34274,7 +34274,7 @@
               {
                 "id": 501,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 422,
@@ -34444,7 +34444,7 @@
               {
                 "id": 501,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 422,
@@ -36755,7 +36755,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -36987,7 +36987,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -41429,7 +41429,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -41661,7 +41661,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -45894,7 +45894,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -46116,7 +46116,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -70695,7 +70695,7 @@
               {
                 "id": 224,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 225,
@@ -155296,7 +155296,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 284,
@@ -156619,7 +156619,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -156910,7 +156910,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -166095,7 +166095,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -166312,7 +166312,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -166555,7 +166555,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -166831,7 +166831,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -201322,7 +201322,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -201598,7 +201598,7 @@
               {
                 "id": 234,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 235,
@@ -215142,7 +215142,7 @@
               {
                 "id": 521,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 522,
@@ -215376,7 +215376,7 @@
               {
                 "id": 521,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 522,
@@ -264530,7 +264530,7 @@
               {
                 "id": 354,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 355,
@@ -265024,7 +265024,7 @@
               {
                 "id": 354,
                 "name": "booking_arrangements",
-                "type": "BookingArrangementsStructure"
+                "type": "BookingArrangements_RelStructure"
               },
               {
                 "id": 355,
@@ -271784,7 +271784,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -272016,7 +272016,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -334095,7 +334095,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -334327,7 +334327,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -335805,7 +335805,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -336052,7 +336052,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -340125,7 +340125,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
@@ -340377,7 +340377,7 @@
               {
                 "id": 295,
                 "name": "service_booking_arrangements",
-                "type": "ServiceBookingArrangementsStructure"
+                "type": "ServiceBookingArrangements_RelStructure"
               },
               {
                 "id": 441,
