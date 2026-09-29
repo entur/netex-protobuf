@@ -44507,7 +44507,7 @@
               {
                 "id": 6,
                 "name": "description",
-                "type": "string"
+                "type": "MultilingualString"
               }
             ],
             "reserved_ids": [
@@ -44549,7 +44549,7 @@
               {
                 "id": 14,
                 "name": "description",
-                "type": "string"
+                "type": "MultilingualString"
               }
             ],
             "reserved_ids": [
@@ -285678,7 +285678,7 @@
               {
                 "id": 6,
                 "name": "description",
-                "type": "string"
+                "type": "MultilingualString"
               },
               {
                 "id": 7,
@@ -285718,7 +285718,7 @@
               {
                 "id": 6,
                 "name": "description",
-                "type": "string"
+                "type": "MultilingualString"
               },
               {
                 "id": 7,
@@ -342641,7 +342641,7 @@
               {
                 "id": 153,
                 "name": "description",
-                "type": "string"
+                "type": "MultilingualString"
               },
               {
                 "id": 163,
@@ -344682,7 +344682,7 @@
               {
                 "id": 153,
                 "name": "description",
-                "type": "string"
+                "type": "MultilingualString"
               },
               {
                 "id": 163,
