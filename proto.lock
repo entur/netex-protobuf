@@ -2160,94 +2160,94 @@
             ]
           },
           {
-            "name": "AllVehicleModesOfTransportEnumeration",
+            "name": "AllPublicTransportModesEnumeration",
             "enum_fields": [
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_UNSPECIFIED"
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_UNSPECIFIED"
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_ALL",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_ALL",
                 "integer": 1
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_UNKNOWN",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_UNKNOWN",
                 "integer": 2
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_BUS",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_BUS",
                 "integer": 3
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_TROLLEY_BUS",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_TROLLEY_BUS",
                 "integer": 4
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_TRAM",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_TRAM",
                 "integer": 5
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_COACH",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_COACH",
                 "integer": 6
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_RAIL",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_RAIL",
                 "integer": 7
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_INTERCITY_RAIL",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_INTERCITY_RAIL",
                 "integer": 8
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_URBAN_RAIL",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_URBAN_RAIL",
                 "integer": 9
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_METRO",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_METRO",
                 "integer": 10
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_AIR",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_AIR",
                 "integer": 11
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_WATER",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_WATER",
                 "integer": 12
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_CABLEWAY",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_CABLEWAY",
                 "integer": 13
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_FUNICULAR",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_FUNICULAR",
                 "integer": 14
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_SNOW_AND_ICE",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_SNOW_AND_ICE",
                 "integer": 15
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_TAXI",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_TAXI",
                 "integer": 16
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_FERRY",
-                "integer": 22
-              },
-              {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_LIFT",
-                "integer": 18
-              },
-              {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_SELF_DRIVE",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_SELF_DRIVE",
                 "integer": 17
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_ANY_MODE",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_LIFT",
+                "integer": 18
+              },
+              {
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_ANY_MODE",
                 "integer": 20
               },
               {
-                "name": "ALL_VEHICLE_MODES_OF_TRANSPORT_ENUMERATION_OTHER",
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_OTHER",
                 "integer": 21
+              },
+              {
+                "name": "ALL_PUBLIC_TRANSPORT_MODES_ENUMERATION_FERRY",
+                "integer": 22
               }
             ]
           },
@@ -15472,70 +15472,6 @@
             ]
           },
           {
-            "name": "VehicleModeEnumeration",
-            "enum_fields": [
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_UNSPECIFIED"
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_AIR",
-                "integer": 1
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_BUS",
-                "integer": 2
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_COACH",
-                "integer": 3
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_FERRY",
-                "integer": 4
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_METRO",
-                "integer": 5
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_RAIL",
-                "integer": 6
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_TROLLEY_BUS",
-                "integer": 7
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_TRAM",
-                "integer": 8
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_WATER",
-                "integer": 9
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_CABLEWAY",
-                "integer": 10
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_FUNICULAR",
-                "integer": 11
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_LIFT",
-                "integer": 12
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_SNOW_AND_ICE",
-                "integer": 13
-              },
-              {
-                "name": "VEHICLE_MODE_ENUMERATION_OTHER",
-                "integer": 14
-              }
-            ]
-          },
-          {
             "name": "VehicleOrientationEnumeration",
             "enum_fields": [
               {
@@ -17289,7 +17225,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -17344,7 +17280,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -17750,7 +17686,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -17805,7 +17741,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -27810,7 +27746,7 @@
               {
                 "id": 445,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 450,
@@ -28050,7 +27986,7 @@
               {
                 "id": 445,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 450,
@@ -31958,7 +31894,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -32013,7 +31949,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -32420,7 +32356,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -32475,7 +32411,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -51036,7 +50972,7 @@
               {
                 "id": 623,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -51294,7 +51230,7 @@
               {
                 "id": 603,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -63360,7 +63296,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -63924,7 +63860,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -64550,7 +64486,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -65028,7 +64964,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -65542,7 +65478,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -66007,7 +65943,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -68147,7 +68083,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -68570,7 +68506,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -68988,7 +68924,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -69290,7 +69226,7 @@
               {
                 "id": 1,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 2,
@@ -70099,7 +70035,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -70222,7 +70158,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -70667,7 +70603,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -70797,7 +70733,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -73735,7 +73671,7 @@
               {
                 "id": 354,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 357,
@@ -73966,7 +73902,7 @@
               {
                 "id": 354,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 357,
@@ -77328,7 +77264,7 @@
               {
                 "id": 164,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllModesEnumeration"
               },
               {
                 "id": 191,
@@ -77451,7 +77387,7 @@
               {
                 "id": 164,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllModesEnumeration"
               }
             ],
             "reserved_ids": [
@@ -89206,7 +89142,7 @@
               {
                 "id": 411,
                 "name": "mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 414,
@@ -89561,7 +89497,7 @@
               {
                 "id": 411,
                 "name": "mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 414,
@@ -93456,7 +93392,7 @@
               {
                 "id": 471,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -93746,7 +93682,7 @@
               {
                 "id": 471,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -99263,7 +99199,7 @@
               {
                 "id": 812,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 821,
@@ -99496,7 +99432,7 @@
               {
                 "id": 812,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 821,
@@ -99695,7 +99631,7 @@
               {
                 "id": 164,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 165,
@@ -99986,7 +99922,7 @@
               {
                 "id": 46,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 47,
@@ -100124,7 +100060,7 @@
               {
                 "id": 46,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 47,
@@ -100323,7 +100259,7 @@
               {
                 "id": 164,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 165,
@@ -101857,7 +101793,7 @@
               {
                 "id": 812,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 821,
@@ -102085,7 +102021,7 @@
               {
                 "id": 812,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 821,
@@ -103631,7 +103567,7 @@
               {
                 "id": 991,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               }
             ],
             "reserved_ids": [
@@ -103834,7 +103770,7 @@
               {
                 "id": 811,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 863,
@@ -116370,7 +116306,7 @@
               {
                 "id": 284,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 285,
@@ -116613,7 +116549,7 @@
               {
                 "id": 284,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 285,
@@ -120194,7 +120130,7 @@
               {
                 "id": 286,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 287,
@@ -120417,7 +120353,7 @@
               {
                 "id": 286,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 287,
@@ -122265,7 +122201,7 @@
               {
                 "id": 812,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 821,
@@ -122518,7 +122454,7 @@
               {
                 "id": 812,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 821,
@@ -122872,7 +122808,7 @@
               {
                 "id": 545,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 546,
@@ -123121,7 +123057,7 @@
               {
                 "id": 545,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 546,
@@ -126770,7 +126706,7 @@
               {
                 "id": 202,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 154,
@@ -126822,7 +126758,7 @@
               {
                 "id": 1,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 2,
@@ -127081,7 +127017,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -127229,7 +127165,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -128494,12 +128430,12 @@
               {
                 "id": 502,
                 "name": "from_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 503,
                 "name": "to_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 504,
@@ -128689,12 +128625,12 @@
               {
                 "id": 502,
                 "name": "from_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 503,
                 "name": "to_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 504,
@@ -129535,7 +129471,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -129663,7 +129599,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -129786,7 +129722,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -129974,7 +129910,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -131952,7 +131888,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -132135,7 +132071,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -132359,7 +132295,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -132567,7 +132503,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -132872,7 +132808,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -133015,7 +132951,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -133436,7 +133372,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -133609,7 +133545,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -134156,7 +134092,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -134279,7 +134215,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -134443,7 +134379,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -134591,7 +134527,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -134758,7 +134694,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -134911,7 +134847,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -135099,7 +135035,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -138411,7 +138347,7 @@
               {
                 "id": 483,
                 "name": "connecting_vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -139666,7 +139602,7 @@
               {
                 "id": 164,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 165,
@@ -139888,7 +139824,7 @@
               {
                 "id": 46,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 47,
@@ -139957,7 +139893,7 @@
               {
                 "id": 46,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 47,
@@ -140087,7 +140023,7 @@
               {
                 "id": 164,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 165,
@@ -149860,7 +149796,7 @@
               {
                 "id": 8,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               }
             ],
             "reserved_ids": [
@@ -149911,7 +149847,7 @@
               {
                 "id": 9,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               }
             ],
             "reserved_ids": [
@@ -150233,7 +150169,7 @@
               {
                 "id": 9,
                 "name": "mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 10,
@@ -154285,7 +154221,7 @@
               {
                 "id": 284,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 285,
@@ -154457,7 +154393,7 @@
               {
                 "id": 43,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               }
             ],
             "options": [
@@ -154493,7 +154429,7 @@
               {
                 "id": 43,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               }
             ],
             "options": [
@@ -154625,7 +154561,7 @@
               {
                 "id": 284,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 285,
@@ -154924,7 +154860,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -155389,7 +155325,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -162397,7 +162333,7 @@
               {
                 "id": 168,
                 "name": "vehicle_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -162545,7 +162481,7 @@
               {
                 "id": 168,
                 "name": "vehicle_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -187530,7 +187466,7 @@
               {
                 "id": 483,
                 "name": "connecting_vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -187990,7 +187926,7 @@
               {
                 "id": 483,
                 "name": "connecting_vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -199380,7 +199316,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -199435,7 +199371,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -199872,7 +199808,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -199927,7 +199863,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -214939,7 +214875,7 @@
               {
                 "id": 42,
                 "name": "vehicle_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 43,
@@ -215005,7 +214941,7 @@
               {
                 "id": 42,
                 "name": "vehicle_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 43,
@@ -222400,7 +222336,7 @@
               {
                 "id": 471,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -222766,7 +222702,7 @@
               {
                 "id": 471,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -234498,7 +234434,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -234981,7 +234917,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -235821,7 +235757,7 @@
               {
                 "id": 283,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 284,
@@ -235974,7 +235910,7 @@
               {
                 "id": 283,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 284,
@@ -239907,7 +239843,7 @@
               {
                 "id": 181,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 182,
@@ -240104,7 +240040,7 @@
               {
                 "id": 181,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 182,
@@ -240650,7 +240586,7 @@
               {
                 "id": 281,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 282,
@@ -240911,7 +240847,7 @@
               {
                 "id": 281,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 282,
@@ -241469,7 +241405,7 @@
               {
                 "id": 1,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 2,
@@ -245882,7 +245818,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -246268,7 +246204,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -250807,7 +250743,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -250862,7 +250798,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -251321,7 +251257,7 @@
               {
                 "id": 2041,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 2042,
@@ -251376,7 +251312,7 @@
               {
                 "id": 2061,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -251798,7 +251734,7 @@
               {
                 "id": 2041,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 2042,
@@ -251853,7 +251789,7 @@
               {
                 "id": 2061,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -252316,7 +252252,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -252371,7 +252307,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -252797,7 +252733,7 @@
               {
                 "id": 1741,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1742,
@@ -252852,7 +252788,7 @@
               {
                 "id": 1761,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -253447,7 +253383,7 @@
               {
                 "id": 2431,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 2432,
@@ -253502,7 +253438,7 @@
               {
                 "id": 2451,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -253929,7 +253865,7 @@
               {
                 "id": 2431,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 2432,
@@ -253984,7 +253920,7 @@
               {
                 "id": 2451,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -254113,7 +254049,7 @@
               {
                 "id": 82,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 41,
@@ -254177,7 +254113,7 @@
               {
                 "id": 52,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 41,
@@ -254524,7 +254460,7 @@
               {
                 "id": 1741,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1742,
@@ -254579,7 +254515,7 @@
               {
                 "id": 1761,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -260882,7 +260818,7 @@
               {
                 "id": 1741,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1742,
@@ -260937,7 +260873,7 @@
               {
                 "id": 1771,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -261475,7 +261411,7 @@
               {
                 "id": 1741,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1742,
@@ -261530,7 +261466,7 @@
               {
                 "id": 1771,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -262853,7 +262789,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -262908,7 +262844,7 @@
               {
                 "id": 1691,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -263353,7 +263289,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -263408,7 +263344,7 @@
               {
                 "id": 1691,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -263730,7 +263666,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -264223,7 +264159,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -264706,7 +264642,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -264933,7 +264869,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -266293,7 +266229,7 @@
               {
                 "id": 381,
                 "name": "vehicle_modes",
-                "type": "AllModesEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -266583,7 +266519,7 @@
               {
                 "id": 381,
                 "name": "vehicle_modes",
-                "type": "AllModesEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -266914,7 +266850,7 @@
               {
                 "id": 441,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -267140,7 +267076,7 @@
               {
                 "id": 441,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -271314,7 +271250,7 @@
               {
                 "id": 411,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -271356,7 +271292,7 @@
               {
                 "id": 425,
                 "name": "default_mode",
-                "type": "VehicleModeEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 426,
@@ -271664,7 +271600,7 @@
               {
                 "id": 411,
                 "name": "vehicle_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -271706,7 +271642,7 @@
               {
                 "id": 425,
                 "name": "default_mode",
-                "type": "VehicleModeEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 426,
@@ -273465,7 +273401,7 @@
               {
                 "id": 283,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 284,
@@ -273618,7 +273554,7 @@
               {
                 "id": 283,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 284,
@@ -279400,7 +279336,7 @@
               {
                 "id": 623,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -279663,7 +279599,7 @@
               {
                 "id": 604,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -280959,7 +280895,7 @@
               {
                 "id": 831,
                 "name": "vehicle_modes",
-                "type": "AllModesEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -281228,7 +281164,7 @@
               {
                 "id": 831,
                 "name": "vehicle_modes",
-                "type": "AllModesEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -282336,7 +282272,7 @@
               {
                 "id": 181,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 182,
@@ -282488,7 +282424,7 @@
               {
                 "id": 181,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 182,
@@ -285746,7 +285682,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -285869,7 +285805,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -313553,7 +313489,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -313700,7 +313636,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -313837,7 +313773,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -314049,7 +313985,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -314297,7 +314233,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -314434,7 +314370,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -315084,7 +315020,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -315412,7 +315348,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -315579,7 +315515,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -315781,7 +315717,7 @@
               {
                 "id": 291,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 292,
@@ -330413,7 +330349,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -330468,7 +330404,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -330899,7 +330835,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -330954,7 +330890,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -331406,7 +331342,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -331461,7 +331397,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -331874,7 +331810,7 @@
               {
                 "id": 1661,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 1662,
@@ -331929,7 +331865,7 @@
               {
                 "id": 1681,
                 "name": "other_transport_modes",
-                "type": "VehicleModeEnumeration",
+                "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
                 "options": [
                   {
@@ -332700,7 +332636,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -332830,7 +332766,7 @@
               {
                 "id": 171,
                 "name": "vehicle_mode",
-                "type": "AllModesEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 172,
@@ -333426,7 +333362,7 @@
               {
                 "id": 413,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -333955,7 +333891,7 @@
               {
                 "id": 378,
                 "name": "transport_mode",
-                "type": "AllVehicleModesOfTransportEnumeration"
+                "type": "AllPublicTransportModesEnumeration"
               },
               {
                 "id": 169,
@@ -376763,9 +376699,9 @@
                 "name": "SequenceWrapper_ValidityParameters_RelStructure",
                 "fields": [
                   {
-                    "id": 1,
+                    "id": 333,
                     "name": "vehicle_modes",
-                    "type": "VehicleModeEnumeration",
+                    "type": "AllPublicTransportModesEnumeration",
                     "is_repeated": true,
                     "options": [
                       {
@@ -377540,7 +377476,8 @@
                 "reserved_ids": [
                   204,
                   329,
-                  196
+                  196,
+                  1
                 ],
                 "reserved_names": [
                   "line_type",
