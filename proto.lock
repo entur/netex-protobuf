@@ -82581,7 +82581,8 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType"
+                "type": "TrainElementsType",
+                "is_repeated": true
               },
               {
                 "id": 781,
@@ -82809,7 +82810,8 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType"
+                "type": "TrainElementsType",
+                "is_repeated": true
               },
               {
                 "id": 354,
@@ -183968,7 +183970,8 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType"
+                "type": "TrainElementsType",
+                "is_repeated": true
               },
               {
                 "id": 571,
@@ -184293,7 +184296,8 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType"
+                "type": "TrainElementsType",
+                "is_repeated": true
               },
               {
                 "id": 354,
@@ -238212,8 +238216,7 @@
               {
                 "id": 371,
                 "name": "journey_patterns",
-                "type": "JourneyPatternRefs_RelStructure",
-                "is_repeated": true
+                "type": "JourneyPatternRefs_RelStructure"
               },
               {
                 "id": 372,
@@ -238446,8 +238449,7 @@
               {
                 "id": 371,
                 "name": "journey_patterns",
-                "type": "JourneyPatternRefs_RelStructure",
-                "is_repeated": true
+                "type": "JourneyPatternRefs_RelStructure"
               },
               {
                 "id": 372,
@@ -325187,7 +325189,8 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType"
+                "type": "TrainElementsType",
+                "is_repeated": true
               },
               {
                 "id": 751,
@@ -325407,7 +325410,8 @@
               {
                 "id": 541,
                 "name": "train_elements",
-                "type": "TrainElementsType"
+                "type": "TrainElementsType",
+                "is_repeated": true
               },
               {
                 "id": 751,
@@ -352758,7 +352762,8 @@
               {
                 "id": 3,
                 "name": "contact",
-                "type": "ContactType"
+                "type": "ContactType",
+                "is_repeated": true
               }
             ],
             "options": [
