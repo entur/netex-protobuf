@@ -4064,9 +4064,1011 @@
                 "name": "COUNTRY_CODE_TYPE_UNSPECIFIED"
               },
               {
-                "name": "COUNTRY_CODE_TYPE_2",
-                "integer": 1
+                "name": "COUNTRY_CODE_TYPE_AC",
+                "integer": 2
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AD",
+                "integer": 3
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AE",
+                "integer": 4
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AF",
+                "integer": 5
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AG",
+                "integer": 6
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AI",
+                "integer": 7
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AL",
+                "integer": 8
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AM",
+                "integer": 9
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AN",
+                "integer": 10
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AO",
+                "integer": 11
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AQ",
+                "integer": 12
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AR",
+                "integer": 13
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AS",
+                "integer": 14
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AT",
+                "integer": 15
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AU",
+                "integer": 16
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AW",
+                "integer": 17
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AZ",
+                "integer": 18
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_AX",
+                "integer": 19
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BA",
+                "integer": 20
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BB",
+                "integer": 21
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BD",
+                "integer": 22
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BE",
+                "integer": 23
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BF",
+                "integer": 24
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BG",
+                "integer": 25
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BH",
+                "integer": 26
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BI",
+                "integer": 27
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BJ",
+                "integer": 28
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BM",
+                "integer": 29
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BN",
+                "integer": 30
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BO",
+                "integer": 31
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BR",
+                "integer": 32
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BS",
+                "integer": 33
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BT",
+                "integer": 34
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BV",
+                "integer": 35
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BW",
+                "integer": 36
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BY",
+                "integer": 37
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_BZ",
+                "integer": 38
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CA",
+                "integer": 39
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CC",
+                "integer": 40
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CD",
+                "integer": 41
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CF",
+                "integer": 42
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CG",
+                "integer": 43
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CH",
+                "integer": 44
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CI",
+                "integer": 45
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CK",
+                "integer": 46
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CL",
+                "integer": 47
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CM",
+                "integer": 48
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CN",
+                "integer": 49
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CO",
+                "integer": 50
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CR",
+                "integer": 51
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CS",
+                "integer": 52
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CU",
+                "integer": 53
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CV",
+                "integer": 54
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CX",
+                "integer": 55
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CY",
+                "integer": 56
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_CZ",
+                "integer": 57
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_DE",
+                "integer": 58
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_DJ",
+                "integer": 59
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_DK",
+                "integer": 60
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_DM",
+                "integer": 61
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_DO",
+                "integer": 62
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_DZ",
+                "integer": 63
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_EC",
+                "integer": 64
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_EE",
+                "integer": 65
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_EG",
+                "integer": 66
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_EH",
+                "integer": 67
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ER",
+                "integer": 68
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ES",
+                "integer": 69
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ET",
+                "integer": 70
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_EU",
+                "integer": 71
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_FI",
+                "integer": 72
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_FJ",
+                "integer": 73
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_FK",
+                "integer": 74
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_FM",
+                "integer": 75
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_FO",
+                "integer": 76
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_FR",
+                "integer": 77
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GA",
+                "integer": 78
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GB",
+                "integer": 79
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GD",
+                "integer": 80
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GE",
+                "integer": 81
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GF",
+                "integer": 82
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GG",
+                "integer": 83
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GH",
+                "integer": 84
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GI",
+                "integer": 85
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GL",
+                "integer": 86
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GM",
+                "integer": 87
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GN",
+                "integer": 88
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GP",
+                "integer": 89
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GQ",
+                "integer": 90
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GR",
+                "integer": 91
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GS",
+                "integer": 92
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GT",
+                "integer": 93
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GU",
+                "integer": 94
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GW",
+                "integer": 95
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_GY",
+                "integer": 96
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_HK",
+                "integer": 97
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_HM",
+                "integer": 98
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_HN",
+                "integer": 99
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_HR",
+                "integer": 100
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_HT",
+                "integer": 101
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_HU",
+                "integer": 102
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ID",
+                "integer": 103
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IE",
+                "integer": 104
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IL",
+                "integer": 105
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IM",
+                "integer": 106
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IN",
+                "integer": 107
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IO",
+                "integer": 108
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IQ",
+                "integer": 109
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IR",
+                "integer": 110
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IS",
+                "integer": 111
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_IT",
+                "integer": 112
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_JE",
+                "integer": 113
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_JM",
+                "integer": 114
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_JO",
+                "integer": 115
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_JP",
+                "integer": 116
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KE",
+                "integer": 117
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KG",
+                "integer": 118
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KH",
+                "integer": 119
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KI",
+                "integer": 120
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KM",
+                "integer": 121
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KN",
+                "integer": 122
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KP",
+                "integer": 123
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KR",
+                "integer": 124
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KW",
+                "integer": 125
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KY",
+                "integer": 126
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_KZ",
+                "integer": 127
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LA",
+                "integer": 128
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LB",
+                "integer": 129
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LC",
+                "integer": 130
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LI",
+                "integer": 131
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LK",
+                "integer": 132
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LR",
+                "integer": 133
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LS",
+                "integer": 134
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LT",
+                "integer": 135
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LU",
+                "integer": 136
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LV",
+                "integer": 137
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_LY",
+                "integer": 138
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MA",
+                "integer": 139
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ME",
+                "integer": 140
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MC",
+                "integer": 141
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MD",
+                "integer": 142
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MG",
+                "integer": 143
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MH",
+                "integer": 144
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MK",
+                "integer": 145
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ML",
+                "integer": 146
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MM",
+                "integer": 147
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MN",
+                "integer": 148
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MO",
+                "integer": 149
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MP",
+                "integer": 150
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MQ",
+                "integer": 151
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MR",
+                "integer": 152
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MS",
+                "integer": 153
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MT",
+                "integer": 154
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MU",
+                "integer": 155
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MV",
+                "integer": 156
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MW",
+                "integer": 157
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MX",
+                "integer": 158
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MY",
+                "integer": 159
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_MZ",
+                "integer": 160
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NA",
+                "integer": 161
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NC",
+                "integer": 162
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NE",
+                "integer": 163
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NF",
+                "integer": 164
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NG",
+                "integer": 165
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NI",
+                "integer": 166
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NL",
+                "integer": 167
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NO",
+                "integer": 168
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NP",
+                "integer": 169
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NR",
+                "integer": 170
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NU",
+                "integer": 171
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_NZ",
+                "integer": 172
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_OM",
+                "integer": 173
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PA",
+                "integer": 174
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PE",
+                "integer": 175
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PF",
+                "integer": 176
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PG",
+                "integer": 177
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PH",
+                "integer": 178
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PK",
+                "integer": 179
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PL",
+                "integer": 180
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PM",
+                "integer": 181
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PN",
+                "integer": 182
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PR",
+                "integer": 183
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PS",
+                "integer": 184
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PT",
+                "integer": 185
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PW",
+                "integer": 186
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_PY",
+                "integer": 187
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_QA",
+                "integer": 188
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_RE",
+                "integer": 189
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_RO",
+                "integer": 190
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_RS",
+                "integer": 191
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_RU",
+                "integer": 192
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_RW",
+                "integer": 193
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SA",
+                "integer": 194
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SB",
+                "integer": 195
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SC",
+                "integer": 196
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SD",
+                "integer": 197
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SE",
+                "integer": 198
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SG",
+                "integer": 199
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SH",
+                "integer": 200
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SI",
+                "integer": 201
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SJ",
+                "integer": 202
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SK",
+                "integer": 203
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SL",
+                "integer": 204
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SM",
+                "integer": 205
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SN",
+                "integer": 206
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SO",
+                "integer": 207
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SR",
+                "integer": 208
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ST",
+                "integer": 209
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SV",
+                "integer": 210
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SY",
+                "integer": 211
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_SZ",
+                "integer": 212
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TC",
+                "integer": 213
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TD",
+                "integer": 214
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TF",
+                "integer": 215
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TG",
+                "integer": 216
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TH",
+                "integer": 217
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TJ",
+                "integer": 218
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TK",
+                "integer": 219
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TL",
+                "integer": 220
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TM",
+                "integer": 221
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TN",
+                "integer": 222
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TO",
+                "integer": 223
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TP",
+                "integer": 224
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TR",
+                "integer": 225
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TT",
+                "integer": 226
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TV",
+                "integer": 227
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TW",
+                "integer": 228
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_TZ",
+                "integer": 229
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_UA",
+                "integer": 230
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_UG",
+                "integer": 231
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_UK",
+                "integer": 232
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_UM",
+                "integer": 233
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_US",
+                "integer": 234
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_UY",
+                "integer": 235
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_UZ",
+                "integer": 236
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_VA",
+                "integer": 237
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_VC",
+                "integer": 238
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_VE",
+                "integer": 239
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_VG",
+                "integer": 240
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_VI",
+                "integer": 241
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_VN",
+                "integer": 242
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_VU",
+                "integer": 243
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_WF",
+                "integer": 244
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_WS",
+                "integer": 245
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_YE",
+                "integer": 246
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_YT",
+                "integer": 247
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_YU",
+                "integer": 248
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ZA",
+                "integer": 249
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ZM",
+                "integer": 250
+              },
+              {
+                "name": "COUNTRY_CODE_TYPE_ZW",
+                "integer": 251
               }
+            ],
+            "reserved_ids": [
+              1
+            ],
+            "reserved_names": [
+              "COUNTRY_CODE_TYPE_2"
             ]
           },
           {
