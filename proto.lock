@@ -15554,7 +15554,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -18062,7 +18062,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -18623,7 +18623,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -20935,7 +20935,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -21098,7 +21098,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -22289,7 +22289,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -23921,7 +23921,7 @@
               {
                 "id": 611,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 621,
@@ -24178,7 +24178,7 @@
               {
                 "id": 611,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 621,
@@ -27424,7 +27424,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -27664,7 +27664,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -27940,7 +27940,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -28162,7 +28162,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -28446,7 +28446,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -28808,7 +28808,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -29558,7 +29558,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -29715,7 +29715,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -31722,9 +31722,9 @@
                 "type": "SiteEntrances_RelStructure"
               },
               {
-                "id": 2431,
+                "id": 2583,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 2432,
@@ -31779,7 +31779,8 @@
               9,
               11,
               10,
-              2462
+              2462,
+              2431
             ],
             "reserved_names": [
               "data_source_ref",
@@ -32183,9 +32184,9 @@
                 "type": "SiteEntrances_RelStructure"
               },
               {
-                "id": 2431,
+                "id": 2555,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 2432,
@@ -32235,7 +32236,8 @@
               9,
               11,
               10,
-              2434
+              2434,
+              2431
             ],
             "reserved_names": [
               "data_source_ref",
@@ -36698,7 +36700,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -36930,7 +36932,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -37198,7 +37200,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -37363,7 +37365,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -41372,7 +41374,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -41604,7 +41606,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -45837,7 +45839,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -46059,7 +46061,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -46470,7 +46472,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -46635,7 +46637,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -47262,7 +47264,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -47415,7 +47417,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -53676,7 +53678,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -53904,7 +53906,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -57489,7 +57491,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -57712,7 +57714,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -63660,7 +63662,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -64545,7 +64547,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -64713,7 +64715,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -66942,9 +66944,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 479,
+                "id": 947,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 491,
@@ -67242,7 +67244,8 @@
               943,
               911,
               912,
-              942
+              942,
+              479
             ],
             "reserved_names": [
               "data_source_ref",
@@ -67505,9 +67508,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 479,
+                "id": 918,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 491,
@@ -67800,7 +67803,8 @@
               914,
               911,
               912,
-              913
+              913,
+              479
             ],
             "reserved_names": [
               "data_source_ref",
@@ -69117,9 +69121,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 808,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -69325,7 +69329,8 @@
               11,
               10,
               803,
-              802
+              802,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -69581,9 +69586,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 780,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -69784,7 +69789,8 @@
               11,
               10,
               774,
-              773
+              773,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -71720,9 +71726,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 1075,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -71887,7 +71893,8 @@
               9,
               11,
               10,
-              1072
+              1072,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -72142,9 +72149,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 1045,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -72304,7 +72311,8 @@
               9,
               11,
               10,
-              1042
+              1042,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -72559,9 +72567,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 765,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -72716,7 +72724,8 @@
               9,
               11,
               10,
-              762
+              762,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -74959,7 +74968,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -75182,7 +75191,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -75574,9 +75583,9 @@
                 "type": "string"
               },
               {
-                "id": 172,
+                "id": 215,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 173,
@@ -75611,7 +75620,8 @@
               9,
               11,
               10,
-              212
+              212,
+              172
             ],
             "reserved_names": [
               "data_source_ref",
@@ -76023,9 +76033,9 @@
                 "type": "string"
               },
               {
-                "id": 52,
+                "id": 54,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 53,
@@ -76038,6 +76048,9 @@
                 "name": "(xsd.base_type)",
                 "value": "DestinationDisplay_DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              52
             ]
           },
           {
@@ -76094,9 +76107,9 @@
                 "type": "string"
               },
               {
-                "id": 52,
+                "id": 54,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 53,
@@ -76109,6 +76122,9 @@
                 "name": "(xsd.base_type)",
                 "value": "DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              52
             ]
           },
           {
@@ -76216,9 +76232,9 @@
                 "type": "string"
               },
               {
-                "id": 172,
+                "id": 187,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 173,
@@ -76248,7 +76264,8 @@
               9,
               11,
               10,
-              184
+              184,
+              172
             ],
             "reserved_names": [
               "data_source_ref",
@@ -86264,7 +86281,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -86552,7 +86569,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -88451,7 +88468,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -88635,7 +88652,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -88873,7 +88890,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -97306,7 +97323,7 @@
               {
                 "id": 446,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 447,
@@ -97596,7 +97613,7 @@
               {
                 "id": 446,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 447,
@@ -103161,9 +103178,9 @@
                 "type": "bool"
               },
               {
-                "id": 823,
+                "id": 1143,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1071,
@@ -103183,7 +103200,8 @@
               9,
               11,
               10,
-              1102
+              1102,
+              823
             ],
             "reserved_names": [
               "data_source_ref",
@@ -103393,9 +103411,9 @@
                 "type": "bool"
               },
               {
-                "id": 823,
+                "id": 1113,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1071,
@@ -103410,7 +103428,8 @@
               9,
               11,
               10,
-              1072
+              1072,
+              823
             ],
             "reserved_names": [
               "data_source_ref",
@@ -103591,9 +103610,9 @@
                 "type": "string"
               },
               {
-                "id": 171,
+                "id": 485,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 172,
@@ -103821,7 +103840,8 @@
               9,
               11,
               10,
-              482
+              482,
+              171
             ],
             "reserved_names": [
               "data_source_ref",
@@ -103851,9 +103871,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 43,
+                "id": 123,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 44,
@@ -103970,6 +103990,9 @@
                 "name": "(xsd.base_type)",
                 "value": "FlexibleLine_DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              43
             ]
           },
           {
@@ -103986,9 +104009,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 43,
+                "id": 123,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 44,
@@ -104105,6 +104128,9 @@
                 "name": "(xsd.base_type)",
                 "value": "Line_DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              43
             ]
           },
           {
@@ -104212,9 +104238,9 @@
                 "type": "string"
               },
               {
-                "id": 171,
+                "id": 444,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 172,
@@ -104437,7 +104463,8 @@
               9,
               11,
               10,
-              441
+              441,
+              171
             ],
             "reserved_names": [
               "data_source_ref",
@@ -105745,9 +105772,9 @@
                 "type": "bool"
               },
               {
-                "id": 823,
+                "id": 883,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 851,
@@ -105762,7 +105789,8 @@
               9,
               11,
               10,
-              852
+              852,
+              823
             ],
             "reserved_names": [
               "data_source_ref",
@@ -105972,9 +106000,9 @@
                 "type": "bool"
               },
               {
-                "id": 823,
+                "id": 855,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               }
             ],
             "reserved_ids": [
@@ -105984,7 +106012,8 @@
               9,
               11,
               10,
-              824
+              824,
+              823
             ],
             "reserved_names": [
               "data_source_ref",
@@ -107482,9 +107511,9 @@
                 "type": "AlternativeNames_RelStructure"
               },
               {
-                "id": 812,
+                "id": 1033,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 821,
@@ -107514,7 +107543,8 @@
               9,
               11,
               10,
-              992
+              992,
+              812
             ],
             "reserved_names": [
               "data_source_ref",
@@ -107709,9 +107739,9 @@
                 "type": "AllVehicleModesOfTransportEnumeration"
               },
               {
-                "id": 812,
+                "id": 863,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 821,
@@ -107731,7 +107761,8 @@
               9,
               11,
               10,
-              832
+              832,
+              812
             ],
             "reserved_names": [
               "data_source_ref",
@@ -113845,7 +113876,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -114075,7 +114106,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -114766,7 +114797,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -114974,7 +115005,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -125007,9 +125038,9 @@
                 "type": "InfoLinksType"
               },
               {
-                "id": 281,
+                "id": 300,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 282,
@@ -125094,7 +125125,8 @@
               9,
               11,
               10,
-              297
+              297,
+              281
             ],
             "reserved_names": [
               "data_source_ref",
@@ -125229,9 +125261,9 @@
                 "type": "InfoLinksType"
               },
               {
-                "id": 281,
+                "id": 335,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 282,
@@ -125321,7 +125353,8 @@
               9,
               11,
               10,
-              332
+              332,
+              281
             ],
             "reserved_names": [
               "data_source_ref",
@@ -127116,9 +127149,9 @@
                 "type": "bool"
               },
               {
-                "id": 823,
+                "id": 1143,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1071,
@@ -127158,7 +127191,8 @@
               9,
               11,
               10,
-              1102
+              1102,
+              823
             ],
             "reserved_names": [
               "data_source_ref",
@@ -127368,9 +127402,9 @@
                 "type": "bool"
               },
               {
-                "id": 823,
+                "id": 1117,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1071,
@@ -127405,7 +127439,8 @@
               9,
               11,
               10,
-              1076
+              1076,
+              823
             ],
             "reserved_names": [
               "data_source_ref",
@@ -127603,7 +127638,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -127736,9 +127771,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 551,
+                "id": 644,
                 "name": "line_public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 542,
@@ -127758,7 +127793,8 @@
               9,
               11,
               10,
-              552
+              552,
+              551
             ],
             "reserved_names": [
               "data_source_ref",
@@ -127856,7 +127892,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -127984,9 +128020,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 551,
+                "id": 764,
                 "name": "line_public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 581,
@@ -128016,7 +128052,8 @@
               9,
               11,
               10,
-              672
+              672,
+              551
             ],
             "reserved_names": [
               "data_source_ref",
@@ -128668,7 +128705,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -128856,7 +128893,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -129080,7 +129117,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -129245,7 +129282,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -131387,7 +131424,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -140961,7 +140998,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -141159,7 +141196,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -141396,9 +141433,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 164,
+                "id": 205,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -141458,7 +141495,8 @@
               9,
               11,
               10,
-              202
+              202,
+              164
             ],
             "reserved_names": [
               "data_source_ref",
@@ -141564,9 +141602,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 164,
+                "id": 177,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -141621,7 +141659,8 @@
               9,
               11,
               10,
-              173
+              173,
+              164
             ],
             "reserved_names": [
               "data_source_ref",
@@ -141765,7 +141804,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -142078,7 +142117,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -144897,9 +144936,9 @@
                 "type": "string"
               },
               {
-                "id": 171,
+                "id": 275,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 172,
@@ -145058,7 +145097,8 @@
               9,
               11,
               10,
-              272
+              272,
+              171
             ],
             "reserved_names": [
               "data_source_ref",
@@ -145088,9 +145128,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 43,
+                "id": 50,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 44,
@@ -145138,6 +145178,9 @@
                 "name": "(xsd.base_type)",
                 "value": "Line_DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              43
             ]
           },
           {
@@ -145154,9 +145197,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 43,
+                "id": 50,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 44,
@@ -145204,6 +145247,9 @@
                 "name": "(xsd.base_type)",
                 "value": "DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              43
             ]
           },
           {
@@ -145311,9 +145357,9 @@
                 "type": "string"
               },
               {
-                "id": 171,
+                "id": 239,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 172,
@@ -145467,7 +145513,8 @@
               9,
               11,
               10,
-              236
+              236,
+              171
             ],
             "reserved_names": [
               "data_source_ref",
@@ -148124,7 +148171,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -149307,7 +149354,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -149465,7 +149512,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -150105,7 +150152,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -150293,7 +150340,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -150517,7 +150564,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -150722,7 +150769,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -150953,7 +151000,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -151183,7 +151230,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -152566,7 +152613,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -152729,7 +152776,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -155194,7 +155241,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -156161,7 +156208,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -156326,7 +156373,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -161180,9 +161227,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 1098,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -161388,7 +161435,8 @@
               11,
               10,
               1093,
-              1092
+              1092,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -161644,9 +161692,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 1068,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -161847,7 +161895,8 @@
               11,
               10,
               1063,
-              1062
+              1062,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -162275,9 +162324,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 52,
+                "id": 82,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 53,
@@ -162310,6 +162359,9 @@
                 "name": "(xsd.base_type)",
                 "value": "NoticeAssignment_DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              52
             ]
           },
           {
@@ -162366,9 +162418,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 52,
+                "id": 57,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 53,
@@ -162396,6 +162448,9 @@
                 "name": "(xsd.base_type)",
                 "value": "DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              52
             ]
           },
           {
@@ -162821,9 +162876,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 164,
+                "id": 215,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -162868,7 +162923,8 @@
               9,
               11,
               10,
-              212
+              212,
+              164
             ],
             "reserved_names": [
               "data_source_ref",
@@ -162974,9 +163030,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 164,
+                "id": 186,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -163016,7 +163072,8 @@
               9,
               11,
               10,
-              183
+              183,
+              164
             ],
             "reserved_names": [
               "data_source_ref",
@@ -165013,7 +165070,7 @@
               {
                 "id": 151,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 152,
@@ -165480,7 +165537,7 @@
               {
                 "id": 151,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 152,
@@ -165983,7 +166040,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -166200,7 +166257,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -167978,7 +168035,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -168206,7 +168263,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -169147,7 +169204,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -169606,7 +169663,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -170361,7 +170418,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -170574,7 +170631,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -170808,7 +170865,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -171235,7 +171292,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -171511,7 +171568,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -171729,7 +171786,7 @@
               {
                 "id": 164,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 165,
@@ -171973,7 +172030,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -172198,7 +172255,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -176909,9 +176966,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2153,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -177006,7 +177063,8 @@
               9,
               11,
               10,
-              2072
+              2072,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -177318,9 +177376,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2129,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -177410,7 +177468,8 @@
               9,
               11,
               10,
-              2042
+              2042,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -177861,9 +177920,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2393,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -177928,7 +177987,8 @@
               9,
               11,
               10,
-              2302
+              2302,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -178240,9 +178300,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2123,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -178302,7 +178362,8 @@
               9,
               11,
               10,
-              2042
+              2042,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -180579,9 +180640,9 @@
                 "type": "NavigationPaths_RelStructure"
               },
               {
-                "id": 1741,
+                "id": 1913,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1751,
@@ -180803,7 +180864,8 @@
               9,
               11,
               10,
-              1842
+              1842,
+              1741
             ],
             "reserved_names": [
               "data_source_ref",
@@ -181175,9 +181237,9 @@
                 "type": "NavigationPaths_RelStructure"
               },
               {
-                "id": 1741,
+                "id": 1873,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1751,
@@ -181394,7 +181456,8 @@
               9,
               11,
               10,
-              1802
+              1802,
+              1741
             ],
             "reserved_names": [
               "data_source_ref",
@@ -182414,7 +182477,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -182603,7 +182666,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -182942,7 +183005,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -183363,7 +183426,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -183568,7 +183631,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -188544,7 +188607,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -189215,7 +189278,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -189403,7 +189466,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -189728,7 +189791,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -189936,7 +189999,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -192704,9 +192767,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2123,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -192766,7 +192829,8 @@
               9,
               11,
               10,
-              2042
+              2042,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -193078,9 +193142,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 1754,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -193135,7 +193199,8 @@
               9,
               11,
               10,
-              1683
+              1683,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -194766,9 +194831,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2123,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -194828,7 +194893,8 @@
               9,
               11,
               10,
-              2042
+              2042,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -195140,9 +195206,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 1754,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -195197,7 +195263,8 @@
               9,
               11,
               10,
-              1683
+              1683,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -208047,9 +208114,9 @@
                 "type": "SiteEntrances_RelStructure"
               },
               {
-                "id": 2431,
+                "id": 2603,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 2432,
@@ -208134,7 +208201,8 @@
               9,
               11,
               10,
-              2482
+              2482,
+              2431
             ],
             "reserved_names": [
               "data_source_ref",
@@ -208538,9 +208606,9 @@
                 "type": "SiteEntrances_RelStructure"
               },
               {
-                "id": 2431,
+                "id": 2574,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 2432,
@@ -208620,7 +208688,8 @@
               9,
               11,
               10,
-              2453
+              2453,
+              2431
             ],
             "reserved_names": [
               "data_source_ref",
@@ -208783,7 +208852,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -208981,7 +209050,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -209891,7 +209960,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -210114,7 +210183,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -210363,7 +210432,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -210500,7 +210569,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -217711,7 +217780,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -217961,7 +218030,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -218546,7 +218615,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -218754,7 +218823,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -219042,7 +219111,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -219207,7 +219276,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -221414,7 +221483,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -221587,7 +221656,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -225179,7 +225248,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -225344,7 +225413,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -230395,7 +230464,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -230642,7 +230711,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -231326,7 +231395,7 @@
               {
                 "id": 446,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 447,
@@ -231490,7 +231559,7 @@
               {
                 "id": 50,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 51,
@@ -231692,7 +231761,7 @@
               {
                 "id": 446,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 447,
@@ -235035,7 +235104,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -235238,7 +235307,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -243963,9 +244032,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 479,
+                "id": 615,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 491,
@@ -244185,7 +244254,8 @@
               9,
               11,
               10,
-              612
+              612,
+              479
             ],
             "reserved_names": [
               "data_source_ref",
@@ -244445,9 +244515,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 479,
+                "id": 586,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 491,
@@ -244662,7 +244732,8 @@
               9,
               11,
               10,
-              583
+              583,
+              479
             ],
             "reserved_names": [
               "data_source_ref",
@@ -247227,7 +247298,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -247467,7 +247538,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -247753,7 +247824,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -247956,7 +248027,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -248154,7 +248225,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -251904,9 +251975,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 1754,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -251961,7 +252032,8 @@
               9,
               11,
               10,
-              1683
+              1683,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -252129,7 +252201,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -256810,7 +256882,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -257023,7 +257095,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -257543,7 +257615,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -257786,7 +257858,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -259382,9 +259454,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 611,
+                "id": 673,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 612,
@@ -259414,7 +259486,8 @@
               9,
               11,
               10,
-              652
+              652,
+              611
             ],
             "reserved_names": [
               "data_source_ref",
@@ -259589,9 +259662,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 611,
+                "id": 636,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 612,
@@ -259616,7 +259689,8 @@
               9,
               11,
               10,
-              615
+              615,
+              611
             ],
             "reserved_names": [
               "data_source_ref",
@@ -260724,9 +260798,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2183,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -260888,7 +260962,8 @@
               9,
               11,
               10,
-              2092
+              2092,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -261200,9 +261275,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2154,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -261359,7 +261434,8 @@
               9,
               11,
               10,
-              2063
+              2063,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -262243,9 +262319,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1731,
+                "id": 1943,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1741,
@@ -262487,7 +262563,8 @@
               9,
               11,
               10,
-              1862
+              1862,
+              1731
             ],
             "reserved_names": [
               "data_source_ref",
@@ -262842,9 +262919,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2583,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -263011,7 +263088,8 @@
               9,
               11,
               10,
-              2482
+              2482,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -263323,9 +263401,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2554,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -263487,7 +263565,8 @@
               9,
               11,
               10,
-              2453
+              2453,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -263531,9 +263610,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 45,
+                "id": 83,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 71,
@@ -263581,6 +263660,9 @@
                 "name": "(xsd.base_type)",
                 "value": "StopPlace_DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              45
             ]
           },
           {
@@ -263612,9 +263694,9 @@
                 "type": "MultilingualString"
               },
               {
-                "id": 45,
+                "id": 54,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 51,
@@ -263642,6 +263724,9 @@
                 "name": "(xsd.base_type)",
                 "value": "DerivedViewStructure"
               }
+            ],
+            "reserved_ids": [
+              45
             ]
           },
           {
@@ -263961,9 +264046,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1731,
+                "id": 1903,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1741,
@@ -264200,7 +264285,8 @@
               9,
               11,
               10,
-              1822
+              1822,
+              1731
             ],
             "reserved_names": [
               "data_source_ref",
@@ -270330,9 +270416,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1731,
+                "id": 2364,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1741,
@@ -270601,6 +270687,9 @@
                 "name": "(xsd.base_type)",
                 "value": "TaxiRank_VersionStructure"
               }
+            ],
+            "reserved_ids": [
+              1731
             ]
           },
           {
@@ -270920,9 +271009,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1731,
+                "id": 2335,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1741,
@@ -271186,6 +271275,9 @@
                 "name": "(xsd.base_type)",
                 "value": "StopPlace_VersionStructure"
               }
+            ],
+            "reserved_ids": [
+              1731
             ]
           },
           {
@@ -271637,7 +271729,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -271869,7 +271961,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -272392,9 +272484,9 @@
                 "type": "SiteEntrances_RelStructure"
               },
               {
-                "id": 2461,
+                "id": 3114,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 2462,
@@ -272518,6 +272610,9 @@
                 "name": "(xsd.base_type)",
                 "value": "TaxiStand_VersionStructure"
               }
+            ],
+            "reserved_ids": [
+              2461
             ]
           },
           {
@@ -272889,9 +272984,9 @@
                 "type": "SiteEntrances_RelStructure"
               },
               {
-                "id": 2461,
+                "id": 2944,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 2462,
@@ -272993,6 +273088,9 @@
                 "name": "(xsd.base_type)",
                 "value": "Quay_VersionStructure"
               }
+            ],
+            "reserved_ids": [
+              2461
             ]
           },
           {
@@ -273281,9 +273379,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 479,
+                "id": 915,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 491,
@@ -273513,7 +273611,8 @@
               9,
               11,
               10,
-              912
+              912,
+              479
             ],
             "reserved_names": [
               "data_source_ref",
@@ -273773,9 +273872,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 479,
+                "id": 886,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 491,
@@ -274000,7 +274099,8 @@
               9,
               11,
               10,
-              883
+              883,
+              479
             ],
             "reserved_names": [
               "data_source_ref",
@@ -275288,7 +275388,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -275468,7 +275568,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -275694,7 +275794,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -275984,7 +276084,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -276315,7 +276415,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -276541,7 +276641,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -290597,7 +290697,7 @@
               {
                 "id": 611,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 621,
@@ -290866,7 +290966,7 @@
               {
                 "id": 611,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 621,
@@ -291166,7 +291266,7 @@
               {
                 "id": 151,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 152,
@@ -291507,7 +291607,7 @@
               {
                 "id": 151,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 152,
@@ -292279,7 +292379,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -292509,7 +292609,7 @@
               {
                 "id": 161,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 162,
@@ -294780,7 +294880,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -294983,7 +295083,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -295376,7 +295476,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -295551,7 +295651,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -321909,7 +322009,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -322082,7 +322182,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -322483,9 +322583,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2153,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -322550,7 +322650,8 @@
               9,
               11,
               10,
-              2072
+              2072,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -322862,9 +322963,9 @@
                 "type": "LocalServices_RelStructure"
               },
               {
-                "id": 1661,
+                "id": 2123,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 1662,
@@ -322924,7 +323025,8 @@
               9,
               11,
               10,
-              2042
+              2042,
+              1661
             ],
             "reserved_names": [
               "data_source_ref",
@@ -325603,9 +325705,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 545,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -325720,7 +325822,8 @@
               9,
               11,
               10,
-              542
+              542,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -326299,9 +326402,9 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 469,
+                "id": 508,
                 "name": "public_code",
-                "type": "string"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 481,
@@ -326411,7 +326514,8 @@
               9,
               11,
               10,
-              505
+              505,
+              469
             ],
             "reserved_names": [
               "data_source_ref",
@@ -333936,7 +334040,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -334168,7 +334272,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -335163,7 +335267,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -335310,7 +335414,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -335646,7 +335750,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -335893,7 +335997,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -339966,7 +340070,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -340218,7 +340322,7 @@
               {
                 "id": 153,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 154,
@@ -345635,7 +345739,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -345828,7 +345932,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -346057,7 +346161,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -346284,7 +346388,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -346501,7 +346605,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
@@ -347012,7 +347116,7 @@
               {
                 "id": 163,
                 "name": "public_code",
-                "type": "PrivateCodeStructure"
+                "type": "PublicCodeStructure"
               },
               {
                 "id": 164,
