@@ -696,6 +696,11 @@ customTypeReplacements:
   ^SitePathJunctionRefStructure$: VersionOfObjectRefStructure
   ^PtRideLegRefStructure$: VersionOfObjectRefStructure
   ^TrainElementTypeRefStructure$: VersionOfObjectRefStructure
+  # NeTEx 2.0 elements in substitution group VersionedChild get their own *Type (same fields, different numbers). Keep the
+  # structure used before 2.0
+  ^AccessRightInProductType$: AccessRightInProduct_VersionedChildStructure
+  ^ServiceLinkInJourneyPatternType$: ServiceLinkInJourneyPattern_VersionedChildStructure
+  ^ResponsibilityRoleAssignmentType$: ResponsibilityRoleAssignment_VersionedChildStructure
 
   ^CrewBaseRefStructure$: GroupOfEntitiesRefStructure
   ^FareTableRefStructure$: GroupOfEntitiesRefStructure
