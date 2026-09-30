@@ -63,12 +63,6 @@
             <version>${protovalidate.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.google.re2j</groupId>
-            <artifactId>re2j</artifactId>
-            <version>1.8</version>
-            <scope>provided</scope>
-        </dependency>
         <!-- xsd:date and xsd:time equivalents -->
         <dependency>
             <groupId>com.google.api.grpc</groupId>
