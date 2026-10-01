@@ -217,6 +217,7 @@ customTypeReplacements:
   ^TariffZoneRefStructure$: VersionOfObjectRefStructure
   ^FareScheduledStopPointRefStructure$: VersionOfObjectRefStructure
   ^VehicleServicePartRefStructure$: VersionOfObjectRefStructure
+  ^ContractRefStructure$: VersionOfObjectRefStructure
   ^SupplyContractRefStructure$: VersionOfObjectRefStructure
   ^ResidentialQualificationEligibilityRefStructure$: VersionOfObjectRefStructure
   ^ServiceJourneyInterchangeRefStructure$: VersionOfObjectRefStructure

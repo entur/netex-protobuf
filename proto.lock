@@ -101969,16 +101969,6 @@
                 "type": "string"
               },
               {
-                "id": 6,
-                "name": "modification",
-                "type": "ModificationEnumeration"
-              },
-              {
-                "id": 7,
-                "name": "version_ref",
-                "type": "string"
-              },
-              {
                 "id": 9,
                 "name": "uri",
                 "type": "string"
@@ -101988,6 +101978,14 @@
                 "name": "value",
                 "type": "string"
               }
+            ],
+            "reserved_ids": [
+              6,
+              7
+            ],
+            "reserved_names": [
+              "modification",
+              "version_ref"
             ],
             "options": [
               {
@@ -102017,7 +102015,7 @@
               {
                 "id": 3,
                 "name": "contract_ref",
-                "type": "ContractRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 4,
@@ -352503,16 +352501,6 @@
                 "type": "string"
               },
               {
-                "id": 13,
-                "name": "modification",
-                "type": "ModificationEnumeration"
-              },
-              {
-                "id": 14,
-                "name": "version_ref",
-                "type": "string"
-              },
-              {
                 "id": 8,
                 "name": "ref",
                 "type": "string"
@@ -352531,10 +352519,14 @@
             "reserved_ids": [
               4,
               2,
-              1
+              1,
+              13,
+              14
             ],
             "reserved_names": [
-              "name_of_ref_class"
+              "name_of_ref_class",
+              "modification",
+              "version_ref"
             ],
             "options": [
               {
