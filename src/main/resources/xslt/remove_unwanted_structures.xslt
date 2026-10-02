@@ -25,12 +25,13 @@
     <xsl:template
         match="/xsd:schema/xsd:element[@name = 'AlternativeName']/xsd:complexType/xsd:complexContent/xsd:restriction[@base = 'AlternativeName_VersionedChildStructure']/xsd:attribute[@name = 'dataSourceRef']"/>
 
-    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'versionRef']"/>
-
+    <!-- versionRef and modification attributes on reference structures. NeTEx 2.0 redeclares them in every restriction of
+         VersionOfObjectRefStructure, so they are removed from all simple content types, except where they have always been
+         kept (versionRef on TypeOfVersionRefStructure) -->
+    <xsl:template match="//xsd:complexType[not(@name = 'TypeOfVersionRefStructure')]/xsd:simpleContent/*/xsd:attribute[@name = 'versionRef']"/>
+    <xsl:template match="//xsd:complexType/xsd:simpleContent/*/xsd:attribute[@name = 'modification']"/>
 
     <!-- modification attribute -->
-    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'VersionOfObjectRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
-    <xsl:template match="/xsd:schema/xsd:complexType[@name = 'TypeOfVersionRefStructure']/xsd:simpleContent/xsd:extension[@base = 'ObjectIdType']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'BasicModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
     <xsl:template match="/xsd:schema/xsd:attributeGroup[@name = 'DocumentModificationDetailsGroup']/xsd:attribute[@name = 'modification']"/>
     <xsl:template
@@ -49,6 +50,18 @@
     <xsl:template match="//xsd:attribute[@name = 'nameOfRefClass']"/>
 
     <xsl:template match="//xsd:attribute[@name = 'nameOfMemberClass']"/>
+
+    <!-- NameOfClass is an enumeration of all class names in NeTEx 2.0 (free text before). Keep it free text, as the enum is
+         unused (fields are replaced with string) and pairs like 'Delta' and 'DeltaValue' break the generated Java (protoc adds a
+         DELTA_VALUE int constant for DELTA) -->
+    <xsl:template match="/xsd:schema/xsd:simpleType[@name = 'NameOfClass']/xsd:restriction/xsd:enumeration"/>
+
+    <!-- NeTEx 2.0 has both e.g. 'planning' and 'Planning' in this enumeration, which give the same enum constant name. Keep
+         the lower case variant (the only one before 2.0) -->
+    <xsl:template
+        match="/xsd:schema/xsd:simpleType[@name = 'StakeholderRoleTypeEnumeration']/xsd:restriction/xsd:enumeration
+            [translate(substring(@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '') = '']
+            [../xsd:enumeration/@value = concat(translate(substring(current()/@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), substring(current()/@value, 2))]"/>
 
     <!-- Only support embedded CPP prices, not relations -->
     <xsl:template match="/xsd:schema/xsd:complexType[@name = 'customerPurchasePackagePrices_RelStructure']/xsd:complexContent/xsd:extension[@base = 'strictContainmentAggregationStructure']">
@@ -77,6 +90,13 @@
     <!-- Remove pricing details from most objects -->
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricingGroup']"/>
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricesGroup']"/>
-    
+
+    <!-- TODO must be resolved before merging NeTEx 2.0: ActivationMeans is a single ActivationMeansEnumeration in NeTEx 2.0,
+         but was a list (ActivationMeansListOfEnumerations) before. Keep the list for now, so activation_means stays a
+         repeated enum -->
+    <xsl:template match="/xsd:schema/xsd:group[@name = 'UsageValidityPeriodGroup']/xsd:sequence/xsd:element[@name = 'ActivationMeans']/@type">
+        <xsl:attribute name="type">ActivationMeansListOfEnumerations</xsl:attribute>
+    </xsl:template>
+
 
 </xsl:stylesheet>
