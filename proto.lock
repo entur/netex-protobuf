@@ -42067,7 +42067,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -42199,7 +42199,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -46789,7 +46789,7 @@
               {
                 "id": 465,
                 "name": "type_of_battery_chemistry_ref",
-                "type": "TypeOfBatteryChemistryRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 491,
@@ -46956,7 +46956,7 @@
               {
                 "id": 465,
                 "name": "type_of_battery_chemistry_ref",
-                "type": "TypeOfBatteryChemistryRefStructure"
+                "type": "VersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -55142,7 +55142,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -55389,7 +55389,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -59143,7 +59143,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -59390,7 +59390,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -63853,7 +63853,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -64090,7 +64090,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -67885,12 +67885,12 @@
               {
                 "id": 754,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 755,
                 "name": "medium_access_device_security_listing_ref",
-                "type": "MediumAccessDeviceSecurityListingRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 756,
@@ -67910,7 +67910,7 @@
               {
                 "id": 773,
                 "name": "individual_passenger_info_ref",
-                "type": "IndividualPassengerInfoRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 774,
@@ -67935,17 +67935,17 @@
               {
                 "id": 780,
                 "name": "parking_bay_status_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 781,
                 "name": "rental_availability_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 782,
                 "name": "parking_bay_condition_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 783,
@@ -67970,12 +67970,12 @@
               {
                 "id": 787,
                 "name": "mobility_service_frame_ref",
-                "type": "MobilityServiceFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 788,
                 "name": "mobility_journey_frame_ref",
-                "type": "MobilityJourneyFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 789,
@@ -68025,7 +68025,7 @@
               {
                 "id": 798,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 799,
@@ -68040,22 +68040,22 @@
               {
                 "id": 801,
                 "name": "vehicle_profile_ref",
-                "type": "VehicleProfileRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 802,
                 "name": "mode_restriction_assessment_ref",
-                "type": "ModeRestrictionAssessmentRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 803,
                 "name": "type_of_battery_chemistry_ref",
-                "type": "TypeOfBatteryChemistryRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 804,
                 "name": "type_of_plug_ref",
-                "type": "TypeOfPlugRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 806,
@@ -68070,12 +68070,12 @@
               {
                 "id": 808,
                 "name": "fleet_ref",
-                "type": "FleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 809,
                 "name": "type_of_fleet_ref",
-                "type": "TypeOfFleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 810,
@@ -68100,7 +68100,7 @@
               {
                 "id": 814,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 815,
@@ -74337,7 +74337,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -74469,7 +74469,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -109225,12 +109225,12 @@
               {
                 "id": 521,
                 "name": "vehicle_meeting_point_assignment_ref",
-                "type": "VehicleMeetingPointAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               },
               {
                 "id": 522,
                 "name": "dynamic_vehicle_meeting_point_assignment_ref",
-                "type": "DynamicVehicleMeetingPointAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -109548,12 +109548,12 @@
               {
                 "id": 521,
                 "name": "vehicle_meeting_point_assignment_ref",
-                "type": "VehicleMeetingPointAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               },
               {
                 "id": 522,
                 "name": "dynamic_vehicle_meeting_point_assignment_ref",
-                "type": "DynamicVehicleMeetingPointAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -110077,7 +110077,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -110194,7 +110194,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -131026,7 +131026,7 @@
               {
                 "id": 274,
                 "name": "type_of_fleet_ref",
-                "type": "TypeOfFleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 275,
@@ -131192,7 +131192,7 @@
               {
                 "id": 274,
                 "name": "type_of_fleet_ref",
-                "type": "TypeOfFleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 275,
@@ -133424,7 +133424,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -133551,7 +133551,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -141166,12 +141166,12 @@
               {
                 "id": 653,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 654,
                 "name": "medium_access_device_security_listing_ref",
-                "type": "MediumAccessDeviceSecurityListingRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 655,
@@ -141191,7 +141191,7 @@
               {
                 "id": 672,
                 "name": "individual_passenger_info_ref",
-                "type": "IndividualPassengerInfoRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 673,
@@ -141216,17 +141216,17 @@
               {
                 "id": 679,
                 "name": "parking_bay_status_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 680,
                 "name": "rental_availability_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 681,
                 "name": "parking_bay_condition_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 682,
@@ -141251,12 +141251,12 @@
               {
                 "id": 686,
                 "name": "mobility_service_frame_ref",
-                "type": "MobilityServiceFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 687,
                 "name": "mobility_journey_frame_ref",
-                "type": "MobilityJourneyFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 688,
@@ -141306,7 +141306,7 @@
               {
                 "id": 697,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 698,
@@ -141321,22 +141321,22 @@
               {
                 "id": 700,
                 "name": "vehicle_profile_ref",
-                "type": "VehicleProfileRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 701,
                 "name": "mode_restriction_assessment_ref",
-                "type": "ModeRestrictionAssessmentRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 702,
                 "name": "type_of_battery_chemistry_ref",
-                "type": "TypeOfBatteryChemistryRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 703,
                 "name": "type_of_plug_ref",
-                "type": "TypeOfPlugRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 705,
@@ -141351,12 +141351,12 @@
               {
                 "id": 707,
                 "name": "fleet_ref",
-                "type": "FleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 708,
                 "name": "type_of_fleet_ref",
-                "type": "TypeOfFleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 709,
@@ -141381,7 +141381,7 @@
               {
                 "id": 713,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 714,
@@ -159519,7 +159519,7 @@
               {
                 "id": 3,
                 "name": "individual_passenger_info_ref",
-                "type": "IndividualPassengerInfoRefStructure"
+                "type": "VersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -184723,7 +184723,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -184927,7 +184927,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -186502,7 +186502,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -186619,7 +186619,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -188161,7 +188161,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -188487,7 +188487,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -188619,7 +188619,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -190450,7 +190450,7 @@
               {
                 "id": 2842,
                 "name": "parking_bay_status_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 2871,
@@ -190937,7 +190937,7 @@
               {
                 "id": 2842,
                 "name": "parking_bay_status_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 2011,
@@ -200408,7 +200408,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -200640,7 +200640,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -210194,7 +210194,7 @@
               {
                 "id": 276,
                 "name": "parking_bay_status_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 301,
@@ -210336,7 +210336,7 @@
               {
                 "id": 276,
                 "name": "parking_bay_status_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 271,
@@ -228573,7 +228573,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -228710,7 +228710,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -253371,7 +253371,7 @@
               {
                 "id": 333,
                 "name": "type_of_plug_ref",
-                "type": "TypeOfPlugRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 334,
@@ -253878,7 +253878,7 @@
               {
                 "id": 333,
                 "name": "type_of_plug_ref",
-                "type": "TypeOfPlugRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 334,
@@ -280049,7 +280049,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -280176,7 +280176,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -283324,7 +283324,7 @@
               {
                 "id": 672,
                 "name": "individual_passenger_info_ref",
-                "type": "IndividualPassengerInfoRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 673,
@@ -283349,17 +283349,17 @@
               {
                 "id": 679,
                 "name": "parking_bay_status_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 680,
                 "name": "rental_availability_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 681,
                 "name": "parking_bay_condition_ref",
-                "type": "ParkingBayStatusRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 682,
@@ -283384,12 +283384,12 @@
               {
                 "id": 686,
                 "name": "mobility_service_frame_ref",
-                "type": "MobilityServiceFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 687,
                 "name": "mobility_journey_frame_ref",
-                "type": "MobilityJourneyFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 707,
@@ -283439,7 +283439,7 @@
               {
                 "id": 716,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 717,
@@ -283454,22 +283454,22 @@
               {
                 "id": 719,
                 "name": "vehicle_profile_ref",
-                "type": "VehicleProfileRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 720,
                 "name": "mode_restriction_assessment_ref",
-                "type": "ModeRestrictionAssessmentRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 721,
                 "name": "type_of_battery_chemistry_ref",
-                "type": "TypeOfBatteryChemistryRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 722,
                 "name": "type_of_plug_ref",
-                "type": "TypeOfPlugRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 724,
@@ -283484,12 +283484,12 @@
               {
                 "id": 726,
                 "name": "fleet_ref",
-                "type": "FleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 727,
                 "name": "type_of_fleet_ref",
-                "type": "TypeOfFleetRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 728,
@@ -283514,7 +283514,7 @@
               {
                 "id": 732,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 733,
@@ -283629,12 +283629,12 @@
               {
                 "id": 755,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 756,
                 "name": "medium_access_device_security_listing_ref",
-                "type": "MediumAccessDeviceSecurityListingRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 757,
@@ -286816,7 +286816,7 @@
                   {
                     "id": 6,
                     "name": "medium_access_device_security_listing_ref",
-                    "type": "MediumAccessDeviceSecurityListingRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   }
                 ]
               }
@@ -308598,7 +308598,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -308715,7 +308715,7 @@
               {
                 "id": 154,
                 "name": "type_of_medium_access_device_ref",
-                "type": "TypeOfMediumAccessDeviceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 155,
@@ -327134,7 +327134,7 @@
               {
                 "id": 3,
                 "name": "taxi_service_place_assignment_ref",
-                "type": "TaxiServicePlaceAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -327618,7 +327618,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -327865,7 +327865,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -385325,7 +385325,7 @@
               {
                 "id": 475,
                 "name": "type_of_plug_ref",
-                "type": "TypeOfPlugRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 464,
@@ -385528,7 +385528,7 @@
               {
                 "id": 475,
                 "name": "type_of_plug_ref",
-                "type": "TypeOfPlugRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 464,
@@ -397026,7 +397026,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -398876,7 +398876,7 @@
               {
                 "id": 3,
                 "name": "vehicle_pooling_place_assignment_ref",
-                "type": "VehiclePoolingPlaceAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -399380,7 +399380,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -399627,7 +399627,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -399829,7 +399829,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -400987,7 +400987,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -401185,7 +401185,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -401447,7 +401447,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -401669,7 +401669,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -403403,7 +403403,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -405253,7 +405253,7 @@
               {
                 "id": 3,
                 "name": "vehicle_sharing_place_assignment_ref",
-                "type": "VehicleSharingPlaceAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -405767,7 +405767,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -406034,7 +406034,7 @@
               {
                 "id": 283,
                 "name": "type_of_mobility_service_ref",
-                "type": "TypeOfMobilityServiceRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 294,
@@ -406261,7 +406261,7 @@
               {
                 "id": 271,
                 "name": "type_of_mode_of_operation_ref",
-                "type": "TypeOfModeOfOperationRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 272,
@@ -423176,7 +423176,7 @@
               {
                 "id": 3,
                 "name": "dynamic_vehicle_meeting_point_assignment_ref",
-                "type": "DynamicVehicleMeetingPointAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -430075,12 +430075,12 @@
                   {
                     "id": 502,
                     "name": "type_of_medium_access_device_ref",
-                    "type": "TypeOfMediumAccessDeviceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 503,
                     "name": "medium_access_device_security_listing_ref",
-                    "type": "MediumAccessDeviceSecurityListingRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 504,
@@ -430100,7 +430100,7 @@
                   {
                     "id": 521,
                     "name": "individual_passenger_info_ref",
-                    "type": "IndividualPassengerInfoRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 522,
@@ -430125,17 +430125,17 @@
                   {
                     "id": 528,
                     "name": "parking_bay_status_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 529,
                     "name": "rental_availability_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 530,
                     "name": "parking_bay_condition_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 531,
@@ -430160,12 +430160,12 @@
                   {
                     "id": 535,
                     "name": "mobility_service_frame_ref",
-                    "type": "MobilityServiceFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 536,
                     "name": "mobility_journey_frame_ref",
-                    "type": "MobilityJourneyFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 548,
@@ -430215,7 +430215,7 @@
                   {
                     "id": 557,
                     "name": "type_of_mode_of_operation_ref",
-                    "type": "TypeOfModeOfOperationRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 558,
@@ -430230,22 +430230,22 @@
                   {
                     "id": 560,
                     "name": "vehicle_profile_ref",
-                    "type": "VehicleProfileRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 561,
                     "name": "mode_restriction_assessment_ref",
-                    "type": "ModeRestrictionAssessmentRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 562,
                     "name": "type_of_battery_chemistry_ref",
-                    "type": "TypeOfBatteryChemistryRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 563,
                     "name": "type_of_plug_ref",
-                    "type": "TypeOfPlugRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 565,
@@ -430260,12 +430260,12 @@
                   {
                     "id": 567,
                     "name": "fleet_ref",
-                    "type": "FleetRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 568,
                     "name": "type_of_fleet_ref",
-                    "type": "TypeOfFleetRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 569,
@@ -430290,7 +430290,7 @@
                   {
                     "id": 573,
                     "name": "type_of_mobility_service_ref",
-                    "type": "TypeOfMobilityServiceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 574,
@@ -434773,7 +434773,7 @@
               {
                 "id": 3,
                 "name": "fleet_ref",
-                "type": "FleetRefStructure",
+                "type": "VersionOfObjectRefStructure",
                 "is_repeated": true
               }
             ],
@@ -439813,7 +439813,7 @@
               {
                 "id": 3,
                 "name": "medium_access_device_security_listing_ref",
-                "type": "MediumAccessDeviceSecurityListingRefStructure",
+                "type": "VersionOfObjectRefStructure",
                 "is_repeated": true
               }
             ],
@@ -440202,7 +440202,7 @@
                   {
                     "id": 1,
                     "name": "mode_restriction_assessment_ref",
-                    "type": "ModeRestrictionAssessmentRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 2,
@@ -443897,12 +443897,12 @@
                   {
                     "id": 502,
                     "name": "type_of_medium_access_device_ref",
-                    "type": "TypeOfMediumAccessDeviceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 503,
                     "name": "medium_access_device_security_listing_ref",
-                    "type": "MediumAccessDeviceSecurityListingRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 504,
@@ -443922,7 +443922,7 @@
                   {
                     "id": 521,
                     "name": "individual_passenger_info_ref",
-                    "type": "IndividualPassengerInfoRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 522,
@@ -443947,17 +443947,17 @@
                   {
                     "id": 528,
                     "name": "parking_bay_status_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 529,
                     "name": "rental_availability_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 530,
                     "name": "parking_bay_condition_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 531,
@@ -443982,12 +443982,12 @@
                   {
                     "id": 535,
                     "name": "mobility_service_frame_ref",
-                    "type": "MobilityServiceFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 536,
                     "name": "mobility_journey_frame_ref",
-                    "type": "MobilityJourneyFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 537,
@@ -444037,7 +444037,7 @@
                   {
                     "id": 546,
                     "name": "type_of_mode_of_operation_ref",
-                    "type": "TypeOfModeOfOperationRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 547,
@@ -444052,22 +444052,22 @@
                   {
                     "id": 549,
                     "name": "vehicle_profile_ref",
-                    "type": "VehicleProfileRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 550,
                     "name": "mode_restriction_assessment_ref",
-                    "type": "ModeRestrictionAssessmentRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 551,
                     "name": "type_of_battery_chemistry_ref",
-                    "type": "TypeOfBatteryChemistryRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 552,
                     "name": "type_of_plug_ref",
-                    "type": "TypeOfPlugRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 554,
@@ -444082,12 +444082,12 @@
                   {
                     "id": 556,
                     "name": "fleet_ref",
-                    "type": "FleetRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 557,
                     "name": "type_of_fleet_ref",
-                    "type": "TypeOfFleetRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 558,
@@ -444112,7 +444112,7 @@
                   {
                     "id": 562,
                     "name": "type_of_mobility_service_ref",
-                    "type": "TypeOfMobilityServiceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 563,
@@ -446042,12 +446042,12 @@
                   {
                     "id": 1,
                     "name": "parking_bay_condition_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 2,
                     "name": "rental_availability_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 3,
@@ -455669,22 +455669,22 @@
                   {
                     "id": 58,
                     "name": "type_of_mode_of_operation_ref",
-                    "type": "TypeOfModeOfOperationRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 59,
                     "name": "type_of_battery_chemistry_ref",
-                    "type": "TypeOfBatteryChemistryRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 60,
                     "name": "type_of_plug_ref",
-                    "type": "TypeOfPlugRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 61,
                     "name": "type_of_mobility_service_ref",
-                    "type": "TypeOfMobilityServiceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 62,
@@ -459523,7 +459523,7 @@
                   {
                     "id": 354,
                     "name": "type_of_medium_access_device_ref",
-                    "type": "TypeOfMediumAccessDeviceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 361,
@@ -461055,12 +461055,12 @@
               {
                 "id": 3,
                 "name": "vehicle_meeting_point_assignment_ref",
-                "type": "VehicleMeetingPointAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               },
               {
                 "id": 4,
                 "name": "dynamic_vehicle_meeting_point_assignment_ref",
-                "type": "DynamicVehicleMeetingPointAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -461129,12 +461129,12 @@
                   {
                     "id": 1,
                     "name": "vehicle_meeting_point_assignment_ref",
-                    "type": "VehicleMeetingPointAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 2,
                     "name": "dynamic_vehicle_meeting_point_assignment_ref",
-                    "type": "DynamicVehicleMeetingPointAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   }
                 ]
               }
@@ -461557,22 +461557,22 @@
               {
                 "id": 3,
                 "name": "vehicle_service_place_assignment_ref",
-                "type": "VehicleServicePlaceAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               },
               {
                 "id": 4,
                 "name": "taxi_service_place_assignment_ref",
-                "type": "TaxiServicePlaceAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               },
               {
                 "id": 5,
                 "name": "vehicle_sharing_place_assignment_ref",
-                "type": "VehicleSharingPlaceAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               },
               {
                 "id": 6,
                 "name": "vehicle_pooling_place_assignment_ref",
-                "type": "VehiclePoolingPlaceAssignmentRefStructure"
+                "type": "OrderedVersionOfObjectRefStructure"
               }
             ],
             "options": [
@@ -465196,12 +465196,12 @@
                   {
                     "id": 13,
                     "name": "mobility_service_frame_ref",
-                    "type": "MobilityServiceFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 14,
                     "name": "mobility_journey_frame_ref",
-                    "type": "MobilityJourneyFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 16,
@@ -470009,12 +470009,12 @@
               {
                 "id": 13,
                 "name": "mobility_service_frame_ref",
-                "type": "MobilityServiceFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 14,
                 "name": "mobility_journey_frame_ref",
-                "type": "MobilityJourneyFrameRefStructure"
+                "type": "VersionOfObjectRefStructure"
               },
               {
                 "id": 16,
@@ -472770,7 +472770,7 @@
                   {
                     "id": 521,
                     "name": "individual_passenger_info_ref",
-                    "type": "IndividualPassengerInfoRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 522,
@@ -472795,17 +472795,17 @@
                   {
                     "id": 528,
                     "name": "parking_bay_status_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 529,
                     "name": "rental_availability_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 530,
                     "name": "parking_bay_condition_ref",
-                    "type": "ParkingBayStatusRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 531,
@@ -472830,12 +472830,12 @@
                   {
                     "id": 535,
                     "name": "mobility_service_frame_ref",
-                    "type": "MobilityServiceFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 536,
                     "name": "mobility_journey_frame_ref",
-                    "type": "MobilityJourneyFrameRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 555,
@@ -472910,7 +472910,7 @@
                   {
                     "id": 582,
                     "name": "type_of_mode_of_operation_ref",
-                    "type": "TypeOfModeOfOperationRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 583,
@@ -472925,22 +472925,22 @@
                   {
                     "id": 585,
                     "name": "vehicle_profile_ref",
-                    "type": "VehicleProfileRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 586,
                     "name": "mode_restriction_assessment_ref",
-                    "type": "ModeRestrictionAssessmentRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 587,
                     "name": "type_of_battery_chemistry_ref",
-                    "type": "TypeOfBatteryChemistryRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 588,
                     "name": "type_of_plug_ref",
-                    "type": "TypeOfPlugRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 590,
@@ -472955,12 +472955,12 @@
                   {
                     "id": 592,
                     "name": "fleet_ref",
-                    "type": "FleetRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 593,
                     "name": "type_of_fleet_ref",
-                    "type": "TypeOfFleetRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 594,
@@ -472985,7 +472985,7 @@
                   {
                     "id": 598,
                     "name": "type_of_mobility_service_ref",
-                    "type": "TypeOfMobilityServiceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 599,
@@ -473100,12 +473100,12 @@
                   {
                     "id": 621,
                     "name": "type_of_medium_access_device_ref",
-                    "type": "TypeOfMediumAccessDeviceRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 622,
                     "name": "medium_access_device_security_listing_ref",
-                    "type": "MediumAccessDeviceSecurityListingRefStructure"
+                    "type": "VersionOfObjectRefStructure"
                   },
                   {
                     "id": 630,
@@ -473590,7 +473590,7 @@
                   {
                     "id": 549,
                     "name": "time_demand_type_assignment_ref",
-                    "type": "TimeDemandTypeAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 565,
@@ -473600,32 +473600,32 @@
                   {
                     "id": 566,
                     "name": "vehicle_meeting_point_assignment_ref",
-                    "type": "VehicleMeetingPointAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 567,
                     "name": "dynamic_vehicle_meeting_point_assignment_ref",
-                    "type": "DynamicVehicleMeetingPointAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 568,
                     "name": "vehicle_service_place_assignment_ref",
-                    "type": "VehicleServicePlaceAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 569,
                     "name": "taxi_service_place_assignment_ref",
-                    "type": "TaxiServicePlaceAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 570,
                     "name": "vehicle_sharing_place_assignment_ref",
-                    "type": "VehicleSharingPlaceAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 571,
                     "name": "vehicle_pooling_place_assignment_ref",
-                    "type": "VehiclePoolingPlaceAssignmentRefStructure"
+                    "type": "OrderedVersionOfObjectRefStructure"
                   },
                   {
                     "id": 699,

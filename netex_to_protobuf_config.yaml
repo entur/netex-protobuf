@@ -692,6 +692,28 @@ customTypeReplacements:
   ^RevertingRefStructure$: VersionOfObjectRefStructure
   ^SecurityPolicyRefStructure$: VersionOfObjectRefStructure
   ^OnboardValidityRefStructure$: VersionOfObjectRefStructure
+  # Not used in abt-protobuf. Other field numbers than (Ordered)VersionOfObjectRefStructure; wire break accepted with NeTEx 2.0
+  ^TypeOfMediumAccessDeviceRefStructure$: VersionOfObjectRefStructure
+  ^FleetRefStructure$: VersionOfObjectRefStructure
+  ^IndividualPassengerInfoRefStructure$: VersionOfObjectRefStructure
+  ^MediumAccessDeviceSecurityListingRefStructure$: VersionOfObjectRefStructure
+  ^MobilityJourneyFrameRefStructure$: VersionOfObjectRefStructure
+  ^MobilityServiceFrameRefStructure$: VersionOfObjectRefStructure
+  ^ModeRestrictionAssessmentRefStructure$: VersionOfObjectRefStructure
+  ^ParkingBayStatusRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfBatteryChemistryRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfFleetRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfMobilityServiceRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfModeOfOperationRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfPlugRefStructure$: VersionOfObjectRefStructure
+  ^VehicleProfileRefStructure$: VersionOfObjectRefStructure
+  ^DynamicVehicleMeetingPointAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^TaxiServicePlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^TimeDemandTypeAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehicleMeetingPointAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehiclePoolingPlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehicleServicePlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehicleSharingPlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
   # Typed in NeTEx 2.0, VersionOfObjectRefStructure before
   ^SiteNavigationPathRefStructure$: VersionOfObjectRefStructure
   ^SitePathJunctionRefStructure$: VersionOfObjectRefStructure
