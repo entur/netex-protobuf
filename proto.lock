@@ -91,6 +91,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               }
@@ -165,6 +169,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -218,6 +226,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               }
@@ -266,6 +278,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               }
@@ -347,6 +363,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               }
@@ -554,6 +574,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -570,6 +594,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -603,6 +631,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -636,6 +668,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -817,6 +853,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -1027,6 +1067,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -1139,6 +1183,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -1192,6 +1240,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -1293,6 +1345,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -16247,6 +16303,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -16351,6 +16411,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -26945,6 +27009,10 @@
                   {
                     "name": "(buf.validate.field).string.pattern",
                     "value": "[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -27069,6 +27137,10 @@
                   {
                     "name": "(buf.validate.field).string.pattern",
                     "value": "[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -31618,6 +31690,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -31782,6 +31858,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -34384,6 +34464,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -34645,6 +34729,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -34911,6 +34999,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -48491,6 +48583,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -51336,6 +51432,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -51524,6 +51624,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -66865,6 +66969,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -67141,6 +67249,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -67422,6 +67534,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -71687,6 +71803,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -95199,6 +95319,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -95584,6 +95708,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -120456,6 +120584,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -125214,6 +125346,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -133148,6 +133284,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -144834,6 +144974,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -146835,6 +146979,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -147056,6 +147204,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -147272,6 +147424,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -147524,6 +147680,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -147845,6 +148005,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -148217,6 +148381,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -148386,6 +148554,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -148683,6 +148855,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -148842,6 +149018,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -157715,6 +157895,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -158006,6 +158190,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -159468,6 +159656,10 @@
                   {
                     "name": "(buf.validate.field).string.pattern",
                     "value": "[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -167652,6 +167844,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -167928,6 +168124,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -187767,6 +187967,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -188013,6 +188217,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -189984,6 +190192,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -190210,6 +190422,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -191644,6 +191860,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -191999,6 +192219,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -192349,6 +192573,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -197065,6 +197293,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -197523,6 +197755,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -198083,6 +198319,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -198362,6 +198602,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -198682,6 +198926,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -198983,6 +199231,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -199274,6 +199526,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -199710,6 +199966,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -200197,6 +200457,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -200356,6 +200620,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -202448,6 +202716,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -202724,6 +202996,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -205439,6 +205715,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -236786,6 +237066,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -237042,6 +237326,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -246140,6 +246428,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -265769,6 +266061,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -266078,6 +266374,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -266256,6 +266556,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -278172,6 +278476,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -278301,6 +278609,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -283767,6 +284079,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -283988,6 +284304,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -285074,6 +285394,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -285350,6 +285674,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -286773,6 +287101,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -286927,6 +287259,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -287505,6 +287841,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -287694,6 +288034,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -288728,6 +289072,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -288811,6 +289159,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -288880,6 +289232,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -289010,6 +289366,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -289556,6 +289916,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -330269,6 +330633,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -330617,6 +330985,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -336258,6 +336630,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gte",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -336372,6 +336748,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gte",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -336558,6 +336938,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gte",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -336672,6 +337056,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gte",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -350379,6 +350767,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -350538,6 +350930,10 @@
                   {
                     "name": "(buf.validate.field).uint32.gt",
                     "value": "0"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -406453,6 +406849,10 @@
                   {
                     "name": "(buf.validate.field).string.pattern",
                     "value": "[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
@@ -406491,6 +406891,10 @@
                   {
                     "name": "(buf.validate.field).string.pattern",
                     "value": "[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*"
+                  },
+                  {
+                    "name": "(buf.validate.field).ignore",
+                    "value": "IGNORE_IF_ZERO_VALUE"
                   }
                 ]
               },
