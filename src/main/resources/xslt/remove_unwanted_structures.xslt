@@ -51,10 +51,15 @@
 
     <xsl:template match="//xsd:attribute[@name = 'nameOfMemberClass']"/>
 
-    <!-- NeTEx 2.0 has both e.g. 'planning' and 'Planning' in these enumerations, which give the same enum constant name. Keep
-         the lower case variant (the only one before 2.0 for StakeholderRoleTypeEnumeration) -->
+    <!-- NameOfClass is an enumeration of all class names in NeTEx 2.0 (free text before). Keep it free text, as the enum is
+         unused (fields are replaced with string) and pairs like 'Delta' and 'DeltaValue' break the generated Java (protoc adds a
+         DELTA_VALUE int constant for DELTA) -->
+    <xsl:template match="/xsd:schema/xsd:simpleType[@name = 'NameOfClass']/xsd:restriction/xsd:enumeration"/>
+
+    <!-- NeTEx 2.0 has both e.g. 'planning' and 'Planning' in this enumeration, which give the same enum constant name. Keep
+         the lower case variant (the only one before 2.0) -->
     <xsl:template
-        match="/xsd:schema/xsd:simpleType[@name = 'NameOfClass' or @name = 'StakeholderRoleTypeEnumeration']/xsd:restriction/xsd:enumeration
+        match="/xsd:schema/xsd:simpleType[@name = 'StakeholderRoleTypeEnumeration']/xsd:restriction/xsd:enumeration
             [translate(substring(@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '') = '']
             [../xsd:enumeration/@value = concat(translate(substring(current()/@value, 1, 1), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), substring(current()/@value, 2))]"/>
 
