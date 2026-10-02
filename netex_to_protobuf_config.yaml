@@ -751,7 +751,6 @@ customTypeReplacements:
   ^PoweredTrainRefStructure$: VersionOfObjectRefStructure
   ^PrivateLegRefStructure$: VersionOfObjectRefStructure
   ^PtConnectionLegRefStructure$: VersionOfObjectRefStructure
-  ^PtRideLegRefStructure$: VersionOfObjectRefStructure
   ^RechargingBayRefStructure$: VersionOfObjectRefStructure
   ^RechargingEquipmentProfileRefStructure$: VersionOfObjectRefStructure
   ^RechargingPlanRefStructure$: VersionOfObjectRefStructure
@@ -767,8 +766,6 @@ customTypeReplacements:
   ^SensorInEntranceRefStructure$: VersionOfObjectRefStructure
   ^SensorInSpotRefStructure$: VersionOfObjectRefStructure
   ^ServiceBookingArrangementRefStructure$: VersionOfObjectRefStructure
-  ^SiteNavigationPathRefStructure$: VersionOfObjectRefStructure
-  ^SitePathJunctionRefStructure$: VersionOfObjectRefStructure
   ^SiteStructureRefStructure$: VersionOfObjectRefStructure
   ^SpotAffinityRefStructure$: VersionOfObjectRefStructure
   ^SpotAllocationMethodRefStructure$: VersionOfObjectRefStructure
@@ -780,7 +777,6 @@ customTypeReplacements:
   ^TractiveRollingStockItemRefStructure$: VersionOfObjectRefStructure
   ^TrailingElementTypeRefStructure$: VersionOfObjectRefStructure
   ^TrailingRollingStockItemRefStructure$: VersionOfObjectRefStructure
-  ^TrainElementTypeRefStructure$: VersionOfObjectRefStructure
   ^TransferLegRefStructure$: VersionOfObjectRefStructure
   ^TripDebitRefStructure$: VersionOfObjectRefStructure
   ^TypeOfDeckEntranceRefStructure$: VersionOfObjectRefStructure
