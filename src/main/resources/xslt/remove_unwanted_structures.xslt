@@ -91,9 +91,9 @@
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricingGroup']"/>
     <xsl:template match="/xsd:schema/xsd:group[@name = 'PriceableObjectGroup']/xsd:sequence/xsd:group[@ref = 'PriceableObjectPricesGroup']"/>
 
-    <!-- TODO must be resolved before merging NeTEx 2.0: ActivationMeans is a single ActivationMeansEnumeration in NeTEx 2.0,
+    <!-- ActivationMeans is a single ActivationMeansEnumeration in NeTEx 2.0.0,
          but was a list (ActivationMeansListOfEnumerations) before. Keep the list for now, so activation_means stays a
-         repeated enum -->
+         repeated enum. Reversal was likely not intended, https://github.com/TransmodelEcosystem/NeTEx/pull/1085 attempts to change back to list again. -->
     <xsl:template match="/xsd:schema/xsd:group[@name = 'UsageValidityPeriodGroup']/xsd:sequence/xsd:element[@name = 'ActivationMeans']/@type">
         <xsl:attribute name="type">ActivationMeansListOfEnumerations</xsl:attribute>
     </xsl:template>
