@@ -50585,7 +50585,7 @@
                 "type": "no.entur.netex.protobuf.Duration"
               },
               {
-                "id": 8,
+                "id": 12,
                 "name": "booking_url",
                 "type": "InfoLinkStructure"
               },
@@ -50594,6 +50594,9 @@
                 "name": "booking_note",
                 "type": "MultilingualString"
               }
+            ],
+            "reserved_ids": [
+              8
             ]
           },
           {
@@ -52753,7 +52756,7 @@
                 "type": "UsageParameterPrices_RelStructure"
               },
               {
-                "id": 501,
+                "id": 533,
                 "name": "booking_arrangements",
                 "type": "BookingArrangements_RelStructure"
               },
@@ -52791,7 +52794,8 @@
               169,
               170,
               181,
-              182
+              182,
+              501
             ],
             "reserved_names": [
               "data_source_ref",
@@ -52933,7 +52937,7 @@
                 "type": "UsageParameterPrices_RelStructure"
               },
               {
-                "id": 501,
+                "id": 533,
                 "name": "booking_arrangements",
                 "type": "BookingArrangements_RelStructure"
               },
@@ -52966,7 +52970,8 @@
               169,
               170,
               181,
-              182
+              182,
+              501
             ],
             "reserved_names": [
               "data_source_ref",
@@ -62668,13 +62673,14 @@
                 "type": "string"
               },
               {
-                "id": 14,
+                "id": 15,
                 "name": "description",
                 "type": "MultilingualString"
               }
             ],
             "reserved_ids": [
-              1
+              1,
+              14
             ],
             "reserved_names": [
               "name_of_class"
@@ -132602,7 +132608,7 @@
                 "type": "no.entur.netex.protobuf.Duration"
               },
               {
-                "id": 439,
+                "id": 490,
                 "name": "booking_url",
                 "type": "InfoLinkStructure"
               },
@@ -132625,7 +132631,8 @@
               11,
               10,
               482,
-              171
+              171,
+              439
             ],
             "reserved_names": [
               "data_source_ref",
@@ -133284,7 +133291,7 @@
                 "type": "no.entur.netex.protobuf.Duration"
               },
               {
-                "id": 439,
+                "id": 490,
                 "name": "booking_url",
                 "type": "InfoLinkStructure"
               },
@@ -133302,7 +133309,8 @@
               11,
               10,
               441,
-              171
+              171,
+              439
             ],
             "reserved_names": [
               "data_source_ref",
@@ -135621,7 +135629,7 @@
                 "type": "no.entur.netex.protobuf.Duration"
               },
               {
-                "id": 188,
+                "id": 244,
                 "name": "booking_url",
                 "type": "InfoLinkStructure"
               },
@@ -135689,7 +135697,8 @@
               11,
               10,
               234,
-              233
+              233,
+              188
             ],
             "reserved_names": [
               "data_source_ref",
@@ -135865,7 +135874,7 @@
                 "type": "no.entur.netex.protobuf.Duration"
               },
               {
-                "id": 188,
+                "id": 244,
                 "name": "booking_url",
                 "type": "InfoLinkStructure"
               },
@@ -135928,7 +135937,8 @@
               11,
               10,
               192,
-              191
+              191,
+              188
             ],
             "reserved_names": [
               "data_source_ref",
@@ -262412,7 +262422,7 @@
                 "type": "bool"
               },
               {
-                "id": 521,
+                "id": 673,
                 "name": "booking_arrangements",
                 "type": "BookingArrangements_RelStructure"
               },
@@ -262450,7 +262460,8 @@
               169,
               170,
               181,
-              182
+              182,
+              521
             ],
             "reserved_names": [
               "data_source_ref",
@@ -262656,7 +262667,7 @@
                 "type": "bool"
               },
               {
-                "id": 521,
+                "id": 673,
                 "name": "booking_arrangements",
                 "type": "BookingArrangements_RelStructure"
               },
@@ -262689,7 +262700,8 @@
               169,
               170,
               181,
-              182
+              182,
+              521
             ],
             "reserved_names": [
               "data_source_ref",
@@ -321057,7 +321069,7 @@
                 "type": "StopUseEnumeration"
               },
               {
-                "id": 354,
+                "id": 476,
                 "name": "booking_arrangements",
                 "type": "BookingArrangements_RelStructure"
               },
@@ -321226,7 +321238,8 @@
               10,
               464,
               176,
-              467
+              467,
+              354
             ],
             "reserved_names": [
               "data_source_ref",
@@ -321618,7 +321631,7 @@
                 "type": "StopUseEnumeration"
               },
               {
-                "id": 354,
+                "id": 476,
                 "name": "booking_arrangements",
                 "type": "BookingArrangements_RelStructure"
               },
@@ -321772,7 +321785,8 @@
               10,
               369,
               368,
-              372
+              372,
+              354
             ],
             "reserved_names": [
               "data_source_ref",
