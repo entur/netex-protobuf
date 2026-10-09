@@ -21,6 +21,6 @@ jobs:
       contents: write
       issues: write
     with:
-      next_version: minor
+      next_version: "2.0.0"
       version_strategy: tag
       version_tag_prefix: release-
