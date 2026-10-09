@@ -72219,15 +72219,18 @@
                 "type": "ContractType"
               },
               {
-                "id": 3,
-                "name": "contract_ref",
-                "type": "VersionOfObjectRefStructure"
-              },
-              {
                 "id": 4,
                 "name": "supply_contract_ref",
                 "type": "VersionOfObjectRefStructure"
+              },
+              {
+                "id": 6,
+                "name": "contract_ref",
+                "type": "VersionOfObjectRefStructure"
               }
+            ],
+            "reserved_ids": [
+              3
             ],
             "options": [
               {
