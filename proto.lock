@@ -170192,7 +170192,7 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 171,
+                "id": 335,
                 "name": "vehicle_mode",
                 "type": "AllPublicTransportModesEnumeration"
               },
@@ -170224,7 +170224,8 @@
               9,
               11,
               10,
-              332
+              332,
+              171
             ],
             "reserved_names": [
               "data_source_ref",
@@ -170315,7 +170316,7 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 171,
+                "id": 335,
                 "name": "vehicle_mode",
                 "type": "AllPublicTransportModesEnumeration"
               },
@@ -170342,7 +170343,8 @@
               9,
               11,
               10,
-              303
+              303,
+              171
             ],
             "reserved_names": [
               "data_source_ref",
@@ -250629,7 +250631,7 @@
                 "type": "SnowAndIceSubmodeEnumeration"
               },
               {
-                "id": 1681,
+                "id": 805,
                 "name": "other_transport_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -250774,7 +250776,8 @@
               11,
               10,
               2482,
-              2431
+              2431,
+              1681
             ],
             "reserved_names": [
               "data_source_ref",
@@ -251146,7 +251149,7 @@
                 "type": "SnowAndIceSubmodeEnumeration"
               },
               {
-                "id": 1681,
+                "id": 805,
                 "name": "other_transport_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -251286,7 +251289,8 @@
               11,
               10,
               2453,
-              2431
+              2431,
+              1681
             ],
             "reserved_names": [
               "data_source_ref",
@@ -281363,7 +281367,7 @@
                 "type": "PresentationStructure"
               },
               {
-                "id": 471,
+                "id": 536,
                 "name": "vehicle_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -281451,7 +281455,8 @@
               9,
               11,
               10,
-              532
+              532,
+              471
             ],
             "reserved_names": [
               "data_source_ref",
@@ -281758,7 +281763,7 @@
                 "type": "PresentationStructure"
               },
               {
-                "id": 471,
+                "id": 536,
                 "name": "vehicle_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -281841,7 +281846,8 @@
               9,
               11,
               10,
-              492
+              492,
+              471
             ],
             "reserved_names": [
               "data_source_ref",
@@ -297876,7 +297882,7 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 283,
+                "id": 316,
                 "name": "vehicle_mode",
                 "type": "AllPublicTransportModesEnumeration"
               },
@@ -297898,7 +297904,8 @@
               9,
               11,
               10,
-              312
+              312,
+              283
             ],
             "reserved_names": [
               "data_source_ref",
@@ -298034,7 +298041,7 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 283,
+                "id": 316,
                 "name": "vehicle_mode",
                 "type": "AllPublicTransportModesEnumeration"
               },
@@ -298051,7 +298058,8 @@
               9,
               11,
               10,
-              285
+              285,
+              283
             ],
             "reserved_names": [
               "data_source_ref",
@@ -318835,7 +318843,7 @@
                 "type": "SnowAndIceSubmodeEnumeration"
               },
               {
-                "id": 1761,
+                "id": 805,
                 "name": "other_transport_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -319020,7 +319028,8 @@
               11,
               10,
               1862,
-              1731
+              1731,
+              1761
             ],
             "reserved_names": [
               "data_source_ref",
@@ -320597,7 +320606,7 @@
                 "type": "SnowAndIceSubmodeEnumeration"
               },
               {
-                "id": 1761,
+                "id": 805,
                 "name": "other_transport_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -320777,7 +320786,8 @@
               11,
               10,
               1822,
-              1731
+              1731,
+              1761
             ],
             "reserved_names": [
               "data_source_ref",
@@ -351633,7 +351643,7 @@
                 "type": "AdministrativeZones_RelStructure"
               },
               {
-                "id": 831,
+                "id": 894,
                 "name": "vehicle_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -351707,7 +351717,8 @@
               9,
               11,
               10,
-              862
+              862,
+              831
             ],
             "reserved_names": [
               "data_source_ref",
@@ -351907,7 +351918,7 @@
                 "type": "AdministrativeZones_RelStructure"
               },
               {
-                "id": 831,
+                "id": 894,
                 "name": "vehicle_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -351976,7 +351987,8 @@
               9,
               11,
               10,
-              832
+              832,
+              831
             ],
             "reserved_names": [
               "data_source_ref",
