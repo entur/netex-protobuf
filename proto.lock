@@ -191948,13 +191948,12 @@
                 "name": "text",
                 "type": "TextType",
                 "is_repeated": true
+              },
+              {
+                "id": 3,
+                "name": "value",
+                "type": "string"
               }
-            ],
-            "reserved_ids": [
-              3
-            ],
-            "reserved_names": [
-              "value"
             ]
           },
           {
