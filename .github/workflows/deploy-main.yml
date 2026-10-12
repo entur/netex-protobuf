@@ -13,14 +13,32 @@ jobs:
     # no secrets necessary
     with:
       java-version: 21
+  next-version:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    outputs:
+      next_version: ${{ steps.next-version.outputs.next_version }}
+    steps:
+      # NeTEx 2.0 is released as major version 2.0.0. Once release-2.0.0 exists the normal minor bump applies again,
+      # so reruns and later releases continue with 2.1.0, 2.2.0, ... This job can be removed after the 2.0.0 release.
+      - id: next-version
+        run: |
+          PREVIOUS_TAG=`git ls-remote --tags --refs --sort=-version:refname https://github.com/${{ github.repository }} "release-*" | head -n 1 | cut -d/ -f3`
+          echo "Previous release tag is: $PREVIOUS_TAG" >> $GITHUB_STEP_SUMMARY
+          if [[ "$PREVIOUS_TAG" == release-1.* ]]; then
+            echo "next_version=2.0.0" >> $GITHUB_OUTPUT
+          else
+            echo "next_version=minor" >> $GITHUB_OUTPUT
+          fi
   maven-build-and-release:
     uses: entur/gha-maven-central/.github/workflows/maven-publish.yml@v1
-    needs: validate-maven-build
+    needs: [validate-maven-build, next-version]
     secrets: inherit
     permissions:
       contents: write
       issues: write
     with:
-      next_version: "2.0.0"
+      next_version: ${{ needs.next-version.outputs.next_version }}
       version_strategy: tag
       version_tag_prefix: release-
