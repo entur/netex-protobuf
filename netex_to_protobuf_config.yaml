@@ -24,18 +24,29 @@ ignoreOutputFields:
 - uk.org.siri.www.siri/ServiceRequestType.ChoiceWrapper_AbstractFunctionalServiceRequestStructure/DataObjectRequest
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractServiceDeliveryStructure/DataObjectDelivery
 - uk.org.siri.www.siri/ChoiceWrapper_AbstractSubscriptionStructure/DataObjectSubscriptionRequest
+# AccessRightParameterAssignment was abstract before NeTEx 2.0 and has been reserved in these messages since 2020. Keep it out.
+# Message names are as in the xsd (first letter not yet uppercased), wrapper names as generated
+- uk.org.netex.www.netex/accessRightParameterAssignments_RelStructure.ChoiceWrapper_DataManagedObjectStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/accessRightParameterAssignmentsInFrame_RelStructure.ChoiceWrapper_DataManagedObjectStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/validityParameterAssignments_RelStructure.ChoiceWrapper_DataManagedObjectStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/entitiesInVersion_RelStructure.ChoiceWrapper_EntityInVersionStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/versionFrameMembers_RelStructure.ChoiceWrapper_VersionFrameMembers_RelStructure/AccessRightParameterAssignment
+- uk.org.netex.www.netex/ChoiceWrapper_GeneralFrameMembers_RelStructure/AccessRightParameterAssignment
 customTypeMappings:
+  # NeTEx 2.0 names abstract substitution group heads X_Dummy instead of X_. Keep the previous names:
+  # X_DummyType (anonymous type of element X_Dummy) -> X_Type
+  ^(.*)_DummyType$: $1_Type
   ^duration$: no.entur.netex.protobuf.Duration
   ^dateTime$: google.protobuf.Timestamp
   ^date$: google.type.Date
   ^time$: google.type.TimeOfDay
   ^gMonthDay$: google.type.Date
   ^Entity_EntityStructure$: EntityES
-  ^Assignment_VersionStructure_$: AssignmentVS
+  ^Assignment_VersionStructure_Dummy$: AssignmentVS
   ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles
-  ^GroupOfEntitiesRefStructure_$: GroupOfEntitiesReference
-  ^SeriesConstraintRefStructure_$: SeriesConstraintReference
-  ^PointOnLinkRefStructure_$: PointOnLinkReference
+  ^GroupOfEntitiesRefStructure_Dummy$: GroupOfEntitiesReference
+  ^SeriesConstraintRefStructure_Dummy$: SeriesConstraintReference
+  ^PointOnLinkRefStructure_Dummy$: PointOnLinkReference
   ^LineInDirectionRef_Structure$: LineInDirectionReference
   ^OnboardStay_VersionedChlldStructure$: OnboardStay
   ^Site_VersionFrameStructure$: SiteFrame
@@ -43,6 +54,10 @@ customTypeMappings:
   ^VehicleType_VersionStructure$: VehicleTypeVS
 
 customTypeReplacements:
+  # NameOfClass is an enumeration of all class names in NeTEx 2.0 (free text before), and schema2proto generates an empty enum
+  # for RelationshipId (restriction of NameOfClass). Keep both as string, as before 2.0
+  ^NameOfClass$: string
+  ^RelationshipId$: string
   ^NormalDatedVehicleJourneyRefStructure: VersionOfObjectRefStructure
   ^DatedServiceJourneyRefStructure: VersionOfObjectRefStructure
   ^StopPlaceSpaceRefStructure$: VersionOfObjectRefStructure
@@ -202,6 +217,7 @@ customTypeReplacements:
   ^TariffZoneRefStructure$: VersionOfObjectRefStructure
   ^FareScheduledStopPointRefStructure$: VersionOfObjectRefStructure
   ^VehicleServicePartRefStructure$: VersionOfObjectRefStructure
+  ^ContractRefStructure$: VersionOfObjectRefStructure
   ^SupplyContractRefStructure$: VersionOfObjectRefStructure
   ^ResidentialQualificationEligibilityRefStructure$: VersionOfObjectRefStructure
   ^ServiceJourneyInterchangeRefStructure$: VersionOfObjectRefStructure
@@ -676,6 +692,139 @@ customTypeReplacements:
   ^RevertingRefStructure$: VersionOfObjectRefStructure
   ^SecurityPolicyRefStructure$: VersionOfObjectRefStructure
   ^OnboardValidityRefStructure$: VersionOfObjectRefStructure
+  # Not used in abt-protobuf. Other field numbers than (Ordered)VersionOfObjectRefStructure; wire break accepted with NeTEx 2.0
+  ^TypeOfMediumAccessDeviceRefStructure$: VersionOfObjectRefStructure
+  ^FleetRefStructure$: VersionOfObjectRefStructure
+  ^IndividualPassengerInfoRefStructure$: VersionOfObjectRefStructure
+  ^MediumAccessDeviceSecurityListingRefStructure$: VersionOfObjectRefStructure
+  ^MobilityJourneyFrameRefStructure$: VersionOfObjectRefStructure
+  ^MobilityServiceFrameRefStructure$: VersionOfObjectRefStructure
+  ^ModeRestrictionAssessmentRefStructure$: VersionOfObjectRefStructure
+  ^ParkingBayStatusRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfBatteryChemistryRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfFleetRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfMobilityServiceRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfModeOfOperationRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfPlugRefStructure$: VersionOfObjectRefStructure
+  ^VehicleProfileRefStructure$: VersionOfObjectRefStructure
+  ^DynamicVehicleMeetingPointAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^TaxiServicePlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^TimeDemandTypeAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehicleMeetingPointAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehiclePoolingPlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehicleServicePlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^VehicleSharingPlaceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  # Typed in NeTEx 2.0, VersionOfObjectRefStructure before
+  ^SiteNavigationPathRefStructure$: VersionOfObjectRefStructure
+  ^SitePathJunctionRefStructure$: VersionOfObjectRefStructure
+  ^PtRideLegRefStructure$: VersionOfObjectRefStructure
+  ^TrainElementTypeRefStructure$: VersionOfObjectRefStructure
+  # New in NeTEx 2.0. The typed refs get other field numbers than the generic ones; use the generic ref structures
+  ^AcceptedDriverPermitRefStructure$: VersionOfObjectRefStructure
+  ^AccessLegRefStructure$: VersionOfObjectRefStructure
+  ^AlternativeModeLegRefStructure$: VersionOfObjectRefStructure
+  ^BedEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^BookingArrangementRefStructure$: VersionOfObjectRefStructure
+  ^BookingDebitRefStructure$: VersionOfObjectRefStructure
+  ^CallRefStructure$: VersionOfObjectRefStructure
+  ^DeckComponentRefStructure$: VersionOfObjectRefStructure
+  ^DeckEntranceCoupleRefStructure$: VersionOfObjectRefStructure
+  ^DeckEntranceRefStructure$: VersionOfObjectRefStructure
+  ^DeckEntranceUsageRefStructure$: VersionOfObjectRefStructure
+  ^DeckLevelRefStructure$: VersionOfObjectRefStructure
+  ^DeckNavigationPathRefStructure$: VersionOfObjectRefStructure
+  ^DeckPathJunctionRefStructure$: VersionOfObjectRefStructure
+  ^DeckPathLinkRefStructure$: VersionOfObjectRefStructure
+  ^DeckPlanRefStructure$: VersionOfObjectRefStructure
+  ^DeckRefStructure$: VersionOfObjectRefStructure
+  ^DeckSpaceCapacityRefStructure$: VersionOfObjectRefStructure
+  ^DeckSpaceRefStructure$: VersionOfObjectRefStructure
+  ^DeckVehicleEntranceRefStructure$: VersionOfObjectRefStructure
+  ^DeckWindowRefStructure$: VersionOfObjectRefStructure
+  ^EntranceSensorRefStructure$: VersionOfObjectRefStructure
+  ^FareDebitRefStructure$: VersionOfObjectRefStructure
+  ^FarePriceFrameRefStructure$: VersionOfObjectRefStructure
+  ^FareProductSaleDebitRefStructure$: VersionOfObjectRefStructure
+  ^GenericNavigationPathRefStructure$: VersionOfObjectRefStructure
+  ^GenericPathJunctionRefStructure$: VersionOfObjectRefStructure
+  ^GenericPathLinkRefStructure$: VersionOfObjectRefStructure
+  ^GroupOfSitesRefStructure$: VersionOfObjectRefStructure
+  ^LegRefStructure$: VersionOfObjectRefStructure
+  ^LevelInStructureRefStructure$: VersionOfObjectRefStructure
+  ^LiftCallEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^LocatableSpotRefStructure$: VersionOfObjectRefStructure
+  ^LuggageSpotEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^LuggageSpotRefStructure$: VersionOfObjectRefStructure
+  ^OccupancyViewRefStructure$: VersionOfObjectRefStructure
+  ^OffSitePathLinkRefStructure$: VersionOfObjectRefStructure
+  ^OffenceDebitRefStructure$: VersionOfObjectRefStructure
+  ^OnboardSpaceRefStructure$: VersionOfObjectRefStructure
+  ^OtherDebitRefStructure$: VersionOfObjectRefStructure
+  ^OtherDeckEntranceRefStructure$: VersionOfObjectRefStructure
+  ^OtherDeckSpaceRefStructure$: VersionOfObjectRefStructure
+  ^PassengerAtStopTimeRefStructure$: VersionOfObjectRefStructure
+  ^PassengerBeaconEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^PassengerEntranceRefStructure$: VersionOfObjectRefStructure
+  ^PassengerSpaceRefStructure$: VersionOfObjectRefStructure
+  ^PassengerSpotAllocationRefStructure$: VersionOfObjectRefStructure
+  ^PassengerSpotRefStructure$: VersionOfObjectRefStructure
+  ^PassengerVehicleCapacityRefStructure$: VersionOfObjectRefStructure
+  ^PassengerVehicleSpotRefStructure$: VersionOfObjectRefStructure
+  ^PoweredTrainRefStructure$: VersionOfObjectRefStructure
+  ^PrivateLegRefStructure$: VersionOfObjectRefStructure
+  ^PtConnectionLegRefStructure$: VersionOfObjectRefStructure
+  ^RechargingBayRefStructure$: VersionOfObjectRefStructure
+  ^RechargingEquipmentProfileRefStructure$: VersionOfObjectRefStructure
+  ^RechargingPlanRefStructure$: VersionOfObjectRefStructure
+  ^RechargingStationRefStructure$: VersionOfObjectRefStructure
+  ^RechargingStepRefStructure$: VersionOfObjectRefStructure
+  ^RestrictedServiceFacilitySetRefStructure$: VersionOfObjectRefStructure
+  ^RideLegRefStructure$: VersionOfObjectRefStructure
+  ^RidePartRefStructure$: VersionOfObjectRefStructure
+  ^RollingStockInventoryRefStructure$: VersionOfObjectRefStructure
+  ^RollingStockItemRefStructure$: VersionOfObjectRefStructure
+  ^SeatEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^SensorEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^SensorInEntranceRefStructure$: VersionOfObjectRefStructure
+  ^SensorInSpotRefStructure$: VersionOfObjectRefStructure
+  ^ServiceBookingArrangementRefStructure$: VersionOfObjectRefStructure
+  ^SiteStructureRefStructure$: VersionOfObjectRefStructure
+  ^SpotAffinityRefStructure$: VersionOfObjectRefStructure
+  ^SpotAllocationMethodRefStructure$: VersionOfObjectRefStructure
+  ^SpotColumnRefStructure$: VersionOfObjectRefStructure
+  ^SpotEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^SpotRowRefStructure$: VersionOfObjectRefStructure
+  ^SpotSensorRefStructure$: VersionOfObjectRefStructure
+  ^TractiveElementTypeRefStructure$: VersionOfObjectRefStructure
+  ^TractiveRollingStockItemRefStructure$: VersionOfObjectRefStructure
+  ^TrailingElementTypeRefStructure$: VersionOfObjectRefStructure
+  ^TrailingRollingStockItemRefStructure$: VersionOfObjectRefStructure
+  ^TransferLegRefStructure$: VersionOfObjectRefStructure
+  ^TripDebitRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfDeckEntranceRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfDeckEntranceUsageRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfDeckSpaceProfileRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfDriverPermitRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfLocatableSpotRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfRollingStockRefStructure$: VersionOfObjectRefStructure
+  ^TypeOfWheelchairRefStructure$: VersionOfObjectRefStructure
+  ^UnpoweredTrainRefStructure$: VersionOfObjectRefStructure
+  ^VehicleEquipmentProfileMemberRefStructure$: VersionOfObjectRefStructure
+  ^VehicleJourneySpotAllocationRefStructure$: VersionOfObjectRefStructure
+  ^WheelchairVehicleEquipmentRefStructure$: VersionOfObjectRefStructure
+  ^ZoneInSeriesRefStructure$: VersionOfObjectRefStructure
+  ^DeckEntranceAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^DeckPlaceInSequenceRefStructure$: OrderedVersionOfObjectRefStructure
+  ^DeckPlanAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^PassengerBoardingPositionAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^PathInstructionRefStructure$: OrderedVersionOfObjectRefStructure
+  ^RechargingPointAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  ^TrainComponentStopAssignmentRefStructure$: OrderedVersionOfObjectRefStructure
+  # NeTEx 2.0 elements in substitution group VersionedChild get their own *Type (same fields, different numbers). Keep the
+  # structure used before 2.0
+  ^AccessRightInProductType$: AccessRightInProduct_VersionedChildStructure
+  ^ServiceLinkInJourneyPatternType$: ServiceLinkInJourneyPattern_VersionedChildStructure
+  ^ResponsibilityRoleAssignmentType$: ResponsibilityRoleAssignment_VersionedChildStructure
 
   ^CrewBaseRefStructure$: GroupOfEntitiesRefStructure
   ^FareTableRefStructure$: GroupOfEntitiesRefStructure
@@ -706,6 +855,10 @@ customTypeReplacements:
 
 
 customNameMappings:
+  # Element X_Dummy (X_ before NeTEx 2.0) -> field x_u, as schema2proto turns a trailing underscore into "u"
+  ^(?![oO]rganisationRef_Dummy$)(.*)_Dummy$: $1_
+  # OrganisationRef_Dummy is new in NeTEx 2.0; before, OrganisationRef was referenced directly (field organisation_ref)
+  ^([oO])rganisationRef_Dummy$: $1rganisationRef
   ^Descriptor$: TopographicPlaceDescriptor
   ^Assignment_VersionStructure_$: AssignmentVS
   ^ParkingEntranceForVehicles__VersionStructure: ParkingEntranceForVehicles
