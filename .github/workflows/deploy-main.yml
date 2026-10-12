@@ -24,7 +24,12 @@ jobs:
       # so reruns and later releases continue with 2.1.0, 2.2.0, ... This job can be removed after the 2.0.0 release.
       - id: next-version
         run: |
-          PREVIOUS_TAG=`git ls-remote --tags --refs --sort=-version:refname https://github.com/${{ github.repository }} "release-*" | head -n 1 | cut -d/ -f3`
+          RELEASE_TAGS=`git ls-remote --tags --refs --sort=-version:refname https://github.com/${{ github.repository }} "release-*"`
+          PREVIOUS_TAG=`echo "$RELEASE_TAGS" | head -n 1 | cut -d/ -f3`
+          if [[ -z "$PREVIOUS_TAG" ]]; then
+            echo "No release-* tag found, cannot choose next version" >&2
+            exit 1
+          fi
           echo "Previous release tag is: $PREVIOUS_TAG" >> $GITHUB_STEP_SUMMARY
           if [[ "$PREVIOUS_TAG" == release-1.* ]]; then
             echo "next_version=2.0.0" >> $GITHUB_OUTPUT
