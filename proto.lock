@@ -62631,13 +62631,14 @@
                 "type": "string"
               },
               {
-                "id": 6,
+                "id": 15,
                 "name": "description",
                 "type": "MultilingualString"
               }
             ],
             "reserved_ids": [
-              1
+              1,
+              6
             ],
             "reserved_names": [
               "name_of_class"
@@ -170486,7 +170487,7 @@
                 "type": "VersionOfObjectRefStructure"
               },
               {
-                "id": 171,
+                "id": 335,
                 "name": "vehicle_mode",
                 "type": "AllPublicTransportModesEnumeration"
               },
@@ -170503,7 +170504,8 @@
               9,
               11,
               10,
-              173
+              173,
+              171
             ],
             "reserved_names": [
               "data_source_ref",
@@ -316793,7 +316795,7 @@
                 "type": "SnowAndIceSubmodeEnumeration"
               },
               {
-                "id": 1681,
+                "id": 805,
                 "name": "other_transport_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -316847,7 +316849,8 @@
               9,
               11,
               10,
-              1683
+              1683,
+              1681
             ],
             "reserved_names": [
               "data_source_ref",
@@ -318342,7 +318345,7 @@
                 "type": "SnowAndIceSubmodeEnumeration"
               },
               {
-                "id": 1681,
+                "id": 805,
                 "name": "other_transport_modes",
                 "type": "AllPublicTransportModesEnumeration",
                 "is_repeated": true,
@@ -318426,7 +318429,8 @@
               9,
               11,
               10,
-              2045
+              2045,
+              1681
             ],
             "reserved_names": [
               "data_source_ref",
